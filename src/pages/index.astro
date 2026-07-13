@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const work = (await getCollection('work')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Base>
+  <section class="hero">
+    <p class="prompt-line"><span class="prompt">~</span> whoami</p>
+    <h1>Cyrus Hadavi<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="name-fa" lang="fa" dir="rtl">کوروش</p>
+    <p class="tagline">
+      I build ML systems that rank ads for billions of people. On the
+      side I build things that watch basketball, decode game formats,
+      and know when to say "I don't know."
+    </p>
+    <p class="role">staff software engineer · ads ranking ai @ meta · new york</p>
+  </section>
+
+  <section id="work">
+    <h2 class="section-rule"><span class="star">✦</span> selected work</h2>
+    <ol class="work-list">
+      {
+        work.map((entry, i) => (
+          <li>
+            <a href={`/work/${entry.id}`}>
+              <span class="idx">{String(i + 1).padStart(2, '0')}</span>
+              <span class="name">{entry.data.title}</span>
+              <span class="desc">{entry.data.tagline.toLowerCase()}</span>
+              <span class="year">{entry.data.year}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section>
+    <h2 class="section-rule"><span class="star">✦</span> about</h2>
+    <p style="max-width: var(--measure);">
+      A decade of ML across Meta, Google, HBO Max, and Microsoft.
+      Recommenders, ML platforms, and two years leading an ads ranking
+      team before going back to building.
+      <a href="/about">the longer version →</a>
+    </p>
+  </section>
+</Base>

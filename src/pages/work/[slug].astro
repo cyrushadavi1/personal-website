@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Base
+  title={`${entry.data.title} · Cyrus Hadavi`}
+  description={entry.data.tagline}
+>
+  <p class="breadcrumb">
+    <a href="/">~</a>/<a href="/#work">work</a>/{entry.id}
+  </p>
+  <h1 class="page-title">{entry.data.title}</h1>
+  <p class="page-tagline">{entry.data.tagline}</p>
+  <div class="meta-row">
+    <span class="chip year-chip">{entry.data.year}</span>
+    {entry.data.stack.map((item) => <span class="chip">{item}</span>)}
+    {
+      entry.data.links.map((link) => (
+        <a class="chip" href={link.url}>
+          {link.label} ↗
+        </a>
+      ))
+    }
+  </div>
+  <article class="prose">
+    <Content />
+  </article>
+</Base>

@@ -1,0 +1,60 @@
+---
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '@fontsource/jetbrains-mono/700.css';
+import '@fontsource/vazirmatn/400.css';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Cyrus Hadavi · AI engineer',
+  description =
+    'Staff software engineer at Meta working on ads ranking AI. A decade of ML systems at scale, and side projects that watch basketball and read game logs.',
+} = Astro.props;
+
+const path = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="home-link" href="/">~/cyrus.hadavi</a>
+      <nav>
+        <a href="/#work" class={path.startsWith('/work') ? 'active' : ''}>work</a>
+        <a href="/about" class={path.startsWith('/about') ? 'active' : ''}>about</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="mailto:cyrus@hadavi.net">email</a>
+        <a href="https://github.com/cyrushadavi1">github</a>
+        <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a>
+      </div>
+      <p class="footer-verse">
+        <span lang="fa" dir="rtl">توانا بود هر که دانا بود</span>
+        <span class="verse-tr">"capable is the one who is wise" · Ferdowsi</span>
+      </p>
+    </footer>
+  </body>
+</html>
