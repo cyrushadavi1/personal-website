@@ -13,11 +13,16 @@ const work = (await getCollection('work')).sort(
     <h1>Cyrus Hadavi<span class="cursor" aria-hidden="true"></span></h1>
     <p class="name-fa" lang="fa" dir="rtl">کوروش</p>
     <p class="tagline">
-      I build ML systems that rank ads for billions of people. On the
-      side I build things that watch basketball, decode game formats,
-      and know when to say "I don't know."
+      I build ML systems that rank ads for billions of people. On the side,
+      I build systems that watch basketball, turn game logs into useful
+      guidance, and know when to say "I don't know."
     </p>
     <p class="role">staff software engineer · ads ranking ai @ meta · new york</p>
+    <p class="specialties">ranking systems · computer vision · applied LLMs</p>
+    <div class="hero-actions" aria-label="Primary links">
+      <a class="button-link primary" href="#work">explore the work ↓</a>
+      <a class="button-link" href="mailto:cyrus@hadavi.net">get in touch ↗</a>
+    </div>
   </section>
 
   <section id="work">
@@ -42,9 +47,9 @@ const work = (await getCollection('work')).sort(
     <h2 class="section-rule"><span class="star">✦</span> about</h2>
     <p style="max-width: var(--measure);">
       A decade of ML across Meta, Google, HBO Max, and Microsoft.
-      Recommenders, ML platforms, and two years leading an ads ranking
-      team before going back to building.
-      <a href="/about">the longer version →</a>
+      Recommenders, ML platforms, and two years leading an ads-ranking
+      team before returning to hands-on technical work.
+      <a class="nowrap-link" href="/about">the longer version →</a>
     </p>
   </section>
 </Base>

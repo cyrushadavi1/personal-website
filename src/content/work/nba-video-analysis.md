@@ -1,7 +1,10 @@
 ---
-title: 'nba-video-analysis'
+title: 'NBA Video Analysis'
 tagline: 'I taught my laptop to watch basketball'
 year: '2026'
+timeframe: 'June 2026'
+status: 'prototype complete'
+role: 'solo builder'
 order: 1
 stack:
   - PyTorch
@@ -11,6 +14,15 @@ stack:
   - SmolVLM2
   - OSNet
   - DuckDB
+results:
+  - label: 'Detection AP50'
+    value: '0.97'
+  - label: 'players identified'
+    value: '21 / 24'
+  - label: 'impossible steps'
+    value: '47% → <1%'
+  - label: 'runtime'
+    value: 'offline laptop'
 links: []
 ---
 
@@ -21,25 +33,26 @@ ball about twenty pixels wide. The goal: turn that video into
 structured game state. Who is where in court coordinates, which team,
 who has the ball, what just happened.
 
-My career has mostly been NLP and two tower ranking models, so I built
+My career has mostly been NLP and two-tower ranking models, so I built
 this to sharpen my computer vision skills. I started from Roboflow's
 basketball tutorial and kept going every time something broke.
 Everything runs offline on a laptop, from public checkpoints only.
 
 ## the pipeline, as it ended up
 
-```text
-video ─┬─ YOLO11 (fine tuned on SportsMOT) ─► ByteTrack + stitching ─► tracks
-       ├─ court keypoints ─► homography + geometric sanity checks ─► calibration
-       ├─ WASB heatmaps ─► Viterbi trajectory decoding ─────────► ball
-       ├─ HSV color statistics + zero shot ref detection ───────► teams
-       └─ SmolVLM2 jersey reading + roster fusion ──────────────► player names
+<div class="pipeline">
+  <div class="pipeline-input">video</div>
+  <div class="pipeline-stages">
+    <p><strong>people</strong><span>YOLO11 → ByteTrack + stitching</span></p>
+    <p><strong>court</strong><span>keypoints → homography + sanity checks</span></p>
+    <p><strong>ball</strong><span>WASB heatmaps → Viterbi decoding</span></p>
+    <p><strong>teams</strong><span>HSV color + zero-shot referee detection</span></p>
+    <p><strong>names</strong><span>SmolVLM2 + roster fusion</span></p>
+  </div>
+  <div class="pipeline-output">possession events<br />annotated video + minimap<br />DuckDB index</div>
+</div>
 
-tracks + ball + calibration ─► possession state machine ─► events
-                             ─► annotated video + minimap + DuckDB index
-```
-
-Almost every box replaced something fancier that lost a head to head
+Almost every box replaced something fancier that lost a head-to-head
 eval. That was the real lesson.
 
 ## night one: boxes around people
@@ -49,12 +62,13 @@ key for, so I rebuilt everything from public checkpoints: YOLO11 for
 people, a court keypoint model from Hugging Face, and a ball tracker
 (WASB) trained on NBA footage. Best thing that happened to the
 project: I had to understand and evaluate each piece instead of
-calling an endpoint. Fine tuning a small YOLO on SportsMOT took
+calling an endpoint. Fine-tuning a small YOLO on SportsMOT took
 detection to AP50 0.97.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/01-jun8-tutorial-style-boxes.mp4"></video>
-
-*Night one: boxes around people. No teams, no names, no ball.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/01-jun8-tutorial-style-boxes.jpg" aria-label="Early basketball analysis with boxes around players" src="/media/nbacv/01-jun8-tutorial-style-boxes.mp4"></video>
+  <figcaption>Night one: boxes around people. No teams, no names, no ball.</figcaption>
+</figure>
 
 ## tracking
 
@@ -63,32 +77,32 @@ pass that re-joins dropped tracks. The metrics looked fine (MOTA
 88.4). The video told the truth: refs were getting jersey numbers and
 players swapped identities whenever they crossed paths.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/02-jun9-debug-overlay-stable-ids.mp4"></video>
-
-*The debug overlay era: every track carries an ID and a confidence,
-and the header admits what the system can't see.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/02-jun9-debug-overlay-stable-ids.jpg" aria-label="Debug overlay showing player track IDs and confidence" src="/media/nbacv/02-jun9-debug-overlay-stable-ids.mp4"></video>
+  <figcaption>The debug overlay era: every track carries an ID and a confidence, and the header admits what the system can't see.</figcaption>
+</figure>
 
 ## the histogram that beat the embedding model
 
 The tutorial clusters SigLIP embeddings to split the teams. That fell
 apart on the wide camera. What worked was embarrassingly simple: HSV
-color statistics, plus zero shot prompts for finding the refs. The
+color statistics, plus zero-shot prompts for finding the refs. The
 fancy embedding model lost to a histogram, and the team color signal
 turned out strong enough to repair the identity swaps too.
 
-A homography then maps pixels onto a top down court, so the output
+A homography then maps pixels onto a top-down court, so the output
 becomes "he's at the left elbow," not "he's at pixel 840, 410." It
 also lets you estimate player height from a bounding box, which pays
 off later.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/03-jun10-teams-refs-court.mp4"></video>
-
-*Team colored ellipses, jersey numbers, possession banner, and a live
-top down minimap.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/03-jun10-teams-refs-court.jpg" aria-label="Team classification, jersey numbers, possession, and top-down court minimap" src="/media/nbacv/03-jun10-teams-refs-court.mp4"></video>
+  <figcaption>Team-colored ellipses, jersey numbers, possession banner, and a live top-down minimap.</figcaption>
+</figure>
 
 ## from numbers to names
 
-The best public jersey reader is fine tuned on soccer, where numbers
+The best public jersey reader is fine-tuned on soccer, where numbers
 run 1 to 99. It had never seen a lone 0, so it read Jayson Tatum's #0
 as #8 at 98% confidence. Every time.
 
@@ -103,10 +117,10 @@ the system can say so.
 > something you can build on. A confident wrong answer poisons
 > everything downstream.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/04-jun10-player-names.mp4"></video>
-
-*The Tatum clip. After roster fusion the misread #0 resolves to
-Tatum, and tracks without enough evidence stay unlabeled.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/04-jun10-player-names.jpg" aria-label="Roster fusion resolving a jersey-number misread to Jayson Tatum" src="/media/nbacv/04-jun10-player-names.mp4"></video>
+  <figcaption>The Tatum clip. After roster fusion, the misread #0 resolves to Tatum, and tracks without enough evidence stay unlabeled.</figcaption>
+</figure>
 
 ## a second game, and everything broke
 
@@ -117,10 +131,10 @@ resolution, keypoint smoothing fell apart on 60fps camera pans, and my
 Not model problems. Assumptions I didn't know I'd baked in until a
 second camera exposed them.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/05-jun10-second-feed.mp4"></video>
-
-*The same pipeline on the second feed after the fixes, part of a 20
-clip batch over the full game.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/05-jun10-second-feed.jpg" aria-label="The corrected pipeline running on a second broadcast feed" src="/media/nbacv/05-jun10-second-feed.mp4"></video>
+  <figcaption>The same pipeline on the second feed after the fixes, part of a 20-clip batch over the full game.</figcaption>
+</figure>
 
 ## the Brandon Williams pile up
 
@@ -135,16 +149,15 @@ rejecting the wrong one. Benchmark the decision you actually need.
 I also benchmarked the OCR properly, and a small vision language model
 (SmolVLM2) beat the soccer specialist outright, so it became the
 primary reader. Rerunning the batch: named tracks went from 138 to
-194, 21 of 24 players identified, five of six hand confirmed errors
+194, 21 of 24 players identified, five of six hand-confirmed errors
 fixed, and the sixth abstains honestly. Max Christie wears #00, which
 the old stack literally could not represent. He went from zero
 identifications to six clips.
 
-<video controls muted loop playsinline preload="metadata" src="/media/nbacv/06-jun10-roster-names-after-vlm-swap.mp4"></video>
-
-*After the reader swap: Flagg gets his name back, Christie's #00
-finally reads, and low evidence tracks keep a plain number instead of
-guessing.*
+<figure class="media-figure">
+  <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/06-jun10-roster-names-after-vlm-swap.jpg" aria-label="Improved player identification after swapping the jersey reader" src="/media/nbacv/06-jun10-roster-names-after-vlm-swap.mp4"></video>
+  <figcaption>After the reader swap: Flagg gets his name back, Christie's #00 finally reads, and low-evidence tracks keep a plain number instead of guessing.</figcaption>
+</figure>
 
 ## stop trusting error metrics
 

@@ -7,8 +7,14 @@ const work = defineCollection({
     title: z.string(),
     tagline: z.string(),
     year: z.string(),
+    timeframe: z.string(),
+    status: z.string(),
+    role: z.string(),
     order: z.number(),
     stack: z.array(z.string()).default([]),
+    results: z
+      .array(z.object({ label: z.string(), value: z.string() }))
+      .default([]),
     links: z
       .array(z.object({ label: z.string(), url: z.string() }))
       .default([]),

@@ -1,13 +1,23 @@
 ---
-title: 'poe-league-tools'
+title: 'Path of Exile League Tools'
 tagline: 'A ToS-safe leveling copilot for Path of Exile'
 year: '2026'
+timeframe: '2026 – now'
+status: 'active'
+role: 'solo builder'
 order: 2
 stack:
   - Python
   - PyQt6
   - Path of Building
   - log parsing
+results:
+  - label: 'game access'
+    value: 'log-only'
+  - label: 'route coverage'
+    value: 'full campaign'
+  - label: 'build import'
+    value: 'PoB → leveling sheet'
 links:
   - label: github
     url: 'https://github.com/cyrushadavi1/poe-league-tools'
@@ -44,12 +54,16 @@ act by act leveling sheet: gem links to buy, passive tree checkpoints,
 printable markdown. The same plan feeds gem reminders into the
 overlay, so the card knows which skills your build wants at each step.
 
+## shipped today
+
+The overlay, full campaign route, Path of Building decoder, leveling
+sheet, and build-aware gem reminders all work locally without reading
+game memory or automating input.
+
 ## what's next
 
-The fun item on the roadmap is an AI build advisor: feed patch notes
-to an LLM alongside a build and get the nerfs flagged and adaptations
-suggested. After launch, a meta ranker over live ladder data from
-poe.ninja.
+The next experiments are an AI build advisor that compares patch notes
+against a build, and a meta-ranker over live ladder data from poe.ninja.
 
 <!-- TODO: screenshot or short screen recording of the overlay in-game:
 <img src="/media/poe-overlay.png" alt="overlay guide card over the game" />

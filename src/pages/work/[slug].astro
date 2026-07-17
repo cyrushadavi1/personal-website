@@ -11,12 +11,34 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+const work = (await getCollection('work')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const currentIndex = work.findIndex((item) => item.id === entry.id);
+const previous = currentIndex > 0 ? work[currentIndex - 1] : undefined;
+const next = currentIndex < work.length - 1 ? work[currentIndex + 1] : undefined;
+const showToc = headings.length >= 5;
 ---
 
 <Base
   title={`${entry.data.title} · Cyrus Hadavi`}
   description={entry.data.tagline}
+  ogType="article"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: entry.data.title,
+    description: entry.data.tagline,
+    dateCreated: entry.data.year,
+    url: new URL(`/work/${entry.id}/`, Astro.site).toString(),
+    author: {
+      '@type': 'Person',
+      name: 'Cyrus Hadavi',
+      url: new URL('/', Astro.site).toString(),
+    },
+    keywords: entry.data.stack.join(', '),
+  }}
 >
   <p class="breadcrumb">
     <a href="/">~</a>/<a href="/#work">work</a>/{entry.id}
@@ -24,7 +46,9 @@ const { Content } = await render(entry);
   <h1 class="page-title">{entry.data.title}</h1>
   <p class="page-tagline">{entry.data.tagline}</p>
   <div class="meta-row">
-    <span class="chip year-chip">{entry.data.year}</span>
+    <span class="chip year-chip">{entry.data.timeframe}</span>
+    <span class="chip">{entry.data.status}</span>
+    <span class="chip">{entry.data.role}</span>
     {entry.data.stack.map((item) => <span class="chip">{item}</span>)}
     {
       entry.data.links.map((link) => (
@@ -34,7 +58,49 @@ const { Content } = await render(entry);
       ))
     }
   </div>
+  <dl class="results-panel" aria-label="Project highlights">
+    {
+      entry.data.results.map((result) => (
+        <div>
+          <dt>{result.label}</dt>
+          <dd>{result.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+  {
+    showToc && (
+      <nav class="article-toc" aria-label="On this page">
+        <p>on this page</p>
+        <ol>
+          {headings
+            .filter((heading) => heading.depth === 2)
+            .map((heading) => (
+              <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+            ))}
+        </ol>
+      </nav>
+    )
+  }
   <article class="prose">
     <Content />
   </article>
+  <nav class="project-pagination" aria-label="More projects">
+    {
+      previous ? (
+        <a class="previous" href={`/work/${previous.id}`}>
+          <span>← previous</span>
+          <strong>{previous.data.title}</strong>
+        </a>
+      ) : <span />
+    }
+    {
+      next ? (
+        <a class="next" href={`/work/${next.id}`}>
+          <span>next →</span>
+          <strong>{next.data.title}</strong>
+        </a>
+      ) : <span />
+    }
+  </nav>
 </Base>
