@@ -1,6 +1,7 @@
 ---
 title: 'NBA Video Analysis'
 tagline: 'I taught my laptop to watch basketball'
+category: 'computer vision'
 year: '2026'
 timeframe: 'June 2026'
 status: 'prototype complete'
@@ -68,6 +69,7 @@ calling an endpoint. Fine-tuning a small YOLO on SportsMOT took
 detection to AP50 0.97.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play Early basketball analysis with boxes around players"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/01-jun8-tutorial-style-boxes.jpg" aria-label="Early basketball analysis with boxes around players" src="/media/nbacv/01-jun8-tutorial-style-boxes.mp4"></video>
   <figcaption>Night one: boxes around people. No teams, no names, no ball.</figcaption>
 </figure>
@@ -80,6 +82,7 @@ pass that re-joins dropped tracks. The metrics looked fine (MOTA
 players swapped identities whenever they crossed paths.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play debug overlay showing player track IDs and confidence"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/02-jun9-debug-overlay-stable-ids.jpg" aria-label="Debug overlay showing player track IDs and confidence" src="/media/nbacv/02-jun9-debug-overlay-stable-ids.mp4"></video>
   <figcaption>The debug overlay era: every track carries an ID and a confidence, and the header admits what the system can't see.</figcaption>
 </figure>
@@ -98,6 +101,7 @@ also lets you estimate player height from a bounding box, which pays
 off later.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play team classification and court minimap video"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/03-jun10-teams-refs-court.jpg" aria-label="Team classification, jersey numbers, possession, and top-down court minimap" src="/media/nbacv/03-jun10-teams-refs-court.mp4"></video>
   <figcaption>Team-colored ellipses, jersey numbers, possession banner, and a live top-down minimap.</figcaption>
 </figure>
@@ -120,6 +124,7 @@ the system can say so.
 > everything downstream.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play roster fusion resolving a jersey-number misread"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/04-jun10-player-names.jpg" aria-label="Roster fusion resolving a jersey-number misread to Jayson Tatum" src="/media/nbacv/04-jun10-player-names.mp4"></video>
   <figcaption>The Tatum clip. After roster fusion, the misread #0 resolves to Tatum, and tracks without enough evidence stay unlabeled.</figcaption>
 </figure>
@@ -134,6 +139,7 @@ Not model problems. Assumptions I didn't know I'd baked in until a
 second camera exposed them.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play corrected pipeline on a second broadcast feed"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/05-jun10-second-feed.jpg" aria-label="The corrected pipeline running on a second broadcast feed" src="/media/nbacv/05-jun10-second-feed.mp4"></video>
   <figcaption>The same pipeline on the second feed after the fixes, part of a 20-clip batch over the full game.</figcaption>
 </figure>
@@ -157,6 +163,7 @@ the old stack literally could not represent. He went from zero
 identifications to six clips.
 
 <figure class="media-figure">
+  <button class="video-play" type="button" data-video-play aria-label="Play improved player identification video"><span aria-hidden="true">▶</span></button>
   <video controls muted loop playsinline preload="none" width="1280" height="720" poster="/media/nbacv/posters/06-jun10-roster-names-after-vlm-swap.jpg" aria-label="Improved player identification after swapping the jersey reader" src="/media/nbacv/06-jun10-roster-names-after-vlm-swap.mp4"></video>
   <figcaption>After the reader swap: Flagg gets his name back, Christie's #00 finally reads, and low-evidence tracks keep a plain number instead of guessing.</figcaption>
 </figure>

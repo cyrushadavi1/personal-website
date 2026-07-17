@@ -1,6 +1,7 @@
 ---
 title: 'Path of Exile League Tools'
 tagline: 'A ToS-safe leveling copilot for Path of Exile'
+category: 'desktop tool'
 year: '2026'
 timeframe: '2026 – now'
 status: 'active'

@@ -34,8 +34,10 @@ const work = (await getCollection('work')).sort(
             <a href={`/work/${entry.id}`}>
               <span class="idx">{String(i + 1).padStart(2, '0')}</span>
               <span class="name">{entry.data.title}</span>
+              <span class="category">{entry.data.category}</span>
               <span class="desc">{entry.data.tagline.toLowerCase()}</span>
               <span class="year">{entry.data.year}</span>
+              <span class="view-project">view project →</span>
             </a>
           </li>
         ))

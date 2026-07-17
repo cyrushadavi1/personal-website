@@ -19,9 +19,13 @@ const currentIndex = work.findIndex((item) => item.id === entry.id);
 const previous = currentIndex > 0 ? work[currentIndex - 1] : undefined;
 const next = currentIndex < work.length - 1 ? work[currentIndex + 1] : undefined;
 const showToc = headings.length >= 5;
+const sectionHeadings = headings.filter((heading) => heading.depth === 2);
+const visibleStack = entry.data.stack.slice(0, 3);
+const hiddenStack = entry.data.stack.slice(3);
 ---
 
 <Base
+  layout="work"
   title={`${entry.data.title} · Cyrus Hadavi`}
   description={entry.data.tagline}
   ogType="article"
@@ -40,67 +44,100 @@ const showToc = headings.length >= 5;
     keywords: entry.data.stack.join(', '),
   }}
 >
-  <p class="breadcrumb">
-    <a href="/">~</a>/<a href="/#work">work</a>/{entry.id}
-  </p>
-  <h1 class="page-title">{entry.data.title}</h1>
-  <p class="page-tagline">{entry.data.tagline}</p>
-  <div class="meta-row">
-    <span class="chip year-chip">{entry.data.timeframe}</span>
-    <span class="chip">{entry.data.status}</span>
-    <span class="chip">{entry.data.role}</span>
-    {entry.data.stack.map((item) => <span class="chip">{item}</span>)}
-    {
-      entry.data.links.map((link) => (
-        <a class="chip" href={link.url}>
-          {link.label} ↗
-        </a>
-      ))
-    }
-  </div>
-  <dl class="results-panel" aria-label="Project highlights">
-    {
-      entry.data.results.map((result) => (
-        <div>
-          <dt>{result.label}</dt>
-          <dd>{result.value}</dd>
+  <div id="top" class="case-study-layout">
+    <header class="case-study-intro">
+      <p class="breadcrumb">
+        <a href="/">~</a>/<a href="/#work">work</a>/{entry.id}
+      </p>
+      <h1 class="page-title">{entry.data.title}</h1>
+      <p class="page-tagline">{entry.data.tagline}</p>
+      <div class="meta-row">
+        <span class="chip year-chip">{entry.data.timeframe}</span>
+        <span class="chip">{entry.data.status}</span>
+        <span class="chip">{entry.data.role}</span>
+        {
+          entry.data.links.map((link) => (
+            <a class="chip" href={link.url}>
+              {link.label} ↗
+            </a>
+          ))
+        }
+      </div>
+      <div class="stack-row" aria-label="Technology stack">
+        <span class="stack-label">built with</span>
+        {entry.data.stack.map((item) => <span class="stack-chip">{item}</span>)}
+      </div>
+      <details class="stack-disclosure">
+        <summary>
+          <span class="stack-label">built with</span>
+          {visibleStack.map((item) => <span class="stack-chip">{item}</span>)}
+          {hiddenStack.length > 0 && <span class="more-tools">+{hiddenStack.length} tools</span>}
+        </summary>
+        <div class="stack-disclosure-panel">
+          {hiddenStack.map((item) => <span class="stack-chip">{item}</span>)}
         </div>
-      ))
-    }
-  </dl>
-  {
-    showToc && (
-      <nav class="article-toc" aria-label="On this page">
-        <p>on this page</p>
-        <ol>
-          {headings
-            .filter((heading) => heading.depth === 2)
-            .map((heading) => (
+      </details>
+      <dl class="results-panel" aria-label="Project highlights">
+        {
+          entry.data.results.map((result) => (
+            <div>
+              <dt>{result.label}</dt>
+              <dd>{result.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      {
+        showToc && (
+          <details class="toc-disclosure">
+            <summary>on this page</summary>
+            <nav class="article-toc" aria-label="On this page, mobile">
+              <ol>
+                {sectionHeadings.map((heading) => (
+                  <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+                ))}
+              </ol>
+            </nav>
+          </details>
+        )
+      }
+    </header>
+    {
+      showToc && (
+        <nav class="article-toc toc-rail" aria-label="On this page">
+          <p>on this page</p>
+          <ol>
+            {sectionHeadings.map((heading) => (
               <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
             ))}
-        </ol>
+          </ol>
+        </nav>
+      )
+    }
+    <article class="prose">
+      <Content />
+    </article>
+    <div class="article-finish">
+      <div class="article-end-mark" aria-hidden="true"><span>✦</span></div>
+      <a class="back-to-top" href="#top">back to top ↑</a>
+      <nav class="project-pagination" aria-label="More projects">
+        {
+          previous ? (
+            <a class="previous" href={`/work/${previous.id}`}>
+              <span>← previous</span>
+              <strong>{previous.data.title}</strong>
+            </a>
+          ) : <span />
+        }
+        {
+          next ? (
+            <a class="next" href={`/work/${next.id}`}>
+              <span>next →</span>
+              <strong>{next.data.title}</strong>
+            </a>
+          ) : <span />
+        }
       </nav>
-    )
-  }
-  <article class="prose">
-    <Content />
-  </article>
-  <nav class="project-pagination" aria-label="More projects">
-    {
-      previous ? (
-        <a class="previous" href={`/work/${previous.id}`}>
-          <span>← previous</span>
-          <strong>{previous.data.title}</strong>
-        </a>
-      ) : <span />
-    }
-    {
-      next ? (
-        <a class="next" href={`/work/${next.id}`}>
-          <span>next →</span>
-          <strong>{next.data.title}</strong>
-        </a>
-      ) : <span />
-    }
-  </nav>
+    </div>
+  </div>
 </Base>

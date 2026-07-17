@@ -11,6 +11,7 @@ interface Props {
   image?: string;
   ogType?: 'website' | 'article';
   schema?: Record<string, unknown>;
+  layout?: 'default' | 'work';
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   image = '/og-default.png',
   ogType = 'website',
   schema,
+  layout = 'default',
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -63,17 +65,43 @@ const jsonLd = schema ?? {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (() => {
+        document.documentElement.classList.add('js');
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+        const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+        const initialTheme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : systemTheme;
+        document.documentElement.dataset.theme = initialTheme;
+      })();
+    </script>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <body>
+  <body class={layout === 'work' ? 'work-layout' : undefined}>
     <div class="scanlines" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="home-link" href="/">~/cyrus.hadavi</a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <a href="/#work" class={path.startsWith('/work') ? 'active' : ''}>work</a>
         <a href="/about" class={path.startsWith('/about') ? 'active' : ''}>about</a>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to light theme"
+          aria-pressed="false"
+        ><span aria-hidden="true">◐</span></button>
       </nav>
+      {layout === 'work' && <span class="reading-progress" data-reading-progress aria-hidden="true"></span>}
     </header>
 
     <main>
@@ -91,5 +119,61 @@ const jsonLd = schema ?? {
         <span class="verse-tr">"capable is the one who is wise" · Ferdowsi</span>
       </p>
     </footer>
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const toggle = document.querySelector('[data-theme-toggle]');
+        const updateThemeButton = () => {
+          if (!(toggle instanceof HTMLButtonElement)) return;
+          const isLight = root.dataset.theme === 'light';
+          toggle.setAttribute('aria-pressed', String(isLight));
+          toggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
+        };
+
+        updateThemeButton();
+        toggle?.addEventListener('click', () => {
+          const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+          root.dataset.theme = nextTheme;
+          updateThemeButton();
+          try {
+            localStorage.setItem('theme', nextTheme);
+          } catch {
+            // The theme still works for this page when persistence is blocked.
+          }
+        });
+
+        const article = document.querySelector('.prose');
+        const progress = document.querySelector('[data-reading-progress]');
+        if (article instanceof HTMLElement && progress instanceof HTMLElement) {
+          const updateProgress = () => {
+            const start = article.offsetTop - window.innerHeight * 0.2;
+            const distance = Math.max(article.offsetHeight - window.innerHeight * 0.6, 1);
+            const value = Math.min(Math.max((window.scrollY - start) / distance, 0), 1);
+            progress.style.setProperty('--reading-progress', String(value));
+          };
+          updateProgress();
+          window.addEventListener('scroll', updateProgress, { passive: true });
+          window.addEventListener('resize', updateProgress);
+        }
+
+        document.querySelectorAll('[data-' + 'video-play]').forEach((button) => {
+          if (!(button instanceof HTMLButtonElement)) return;
+          const figure = button.closest('.media-figure');
+          const video = figure?.querySelector('video');
+          if (!(figure instanceof HTMLElement) || !(video instanceof HTMLVideoElement)) return;
+          const setPlaying = (isPlaying) => {
+            figure.classList.toggle('is-playing', isPlaying);
+            button.hidden = isPlaying;
+          };
+          button.addEventListener('click', () => {
+            video.play();
+            video.focus();
+          });
+          video.addEventListener('playing', () => setPlaying(true));
+          video.addEventListener('pause', () => setPlaying(false));
+          video.addEventListener('ended', () => setPlaying(false));
+        });
+      })();
+    </script>
   </body>
 </html>
