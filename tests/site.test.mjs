@@ -24,6 +24,10 @@ test('case studies surface evidence and provide article navigation', async () =>
   assert.match(html, /class="project-pagination"/);
   assert.match(html, /class="pipeline"/);
   assert.doesNotMatch(html, /class="pipeline"[^>]*role="img"/);
+  assert.match(
+    html,
+    /href="https:\/\/github\.com\/cyrushadavi1\/nba_video_analysis_v2"[^>]*>\s*github ↗\s*<\/a>/
+  );
 });
 
 test('video evidence is accessible and defers media loading', async () => {

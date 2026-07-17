@@ -23,7 +23,9 @@ results:
     value: '47% → <1%'
   - label: 'runtime'
     value: 'offline laptop'
-links: []
+links:
+  - label: github
+    url: 'https://github.com/cyrushadavi1/nba_video_analysis_v2'
 ---
 
 ## the problem
