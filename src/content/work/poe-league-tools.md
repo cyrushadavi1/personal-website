@@ -1,6 +1,6 @@
 ---
 title: 'Path of Exile League Tools'
-tagline: 'A ToS-safe leveling copilot for Path of Exile'
+tagline: 'A log-driven desktop assistant for Path of Exile league starts'
 category: 'desktop tool'
 year: '2026'
 timeframe: '2026 – now'
@@ -24,21 +24,21 @@ links:
     url: 'https://github.com/cyrushadavi1/poe-league-tools'
 ---
 
-## the problem
+## reducing manual work during league starts
 
 A Path of Exile league start is a race. The first hours set up your
 whole economy, and every minute alt tabbed to a wiki is a minute lost.
 Most gaming helpers solve this by reading game memory or injecting
 into the process, which is exactly how accounts get banned.
 
-## the constraint that shaped the design
+## designing within Path of Exile's automation rules
 
 The whole system reads exactly one thing: `Client.txt`, the plain text
 log the game writes and the developer explicitly allows reading. No
 memory access, no injection, no simulated input. Everything the tool
 knows, it infers from log lines.
 
-## how it works
+## system architecture and data flow
 
 A PyQt6 guide card floats over the game, watches the log, and auto
 advances through a full campaign route as you zone: every quest, skill
@@ -47,7 +47,7 @@ in a JSON route format. Global hotkeys cover the weird cases: step
 back, skip ahead, hide, or toggle click through so the card never eats
 a click meant for the game.
 
-## decoding the build format
+## decoding Path of Building data
 
 Path of Building codes, the community standard for sharing builds, are
 base64 wrapped zlib compressed XML. A decoder turns any code into an
@@ -55,13 +55,13 @@ act by act leveling sheet: gem links to buy, passive tree checkpoints,
 printable markdown. The same plan feeds gem reminders into the
 overlay, so the card knows which skills your build wants at each step.
 
-## shipped today
+## current capabilities
 
 The overlay, full campaign route, Path of Building decoder, leveling
 sheet, and build-aware gem reminders all work locally without reading
 game memory or automating input.
 
-## what's next
+## planned improvements
 
 The next experiments are an AI build advisor that compares patch notes
 against a build, and a meta-ranker over live ladder data from poe.ninja.

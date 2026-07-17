@@ -17,6 +17,51 @@ test('homepage presents readable projects and clear next actions', async () => {
   assert.match(html, /class="category">desktop tool<\/span>/i);
   assert.equal((html.match(/class="view-project"/g) ?? []).length, 2);
   assert.match(html, /view project →/i);
+  assert.match(
+    html,
+    /an offline pipeline for extracting structured data from basketball video/i
+  );
+  assert.match(
+    html,
+    /a log-driven desktop assistant for path of exile league starts/i
+  );
+});
+
+test('project headings describe the technical subject directly', async () => {
+  const nba = await read('dist/work/nba-video-analysis/index.html');
+  const poe = await read('dist/work/poe-league-tools/index.html');
+
+  for (const heading of [
+    'extracting structured game state from broadcast video',
+    'pipeline evolution',
+    'baseline player detection',
+    'maintaining player identities across frames',
+    'classifying teams using jersey colors',
+    'identifying players from jersey numbers and roster data',
+    'generalizing across broadcast feeds',
+    'preventing player identity collisions',
+    'validating court calibration with geometric checks',
+    'indexing and validating player trajectories',
+  ]) {
+    assert.match(nba, new RegExp(heading, 'i'));
+  }
+
+  for (const heading of [
+    'reducing manual work during league starts',
+    'designing within path of exile.s automation rules',
+    'system architecture and data flow',
+    'decoding path of building data',
+    'current capabilities',
+    'planned improvements',
+  ]) {
+    assert.match(poe, new RegExp(heading, 'i'));
+  }
+
+  assert.doesNotMatch(
+    nba,
+    /<h2[^>]*>[^<]*(night one|everything broke|pile up|stop trusting)/i
+  );
+  assert.doesNotMatch(poe, /<h2[^>]*>[^<]*(shipped today|what's next)/i);
 });
 
 test('global shell supports editorial typography and theme switching', async () => {
@@ -41,8 +86,8 @@ test('case studies surface evidence and provide article navigation', async () =>
   assert.match(html, /Detection AP50/);
   assert.match(html, /class="article-toc"/);
   assert.match(html, /class="project-pagination"/);
-  assert.match(html, /class="pipeline"/);
-  assert.doesNotMatch(html, /class="pipeline"[^>]*role="img"/);
+  assert.match(html, /class="pipeline-evolution"/);
+  assert.doesNotMatch(html, /class="pipeline-evolution"[^>]*role="img"/);
   assert.match(
     html,
     /href="https:\/\/github\.com\/cyrushadavi1\/nba_video_analysis_v2"[^>]*>\s*github ↗\s*<\/a>/
@@ -54,6 +99,62 @@ test('case studies surface evidence and provide article navigation', async () =>
   assert.match(html, /data-reading-progress/);
   assert.match(html, /class="back-to-top" href="#top"/);
   assert.match(html, /class="article-end-mark"/);
+});
+
+test('pipeline evolution exposes five complete stages without requiring media', async () => {
+  const html = await read('dist/work/nba-video-analysis/index.html');
+  const component = html.match(
+    /<div class="pipeline-evolution"[\s\S]*?<\/div>\s*<p>Almost every box/
+  )?.[0] ?? '';
+
+  assert.match(component, /data-pipeline-evolution/);
+  assert.match(
+    component,
+    /<input[^>]*type="range"[^>]*min="0"[^>]*max="4"[^>]*step="1"/
+  );
+  assert.equal(
+    (component.match(/class="pipeline-stage-fallback"/g) ?? []).length,
+    5
+  );
+  for (const title of [
+    'Basic detection',
+    'Tracking and court context',
+    'Player identification',
+    'Cross-broadcast hardening',
+    'Full-game reliability',
+  ]) {
+    assert.match(component, new RegExp(title, 'i'));
+  }
+  assert.equal((component.match(/why it changed/gi) ?? []).length, 5);
+  assert.match(component, /retained from earlier stages/i);
+  assert.match(component, /added at this stage/i);
+  assert.doesNotMatch(component, /<(video|img|picture)\b/i);
+
+  const stageJson = component.match(
+    /<script type="application\/json" data-pipeline-stages="">([\s\S]*?)<\/script>/
+  )?.[1];
+  assert.ok(stageJson);
+  const stages = JSON.parse(stageJson);
+  for (let index = 1; index < stages.length; index += 1) {
+    const previousLabels = stages[index - 1].blocks.map((block) => block.label);
+    const currentLabels = stages[index].blocks.map((block) => block.label);
+    for (const label of previousLabels) assert.ok(currentLabels.includes(label));
+  }
+  assert.ok(stages[1].blocks.some((block) => /court keypoints/i.test(block.label)));
+  assert.ok(stages[2].blocks.some((block) => block.label === 'jersey-number evidence'));
+  assert.ok(!stages[4].blocks.some((block) => /soccer OCR/i.test(block.label)));
+});
+
+test('pipeline range progressively enhances and announces the selected stage', async () => {
+  const html = await read('dist/work/nba-video-analysis/index.html');
+
+  assert.match(html, /range\.addEventListener\(['"]input['"]/);
+  assert.match(html, /Number\(range\.value\)/);
+  assert.match(html, /setAttribute\(['"]aria-valuetext['"]/);
+  assert.match(html, /blocks\.replaceChildren/);
+  assert.match(html, /classList\.add\(['"]is-enhanced['"]\)/);
+  assert.match(html, /announcement\.textContent/);
+  assert.match(html, /item\.setAttribute\(['"]aria-label['"]/);
 });
 
 test('case studies separate core metadata from responsive technology disclosure', async () => {
@@ -138,4 +239,19 @@ test('global styles provide focus, contrast, and responsive component rules', as
   assert.match(css, /\.media-figure \.video-play/);
   assert.match(css, /@media \(max-width: 1000px\)/);
   assert.match(css, /\.work-list \.view-project\s*\{[^}]*opacity:\s*1/s);
+  assert.match(css, /\.pipeline-evolution\s*\{/);
+  assert.match(css, /\.pipeline-control input\[type='range'\]/);
+  assert.match(css, /\.pipeline-stage-live\s*\{/);
+  assert.match(css, /\.pipeline-block\.is-new/);
+  assert.match(css, /\.pipeline-block\.is-inherited/);
+  assert.match(
+    css,
+    /\.pipeline-block\.is-inherited\s*\{[^}]*color:\s*var\(--muted\)/s
+  );
+  assert.match(css, /\.pipeline-range-labels\s*\{[^}]*color:\s*var\(--muted\)/s);
+  assert.match(
+    css,
+    /\.pipeline-evolution\.is-enhanced \.pipeline-fallback\s*\{[^}]*display:\s*none/s
+  );
+  assert.match(css, /@media \(max-width: 600px\)[\s\S]*\.pipeline-blocks/);
 });

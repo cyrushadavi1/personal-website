@@ -156,6 +156,68 @@ const jsonLd = schema ?? {
           window.addEventListener('resize', updateProgress);
         }
 
+        document.querySelectorAll('[data-' + 'pipeline-evolution]').forEach((evolution) => {
+          if (!(evolution instanceof HTMLElement)) return;
+          const range = evolution.querySelector('[data-pipeline-range]');
+          const stageData = evolution.querySelector('[data-pipeline-stages]');
+          const title = evolution.querySelector('[data-pipeline-title]');
+          const count = evolution.querySelector('[data-pipeline-count]');
+          const summary = evolution.querySelector('[data-pipeline-summary]');
+          const blocks = evolution.querySelector('[data-pipeline-blocks]');
+          const reasonLabel = evolution.querySelector('[data-pipeline-reason-label]');
+          const reason = evolution.querySelector('[data-pipeline-reason]');
+          const announcement = evolution.querySelector('[data-pipeline-announcement]');
+          if (
+            !(range instanceof HTMLInputElement) ||
+            !(stageData instanceof HTMLScriptElement) ||
+            !(title instanceof HTMLElement) ||
+            !(count instanceof HTMLElement) ||
+            !(summary instanceof HTMLElement) ||
+            !(blocks instanceof HTMLElement) ||
+            !(reasonLabel instanceof HTMLElement) ||
+            !(reason instanceof HTMLElement) ||
+            !(announcement instanceof HTMLElement)
+          ) return;
+
+          try {
+            const stages = JSON.parse(stageData.textContent || '[]');
+            if (!Array.isArray(stages) || stages.length !== 5) return;
+
+            const renderStage = (index, shouldAnnounce = true) => {
+              const stage = stages[index];
+              if (!stage || !Array.isArray(stage.blocks)) return;
+              const stageLabel = `Stage ${index + 1} of ${stages.length}: ${stage.title}`;
+              count.textContent = `stage ${index + 1} / ${stages.length}`;
+              title.textContent = stage.title;
+              summary.textContent = stage.summary;
+              reasonLabel.textContent = 'why it changed';
+              reason.textContent = stage.reason;
+              blocks.replaceChildren(
+                ...stage.blocks.map((block) => {
+                  const item = document.createElement('span');
+                  item.className = `pipeline-block ${block.added ? 'is-new' : 'is-inherited'}`;
+                  item.textContent = block.label;
+                  item.setAttribute('aria-label', `${block.label}; ${block.added ? 'added at this stage' : 'retained from earlier stages'}`);
+                  return item;
+                })
+              );
+              range.setAttribute('aria-valuetext', stageLabel);
+              range.style.setProperty(
+                '--pipeline-progress',
+                `${(index / (stages.length - 1)) * 100}%`
+              );
+              evolution.dataset.stage = String(index + 1);
+              if (shouldAnnounce) announcement.textContent = stageLabel;
+            };
+
+            renderStage(Number(range.value), false);
+            evolution.classList.add('is-enhanced');
+            range.addEventListener('input', () => renderStage(Number(range.value)));
+          } catch {
+            evolution.classList.remove('is-enhanced');
+          }
+        });
+
         document.querySelectorAll('[data-' + 'video-play]').forEach((button) => {
           if (!(button instanceof HTMLButtonElement)) return;
           const figure = button.closest('.media-figure');

@@ -1,6 +1,6 @@
 ---
 title: 'NBA Video Analysis'
-tagline: 'I taught my laptop to watch basketball'
+tagline: 'An offline pipeline for extracting structured data from basketball video'
 category: 'computer vision'
 year: '2026'
 timeframe: 'June 2026'
@@ -29,7 +29,7 @@ links:
     url: 'https://github.com/cyrushadavi1/nba_video_analysis_v2'
 ---
 
-## the problem
+## extracting structured game state from broadcast video
 
 A basketball broadcast is one moving camera, constant occlusion, and a
 ball about twenty pixels wide. The goal: turn that video into
@@ -41,24 +41,145 @@ this to sharpen my computer vision skills. I started from Roboflow's
 basketball tutorial and kept going every time something broke.
 Everything runs offline on a laptop, from public checkpoints only.
 
-## the pipeline, as it ended up
+## pipeline evolution
 
-<div class="pipeline">
-  <div class="pipeline-input">video</div>
-  <div class="pipeline-stages">
-    <p><strong>people</strong><span>YOLO11 → ByteTrack + stitching</span></p>
-    <p><strong>court</strong><span>keypoints → homography + sanity checks</span></p>
-    <p><strong>ball</strong><span>WASB heatmaps → Viterbi decoding</span></p>
-    <p><strong>teams</strong><span>HSV color + zero-shot referee detection</span></p>
-    <p><strong>names</strong><span>SmolVLM2 + roster fusion</span></p>
+<div class="pipeline-evolution" data-pipeline-evolution>
+  <div class="pipeline-control">
+    <label for="pipeline-stage">pipeline stage</label>
+    <input id="pipeline-stage" data-pipeline-range type="range" min="0" max="4" step="1" value="0" aria-valuetext="Stage 1 of 5: Basic detection" />
+    <div class="pipeline-range-labels" aria-hidden="true">
+      <span>detect</span><span>context</span><span>identify</span><span>harden</span><span>reliable</span>
+    </div>
+    <div class="pipeline-legend" aria-label="Pipeline block key">
+      <span><i class="pipeline-legend-swatch is-inherited" aria-hidden="true"></i>retained from earlier stages</span>
+      <span><i class="pipeline-legend-swatch is-new" aria-hidden="true"></i>added at this stage</span>
+    </div>
   </div>
-  <div class="pipeline-output">possession events<br />annotated video + minimap<br />DuckDB index</div>
+  <section class="pipeline-stage-live" data-pipeline-live aria-labelledby="pipeline-stage-title">
+    <header>
+      <span data-pipeline-count>stage 1 / 5</span>
+      <h3 id="pipeline-stage-title" data-pipeline-title>Basic detection</h3>
+    </header>
+    <p data-pipeline-summary>Detect people in each frame and draw player boxes.</p>
+    <div class="pipeline-blocks" data-pipeline-blocks>
+      <span class="pipeline-block is-new" aria-label="broadcast video; added at this stage">broadcast video</span>
+      <span class="pipeline-block is-new" aria-label="YOLO11 player detection; added at this stage">YOLO11 player detection</span>
+    </div>
+    <div class="pipeline-reason">
+      <strong data-pipeline-reason-label></strong>
+      <p data-pipeline-reason></p>
+    </div>
+  </section>
+  <p class="sr-only" data-pipeline-announcement aria-live="polite" aria-atomic="true"></p>
+  <script type="application/json" data-pipeline-stages>
+    [
+      {
+        "title": "Basic detection",
+        "summary": "Detect people in each frame and draw player boxes.",
+        "reason": "Detection alone cannot preserve identity across frames or produce structured game state.",
+        "blocks": [
+          { "label": "broadcast video", "added": true },
+          { "label": "YOLO11 player detection", "added": true }
+        ]
+      },
+      {
+        "title": "Tracking and court context",
+        "summary": "Maintain track identities and map players, teams, and the ball into court coordinates.",
+        "reason": "Unstable IDs and raw pixel positions are not useful enough for possession or movement analysis.",
+        "blocks": [
+          { "label": "broadcast video", "added": false },
+          { "label": "YOLO11 player detection", "added": false },
+          { "label": "ByteTrack + stitching", "added": true },
+          { "label": "court keypoints + homography", "added": true },
+          { "label": "WASB ball + jersey-color teams", "added": true }
+        ]
+      },
+      {
+        "title": "Player identification",
+        "summary": "Resolve track identities from jersey readings and roster evidence while allowing abstention.",
+        "reason": "The jersey reader produced confident number errors, so identity needed multiple independent signals.",
+        "blocks": [
+          { "label": "broadcast video", "added": false },
+          { "label": "YOLO11 player detection", "added": false },
+          { "label": "ByteTrack + stitching", "added": false },
+          { "label": "court keypoints + homography", "added": false },
+          { "label": "WASB ball + jersey-color teams", "added": false },
+          { "label": "jersey-number evidence", "added": true },
+          { "label": "roster + height + abstention", "added": true }
+        ]
+      },
+      {
+        "title": "Cross-broadcast hardening",
+        "summary": "Make the same pipeline work across feeds with different resolutions, frame rates, and uniforms.",
+        "reason": "A second broadcast exposed assumptions that had been invisible when testing on only one feed.",
+        "blocks": [
+          { "label": "broadcast video", "added": false },
+          { "label": "YOLO11 player detection", "added": false },
+          { "label": "ByteTrack + stitching", "added": false },
+          { "label": "court keypoints + homography", "added": false },
+          { "label": "WASB ball + jersey-color teams", "added": false },
+          { "label": "jersey-number evidence", "added": false },
+          { "label": "roster + height + abstention", "added": false },
+          { "label": "resolution + camera-motion handling", "added": true },
+          { "label": "contextual referee detection", "added": true }
+        ]
+      },
+      {
+        "title": "Full-game reliability",
+        "summary": "Reject identity collisions, validate calibration geometrically, smooth trajectories, and index the output.",
+        "reason": "Full-game batches exposed repeated false identities, misleading calibration metrics, and physically impossible movement.",
+        "blocks": [
+          { "label": "broadcast video", "added": false },
+          { "label": "YOLO11 player detection", "added": false },
+          { "label": "ByteTrack + stitching", "added": false },
+          { "label": "court keypoints + homography", "added": false },
+          { "label": "WASB ball + jersey-color teams", "added": false },
+          { "label": "jersey-number evidence", "added": false },
+          { "label": "roster + height + abstention", "added": false },
+          { "label": "resolution + camera-motion handling", "added": false },
+          { "label": "contextual referee detection", "added": false },
+          { "label": "SmolVLM2 jersey reading", "added": true },
+          { "label": "OSNet appearance veto", "added": true },
+          { "label": "geometric calibration checks", "added": true },
+          { "label": "RTS trajectory smoothing", "added": true },
+          { "label": "DuckDB index", "added": true }
+        ]
+      }
+    ]
+  </script>
+  <ol class="pipeline-fallback">
+    <li class="pipeline-stage-fallback">
+      <h3>Basic detection</h3>
+      <p>Video → YOLO11 → player boxes.</p>
+      <p><strong>why it changed:</strong> Detection alone cannot preserve identity across frames or produce structured game state.</p>
+    </li>
+    <li class="pipeline-stage-fallback">
+      <h3>Tracking and court context</h3>
+      <p>Add ByteTrack, court mapping, ball tracking, and team classification.</p>
+      <p><strong>why it changed:</strong> Unstable IDs and raw pixel positions are not useful enough for possession or movement analysis.</p>
+    </li>
+    <li class="pipeline-stage-fallback">
+      <h3>Player identification</h3>
+      <p>Add jersey reading, roster and height fusion, and evidence-based abstention.</p>
+      <p><strong>why it changed:</strong> The jersey reader produced confident number errors, so identity needed multiple independent signals.</p>
+    </li>
+    <li class="pipeline-stage-fallback">
+      <h3>Cross-broadcast hardening</h3>
+      <p>Add resolution normalization, camera-motion propagation, and contextual referee detection.</p>
+      <p><strong>why it changed:</strong> A second broadcast exposed assumptions that had been invisible when testing on only one feed.</p>
+    </li>
+    <li class="pipeline-stage-fallback">
+      <h3>Full-game reliability</h3>
+      <p>Add stronger jersey reading, appearance vetoes, geometric checks, trajectory smoothing, and DuckDB indexing.</p>
+      <p><strong>why it changed:</strong> Full-game batches exposed identity collisions, misleading calibration metrics, and physically impossible movement.</p>
+    </li>
+  </ol>
 </div>
 
 Almost every box replaced something fancier that lost a head-to-head
 eval. That was the real lesson.
 
-## night one: boxes around people
+## baseline player detection
 
 The tutorial's best models live behind a hosted API I didn't have a
 key for, so I rebuilt everything from public checkpoints: YOLO11 for
@@ -74,7 +195,7 @@ detection to AP50 0.97.
   <figcaption>Night one: boxes around people. No teams, no names, no ball.</figcaption>
 </figure>
 
-## tracking
+## maintaining player identities across frames
 
 ByteTrack keeps identities frame to frame, plus an offline stitching
 pass that re-joins dropped tracks. The metrics looked fine (MOTA
@@ -87,7 +208,7 @@ players swapped identities whenever they crossed paths.
   <figcaption>The debug overlay era: every track carries an ID and a confidence, and the header admits what the system can't see.</figcaption>
 </figure>
 
-## the histogram that beat the embedding model
+## classifying teams using jersey colors
 
 The tutorial clusters SigLIP embeddings to split the teams. That fell
 apart on the wide camera. What worked was embarrassingly simple: HSV
@@ -106,7 +227,7 @@ off later.
   <figcaption>Team-colored ellipses, jersey numbers, possession banner, and a live top-down minimap.</figcaption>
 </figure>
 
-## from numbers to names
+## identifying players from jersey numbers and roster data
 
 The best public jersey reader is fine-tuned on soccer, where numbers
 run 1 to 99. It had never seen a lone 0, so it read Jayson Tatum's #0
@@ -129,7 +250,7 @@ the system can say so.
   <figcaption>The Tatum clip. After roster fusion, the misread #0 resolves to Tatum, and tracks without enough evidence stay unlabeled.</figcaption>
 </figure>
 
-## a second game, and everything broke
+## generalizing across broadcast feeds
 
 All of this worked on a Celtics broadcast. On a Mavs feed, three
 things failed at once: the court model saw nothing at the old
@@ -144,7 +265,7 @@ second camera exposed them.
   <figcaption>The same pipeline on the second feed after the fixes, part of a 20-clip batch over the full game.</figcaption>
 </figure>
 
-## the Brandon Williams pile up
+## preventing player identity collisions
 
 On the full game, one Mavs bench player showed up in 14 of 20 clips.
 OCR misreads of several players all collapsed onto his number,
@@ -168,7 +289,7 @@ identifications to six clips.
   <figcaption>After the reader swap: Flagg gets his name back, Christie's #00 finally reads, and low-evidence tracks keep a plain number instead of guessing.</figcaption>
 </figure>
 
-## stop trusting error metrics
+## validating court calibration with geometric checks
 
 Some camera angles show only 4 to 6 court keypoints. A homography fit
 on those is exact, zero reprojection error, while putting the horizon
@@ -177,7 +298,7 @@ being right. I replaced it with geometric sanity checks (horizon
 placement, sane scale, keypoint spread) and propagated calibration
 through camera motion when keypoints go missing.
 
-## query it
+## indexing and validating player trajectories
 
 With everything in JSON I built a DuckDB index, and the first sanity
 query found players teleporting at 24 m/s. Aggregates looked fine;
