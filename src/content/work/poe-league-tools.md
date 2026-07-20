@@ -6,7 +6,7 @@ year: '2026'
 timeframe: '2026 – now'
 status: 'active'
 role: 'solo builder'
-order: 2
+order: 3
 stack:
   - Python
   - PyQt6

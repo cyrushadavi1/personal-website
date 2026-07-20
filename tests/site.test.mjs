@@ -7,15 +7,19 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 test('homepage presents readable projects and clear next actions', async () => {
   const html = await read('dist/index.html');
 
+  assert.match(html, /Rakhsh/);
   assert.match(html, /NBA Video Analysis/);
   assert.match(html, /Path of Exile League Tools/);
+  assert.ok(html.indexOf('NBA Video Analysis') < html.indexOf('Rakhsh'));
+  assert.ok(html.indexOf('Rakhsh') < html.indexOf('Path of Exile League Tools'));
   assert.match(html, /ranking systems · computer vision · applied llms/i);
   assert.match(html, /href="#work"[^>]*>explore the work/i);
   assert.match(html, /href="mailto:cyrus@hadavi.net"[^>]*>get in touch/i);
   assert.match(html, /class="nowrap-link"[^>]*>the longer version →<\/a>/i);
+  assert.match(html, /class="category">agent systems<\/span>/i);
   assert.match(html, /class="category">computer vision<\/span>/i);
   assert.match(html, /class="category">desktop tool<\/span>/i);
-  assert.equal((html.match(/class="view-project"/g) ?? []).length, 2);
+  assert.equal((html.match(/class="view-project"/g) ?? []).length, 3);
   assert.match(html, /view project →/i);
   assert.match(
     html,
@@ -25,11 +29,28 @@ test('homepage presents readable projects and clear next actions', async () => {
     html,
     /a log-driven desktop assistant for path of exile league starts/i
   );
+  assert.match(
+    html,
+    /an always-on personal operator with durable memory and bounded authority/i
+  );
 });
 
 test('project headings describe the technical subject directly', async () => {
+  const rakhsh = await read('dist/work/rakhsh/index.html');
   const nba = await read('dist/work/nba-video-analysis/index.html');
   const poe = await read('dist/work/poe-league-tools/index.html');
+
+  for (const heading of [
+    'building an always-on operator around imessage',
+    'separating reasoning from authority',
+    'making work survive process failure',
+    'binding approvals to exact operations',
+    'designing memory that gets sharper over time',
+    'keeping the tool surface small',
+    'current alpha and the next security boundary',
+  ]) {
+    assert.match(rakhsh, new RegExp(heading, 'i'));
+  }
 
   for (const heading of [
     'extracting structured game state from broadcast video',
@@ -99,6 +120,18 @@ test('case studies surface evidence and provide article navigation', async () =>
   assert.match(html, /data-reading-progress/);
   assert.match(html, /class="back-to-top" href="#top"/);
   assert.match(html, /class="article-end-mark"/);
+});
+
+test('rakhsh case study presents verified system evidence without exposing its private repository', async () => {
+  const html = await read('dist/work/rakhsh/index.html');
+
+  assert.match(html, /class="results-panel"/);
+  assert.match(html, /696 tests/i);
+  assert.match(html, /SQLite WAL/);
+  assert.match(html, /Codex App Server/);
+  assert.match(html, /class="article-toc"/);
+  assert.match(html, /class="project-pagination"/);
+  assert.doesNotMatch(html, /github\.com\/cyrushadavi1\/rakhsh/i);
 });
 
 test('pipeline evolution exposes five complete stages without requiring media', async () => {
@@ -199,6 +232,7 @@ test('pages include canonical, social, and structured metadata', async () => {
   for (const page of [
     'dist/index.html',
     'dist/about/index.html',
+    'dist/work/rakhsh/index.html',
     'dist/work/nba-video-analysis/index.html',
     'dist/work/poe-league-tools/index.html',
   ]) {
@@ -219,6 +253,7 @@ test('search-engine discovery files are generated', async () => {
 
   assert.match(sitemap, /https:\/\/kuros\.io\/work\/nba-video-analysis\/<\/loc>/);
   assert.match(sitemap, /https:\/\/kuros\.io\/work\/poe-league-tools\/<\/loc>/);
+  assert.match(sitemap, /https:\/\/kuros\.io\/work\/rakhsh\/<\/loc>/);
   assert.match(robots, /Sitemap: https:\/\/kuros\.io\/sitemap\.xml/);
 });
 
