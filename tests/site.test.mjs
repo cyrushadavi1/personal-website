@@ -35,6 +35,16 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
+test('pages and structured data use the Kuros Persian spelling', async () => {
+  const homepage = await read('dist/index.html');
+  const about = await read('dist/about/index.html');
+
+  assert.match(homepage, /کوروس/);
+  assert.match(about, /کوروس/);
+  assert.doesNotMatch(homepage, /کوروش/);
+  assert.doesNotMatch(about, /کوروش/);
+});
+
 test('project headings describe the technical subject directly', async () => {
   const rakhsh = await read('dist/work/rakhsh/index.html');
   const nba = await read('dist/work/nba-video-analysis/index.html');
