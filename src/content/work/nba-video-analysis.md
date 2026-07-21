@@ -1,6 +1,6 @@
 ---
 title: 'NBA Video Analysis'
-tagline: 'An offline pipeline for extracting structured data from basketball video'
+tagline: 'Teaching a laptop to watch NBA broadcasts and abstain when it cannot tell who is who'
 category: 'computer vision'
 year: '2026'
 timeframe: 'June 2026'
@@ -41,40 +41,48 @@ this to sharpen my computer vision skills. I started from Roboflow's
 basketball tutorial and kept going every time something broke.
 Everything runs offline on a laptop, from public checkpoints only.
 
+The short version: every model in this pipeline lies with confidence.
+The jersey reader called Jayson Tatum's #0 an #8 at 98% confidence,
+every single time. The system only got good when each stage had to
+show its evidence or abstain. The rest of this page is how I learned
+that.
+
 ## pipeline evolution
+
+Almost every box below replaced something fancier that lost a
+head-to-head eval. That was the real lesson, and the slider starts at
+the final stage so you can scrub backward and watch the pipeline
+un-build itself.
 
 <div class="pipeline-evolution" data-pipeline-evolution>
   <div class="pipeline-control">
     <label for="pipeline-stage">pipeline stage</label>
-    <input id="pipeline-stage" data-pipeline-range type="range" min="0" max="4" step="1" value="0" aria-valuetext="Stage 1 of 5: Basic detection" />
+    <input id="pipeline-stage" data-pipeline-range type="range" min="0" max="4" step="1" value="4" aria-valuetext="Stage 5 of 5: full-game reliability" />
     <div class="pipeline-range-labels" aria-hidden="true">
       <span>detect</span><span>context</span><span>identify</span><span>harden</span><span>reliable</span>
     </div>
-    <div class="pipeline-legend" aria-label="Pipeline block key">
+    <div class="pipeline-legend">
       <span><i class="pipeline-legend-swatch is-inherited" aria-hidden="true"></i>retained from earlier stages</span>
       <span><i class="pipeline-legend-swatch is-new" aria-hidden="true"></i>added at this stage</span>
     </div>
   </div>
   <section class="pipeline-stage-live" data-pipeline-live aria-labelledby="pipeline-stage-title">
     <header>
-      <span data-pipeline-count>stage 1 / 5</span>
-      <h3 id="pipeline-stage-title" data-pipeline-title>Basic detection</h3>
+      <span data-pipeline-count>stage 5 / 5</span>
+      <h3 id="pipeline-stage-title" data-pipeline-title>full-game reliability</h3>
     </header>
-    <p data-pipeline-summary>Detect people in each frame and draw player boxes.</p>
-    <div class="pipeline-blocks" data-pipeline-blocks>
-      <span class="pipeline-block is-new" aria-label="broadcast video; added at this stage">broadcast video</span>
-      <span class="pipeline-block is-new" aria-label="YOLO11 player detection; added at this stage">YOLO11 player detection</span>
-    </div>
+    <p data-pipeline-summary>Reject identity collisions, validate calibration geometrically, smooth trajectories, and index the output.</p>
+    <!-- populated by the page script before this section becomes visible -->
+    <div class="pipeline-blocks" data-pipeline-blocks></div>
     <div class="pipeline-reason">
       <strong data-pipeline-reason-label></strong>
       <p data-pipeline-reason></p>
     </div>
   </section>
-  <p class="sr-only" data-pipeline-announcement aria-live="polite" aria-atomic="true"></p>
   <script type="application/json" data-pipeline-stages>
     [
       {
-        "title": "Basic detection",
+        "title": "basic detection",
         "summary": "Detect people in each frame and draw player boxes.",
         "reason": "Detection alone cannot preserve identity across frames or produce structured game state.",
         "blocks": [
@@ -83,7 +91,7 @@ Everything runs offline on a laptop, from public checkpoints only.
         ]
       },
       {
-        "title": "Tracking and court context",
+        "title": "tracking and court context",
         "summary": "Maintain track identities and map players, teams, and the ball into court coordinates.",
         "reason": "Unstable IDs and raw pixel positions are not useful enough for possession or movement analysis.",
         "blocks": [
@@ -95,7 +103,7 @@ Everything runs offline on a laptop, from public checkpoints only.
         ]
       },
       {
-        "title": "Player identification",
+        "title": "player identification",
         "summary": "Resolve track identities from jersey readings and roster evidence while allowing abstention.",
         "reason": "The jersey reader produced confident number errors, so identity needed multiple independent signals.",
         "blocks": [
@@ -109,7 +117,7 @@ Everything runs offline on a laptop, from public checkpoints only.
         ]
       },
       {
-        "title": "Cross-broadcast hardening",
+        "title": "cross-broadcast hardening",
         "summary": "Make the same pipeline work across feeds with different resolutions, frame rates, and uniforms.",
         "reason": "A second broadcast exposed assumptions that had been invisible when testing on only one feed.",
         "blocks": [
@@ -125,7 +133,7 @@ Everything runs offline on a laptop, from public checkpoints only.
         ]
       },
       {
-        "title": "Full-game reliability",
+        "title": "full-game reliability",
         "summary": "Reject identity collisions, validate calibration geometrically, smooth trajectories, and index the output.",
         "reason": "Full-game batches exposed repeated false identities, misleading calibration metrics, and physically impossible movement.",
         "blocks": [
@@ -149,35 +157,32 @@ Everything runs offline on a laptop, from public checkpoints only.
   </script>
   <ol class="pipeline-fallback">
     <li class="pipeline-stage-fallback">
-      <h3>Basic detection</h3>
+      <h3>basic detection</h3>
       <p>Video → YOLO11 → player boxes.</p>
       <p><strong>why it changed:</strong> Detection alone cannot preserve identity across frames or produce structured game state.</p>
     </li>
     <li class="pipeline-stage-fallback">
-      <h3>Tracking and court context</h3>
+      <h3>tracking and court context</h3>
       <p>Add ByteTrack, court mapping, ball tracking, and team classification.</p>
       <p><strong>why it changed:</strong> Unstable IDs and raw pixel positions are not useful enough for possession or movement analysis.</p>
     </li>
     <li class="pipeline-stage-fallback">
-      <h3>Player identification</h3>
+      <h3>player identification</h3>
       <p>Add jersey reading, roster and height fusion, and evidence-based abstention.</p>
       <p><strong>why it changed:</strong> The jersey reader produced confident number errors, so identity needed multiple independent signals.</p>
     </li>
     <li class="pipeline-stage-fallback">
-      <h3>Cross-broadcast hardening</h3>
+      <h3>cross-broadcast hardening</h3>
       <p>Add resolution normalization, camera-motion propagation, and contextual referee detection.</p>
       <p><strong>why it changed:</strong> A second broadcast exposed assumptions that had been invisible when testing on only one feed.</p>
     </li>
     <li class="pipeline-stage-fallback">
-      <h3>Full-game reliability</h3>
+      <h3>full-game reliability</h3>
       <p>Add stronger jersey reading, appearance vetoes, geometric checks, trajectory smoothing, and DuckDB indexing.</p>
       <p><strong>why it changed:</strong> Full-game batches exposed identity collisions, misleading calibration metrics, and physically impossible movement.</p>
     </li>
   </ol>
 </div>
-
-Almost every box replaced something fancier that lost a head-to-head
-eval. That was the real lesson.
 
 ## baseline player detection
 
@@ -309,4 +314,5 @@ shot quality.
 
 The models were never the hard part. Every component lies to you in
 its own way, and the system only got good when each stage had to show
-its evidence or abstain.
+its evidence or abstain. The head-to-head evals were how each stage
+got caught lying.

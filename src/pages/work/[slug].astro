@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Khatam from '../../components/Khatam.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('work');
@@ -29,6 +30,8 @@ const hiddenStack = entry.data.stack.slice(3);
   title={`${entry.data.title} · Cyrus Hadavi`}
   description={entry.data.tagline}
   ogType="article"
+  image={`/og/${entry.id}.png`}
+  imageAlt={`${entry.data.title} · ${entry.data.tagline}`}
   schema={{
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
@@ -44,26 +47,26 @@ const hiddenStack = entry.data.stack.slice(3);
     keywords: entry.data.stack.join(', '),
   }}
 >
-  <div id="top" class="case-study-layout">
+  <div id="top" class={`case-study-layout${showToc ? '' : ' no-toc'}`}>
     <header class="case-study-intro">
       <p class="breadcrumb">
         <a href="/">~</a>/<a href="/#work">work</a>/{entry.id}
       </p>
-      <h1 class="page-title">{entry.data.title}</h1>
+      <h1 class="page-title" style={`view-transition-name: work-title-${entry.id}`}>{entry.data.title}</h1>
       <p class="page-tagline">{entry.data.tagline}</p>
       <div class="meta-row">
-        <span class="chip year-chip">{entry.data.timeframe}</span>
+        <span class="year-chip">{entry.data.timeframe}</span>
         <span class="chip">{entry.data.status}</span>
         <span class="chip">{entry.data.role}</span>
         {
           entry.data.links.map((link) => (
-            <a class="chip" href={link.url}>
-              {link.label} ↗
+            <a class="chip link-chip" href={link.url}>
+              {link.label} <span aria-hidden="true">↗</span>
             </a>
           ))
         }
       </div>
-      <div class="stack-row" aria-label="Technology stack">
+      <div class="stack-row">
         <span class="stack-label">built with</span>
         {entry.data.stack.map((item) => <span class="stack-chip">{item}</span>)}
       </div>
@@ -77,7 +80,7 @@ const hiddenStack = entry.data.stack.slice(3);
           {hiddenStack.map((item) => <span class="stack-chip">{item}</span>)}
         </div>
       </details>
-      <dl class="results-panel" aria-label="Project highlights">
+      <dl class="results-panel">
         {
           entry.data.results.map((result) => (
             <div>
@@ -118,12 +121,12 @@ const hiddenStack = entry.data.stack.slice(3);
       <Content />
     </article>
     <div class="article-finish">
-      <div class="article-end-mark" aria-hidden="true"><span>✦</span></div>
+      <div class="article-end-mark" aria-hidden="true"><Khatam size={18} /></div>
       <a class="back-to-top" href="#top">back to top ↑</a>
       <nav class="project-pagination" aria-label="More projects">
         {
           previous ? (
-            <a class="previous" href={`/work/${previous.id}`}>
+            <a class="previous" href={`/work/${previous.id}/`}>
               <span>← previous</span>
               <strong>{previous.data.title}</strong>
             </a>
@@ -131,7 +134,7 @@ const hiddenStack = entry.data.stack.slice(3);
         }
         {
           next ? (
-            <a class="next" href={`/work/${next.id}`}>
+            <a class="next" href={`/work/${next.id}/`}>
               <span>next →</span>
               <strong>{next.data.title}</strong>
             </a>
@@ -140,4 +143,133 @@ const hiddenStack = entry.data.stack.slice(3);
       </nav>
     </div>
   </div>
+  <script>
+    // Reading progress under the sticky header.
+    const article = document.querySelector('.prose');
+    const progress = document.querySelector('[data-reading-progress]');
+    if (article instanceof HTMLElement && progress instanceof HTMLElement) {
+      const updateProgress = () => {
+        const start = article.offsetTop - window.innerHeight * 0.2;
+        const distance = Math.max(article.offsetHeight - window.innerHeight * 0.6, 1);
+        const value = Math.min(Math.max((window.scrollY - start) / distance, 0), 1);
+        progress.style.setProperty('--reading-progress', String(value));
+      };
+      updateProgress();
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+    }
+
+    // Scrollspy for the table-of-contents rail.
+    const tocLinks = [...document.querySelectorAll('.toc-rail a[href^="#"]')];
+    if (tocLinks.length > 0 && 'IntersectionObserver' in window) {
+      const linkFor = new Map(
+        tocLinks.map((link) => [decodeURIComponent(link.hash.slice(1)), link])
+      );
+      let activeLink: Element | null = null;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const observed of entries) {
+            if (!observed.isIntersecting) continue;
+            const link = linkFor.get(observed.target.id);
+            if (!link || link === activeLink) continue;
+            activeLink?.classList.remove('is-active');
+            link.classList.add('is-active');
+            activeLink = link;
+          }
+        },
+        { rootMargin: '-15% 0px -70% 0px' }
+      );
+      for (const id of linkFor.keys()) {
+        const heading = document.getElementById(id);
+        if (heading) observer.observe(heading);
+      }
+    }
+
+    // Pipeline evolution slider.
+    document.querySelectorAll('[data-pipeline-evolution]').forEach((evolution) => {
+      if (!(evolution instanceof HTMLElement)) return;
+      const range = evolution.querySelector('[data-pipeline-range]');
+      const stageData = evolution.querySelector('[data-pipeline-stages]');
+      const title = evolution.querySelector('[data-pipeline-title]');
+      const count = evolution.querySelector('[data-pipeline-count]');
+      const summary = evolution.querySelector('[data-pipeline-summary]');
+      const blocks = evolution.querySelector('[data-pipeline-blocks]');
+      const reasonLabel = evolution.querySelector('[data-pipeline-reason-label]');
+      const reason = evolution.querySelector('[data-pipeline-reason]');
+      if (
+        !(range instanceof HTMLInputElement) ||
+        !(stageData instanceof HTMLScriptElement) ||
+        !(title instanceof HTMLElement) ||
+        !(count instanceof HTMLElement) ||
+        !(summary instanceof HTMLElement) ||
+        !(blocks instanceof HTMLElement) ||
+        !(reasonLabel instanceof HTMLElement) ||
+        !(reason instanceof HTMLElement)
+      ) return;
+
+      try {
+        const stages = JSON.parse(stageData.textContent || '[]');
+        if (!Array.isArray(stages) || stages.length !== 5) return;
+
+        const renderStage = (index: number) => {
+          const stage = stages[index];
+          if (!stage || !Array.isArray(stage.blocks)) return;
+          const stageLabel = `Stage ${index + 1} of ${stages.length}: ${stage.title}`;
+          count.textContent = `stage ${index + 1} / ${stages.length}`;
+          title.textContent = stage.title;
+          summary.textContent = stage.summary;
+          reasonLabel.textContent = 'why it changed';
+          reason.textContent = stage.reason;
+          blocks.replaceChildren(
+            ...stage.blocks.map((block: { label: string; added: boolean }) => {
+              const item = document.createElement('span');
+              item.className = `pipeline-block ${block.added ? 'is-new' : 'is-inherited'}`;
+              item.textContent = block.label;
+              const state = document.createElement('span');
+              state.className = 'sr-only';
+              state.textContent = block.added
+                ? ', added at this stage'
+                : ', retained from earlier stages';
+              item.append(state);
+              return item;
+            })
+          );
+          range.setAttribute('aria-valuetext', stageLabel);
+          range.style.setProperty(
+            '--pipeline-progress',
+            `${(index / (stages.length - 1)) * 100}%`
+          );
+          evolution.dataset.stage = String(index + 1);
+        };
+
+        renderStage(Number(range.value));
+        evolution.classList.add('is-enhanced');
+        range.addEventListener('input', () => renderStage(Number(range.value)));
+      } catch {
+        evolution.classList.remove('is-enhanced');
+      }
+    });
+
+    // Poster overlay play buttons for the demo videos.
+    document.querySelectorAll('[data-video-play]').forEach((button) => {
+      if (!(button instanceof HTMLButtonElement)) return;
+      const figure = button.closest('.media-figure');
+      const video = figure?.querySelector('video');
+      if (!(figure instanceof HTMLElement) || !(video instanceof HTMLVideoElement)) return;
+      const setPlaying = (isPlaying: boolean) => {
+        figure.classList.toggle('is-playing', isPlaying);
+        button.hidden = isPlaying;
+      };
+      button.addEventListener('click', () => {
+        video
+          .play()
+          .then(() => video.focus())
+          .catch(() => {
+            // Leave the overlay in place; the native controls still work.
+          });
+      });
+      video.addEventListener('playing', () => setPlaying(true));
+      video.addEventListener('pause', () => setPlaying(false));
+    });
+  </script>
 </Base>

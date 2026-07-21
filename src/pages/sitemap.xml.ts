@@ -4,7 +4,15 @@ export const prerender = true;
 
 export async function GET() {
   const work = await getCollection('work');
-  const paths = ['/', '/about/', ...work.map((entry) => `/work/${entry.id}/`)];
+  const notes = await getCollection('notes');
+  const paths = [
+    '/',
+    '/about/',
+    '/notes/',
+    '/colophon/',
+    ...work.map((entry) => `/work/${entry.id}/`),
+    ...notes.map((entry) => `/notes/${entry.id}/`),
+  ];
   const urls = paths
     .map((path) => `  <url><loc>${new URL(path, 'https://kuros.io')}</loc></url>`)
     .join('\n');

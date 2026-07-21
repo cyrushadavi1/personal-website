@@ -1,8 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import Khatam from '../components/Khatam.astro';
 
-const work = (await getCollection('work')).sort(
+const allWork = (await getCollection('work')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const work = allWork.filter((entry) => entry.data.featured);
+const alsoWork = allWork.filter((entry) => !entry.data.featured);
+const notes = (await getCollection('notes')).sort(
   (a, b) => a.data.order - b.data.order
 );
 ---
@@ -11,47 +17,82 @@ const work = (await getCollection('work')).sort(
   <section class="hero">
     <p class="prompt-line"><span class="prompt">~</span> whoami</p>
     <h1>Cyrus Hadavi<span class="cursor" aria-hidden="true"></span></h1>
-    <p class="name-fa" lang="fa" dir="rtl">کوروس</p>
+    <p class="name-fa"><span lang="fa" dir="rtl">کوروس</span></p>
     <p class="tagline">
-      I build ML systems that rank ads for billions of people. On the side,
-      I build systems that keep working after I put my phone down, watch
-      basketball, turn game logs into useful guidance, and know when to ask.
+      I build ranking systems that serve billions of people at Meta. On the
+      side I build things that keep working while I sleep: an agent I text
+      over iMessage, a pipeline that watches NBA broadcasts, a leveling
+      copilot for Path of Exile. One rule everywhere: show your evidence
+      or abstain.
     </p>
     <p class="role">staff software engineer · ads ranking ai @ meta · new york</p>
-    <p class="specialties">ranking systems · computer vision · applied LLMs</p>
-    <div class="hero-actions" aria-label="Primary links">
-      <a class="button-link primary" href="#work">explore the work ↓</a>
-      <a class="button-link" href="mailto:cyrus@hadavi.net">get in touch ↗</a>
+    <p class="specialties">ranking systems · agent systems · computer vision · evals</p>
+    <div class="hero-actions">
+      <a class="button-link primary" href="#work">explore the work <span aria-hidden="true">↓</span></a>
+      <a class="button-link" href="mailto:cyrus@hadavi.net">get in touch <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
   <section id="work">
-    <h2 class="section-rule"><span class="star">✦</span> selected work</h2>
+    <h2 class="section-rule"><span class="star"><Khatam /></span> selected work</h2>
     <ol class="work-list">
       {
         work.map((entry, i) => (
           <li>
-            <a href={`/work/${entry.id}`}>
+            <a href={`/work/${entry.id}/`}>
               <span class="idx">{String(i + 1).padStart(2, '0')}</span>
-              <span class="name">{entry.data.title}</span>
+              <span class="name" style={`view-transition-name: work-title-${entry.id}`}>{entry.data.title}</span>
               <span class="category">{entry.data.category}</span>
               <span class="desc">{entry.data.tagline.toLowerCase()}</span>
               <span class="year">{entry.data.year}</span>
-              <span class="view-project">view project →</span>
+              <span class="view-project">view project <span aria-hidden="true">→</span></span>
             </a>
           </li>
         ))
       }
     </ol>
+    {
+      alsoWork.length > 0 && (
+        <ul class="also-list">
+          {alsoWork.map((entry) => (
+            <li>
+              <a href={`/work/${entry.id}/`}>
+                <span class="also-label">also</span>
+                <span class="name" style={`view-transition-name: work-title-${entry.id}`}>{entry.data.title}</span>
+                <span class="desc">{entry.data.tagline.toLowerCase()}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </section>
 
+  {
+    notes.length > 0 && (
+      <section id="notes">
+        <h2 class="section-rule"><span class="star"><Khatam /></span> notes</h2>
+        <ol class="notes-list">
+          {notes.map((entry) => (
+            <li>
+              <a href={`/notes/${entry.id}/`}>
+                <span class="name">{entry.data.title}</span>
+                <span class="desc">{entry.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
   <section>
-    <h2 class="section-rule"><span class="star">✦</span> about</h2>
-    <p style="max-width: var(--measure);">
+    <h2 class="section-rule"><span class="star"><Khatam /></span> about</h2>
+    <p class="section-teaser">
       A decade of ML across Meta, Google, HBO Max, and Microsoft.
-      Recommenders, ML platforms, and two years leading an ads-ranking
-      team before returning to hands-on technical work.
-      <a class="nowrap-link" href="/about">the longer version →</a>
+      Recommenders, ML platforms, and two years leading a 15 engineer
+      ads ranking team before going back to building things myself.
+      <a class="nowrap-link" href="/about/">the longer version →</a>
     </p>
   </section>
 </Base>

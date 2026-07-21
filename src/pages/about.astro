@@ -2,37 +2,56 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="about · Cyrus Hadavi">
+<Base
+  title="about · Cyrus Hadavi"
+  description="Staff software engineer at Meta, ads ranking AI. A decade of ranking and recommender systems, four years of engineering management, back to building since May 2026."
+>
   <p class="breadcrumb"><a href="/">~</a>/about</p>
   <h1 class="page-title">about</h1>
 
   <article class="prose">
     <p>
-      I'm Cyrus (<span lang="fa" dir="rtl">کوروس</span>, the name is
-      Persian), a staff software engineer at Meta in New York, working
-      on ads ranking AI.
+      I'm Cyrus (<span lang="fa" dir="rtl">کوروس</span>, Kuros in Persian,
+      which is where the domain comes from), a staff software engineer at
+      Meta in New York, working on ads ranking AI.
     </p>
     <p>
-      I specialize in ranking systems, recommender systems, and the
-      infrastructure that makes applied ML reliable. Over the past decade,
-      that has included recommenders at Dollar Shave Club, LLM fine-tuning
-      at Google, the ML platform at HBO Max, and ranking models that serve
-      billions of people at Meta.
+      My lane is ranking systems, recommenders, and the infrastructure
+      that keeps applied ML honest. Over the past decade that has included
+      recommenders at Dollar Shave Club, LLM fine-tuning at Google, the
+      ML platform at HBO Max, and ranking models that serve billions of
+      people at Meta.
     </p>
     <p>
-      I also spent four years in engineering management, including two
-      years leading a 15-engineer ads-ranking team at Meta. In May 2026,
-      I returned to an individual-contributor role to focus on hands-on
-      technical leadership: building systems, setting direction, and
-      helping teams make better engineering decisions.
+      I also spent four years in engineering management, the last two
+      running a 15 engineer ads ranking team at Meta. In May 2026 I went
+      back to building on purpose. The first month back I shipped a
+      computer vision pipeline for NBA broadcast video; the next, an
+      always-on agent that takes orders over iMessage. Management
+      taught me what unreliable systems cost a team, which is probably
+      why everything I build now has to show its evidence or abstain.
+    </p>
+
+    <h2>ranking at meta scale</h2>
+    <p>
+      The specifics of the ads work are Meta's, but the shape of the
+      problems is public: calibration under delayed and biased feedback,
+      exploration against a live auction, multi-task value models,
+      latency budgets measured in milliseconds, and launch discipline
+      where every change has to prove itself against a holdout. A decade
+      of ranking and recommender work, the recent stretch at that scale,
+      turns out to be good preparation for frontier model work, because
+      reward models are ranking models. Pairwise preference, calibration,
+      evals that catch a model being confidently wrong: same math,
+      higher stakes.
     </p>
 
     <h2>the path here</h2>
     <ol class="career-timeline">
-      <li><span class="timeline-date">2026 – now</span><strong>Meta</strong><span>Staff SWE, ads ranking AI</span></li>
+      <li><span class="timeline-date">2026 – now</span><strong>Meta</strong><span>Staff SWE, ads ranking AI · back to building</span></li>
       <li><span class="timeline-date">2024 – 2026</span><strong>Meta</strong><span>Engineering Manager, ML</span></li>
       <li><span class="timeline-date">2022 – 2024</span><strong>HBO Max</strong><span>Engineering Manager, ML platform</span></li>
-      <li><span class="timeline-date">2020 – 2022</span><strong>Google</strong><span>Senior SWE, ML</span></li>
+      <li><span class="timeline-date">2020 – 2022</span><strong>Google</strong><span>Senior SWE, ML · LLM fine-tuning</span></li>
       <li><span class="timeline-date">2019 – 2020</span><strong>Dollar Shave Club</strong><span>Lead ML Engineer</span></li>
       <li><span class="timeline-date">2017 – 2018</span><strong>Facebook</strong><span>Data Scientist</span></li>
       <li><span class="timeline-date">2015 – 2017</span><strong>Hulu</strong><span>Data Scientist</span></li>
@@ -42,27 +61,32 @@ import Base from '../layouts/Base.astro';
 
     <h2>off the clock</h2>
     <p>
-      I build things that don't need a roadmap review: a computer
-      vision pipeline that <a href="/work/nba-video-analysis">watches
-      NBA games from broadcast video</a>, a
-      <a href="/work/poe-league-tools">leveling copilot for Path of
-      Exile</a>, and a rotating cast of LLM experiments.
+      I build things that don't need a roadmap review: an
+      <a href="/work/rakhsh/">always-on agent that takes orders over
+      iMessage</a>, a computer vision pipeline that
+      <a href="/work/nba-video-analysis/">watches NBA games from
+      broadcast video</a>, and a
+      <a href="/work/poe-league-tools/">leveling copilot for Path of
+      Exile</a>.
     </p>
     <p>
       The common thread: systems that are honest about what they know.
-      Models that abstain instead of guessing.
+      Models that abstain instead of guessing, and agents whose authority
+      is bounded by structure, not by politeness. As AI systems get real
+      autonomy, I think that stops being taste and starts being safety.
     </p>
 
     <aside class="contact-callout">
-      <p>Working on a difficult ML system or an experiment that needs a skeptical second set of eyes?</p>
-      <a class="button-link primary" href="mailto:cyrus@hadavi.net">get in touch ↗</a>
+      <p>If you're building frontier ML systems and this way of thinking resonates, my inbox is open.</p>
+      <a class="button-link primary" href="mailto:cyrus@hadavi.net">get in touch <span aria-hidden="true">↗</span></a>
     </aside>
 
     <h2>elsewhere</h2>
     <p>
       <a href="mailto:cyrus@hadavi.net">cyrus@hadavi.net</a> ·
       <a href="https://github.com/cyrushadavi1">github</a> ·
-      <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a>
+      <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a> ·
+      <a href="/resume.pdf">resume</a>
     </p>
   </article>
 </Base>

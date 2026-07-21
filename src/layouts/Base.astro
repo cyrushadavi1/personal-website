@@ -1,27 +1,33 @@
 ---
-import '@fontsource/jetbrains-mono/400.css';
-import '@fontsource/jetbrains-mono/500.css';
-import '@fontsource/jetbrains-mono/700.css';
-import '@fontsource/vazirmatn/400.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-700.css';
+import '@fontsource/vazirmatn/arabic-400.css';
 import '../styles/global.css';
+import jbmRegular from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url';
+import jbmBold from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2?url';
+import vazirArabic from '@fontsource/vazirmatn/files/vazirmatn-arabic-400-normal.woff2?url';
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   ogType?: 'website' | 'article';
   schema?: Record<string, unknown>;
   layout?: 'default' | 'work';
+  noindex?: boolean;
 }
 
 const {
   title = 'Cyrus Hadavi · AI engineer',
   description =
-    'Staff software engineer at Meta working on ads ranking AI. A decade of ML systems at scale, plus agent systems, computer vision, and developer tools.',
+    'Staff software engineer at Meta working on ads ranking AI. A decade of ML systems at scale, plus ranking systems, agent systems, computer vision, and evals.',
   image = '/og-default.png',
+  imageAlt = 'Cyrus Hadavi · AI engineer',
   ogType = 'website',
   schema,
   layout = 'default',
+  noindex = false,
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -34,12 +40,15 @@ const jsonLd = schema ?? {
   alternateName: 'کوروس',
   jobTitle: 'Staff Software Engineer',
   worksFor: { '@type': 'Organization', name: 'Meta' },
+  homeLocation: { '@type': 'Place', name: 'New York, NY' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Maryland' },
+  email: 'mailto:cyrus@hadavi.net',
   url: new URL('/', Astro.site).toString(),
   sameAs: [
     'https://github.com/cyrushadavi1',
     'https://www.linkedin.com/in/cyrus-h-8563b435/',
   ],
-  knowsAbout: ['ranking systems', 'machine learning', 'agent systems', 'computer vision'],
+  knowsAbout: ['ranking systems', 'agent systems', 'computer vision', 'evals', 'machine learning'],
 };
 ---
 
@@ -48,10 +57,11 @@ const jsonLd = schema ?? {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#101312" />
+    <meta name="theme-color" content="#101312" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
@@ -59,12 +69,15 @@ const jsonLd = schema ?? {
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Cyrus Hadavi — AI engineer" />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={jbmRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={jbmBold} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={vazirArabic} as="font" type="font/woff2" crossorigin />
     <script is:inline>
       (() => {
         document.documentElement.classList.add('js');
@@ -86,25 +99,26 @@ const jsonLd = schema ?? {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class={layout === 'work' ? 'work-layout' : undefined}>
+    <a class="skip-link" href="#main">skip to content</a>
     <div class="scanlines" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="home-link" href="/">~/cyrus.hadavi</a>
       <nav aria-label="Primary navigation">
         <a href="/#work" class={path.startsWith('/work') ? 'active' : ''}>work</a>
-        <a href="/about" class={path.startsWith('/about') ? 'active' : ''}>about</a>
+        <a href="/notes/" class={path.startsWith('/notes') ? 'active' : ''}>notes</a>
+        <a href="/about/" class={path.startsWith('/about') ? 'active' : ''}>about</a>
         <button
           class="theme-toggle"
           type="button"
           data-theme-toggle
           aria-label="Switch to light theme"
-          aria-pressed="false"
         ><span aria-hidden="true">◐</span></button>
       </nav>
       {layout === 'work' && <span class="reading-progress" data-reading-progress aria-hidden="true"></span>}
     </header>
 
-    <main>
+    <main id="main">
       <slot />
     </main>
 
@@ -113,6 +127,8 @@ const jsonLd = schema ?? {
         <a href="mailto:cyrus@hadavi.net">email</a>
         <a href="https://github.com/cyrushadavi1">github</a>
         <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a>
+        <a href="/resume.pdf">resume</a>
+        <a href="/colophon/">colophon</a>
       </div>
       <p class="footer-verse">
         <span lang="fa" dir="rtl">توانا بود هر که دانا بود</span>
@@ -123,117 +139,31 @@ const jsonLd = schema ?? {
       (() => {
         const root = document.documentElement;
         const toggle = document.querySelector('[data-theme-toggle]');
+        const themeColors = { dark: '#101312', light: '#f3efe6' };
+        const syncThemeColor = () => {
+          const theme = root.dataset.theme === 'light' ? 'light' : 'dark';
+          document
+            .querySelectorAll('meta[name="theme-color"]')
+            .forEach((meta) => meta.setAttribute('content', themeColors[theme]));
+        };
         const updateThemeButton = () => {
           if (!(toggle instanceof HTMLButtonElement)) return;
           const isLight = root.dataset.theme === 'light';
-          toggle.setAttribute('aria-pressed', String(isLight));
           toggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
         };
 
+        syncThemeColor();
         updateThemeButton();
         toggle?.addEventListener('click', () => {
           const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
           root.dataset.theme = nextTheme;
+          syncThemeColor();
           updateThemeButton();
           try {
             localStorage.setItem('theme', nextTheme);
           } catch {
             // The theme still works for this page when persistence is blocked.
           }
-        });
-
-        const article = document.querySelector('.prose');
-        const progress = document.querySelector('[data-reading-progress]');
-        if (article instanceof HTMLElement && progress instanceof HTMLElement) {
-          const updateProgress = () => {
-            const start = article.offsetTop - window.innerHeight * 0.2;
-            const distance = Math.max(article.offsetHeight - window.innerHeight * 0.6, 1);
-            const value = Math.min(Math.max((window.scrollY - start) / distance, 0), 1);
-            progress.style.setProperty('--reading-progress', String(value));
-          };
-          updateProgress();
-          window.addEventListener('scroll', updateProgress, { passive: true });
-          window.addEventListener('resize', updateProgress);
-        }
-
-        document.querySelectorAll('[data-' + 'pipeline-evolution]').forEach((evolution) => {
-          if (!(evolution instanceof HTMLElement)) return;
-          const range = evolution.querySelector('[data-pipeline-range]');
-          const stageData = evolution.querySelector('[data-pipeline-stages]');
-          const title = evolution.querySelector('[data-pipeline-title]');
-          const count = evolution.querySelector('[data-pipeline-count]');
-          const summary = evolution.querySelector('[data-pipeline-summary]');
-          const blocks = evolution.querySelector('[data-pipeline-blocks]');
-          const reasonLabel = evolution.querySelector('[data-pipeline-reason-label]');
-          const reason = evolution.querySelector('[data-pipeline-reason]');
-          const announcement = evolution.querySelector('[data-pipeline-announcement]');
-          if (
-            !(range instanceof HTMLInputElement) ||
-            !(stageData instanceof HTMLScriptElement) ||
-            !(title instanceof HTMLElement) ||
-            !(count instanceof HTMLElement) ||
-            !(summary instanceof HTMLElement) ||
-            !(blocks instanceof HTMLElement) ||
-            !(reasonLabel instanceof HTMLElement) ||
-            !(reason instanceof HTMLElement) ||
-            !(announcement instanceof HTMLElement)
-          ) return;
-
-          try {
-            const stages = JSON.parse(stageData.textContent || '[]');
-            if (!Array.isArray(stages) || stages.length !== 5) return;
-
-            const renderStage = (index, shouldAnnounce = true) => {
-              const stage = stages[index];
-              if (!stage || !Array.isArray(stage.blocks)) return;
-              const stageLabel = `Stage ${index + 1} of ${stages.length}: ${stage.title}`;
-              count.textContent = `stage ${index + 1} / ${stages.length}`;
-              title.textContent = stage.title;
-              summary.textContent = stage.summary;
-              reasonLabel.textContent = 'why it changed';
-              reason.textContent = stage.reason;
-              blocks.replaceChildren(
-                ...stage.blocks.map((block) => {
-                  const item = document.createElement('span');
-                  item.className = `pipeline-block ${block.added ? 'is-new' : 'is-inherited'}`;
-                  item.textContent = block.label;
-                  item.setAttribute('aria-label', `${block.label}; ${block.added ? 'added at this stage' : 'retained from earlier stages'}`);
-                  return item;
-                })
-              );
-              range.setAttribute('aria-valuetext', stageLabel);
-              range.style.setProperty(
-                '--pipeline-progress',
-                `${(index / (stages.length - 1)) * 100}%`
-              );
-              evolution.dataset.stage = String(index + 1);
-              if (shouldAnnounce) announcement.textContent = stageLabel;
-            };
-
-            renderStage(Number(range.value), false);
-            evolution.classList.add('is-enhanced');
-            range.addEventListener('input', () => renderStage(Number(range.value)));
-          } catch {
-            evolution.classList.remove('is-enhanced');
-          }
-        });
-
-        document.querySelectorAll('[data-' + 'video-play]').forEach((button) => {
-          if (!(button instanceof HTMLButtonElement)) return;
-          const figure = button.closest('.media-figure');
-          const video = figure?.querySelector('video');
-          if (!(figure instanceof HTMLElement) || !(video instanceof HTMLVideoElement)) return;
-          const setPlaying = (isPlaying) => {
-            figure.classList.toggle('is-playing', isPlaying);
-            button.hidden = isPlaying;
-          };
-          button.addEventListener('click', () => {
-            video.play();
-            video.focus();
-          });
-          video.addEventListener('playing', () => setPlaying(true));
-          video.addEventListener('pause', () => setPlaying(false));
-          video.addEventListener('ended', () => setPlaying(false));
         });
       })();
     </script>

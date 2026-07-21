@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Khatam from '../../components/Khatam.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('notes');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const notes = (await getCollection('notes')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const currentIndex = notes.findIndex((item) => item.id === entry.id);
+const previous = currentIndex > 0 ? notes[currentIndex - 1] : undefined;
+const next = currentIndex < notes.length - 1 ? notes[currentIndex + 1] : undefined;
+---
+
+<Base
+  title={`${entry.data.title} · Cyrus Hadavi`}
+  description={entry.data.description}
+  ogType="article"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: entry.data.title,
+    description: entry.data.description,
+    datePublished: entry.data.published,
+    url: new URL(`/notes/${entry.id}/`, Astro.site).toString(),
+    author: {
+      '@type': 'Person',
+      name: 'Cyrus Hadavi',
+      url: new URL('/', Astro.site).toString(),
+    },
+  }}
+>
+  <p class="breadcrumb">
+    <a href="/">~</a>/<a href="/notes/">notes</a>/{entry.id}
+  </p>
+  <h1 class="page-title note-title">{entry.data.title}</h1>
+  <p class="note-meta">
+    <span>{entry.data.date}</span>
+    {
+      entry.data.from && (
+        <span>
+          from <a href={entry.data.from.url}>{entry.data.from.label}</a>
+        </span>
+      )
+    }
+  </p>
+
+  <article class="prose">
+    <Content />
+  </article>
+
+  <div class="article-finish">
+    <div class="article-end-mark" aria-hidden="true"><Khatam size={18} /></div>
+    <nav class="project-pagination" aria-label="More notes">
+      {
+        previous ? (
+          <a class="previous" href={`/notes/${previous.id}/`}>
+            <span>← previous</span>
+            <strong>{previous.data.title}</strong>
+          </a>
+        ) : <span />
+      }
+      {
+        next ? (
+          <a class="next" href={`/notes/${next.id}/`}>
+            <span>next →</span>
+            <strong>{next.data.title}</strong>
+          </a>
+        ) : <span />
+      }
+    </nav>
+  </div>
+</Base>

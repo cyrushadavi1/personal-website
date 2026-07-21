@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const notes = (await getCollection('notes')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Base
+  title="notes · Cyrus Hadavi"
+  description="Short essays on evals, metrics that lie, and systems that abstain instead of guessing."
+>
+  <p class="breadcrumb"><a href="/">~</a>/notes</p>
+  <h1 class="page-title">notes</h1>
+  <p class="page-tagline">
+    short essays pulled from things I built. mostly about evals,
+    metrics that lie, and systems that abstain instead of guessing.
+  </p>
+
+  <ol class="notes-list notes-index">
+    {
+      notes.map((entry) => (
+        <li>
+          <a href={`/notes/${entry.id}/`}>
+            <span class="name">{entry.data.title}</span>
+            <span class="desc">{entry.data.description}</span>
+            <span class="year">{entry.data.date.toLowerCase()}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</Base>

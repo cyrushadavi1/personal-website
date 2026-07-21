@@ -1,6 +1,6 @@
 ---
 title: 'Rakhsh'
-tagline: 'An always-on personal operator with durable memory and bounded authority'
+tagline: 'An assistant that lives on a Mac Mini, takes orders over iMessage, and keeps working after I put my phone down'
 category: 'agent systems'
 year: '2026'
 timeframe: 'July 2026 – now'
@@ -19,16 +19,20 @@ stack:
 results:
   - label: 'interface'
     value: 'iMessage'
-  - label: 'verification'
-    value: '696 tests'
+  - label: 'approvals'
+    value: 'bound to exact args'
   - label: 'recovery'
-    value: 'durable queue'
+    value: 'resumes after restarts'
   - label: 'authority'
     value: 'typed & scoped'
 links: []
 ---
 
 ## building an always-on operator around iMessage
+
+Rakhsh was Rostam's horse in the Shahnameh: strong, loyal, and famously
+capable of fighting off a lion while his rider slept. That felt like
+the right job description.
 
 Most assistants wait inside an app for the next prompt. I wanted one I could
 text, walk away from, and trust to keep working: an operator that remembers
@@ -65,6 +69,8 @@ of quietly gaining more privilege.
 
 This makes the security model structural. It does not depend on asking a model
 to recognize every dangerous shell command or obey a list of forbidden names.
+It is the same problem frontier labs call agent safety: you cannot prompt
+your way to a security boundary, so the boundary has to be structural.
 
 ## making work survive process failure
 
@@ -91,8 +97,9 @@ security boundaries.
 
 Those approvals bind to a canonical semantic operation: the capability, exact
 normalized arguments, target, nonce, expiry, and a hash of the full envelope.
-A short reply code approves only that operation. Change a recipient, amount, or
-other material argument and the approval no longer matches.
+If I ask it to send money, the approval it texts me names that exact
+operation, and I reply with a short code. Change the amount or the recipient
+and the code stops working.
 
 Standing rules can authorize recurring work, but remain scoped by account,
 target, time window, reversibility, and rolling budgets. Every non-read attempt

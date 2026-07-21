@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="404 · Cyrus Hadavi" description="Page not found." noindex={true}>
+  <section class="hero not-found">
+    <p class="prompt-line"><span class="prompt">~</span> cd <span data-404-path>/that-page</span></p>
+    <h1>zsh: no such file or directory<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="tagline">
+      whatever was here has moved, or never existed. the work did not
+      abstain, it just is not at this address.
+    </p>
+    <div class="hero-actions">
+      <a class="button-link primary" href="/">cd ~</a>
+      <a class="button-link" href="/#work">explore the work <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+  <script is:inline>
+    const slot = document.querySelector('[data-404-path]');
+    if (slot) slot.textContent = window.location.pathname;
+  </script>
+</Base>

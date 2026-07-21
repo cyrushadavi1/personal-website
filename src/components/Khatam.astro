@@ -1,0 +1,20 @@
+---
+interface Props {
+  size?: number;
+}
+const { size = 13 } = Astro.props;
+---
+
+<svg
+  class="khatam"
+  width={size}
+  height={size}
+  viewBox="0 0 100 100"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="6"
+  aria-hidden="true"
+>
+  <rect x="27" y="27" width="46" height="46"></rect>
+  <rect x="27" y="27" width="46" height="46" transform="rotate(45 50 50)"></rect>
+</svg>

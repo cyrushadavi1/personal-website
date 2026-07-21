@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="colophon · Cyrus Hadavi"
+  description="How this site is built, and why it looks the way it does: terminal typography, Persian turquoise, and a verse from Ferdowsi."
+>
+  <p class="breadcrumb"><a href="/">~</a>/colophon</p>
+  <h1 class="page-title">colophon</h1>
+
+  <article class="prose">
+    <p>
+      This site is two things I grew up with layered on top of each
+      other: a terminal, and Persian design.
+    </p>
+
+    <h2>the colors</h2>
+    <p>
+      The accent is <em>firouzeh</em>, Persian turquoise, the stone and
+      the color you see on domes and tilework across Iran. The warm
+      gold is saffron, used the way you would use actual saffron:
+      sparingly, where it counts. They sit on a warm charcoal instead
+      of terminal black, and on parchment in the light theme.
+    </p>
+
+    <h2>the star</h2>
+    <p>
+      The eight pointed star in the favicon and section marks is a
+      <em>khatam</em> motif, two overlapping squares, the basic unit of
+      Persian geometric patternwork. The faint lattice behind the
+      homepage hero is the same star, tiled.
+    </p>
+
+    <h2>the verse</h2>
+    <p>
+      The footer carries a line from Ferdowsi's Shahnameh, the epic
+      that also named <a href="/work/rakhsh/">Rakhsh</a>:
+      <span lang="fa" dir="rtl">توانا بود هر که دانا بود</span>,
+      "capable is the one who is wise." A thousand year old comment
+      about the relationship between knowledge and ability, on a site
+      about systems that are honest about what they know.
+    </p>
+
+    <h2>the name</h2>
+    <p>
+      Cyrus is <span lang="fa" dir="rtl">کوروس</span>, Kuros, in
+      Persian. That is where kuros.io comes from.
+    </p>
+
+    <h2>the stack</h2>
+    <p>
+      Astro, static output, content collections for the case studies
+      and notes. JetBrains Mono for anything structural, system sans
+      for prose, Vazirmatn for Farsi. No frameworks on the client, no
+      trackers, no analytics. The heaviest thing on any page is the
+      evidence: the demo videos, which only load if you press play.
+    </p>
+    <p>
+      Built and tested with a Node test suite that checks the built
+      HTML, because a site that argues for showing your evidence
+      should have receipts too. Source lives on
+      <a href="https://github.com/cyrushadavi1">GitHub</a>.
+    </p>
+  </article>
+</Base>

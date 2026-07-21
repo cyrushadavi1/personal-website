@@ -1,0 +1,43 @@
+# Cyrus Hadavi (kuros.io)
+
+Staff software engineer at Meta in New York, working on ads ranking AI.
+A decade of ML systems: ranking models serving billions of people at Meta,
+LLM fine-tuning at Google, the ML platform at HBO Max, recommenders at
+Dollar Shave Club, data science at Hulu and Microsoft. Four years of
+engineering management (last two running a 15 engineer ads ranking team
+at Meta) before returning to hands-on IC work in May 2026.
+
+Core thesis across all work: ML systems should show their evidence or
+abstain. Models that abstain instead of guessing; agents whose authority
+is bounded by structure, not politeness.
+
+## Work
+
+- /work/nba-video-analysis/ : Computer vision pipeline turning NBA
+  broadcast video into structured game state. YOLO11, ByteTrack, WASB,
+  SmolVLM2, OSNet, DuckDB. Detection AP50 0.97, 21/24 players identified,
+  physically impossible trajectory steps cut from 47% to under 1%.
+  Built solo, offline, on a laptop. Demo videos on the page.
+- /work/rakhsh/ : Always-on personal agent on a Mac Mini, taking orders
+  over iMessage. Durable SQLite-backed task supervision, semantic approvals
+  bound to exact operations, curated memory with trust provenance,
+  capability-scoped authority. Private alpha.
+- /work/poe-league-tools/ : Desktop assistant for Path of Exile built
+  entirely from the game's plain text log file. No memory reads, no
+  injection, no simulated input.
+
+## Notes
+
+- /notes/benchmark-the-decision/ : benchmark the decision you actually
+  need (SigLIP vs OSNet, retrieval vs veto).
+- /notes/anti-correlated-metrics/ : when the metric is anti-correlated
+  with reality (zero reprojection error, wrong homography).
+- /notes/abstain-dont-guess/ : errors should degrade to abstention,
+  not misassignment.
+
+## Contact
+
+- Email: cyrus@hadavi.net
+- Resume: https://kuros.io/resume.pdf
+- GitHub: https://github.com/cyrushadavi1
+- LinkedIn: https://www.linkedin.com/in/cyrus-h-8563b435/
