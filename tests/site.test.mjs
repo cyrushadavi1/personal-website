@@ -382,12 +382,15 @@ test('search-engine and agent discovery files are generated', async () => {
   assert.match(llms, /nba-video-analysis/);
 });
 
-test('resume pdf ships and is linked from the site', async () => {
+test('resume pdf ships and is easy to find', async () => {
   assert.ok(await exists('dist/resume.pdf'));
   const about = await read('dist/about/index.html');
   const home = await read('dist/index.html');
   assert.match(about, /href="\/resume\.pdf"/);
-  assert.match(home, /href="\/resume\.pdf"/);
+  assert.match(home, /class="nav-resume"[^>]*>resume</);
+  assert.match(home, /class="button-link" href="\/resume\.pdf"/);
+  const work = await read('dist/work/nba-video-analysis/index.html');
+  assert.match(work, /class="nav-resume"/);
 });
 
 test('custom 404 page keeps the terminal voice', async () => {

@@ -1577,6 +1577,11 @@ main {
     gap: 0.7rem;
   }
 
+  /* the hero button and footer keep the resume reachable on small screens */
+  .site-header .nav-resume {
+    display: none;
+  }
+
   .work-list a {
     grid-template-columns: 1fr auto;
     grid-template-areas:
