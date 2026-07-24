@@ -59,11 +59,14 @@ const notes = (await getCollection('notes')).sort(
 
           if (reduceMotion.matches) {
             document.body.classList.add('intro-complete');
+            intro.hidden = true;
+            shell.inert = false;
             return;
           }
 
           let frame = 0;
           let primed = false;
+          let completed = false;
           const primeVideo = () => {
             if (primed) return;
             primed = true;
@@ -75,19 +78,58 @@ const notes = (await getCollection('notes')).sort(
               primed = false;
             });
           };
+          const completeIntro = () => {
+            if (completed) return;
+            completed = true;
+            video.pause();
+            shell.inert = false;
+            document.body.classList.add('intro-complete');
+            document.body.style.removeProperty('--intro-progress');
+            const root = document.documentElement;
+            const previousOverflow = root.style.overflow;
+            root.style.overflow = 'hidden';
+            let unlockTimer = 0;
+            const holdAtTop = () => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            };
+            const unlockScroll = () => {
+              window.removeEventListener('wheel', absorbScroll);
+              window.removeEventListener('touchmove', absorbScroll);
+              window.removeEventListener('scroll', holdAtTop);
+              root.style.overflow = previousOverflow;
+              holdAtTop();
+            };
+            const scheduleUnlock = () => {
+              window.clearTimeout(unlockTimer);
+              unlockTimer = window.setTimeout(unlockScroll, 1000);
+            };
+            const absorbScroll = (event) => {
+              event.preventDefault();
+              holdAtTop();
+              scheduleUnlock();
+            };
+            window.addEventListener('wheel', absorbScroll, { passive: false });
+            window.addEventListener('touchmove', absorbScroll, { passive: false });
+            window.addEventListener('scroll', holdAtTop, { passive: true });
+            intro.hidden = true;
+            holdAtTop();
+            scheduleUnlock();
+          };
           const render = () => {
             frame = 0;
+            if (completed) return;
             const distance = Math.max(1, intro.offsetHeight - window.innerHeight);
             const progress = Math.min(1, Math.max(0, -intro.getBoundingClientRect().top / distance));
             intro.style.setProperty('--intro-progress', String(progress));
             document.body.style.setProperty('--intro-progress', String(progress));
-            document.body.classList.toggle('intro-complete', progress >= 0.999);
-            shell.inert = progress < 0.999;
+            shell.inert = true;
 
             if (video.readyState >= HTMLMediaElement.HAVE_METADATA && Number.isFinite(video.duration)) {
               const targetTime = Math.min(video.duration - 0.001, progress * video.duration);
               if (Math.abs(video.currentTime - targetTime) > 0.025) video.currentTime = targetTime;
             }
+
+            if (progress >= 0.999) completeIntro();
           };
           const requestRender = () => {
             if (!frame) frame = window.requestAnimationFrame(render);
