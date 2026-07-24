@@ -109,71 +109,73 @@ const jsonLd = schema ?? {
 
     {hasIntro && <slot name="intro" />}
 
-    <header class="site-header">
-      <a class="home-link" href="/">~/cyrus.hadavi</a>
-      <nav aria-label="Primary navigation">
-        <a href="/#work" class={path.startsWith('/work') ? 'active' : ''}>work</a>
-        <a href="/notes/" class={path.startsWith('/notes') ? 'active' : ''}>notes</a>
-        <a href="/about/" class={path.startsWith('/about') ? 'active' : ''}>about</a>
-        <a href="/resume.pdf" class="nav-resume">resume</a>
-        <button
-          class="theme-toggle"
-          type="button"
-          data-theme-toggle
-          aria-label="Switch to light theme"
-        ><span aria-hidden="true">◐</span></button>
-      </nav>
-      {layout === 'work' && <span class="reading-progress" data-reading-progress aria-hidden="true"></span>}
-    </header>
+    <div class="site-shell" data-site-shell>
+      <header class="site-header">
+        <a class="home-link" href="/">~/cyrus.hadavi</a>
+        <nav aria-label="Primary navigation">
+          <a href="/#work" class={path.startsWith('/work') ? 'active' : ''}>work</a>
+          <a href="/notes/" class={path.startsWith('/notes') ? 'active' : ''}>notes</a>
+          <a href="/about/" class={path.startsWith('/about') ? 'active' : ''}>about</a>
+          <a href="/resume.pdf" class="nav-resume">resume</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to light theme"
+          ><span aria-hidden="true">◐</span></button>
+        </nav>
+        {layout === 'work' && <span class="reading-progress" data-reading-progress aria-hidden="true"></span>}
+      </header>
 
-    <main id="main">
-      <slot />
-    </main>
+      <main id="main">
+        <slot />
+      </main>
 
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="mailto:cyrus@hadavi.net">email</a>
-        <a href="https://github.com/cyrushadavi1">github</a>
-        <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a>
-        <a href="/resume.pdf">resume</a>
-        <a href="/colophon/">colophon</a>
-      </div>
-      <p class="footer-verse">
-        <span lang="fa" dir="rtl">توانا بود هر که دانا بود</span>
-        <span class="verse-tr">"capable is the one who is wise" · Ferdowsi</span>
-      </p>
-    </footer>
-    <script is:inline>
-      (() => {
-        const root = document.documentElement;
-        const toggle = document.querySelector('[data-theme-toggle]');
-        const themeColors = { dark: '#101312', light: '#f3efe6' };
-        const syncThemeColor = () => {
-          const theme = root.dataset.theme === 'light' ? 'light' : 'dark';
-          document
-            .querySelectorAll('meta[name="theme-color"]')
-            .forEach((meta) => meta.setAttribute('content', themeColors[theme]));
-        };
-        const updateThemeButton = () => {
-          if (!(toggle instanceof HTMLButtonElement)) return;
-          const isLight = root.dataset.theme === 'light';
-          toggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
-        };
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="mailto:cyrus@hadavi.net">email</a>
+          <a href="https://github.com/cyrushadavi1">github</a>
+          <a href="https://www.linkedin.com/in/cyrus-h-8563b435/">linkedin</a>
+          <a href="/resume.pdf">resume</a>
+          <a href="/colophon/">colophon</a>
+        </div>
+        <p class="footer-verse">
+          <span lang="fa" dir="rtl">توانا بود هر که دانا بود</span>
+          <span class="verse-tr">"capable is the one who is wise" · Ferdowsi</span>
+        </p>
+      </footer>
+      <script is:inline>
+        (() => {
+          const root = document.documentElement;
+          const toggle = document.querySelector('[data-theme-toggle]');
+          const themeColors = { dark: '#101312', light: '#f3efe6' };
+          const syncThemeColor = () => {
+            const theme = root.dataset.theme === 'light' ? 'light' : 'dark';
+            document
+              .querySelectorAll('meta[name="theme-color"]')
+              .forEach((meta) => meta.setAttribute('content', themeColors[theme]));
+          };
+          const updateThemeButton = () => {
+            if (!(toggle instanceof HTMLButtonElement)) return;
+            const isLight = root.dataset.theme === 'light';
+            toggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} theme`);
+          };
 
-        syncThemeColor();
-        updateThemeButton();
-        toggle?.addEventListener('click', () => {
-          const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
-          root.dataset.theme = nextTheme;
           syncThemeColor();
           updateThemeButton();
-          try {
-            localStorage.setItem('theme', nextTheme);
-          } catch {
-            // The theme still works for this page when persistence is blocked.
-          }
-        });
-      })();
-    </script>
+          toggle?.addEventListener('click', () => {
+            const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+            root.dataset.theme = nextTheme;
+            syncThemeColor();
+            updateThemeButton();
+            try {
+              localStorage.setItem('theme', nextTheme);
+            } catch {
+              // The theme still works for this page when persistence is blocked.
+            }
+          });
+        })();
+      </script>
+    </div>
   </body>
 </html>

@@ -113,6 +113,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.site-shell {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+}
+
 /* faint scanlines over the dark theme — texture, not gimmick */
 .scanlines {
   position: fixed;
@@ -197,10 +203,11 @@ a:hover {
 .scroll-intro {
   --intro-progress: 0;
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 100vh;
   height: 100svh;
-  background: #020304;
+  background: transparent;
 }
 
 .js .scroll-intro {
@@ -217,6 +224,7 @@ a:hover {
   overflow: hidden;
   background: #020304;
   isolation: isolate;
+  opacity: clamp(0, calc((1 - var(--intro-progress)) * 4), 1);
 }
 
 .scroll-intro-media {
@@ -225,7 +233,6 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: clamp(0, calc((1 - var(--intro-progress)) * 5), 1);
 }
 
 .scroll-intro-shade {
@@ -291,6 +298,23 @@ a:hover {
   50% {
     transform: translateY(0.3rem);
   }
+}
+
+.js .has-scroll-intro:not(.intro-complete) .site-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  height: 100dvh;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: clamp(0, calc((var(--intro-progress) - 0.72) * 3.58), 1);
+  transform: scale(clamp(0.985, calc(0.985 + var(--intro-progress) * 0.015), 1));
+}
+
+.js .has-scroll-intro.intro-complete .site-shell {
+  position: relative;
+  z-index: 0;
+  margin-top: -100dvh;
 }
 
 /* ── shell ─────────────────────────────────────────────────────── */
@@ -1783,12 +1807,11 @@ main {
   }
 
   .js .scroll-intro {
-    height: 100vh;
-    height: 100svh;
+    display: none;
   }
 
-  .scroll-intro-media {
-    opacity: 1;
+  .js .has-scroll-intro.intro-complete .site-shell {
+    margin-top: 0;
   }
 
   *,

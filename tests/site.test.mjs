@@ -62,6 +62,11 @@ test('homepage opens with a silent, scroll-controlled video intro', async () => 
   assert.match(html, /<video[^>]*\splaysinline(?:\s|>)/);
   assert.match(html, /skip intro/i);
   assert.match(html, /prefers-reduced-motion: reduce/);
+  assert.match(html, /primeVideo/);
+  assert.match(html, /video\.play\(\)/);
+  assert.match(html, /DOMContentLoaded/);
+  assert.match(html, /classList\.toggle\(['"]intro-complete['"]/);
+  assert.match(html, /data-site-shell/);
   assert.equal(await exists('dist/website-intro.mp4'), true);
   assert.equal(await exists('dist/website-intro-poster.jpg'), true);
 });

@@ -41,37 +41,84 @@ const notes = (await getCollection('notes')).sort(
 
     <script is:inline>
       (() => {
-        const intro = document.querySelector('[data-scroll-intro]');
-        const video = document.querySelector('[data-scroll-intro-video]');
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const initIntro = () => {
+          const intro = document.querySelector('[data-scroll-intro]');
+          const video = document.querySelector('[data-scroll-intro-video]');
+          const shell = document.querySelector('[data-site-shell]');
+          const skip = intro?.querySelector('.scroll-intro-skip');
+          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-        if (!(intro instanceof HTMLElement) || !(video instanceof HTMLVideoElement)) return;
+          if (
+            !(intro instanceof HTMLElement) ||
+            !(video instanceof HTMLVideoElement) ||
+            !(shell instanceof HTMLElement)
+          ) return;
 
-        video.defaultMuted = true;
-        video.muted = true;
+          video.defaultMuted = true;
+          video.muted = true;
 
-        if (reduceMotion.matches) return;
-
-        let frame = 0;
-        const render = () => {
-          frame = 0;
-          const distance = Math.max(1, intro.offsetHeight - window.innerHeight);
-          const progress = Math.min(1, Math.max(0, -intro.getBoundingClientRect().top / distance));
-          intro.style.setProperty('--intro-progress', String(progress));
-
-          if (video.readyState >= HTMLMediaElement.HAVE_METADATA && Number.isFinite(video.duration)) {
-            const targetTime = Math.min(video.duration - 0.001, progress * video.duration);
-            if (Math.abs(video.currentTime - targetTime) > 0.025) video.currentTime = targetTime;
+          if (reduceMotion.matches) {
+            document.body.classList.add('intro-complete');
+            return;
           }
-        };
-        const requestRender = () => {
-          if (!frame) frame = window.requestAnimationFrame(render);
+
+          let frame = 0;
+          let primed = false;
+          const primeVideo = () => {
+            if (primed) return;
+            primed = true;
+            const playback = video.play();
+            playback?.then(() => {
+              video.pause();
+              requestRender();
+            }).catch(() => {
+              primed = false;
+            });
+          };
+          const render = () => {
+            frame = 0;
+            const distance = Math.max(1, intro.offsetHeight - window.innerHeight);
+            const progress = Math.min(1, Math.max(0, -intro.getBoundingClientRect().top / distance));
+            intro.style.setProperty('--intro-progress', String(progress));
+            document.body.style.setProperty('--intro-progress', String(progress));
+            document.body.classList.toggle('intro-complete', progress >= 0.999);
+            shell.inert = progress < 0.999;
+
+            if (video.readyState >= HTMLMediaElement.HAVE_METADATA && Number.isFinite(video.duration)) {
+              const targetTime = Math.min(video.duration - 0.001, progress * video.duration);
+              if (Math.abs(video.currentTime - targetTime) > 0.025) video.currentTime = targetTime;
+            }
+          };
+          const requestRender = () => {
+            if (!frame) frame = window.requestAnimationFrame(render);
+          };
+
+          skip?.addEventListener('click', (event) => {
+            event.preventDefault();
+            primeVideo();
+            const distance = Math.max(1, intro.offsetHeight - window.innerHeight);
+            window.scrollTo({
+              top: intro.offsetTop + distance,
+              behavior: 'smooth',
+            });
+          });
+          video.addEventListener('canplay', primeVideo, { once: true });
+          video.addEventListener('loadedmetadata', requestRender);
+          window.addEventListener('pointerdown', primeVideo, { once: true, passive: true });
+          window.addEventListener('touchstart', primeVideo, { once: true, passive: true });
+          window.addEventListener('scroll', () => {
+            primeVideo();
+            requestRender();
+          }, { passive: true });
+          window.addEventListener('resize', requestRender, { passive: true });
+          requestRender();
         };
 
-        video.addEventListener('loadedmetadata', requestRender);
-        window.addEventListener('scroll', requestRender, { passive: true });
-        window.addEventListener('resize', requestRender, { passive: true });
-        requestRender();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initIntro, { once: true });
+        } else {
+          initIntro();
+        }
       })();
     </script>
   </Fragment>
