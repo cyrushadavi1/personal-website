@@ -312,22 +312,19 @@ a:hover {
 }
 
 .js .has-scroll-intro.intro-complete .site-shell {
-  position: fixed;
-  inset: 0;
+  position: relative;
+  inset: auto;
   z-index: 0;
-  height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
+  height: auto;
+  overflow: visible;
   pointer-events: auto;
   opacity: 1;
   transform: none;
-  -webkit-overflow-scrolling: touch;
 }
 
-.js .has-scroll-intro.intro-settling .site-shell {
+.js .has-scroll-intro.intro-settling {
+  height: 100dvh;
   overflow: hidden;
-  pointer-events: none;
 }
 
 /* ── shell ─────────────────────────────────────────────────────── */
@@ -1821,13 +1818,6 @@ main {
 
   .js .scroll-intro {
     display: none;
-  }
-
-  .js .has-scroll-intro.intro-complete .site-shell {
-    position: relative;
-    inset: auto;
-    height: auto;
-    overflow: visible;
   }
 
   *,

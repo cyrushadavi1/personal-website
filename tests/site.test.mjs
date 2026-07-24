@@ -69,10 +69,11 @@ test('homepage opens with a silent, scroll-controlled video intro', async () => 
   assert.match(html, /intro\.hidden = true/);
   assert.match(html, /shell\.inert = false/);
   assert.match(html, /classList\.add\(['"]intro-complete['"], ['"]intro-settling['"]\)/);
-  assert.match(html, /const absorbMomentum/);
-  assert.match(html, /shell\.addEventListener\(['"]scroll['"], holdShellAtTop/);
-  assert.match(html, /shell\.scrollTop = 0/);
-  assert.doesNotMatch(html, /style\.overflow = ['"]hidden['"]/);
+  // The settle freeze must end on a fixed deadline; a user-resettable timer
+  // can lock scrolling forever while input keeps arriving.
+  assert.match(html, /setTimeout\(\(\) => \{[\s\S]*?classList\.remove\(['"]intro-settling['"]\)[\s\S]*?\}, \d+\)/);
+  assert.doesNotMatch(html, /absorbMomentum/);
+  assert.doesNotMatch(html, /preventDefault\(\)[\s\S]*?intro-settling/);
   assert.match(html, /window\.scrollTo\(\{ top: 0/);
   assert.match(html, /data-site-shell/);
   assert.equal(await exists('dist/website-intro.mp4'), true);

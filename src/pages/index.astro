@@ -82,39 +82,24 @@ const notes = (await getCollection('notes')).sort(
             if (completed) return;
             completed = true;
             video.pause();
-            let settleTimer = 0;
-            const finishSettling = () => {
-              window.clearTimeout(settleTimer);
-              window.removeEventListener('wheel', absorbMomentum);
-              window.removeEventListener('touchmove', absorbMomentum);
-              shell.removeEventListener('scroll', holdShellAtTop);
-              document.body.classList.remove('intro-settling');
-              shell.inert = false;
-              shell.scrollTop = 0;
-              window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-            };
-            const scheduleSettling = () => {
-              window.clearTimeout(settleTimer);
-              settleTimer = window.setTimeout(finishSettling, 1000);
-            };
-            const absorbMomentum = (event) => {
-              event.preventDefault();
-              shell.scrollTop = 0;
-              scheduleSettling();
-            };
-            const holdShellAtTop = () => {
-              shell.scrollTop = 0;
-              scheduleSettling();
-            };
             document.body.classList.add('intro-complete', 'intro-settling');
             document.body.style.removeProperty('--intro-progress');
             intro.hidden = true;
-            shell.scrollTop = 0;
-            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-            window.addEventListener('wheel', absorbMomentum, { passive: false });
-            window.addEventListener('touchmove', absorbMomentum, { passive: false });
-            shell.addEventListener('scroll', holdShellAtTop, { passive: true });
-            scheduleSettling();
+            shell.inert = false;
+            // 'instant', never 'auto': the html element opts into smooth
+            // scrolling, so 'auto' would animate through the collapsing page.
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            const holdAtTop = () => {
+              if (window.scrollY !== 0) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            };
+            window.addEventListener('scroll', holdAtTop, { passive: true });
+            // Fixed deadline: leftover scroll momentum dies against the frozen
+            // page, and no input pattern can extend the freeze.
+            window.setTimeout(() => {
+              window.removeEventListener('scroll', holdAtTop);
+              document.body.classList.remove('intro-settling');
+              window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }, 700);
           };
           const render = () => {
             frame = 0;
