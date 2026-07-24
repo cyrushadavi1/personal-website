@@ -82,38 +82,39 @@ const notes = (await getCollection('notes')).sort(
             if (completed) return;
             completed = true;
             video.pause();
-            shell.inert = false;
-            document.body.classList.add('intro-complete');
-            document.body.style.removeProperty('--intro-progress');
-            const root = document.documentElement;
-            const previousOverflow = root.style.overflow;
-            root.style.overflow = 'hidden';
-            let unlockTimer = 0;
-            const holdAtTop = () => {
+            let settleTimer = 0;
+            const finishSettling = () => {
+              window.clearTimeout(settleTimer);
+              window.removeEventListener('wheel', absorbMomentum);
+              window.removeEventListener('touchmove', absorbMomentum);
+              shell.removeEventListener('scroll', holdShellAtTop);
+              document.body.classList.remove('intro-settling');
+              shell.inert = false;
+              shell.scrollTop = 0;
               window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
             };
-            const unlockScroll = () => {
-              window.removeEventListener('wheel', absorbScroll);
-              window.removeEventListener('touchmove', absorbScroll);
-              window.removeEventListener('scroll', holdAtTop);
-              root.style.overflow = previousOverflow;
-              holdAtTop();
+            const scheduleSettling = () => {
+              window.clearTimeout(settleTimer);
+              settleTimer = window.setTimeout(finishSettling, 1000);
             };
-            const scheduleUnlock = () => {
-              window.clearTimeout(unlockTimer);
-              unlockTimer = window.setTimeout(unlockScroll, 1000);
-            };
-            const absorbScroll = (event) => {
+            const absorbMomentum = (event) => {
               event.preventDefault();
-              holdAtTop();
-              scheduleUnlock();
+              shell.scrollTop = 0;
+              scheduleSettling();
             };
-            window.addEventListener('wheel', absorbScroll, { passive: false });
-            window.addEventListener('touchmove', absorbScroll, { passive: false });
-            window.addEventListener('scroll', holdAtTop, { passive: true });
+            const holdShellAtTop = () => {
+              shell.scrollTop = 0;
+              scheduleSettling();
+            };
+            document.body.classList.add('intro-complete', 'intro-settling');
+            document.body.style.removeProperty('--intro-progress');
             intro.hidden = true;
-            holdAtTop();
-            scheduleUnlock();
+            shell.scrollTop = 0;
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            window.addEventListener('wheel', absorbMomentum, { passive: false });
+            window.addEventListener('touchmove', absorbMomentum, { passive: false });
+            shell.addEventListener('scroll', holdShellAtTop, { passive: true });
+            scheduleSettling();
           };
           const render = () => {
             frame = 0;
