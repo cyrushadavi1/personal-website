@@ -33,6 +33,11 @@ const {
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site);
 const socialImage = new URL(image, Astro.site);
+const hasIntro = Astro.slots.has('intro');
+const bodyClass = [
+  layout === 'work' ? 'work-layout' : '',
+  hasIntro ? 'has-scroll-intro' : '',
+].filter(Boolean).join(' ') || undefined;
 const jsonLd = schema ?? {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -98,9 +103,11 @@ const jsonLd = schema ?? {
     </script>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <body class={layout === 'work' ? 'work-layout' : undefined}>
+  <body class={bodyClass}>
     <a class="skip-link" href="#main">skip to content</a>
     <div class="scanlines" aria-hidden="true"></div>
+
+    {hasIntro && <slot name="intro" />}
 
     <header class="site-header">
       <a class="home-link" href="/">~/cyrus.hadavi</a>

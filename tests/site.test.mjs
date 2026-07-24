@@ -52,6 +52,20 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
+test('homepage opens with a silent, scroll-controlled video intro', async () => {
+  const html = await read('dist/index.html');
+
+  assert.match(html, /class="scroll-intro"/);
+  assert.match(html, /data-scroll-intro-video/);
+  assert.match(html, /src="\/website-intro\.mp4"/);
+  assert.match(html, /<video[^>]*\smuted(?:\s|>)/);
+  assert.match(html, /<video[^>]*\splaysinline(?:\s|>)/);
+  assert.match(html, /skip intro/i);
+  assert.match(html, /prefers-reduced-motion: reduce/);
+  assert.equal(await exists('dist/website-intro.mp4'), true);
+  assert.equal(await exists('dist/website-intro-poster.jpg'), true);
+});
+
 test('homepage surfaces the notes section', async () => {
   const html = await read('dist/index.html');
 
