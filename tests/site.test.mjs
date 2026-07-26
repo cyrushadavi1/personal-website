@@ -52,7 +52,7 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
-test('homepage opens with a typed-command khatam intro', async () => {
+test('homepage opens with a typed-command intro sequence', async () => {
   const html = await read('dist/index.html');
 
   assert.match(html, /class="scroll-intro"/);
@@ -61,7 +61,7 @@ test('homepage opens with a typed-command khatam intro', async () => {
   assert.match(html, /skip intro/i);
   assert.match(html, /prefers-reduced-motion: reduce/);
   assert.match(html, /DOMContentLoaded/);
-  assert.match(html, /~ construct khatam/);
+  assert.match(html, /const CMD = '~ construct'/);
   assert.match(html, /completeIntro/);
   assert.match(html, /intro\.hidden = true/);
   assert.match(html, /shell\.inert = false/);
