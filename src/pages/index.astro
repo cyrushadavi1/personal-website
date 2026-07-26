@@ -43,18 +43,18 @@ const alsoWork = allWork.filter((entry) => !entry.data.featured);
 
           const ctx = canvas.getContext('2d');
 
-          let introSeen = false;
+          let introSkipped = false;
           try {
-            introSeen = sessionStorage.getItem('introSeen') === '1';
+            introSkipped = localStorage.getItem('introSkipped') === '1';
           } catch {
             // Storage can be unavailable in privacy-restricted contexts.
           }
 
-          // The intro is a first-arrival moment only: deep links (the site's
-          // own nav sends /#work here), return visits this session,
-          // reduced-motion visitors, and canvas-less browsers land on the
-          // page itself.
-          if (reduceMotion.matches || introSeen || location.hash || !ctx) {
+          // Replay on every ordinary arrival unless this visitor has explicitly
+          // skipped before. Deep links (the site's own nav sends /#work here),
+          // reduced-motion visitors, and canvas-less browsers still land on the
+          // page itself without changing that preference.
+          if (reduceMotion.matches || introSkipped || location.hash || !ctx) {
             document.body.classList.add('intro-complete');
             intro.hidden = true;
             shell.inert = false;
@@ -279,14 +279,16 @@ const alsoWork = allWork.filter((entry) => !entry.data.featured);
           const PREROLL = 400;
           const DURATION = 9500;
 
-          const completeIntro = () => {
+          const completeIntro = (rememberSkip = false) => {
             if (completed) return;
             completed = true;
             window.cancelAnimationFrame(rafId);
-            try {
-              sessionStorage.setItem('introSeen', '1');
-            } catch {
-              // Without storage the intro simply replays next visit.
+            if (rememberSkip) {
+              try {
+                localStorage.setItem('introSkipped', '1');
+              } catch {
+                // Without storage the intro simply replays next visit.
+              }
             }
             document.body.classList.add('intro-complete', 'intro-settling');
             document.body.style.removeProperty('--intro-progress');
@@ -346,15 +348,15 @@ const alsoWork = allWork.filter((entry) => !entry.data.featured);
           window.addEventListener('wheel', boost, { passive: true });
           window.addEventListener('touchmove', boost, { passive: true });
           window.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') completeIntro();
+            if (event.key === 'Escape') completeIntro(true);
           });
           skip?.addEventListener('click', (event) => {
             event.preventDefault();
-            completeIntro();
+            completeIntro(true);
           });
           // While the intro is up, "skip to content" would point into an
           // inert shell; completing the intro first makes #main reachable.
-          document.querySelector('.skip-link')?.addEventListener('click', () => completeIntro());
+          document.querySelector('.skip-link')?.addEventListener('click', () => completeIntro(true));
           resizeCanvas();
           rafId = window.requestAnimationFrame(tick);
         };

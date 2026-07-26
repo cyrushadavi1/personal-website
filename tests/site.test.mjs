@@ -67,14 +67,17 @@ test('homepage opens with a typed-command intro sequence', async () => {
   assert.match(html, /intro\.hidden = true/);
   assert.match(html, /shell\.inert = false/);
   assert.match(html, /classList\.add\(['"]intro-complete['"], ['"]intro-settling['"]\)/);
-  // The intro is a first-arrival moment only: repeat visits this session,
-  // deep links, reduced motion, and canvas-less browsers land on the page.
-  assert.match(html, /sessionStorage\.getItem\(['"]introSeen['"]\)/);
-  assert.match(html, /sessionStorage\.setItem\(['"]introSeen['"], ['"]1['"]\)/);
-  assert.match(html, /reduceMotion\.matches \|\| introSeen \|\| location\.hash \|\| !ctx/);
-  // Impatience is input: skip and Escape complete the intro instantly.
-  assert.match(html, /skip\?\.addEventListener\(['"]click['"],[\s\S]*?completeIntro\(\)/);
+  // Ordinary completions replay on the next arrival. Only an explicit skip is
+  // remembered across visits; deep links and reduced motion still bypass it.
+  assert.match(html, /localStorage\.getItem\(['"]introSkipped['"]\)/);
+  assert.match(html, /localStorage\.setItem\(['"]introSkipped['"], ['"]1['"]\)/);
+  assert.doesNotMatch(html, /sessionStorage\.(?:get|set)Item\(['"]introSeen['"]/);
+  assert.match(html, /reduceMotion\.matches \|\| introSkipped \|\| location\.hash \|\| !ctx/);
+  // Impatience is input: skip and Escape complete and remember the skip.
+  assert.match(html, /skip\?\.addEventListener\(['"]click['"],[\s\S]*?completeIntro\(true\)/);
   assert.match(html, /key === 'Escape'/);
+  // Reaching the end naturally must not persist the skip preference.
+  assert.match(html, /if \(progress >= 1\) \{\s*completeIntro\(\)/);
   // The settle freeze must stay bounded: momentum release may come early,
   // but the hard cap ends it no matter what input keeps arriving.
   assert.match(html, /capTimer = window\.setTimeout\(release, \d+\)/);
