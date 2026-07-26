@@ -17,24 +17,14 @@ const notes = (await getCollection('notes')).sort(
   <Fragment slot="intro">
     <section class="scroll-intro" data-scroll-intro aria-label="Visual introduction">
       <div class="scroll-intro-sticky">
-        <video
+        <div class="scroll-intro-fallback" aria-hidden="true"><Khatam size={220} /></div>
+        <canvas
           class="scroll-intro-media"
-          data-scroll-intro-video
-          poster="/website-intro-poster.jpg"
-          preload="metadata"
-          muted
-          playsinline
-          tabindex="-1"
+          data-scroll-intro-canvas
           aria-hidden="true"
-        >
-          <source src="/website-intro.mp4" type="video/mp4" />
-        </video>
+        ></canvas>
         <div class="scroll-intro-shade" aria-hidden="true"></div>
         <a class="scroll-intro-skip" href="#main">skip intro</a>
-        <p class="scroll-intro-hint" aria-hidden="true">
-          <span>scroll to enter</span>
-          <span class="scroll-intro-arrow">↓</span>
-        </p>
         <span class="scroll-intro-progress" aria-hidden="true"></span>
       </div>
     </section>
@@ -43,20 +33,18 @@ const notes = (await getCollection('notes')).sort(
       (() => {
         const initIntro = () => {
           const intro = document.querySelector('[data-scroll-intro]');
-          const video = document.querySelector('[data-scroll-intro-video]');
+          const canvas = document.querySelector('[data-scroll-intro-canvas]');
           const shell = document.querySelector('[data-site-shell]');
           const skip = intro?.querySelector('.scroll-intro-skip');
-          const hintText = intro?.querySelector('.scroll-intro-hint span');
           const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
           if (
             !(intro instanceof HTMLElement) ||
-            !(video instanceof HTMLVideoElement) ||
+            !(canvas instanceof HTMLCanvasElement) ||
             !(shell instanceof HTMLElement)
           ) return;
 
-          video.defaultMuted = true;
-          video.muted = true;
+          const ctx = canvas.getContext('2d');
 
           let introSeen = false;
           try {
@@ -66,10 +54,10 @@ const notes = (await getCollection('notes')).sort(
           }
 
           // The intro is a first-arrival moment only: deep links (the site's
-          // own nav sends /#work here), return visits this session, and
-          // reduced-motion visitors land on the page itself.
-          if (reduceMotion.matches || introSeen || location.hash) {
-            video.preload = 'none';
+          // own nav sends /#work here), return visits this session,
+          // reduced-motion visitors, and canvas-less browsers land on the
+          // page itself.
+          if (reduceMotion.matches || introSeen || location.hash || !ctx) {
             document.body.classList.add('intro-complete');
             intro.hidden = true;
             shell.inert = false;
@@ -86,52 +74,218 @@ const notes = (await getCollection('notes')).sort(
             return;
           }
 
-          // Markup ships preload="metadata" so bypassed and no-JS visitors
-          // never fetch the full file; only an active intro upgrades, and
-          // not against an explicit data-saver preference.
-          if (!navigator.connection?.saveData) video.preload = 'auto';
+          /* ── procedural scene: a command, then the khatam built
+             from data ────────────────────────────────────────────────
+             A pure function of time: the command types alone in the
+             dark and dissolves; a point cloud drifts in, lands coarsely
+             on the compass guides, the star is drawn between the landed
+             points, then everything refines onto the lattice and dims
+             to black for the handoff. */
 
-          let frame = 0;
-          let primed = false;
+          const FIROUZEH = '#3fd0bc';
+          const SAFFRON = '#d9a45b';
+          const PAPER = '#d7d3ca';
+          const CMD = '~ construct khatam';
+          const N = 72;
+
+          let vw = 0;
+          let vh = 0;
+          let dpr = 1;
+          const resizeCanvas = () => {
+            dpr = Math.min(2, window.devicePixelRatio || 1);
+            vw = canvas.clientWidth;
+            vh = canvas.clientHeight;
+            canvas.width = Math.round(vw * dpr);
+            canvas.height = Math.round(vh * dpr);
+          };
+
+          const clamp01 = (v) => Math.min(1, Math.max(0, v));
+          const span = (p, a, b) => clamp01((p - a) / (b - a));
+          const easeOut = (t) => 1 - (1 - t) ** 3;
+          const easeInOut = (t) => (t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 / 2);
+          const lerp = (a, b, t) => a + (b - a) * t;
+          const hash = (i, j) => ((((i * 73856093) ^ (j * 19349663)) >>> 0) % 1000) / 1000;
+
+          const squareSegs = (mx, my, r, rotDeg) => {
+            const pts = [];
+            for (let k = 0; k < 4; k += 1) {
+              const a = ((rotDeg + k * 90 - 90) * Math.PI) / 180;
+              pts.push([mx + r * Math.cos(a), my + r * Math.sin(a)]);
+            }
+            return pts.map((pt, k) => [pt, pts[(k + 1) % 4]]);
+          };
+          const octagonSegs = (mx, my, r) => {
+            const pts = [];
+            for (let k = 0; k < 8; k += 1) {
+              const a = ((k * 45 + 22.5 - 90) * Math.PI) / 180;
+              pts.push([mx + r * Math.cos(a), my + r * Math.sin(a)]);
+            }
+            return pts.map((pt, k) => [pt, pts[(k + 1) % 8]]);
+          };
+
+          // alpha is final; callers fold in the master fade
+          const drawSegs = (segs, t, color, alpha, width) => {
+            if (t <= 0 || alpha <= 0) return;
+            ctx.strokeStyle = color;
+            ctx.globalAlpha = clamp01(alpha);
+            ctx.lineWidth = width;
+            const total = segs.length;
+            const fullCount = Math.min(total, Math.floor(t * total));
+            const frac = t * total - fullCount;
+            ctx.beginPath();
+            for (let k = 0; k < fullCount; k += 1) {
+              ctx.moveTo(segs[k][0][0], segs[k][0][1]);
+              ctx.lineTo(segs[k][1][0], segs[k][1][1]);
+            }
+            if (fullCount < total && frac > 0) {
+              const [a, b] = segs[fullCount];
+              ctx.moveTo(a[0], a[1]);
+              ctx.lineTo(lerp(a[0], b[0], frac), lerp(a[1], b[1], frac));
+            }
+            ctx.stroke();
+          };
+
+          const draw = (p, now) => {
+            if (canvas.clientWidth !== vw || canvas.clientHeight !== vh) resizeCanvas();
+            if (!vw || !vh) return;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.fillStyle = '#020304';
+            ctx.fillRect(0, 0, vw, vh);
+
+            // Fully black by 0.8, when the sticky layer lifts off the shell.
+            const master = 1 - easeInOut(span(p, 0.72, 0.8));
+            if (master <= 0) return;
+
+            const cx = vw / 2;
+            const cy = vh * 0.48;
+            const vmin = Math.min(vw, vh);
+            const step = vmin * 0.23;
+            const rLatt = step * 0.3;
+            const R = lerp(vmin * 0.17, rLatt, easeInOut(span(p, 0.54, 0.66)));
+
+            // Act 1: the command alone, centered, then it dissolves.
+            const typedN = Math.round(CMD.length * span(p, 0.01, 0.11));
+            const cmdFade = 1 - easeInOut(span(p, 0.14, 0.2));
+            if (typedN > 0 && cmdFade > 0) {
+              const fs = Math.max(14, Math.round(vmin * 0.04));
+              ctx.font = `${fs}px 'JetBrains Mono', ui-monospace, monospace`;
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              const tx = cx - ctx.measureText(CMD).width / 2;
+              const line = CMD.slice(0, typedN);
+              ctx.fillStyle = PAPER;
+              ctx.globalAlpha = 0.85 * cmdFade * master;
+              ctx.fillText(line, tx, cy);
+              if (Math.floor(now / 575) % 2 === 0) {
+                const cursorX = tx + ctx.measureText(line).width;
+                ctx.fillRect(cursorX + fs * 0.25, cy - fs * 0.38, fs * 0.5, fs * 0.76);
+              }
+            }
+
+            // The data: adrift, then coarse onto the guides, then fine
+            // onto the lattice vertices.
+            const coarseT = easeInOut(span(p, 0.26, 0.4));
+            const fineT = easeInOut(span(p, 0.54, 0.66));
+            const pointFade = (1 - span(p, 0.66, 0.74)) * span(p, 0.16, 0.24);
+            if (pointFade > 0) {
+              ctx.fillStyle = PAPER;
+              for (let n = 0; n < N; n += 1) {
+                const dx = cx + (hash(n, 1) - 0.5) * 1.7 * vw + Math.sin(p * 9 + n) * vmin * 0.014;
+                const dy = cy + (hash(n, 2) - 0.5) * 1.7 * vh + Math.cos(p * 7 + n * 2) * vmin * 0.014;
+                let gx;
+                let gy;
+                if (hash(n, 6) < 0.65) {
+                  const a = hash(n, 7) * Math.PI * 2;
+                  gx = cx + R * 1.18 * Math.cos(a);
+                  gy = cy + R * 1.18 * Math.sin(a);
+                } else {
+                  const a = (Math.floor(hash(n, 7) * 8) * 45 * Math.PI) / 180;
+                  const f = 0.25 + 0.7 * hash(n, 8);
+                  gx = cx + R * 1.18 * f * Math.cos(a);
+                  gy = cy + R * 1.18 * f * Math.sin(a);
+                }
+                const ti = Math.floor(hash(n, 3) * 7) - 3;
+                const tj = Math.floor(hash(n, 4) * 7) - 3;
+                const fa = ((Math.floor(hash(n, 5) * 8) * 45 - 90) * Math.PI) / 180;
+                const fx = cx + ti * step + rLatt * Math.cos(fa);
+                const fy = cy + tj * step + rLatt * Math.sin(fa);
+                const x = lerp(lerp(dx, gx, coarseT), fx, fineT);
+                const y = lerp(lerp(dy, gy, coarseT), fy, fineT);
+                ctx.globalAlpha = lerp(0.3, 0.55, coarseT) * pointFade * master;
+                ctx.beginPath();
+                ctx.arc(x, y, 1.4, 0, Math.PI * 2);
+                ctx.fill();
+              }
+            }
+
+            // Act 2: guides ink in between the landed points.
+            const guideAlpha = 1 - span(p, 0.52, 0.6);
+            if (guideAlpha > 0) {
+              ctx.strokeStyle = PAPER;
+              ctx.lineWidth = 1;
+              const sweep = easeOut(span(p, 0.28, 0.38));
+              if (sweep > 0) {
+                ctx.globalAlpha = 0.34 * guideAlpha * master;
+                ctx.beginPath();
+                ctx.arc(cx, cy, R * 1.18, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * sweep);
+                ctx.stroke();
+              }
+              for (let k = 0; k < 8; k += 1) {
+                const t = span(p, 0.3 + (k % 4) * 0.01, 0.4);
+                if (t <= 0) continue;
+                const a = (k * 45 * Math.PI) / 180;
+                const len = R * 1.18 * easeOut(t);
+                drawSegs(
+                  [[[cx, cy], [cx + len * Math.cos(a), cy + len * Math.sin(a)]]],
+                  1, PAPER, 0.2 * guideAlpha * master, 1
+                );
+              }
+            }
+
+            // The first landed datum, at the center.
+            const dotA = span(p, 0.24, 0.26);
+            if (dotA > 0) {
+              ctx.fillStyle = PAPER;
+              ctx.globalAlpha = 0.9 * dotA * master;
+              ctx.beginPath();
+              ctx.arc(cx, cy, 2, 0, Math.PI * 2);
+              ctx.fill();
+            }
+
+            // Act 3: the star, drawn between the points.
+            drawSegs(squareSegs(cx, cy, R, 45), easeOut(span(p, 0.4, 0.48)), FIROUZEH, 0.95 * master, 1.6);
+            drawSegs(squareSegs(cx, cy, R, 0), easeOut(span(p, 0.44, 0.52)), FIROUZEH, 0.95 * master, 1.6);
+            drawSegs(octagonSegs(cx, cy, R * 0.765), easeOut(span(p, 0.48, 0.56)), SAFFRON, 0.85 * master, 1.1);
+
+            // Act 4: refine — the lattice tiles as the points settle.
+            for (let i = -3; i <= 3; i += 1) {
+              for (let j = -3; j <= 3; j += 1) {
+                if (i === 0 && j === 0) continue;
+                const mx = cx + i * step;
+                const my = cy + j * step;
+                if (mx < -step || mx > vw + step || my < -step || my > vh + step) continue;
+                const dist = Math.hypot(i, j);
+                const t = easeOut(span(p, 0.56 + dist * 0.022, 0.66 + dist * 0.022));
+                if (t <= 0) continue;
+                const starSegs = [...squareSegs(mx, my, rLatt, 45), ...squareSegs(mx, my, rLatt, 0)];
+                drawSegs(starSegs, t, FIROUZEH, 0.4 * master, 1);
+              }
+            }
+          };
+
           let completed = false;
-          let lastProgress = 0;
-          let stallTimer = 0;
-          let seekTimer = 0;
-          let hintMode = 'scroll';
+          let rafId = 0;
+          let lastTick = 0;
+          let elapsed = 0;
+          let boostUntil = 0;
+          // A short black beat, then the command types itself.
+          const PREROLL = 400;
+          const DURATION = 9500;
 
-          const setHint = (mode) => {
-            if (completed || hintMode === mode || !hintText) return;
-            hintMode = mode;
-            intro.classList.toggle('is-stalled', mode === 'stalled');
-            intro.classList.toggle('is-buffering', mode === 'buffering');
-            hintText.textContent =
-              mode === 'buffering' ? 'buffering…'
-              : mode === 'stalled' ? 'keep scrolling'
-              : 'scroll to enter';
-          };
-          const armStallTimer = () => {
-            window.clearTimeout(stallTimer);
-            stallTimer = window.setTimeout(() => {
-              if (!completed && lastProgress > 0.05 && lastProgress < 0.9) setHint('stalled');
-            }, 4000);
-          };
-          const primeVideo = () => {
-            if (primed) return;
-            primed = true;
-            const playback = video.play();
-            playback?.then(() => {
-              video.pause();
-              requestRender();
-            }).catch(() => {
-              primed = false;
-            });
-          };
           const completeIntro = () => {
             if (completed) return;
             completed = true;
-            window.clearTimeout(stallTimer);
-            window.clearTimeout(seekTimer);
-            video.pause();
+            window.cancelAnimationFrame(rafId);
             try {
               sessionStorage.setItem('introSeen', '1');
             } catch {
@@ -167,32 +321,36 @@ const notes = (await getCollection('notes')).sort(
             scheduleRelease();
             capTimer = window.setTimeout(release, 1200);
           };
-          const render = () => {
-            frame = 0;
+          const tick = (now) => {
+            rafId = 0;
             if (completed) return;
-            const distance = Math.max(1, intro.offsetHeight - window.innerHeight);
-            const progress = Math.min(1, Math.max(0, -intro.getBoundingClientRect().top / distance));
-            lastProgress = progress;
+            if (!lastTick) lastTick = now;
+            // Clamped so a backgrounded tab resumes where it left off
+            // instead of jumping to the end.
+            elapsed += Math.min(100, now - lastTick) * (now < boostUntil ? 4 : 1);
+            lastTick = now;
+            const progress = Math.min(1, Math.max(0, (elapsed - PREROLL) / DURATION));
             intro.style.setProperty('--intro-progress', String(progress));
             document.body.style.setProperty('--intro-progress', String(progress));
             shell.inert = true;
-
-            if (video.readyState >= HTMLMediaElement.HAVE_METADATA && Number.isFinite(video.duration)) {
-              const targetTime = Math.min(video.duration - 0.001, progress * video.duration);
-              if (Math.abs(video.currentTime - targetTime) > 0.025) {
-                video.currentTime = targetTime;
-                // Distinguish "loading" from "broken" when the scrub outruns
-                // the download.
-                if (!seekTimer) seekTimer = window.setTimeout(() => setHint('buffering'), 300);
-              }
+            draw(progress, now);
+            if (progress >= 1) {
+              completeIntro();
+              return;
             }
-
-            if (progress >= 0.999) completeIntro();
-          };
-          const requestRender = () => {
-            if (!frame) frame = window.requestAnimationFrame(render);
+            rafId = window.requestAnimationFrame(tick);
           };
 
+          // Impatience is input: scrolling or dragging fast-forwards the
+          // sequence, Escape and "skip intro" complete it instantly.
+          const boost = () => {
+            boostUntil = performance.now() + 300;
+          };
+          window.addEventListener('wheel', boost, { passive: true });
+          window.addEventListener('touchmove', boost, { passive: true });
+          window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') completeIntro();
+          });
           skip?.addEventListener('click', (event) => {
             event.preventDefault();
             completeIntro();
@@ -200,26 +358,8 @@ const notes = (await getCollection('notes')).sort(
           // While the intro is up, "skip to content" would point into an
           // inert shell; completing the intro first makes #main reachable.
           document.querySelector('.skip-link')?.addEventListener('click', () => completeIntro());
-          video.addEventListener('seeked', () => {
-            window.clearTimeout(seekTimer);
-            seekTimer = 0;
-            setHint('scroll');
-          });
-          // A video that cannot load or play should cost the visitor
-          // nothing: hand them the page instead of a black scrub.
-          video.addEventListener('error', completeIntro);
-          video.querySelector('source')?.addEventListener('error', completeIntro);
-          video.addEventListener('canplay', primeVideo, { once: true });
-          video.addEventListener('loadedmetadata', requestRender);
-          window.addEventListener('pointerdown', primeVideo, { once: true, passive: true });
-          window.addEventListener('touchstart', primeVideo, { once: true, passive: true });
-          window.addEventListener('scroll', () => {
-            primeVideo();
-            requestRender();
-            armStallTimer();
-          }, { passive: true });
-          window.addEventListener('resize', requestRender, { passive: true });
-          requestRender();
+          resizeCanvas();
+          rafId = window.requestAnimationFrame(tick);
         };
 
         if (document.readyState === 'loading') {

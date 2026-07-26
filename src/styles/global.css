@@ -210,11 +210,6 @@ a:hover {
   background: transparent;
 }
 
-.js .scroll-intro {
-  height: 500vh;
-  height: 500svh;
-}
-
 .scroll-intro-sticky {
   position: sticky;
   top: 0;
@@ -235,9 +230,26 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* The film dims to black over ~0.61-0.78 of the scrub, so the two visual
-     worlds never double-expose during the handoff. */
-  opacity: clamp(0, calc((0.78 - var(--intro-progress)) * 6), 1);
+}
+
+/* Static khatam for no-JS visitors; the canvas scene replaces it. */
+.scroll-intro-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #3fd0bc;
+}
+
+.scroll-intro-fallback svg {
+  width: clamp(160px, 26vmin, 260px);
+  height: auto;
+  stroke-width: 2;
+  opacity: 0.8;
+}
+
+.js .scroll-intro-fallback {
+  display: none;
 }
 
 /* A 16:9 frame letterboxed into a portrait phone reads as a thin strip;
@@ -258,8 +270,7 @@ a:hover {
     linear-gradient(to top, rgba(2, 3, 4, 0.72), transparent 30%);
 }
 
-.scroll-intro-skip,
-.scroll-intro-hint {
+.scroll-intro-skip {
   position: absolute;
   z-index: 2;
   color: rgba(255, 255, 255, 0.72);
@@ -298,31 +309,6 @@ a:hover {
   }
 }
 
-.scroll-intro-hint {
-  bottom: max(1.6rem, env(safe-area-inset-bottom));
-  left: 50%;
-  display: grid;
-  justify-items: center;
-  gap: 0.25rem;
-  transform: translateX(-50%);
-  opacity: clamp(0, calc((0.16 - var(--intro-progress)) * 12), 1);
-}
-
-/* A stalled or starved scrub brings the guidance back mid-intro. */
-.scroll-intro.is-stalled .scroll-intro-hint,
-.scroll-intro.is-buffering .scroll-intro-hint {
-  opacity: 1;
-}
-
-.scroll-intro.is-buffering .scroll-intro-arrow {
-  display: none;
-}
-
-.scroll-intro-arrow {
-  font-size: 1rem;
-  animation: intro-nudge 1.5s ease-in-out infinite;
-}
-
 .scroll-intro-progress {
   position: absolute;
   right: 0;
@@ -333,12 +319,6 @@ a:hover {
   background: var(--accent);
   transform: scaleX(var(--intro-progress));
   transform-origin: left;
-}
-
-@keyframes intro-nudge {
-  50% {
-    transform: translateY(0.3rem);
-  }
 }
 
 .js .has-scroll-intro:not(.intro-complete) .site-shell {

@@ -52,44 +52,37 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
-test('homepage opens with a silent, scroll-controlled video intro', async () => {
+test('homepage opens with a typed-command khatam intro', async () => {
   const html = await read('dist/index.html');
 
   assert.match(html, /class="scroll-intro"/);
-  assert.match(html, /data-scroll-intro-video/);
-  assert.match(html, /src="\/website-intro\.mp4"/);
-  assert.match(html, /<video[^>]*\smuted(?:\s|>)/);
-  assert.match(html, /<video[^>]*\splaysinline(?:\s|>)/);
+  assert.match(html, /data-scroll-intro-canvas/);
+  assert.match(html, /class="scroll-intro-fallback"/);
   assert.match(html, /skip intro/i);
   assert.match(html, /prefers-reduced-motion: reduce/);
-  assert.match(html, /primeVideo/);
-  assert.match(html, /video\.play\(\)/);
   assert.match(html, /DOMContentLoaded/);
+  assert.match(html, /~ construct khatam/);
   assert.match(html, /completeIntro/);
   assert.match(html, /intro\.hidden = true/);
   assert.match(html, /shell\.inert = false/);
   assert.match(html, /classList\.add\(['"]intro-complete['"], ['"]intro-settling['"]\)/);
   // The intro is a first-arrival moment only: repeat visits this session,
-  // deep links, and reduced motion land on the page itself, and the full
-  // video is not fetched unless the intro actually runs.
-  assert.match(html, /<video[^>]*preload="metadata"/);
+  // deep links, reduced motion, and canvas-less browsers land on the page.
   assert.match(html, /sessionStorage\.getItem\(['"]introSeen['"]\)/);
   assert.match(html, /sessionStorage\.setItem\(['"]introSeen['"], ['"]1['"]\)/);
-  assert.match(html, /reduceMotion\.matches \|\| introSeen \|\| location\.hash/);
-  // "skip intro" completes immediately instead of fast-forwarding the scrub.
+  assert.match(html, /reduceMotion\.matches \|\| introSeen \|\| location\.hash \|\| !ctx/);
+  // Impatience is input: skip and Escape complete the intro instantly.
   assert.match(html, /skip\?\.addEventListener\(['"]click['"],[\s\S]*?completeIntro\(\)/);
-  // A failed video hands the visitor the page instead of a black scrub.
-  assert.match(html, /video\.addEventListener\(['"]error['"], completeIntro\)/);
+  assert.match(html, /key === 'Escape'/);
   // The settle freeze must stay bounded: momentum release may come early,
   // but the hard cap ends it no matter what input keeps arriving.
   assert.match(html, /capTimer = window\.setTimeout\(release, \d+\)/);
   assert.match(html, /classList\.remove\(['"]intro-settling['"]\)/);
-  assert.doesNotMatch(html, /absorbMomentum/);
-  assert.doesNotMatch(html, /preventDefault\(\)[\s\S]*?intro-settling/);
   assert.match(html, /window\.scrollTo\(\{ top: 0/);
   assert.match(html, /data-site-shell/);
-  assert.equal(await exists('dist/website-intro.mp4'), true);
-  assert.equal(await exists('dist/website-intro-poster.jpg'), true);
+  // The video intro is gone from the homepage entirely.
+  assert.doesNotMatch(html, /data-scroll-intro-video/);
+  assert.doesNotMatch(html, /website-intro\.mp4/);
 });
 
 test('homepage surfaces the notes section', async () => {
