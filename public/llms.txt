@@ -7,9 +7,8 @@ Dollar Shave Club, data science at Hulu and Microsoft. Four years of
 engineering management (last two running a 15 engineer ads ranking team
 at Meta) before returning to hands-on IC work in May 2026.
 
-Core thesis across all work: ML systems should show their evidence or
-abstain. Models that abstain instead of guessing; agents whose authority
-is bounded by structure, not politeness.
+Recurring interests: models that abstain instead of guessing; agents
+whose authority is bounded by structure, not politeness.
 
 ## Work
 
@@ -25,15 +24,6 @@ is bounded by structure, not politeness.
 - /work/poe-league-tools/ : Desktop assistant for Path of Exile built
   entirely from the game's plain text log file. No memory reads, no
   injection, no simulated input.
-
-## Notes
-
-- /notes/benchmark-the-decision/ : benchmark the decision you actually
-  need (SigLIP vs OSNet, retrieval vs veto).
-- /notes/anti-correlated-metrics/ : when the metric is anti-correlated
-  with reality (zero reprojection error, wrong homography).
-- /notes/abstain-dont-guess/ : errors should degrade to abstention,
-  not misassignment.
 
 ## Contact
 

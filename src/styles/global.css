@@ -797,53 +797,6 @@ main {
   color: var(--accent);
 }
 
-/* ── notes list ────────────────────────────────────────────────── */
-
-.notes-list {
-  list-style: none;
-  font-family: var(--font-mono);
-}
-
-.notes-list li + li {
-  border-top: 1px solid var(--border-soft);
-}
-
-.notes-list a {
-  display: grid;
-  gap: 0.15rem;
-  padding: 0.9rem 0.5rem;
-  color: var(--text);
-  transition: background var(--transition-duration) ease;
-}
-
-.notes-list a:hover {
-  text-decoration: none;
-  background: linear-gradient(to right, transparent, var(--bg-raise) 10%, var(--bg-raise) 90%, transparent);
-}
-
-.notes-list .name {
-  font-weight: 700;
-}
-
-.notes-list a:hover .name {
-  color: var(--accent);
-}
-
-.notes-list .desc {
-  color: var(--muted);
-  font-size: var(--fs-sm);
-  font-family: var(--font-sans);
-}
-
-.notes-list .year {
-  color: var(--faint);
-  font-size: var(--fs-2xs);
-}
-
-.notes-index {
-  margin-top: 2rem;
-  max-width: var(--measure);
-}
 
 .note-meta {
   display: flex;

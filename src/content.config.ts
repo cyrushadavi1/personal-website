@@ -23,18 +23,4 @@ const work = defineCollection({
   }),
 });
 
-const notes = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/notes' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.string(),
-    published: z.string(),
-    order: z.number(),
-    from: z
-      .object({ label: z.string(), url: z.string() })
-      .optional(),
-  }),
-});
-
-export const collections = { work, notes };
+export const collections = { work };

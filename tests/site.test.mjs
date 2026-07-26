@@ -32,7 +32,8 @@ test('homepage presents readable projects and clear next actions', async () => {
   assert.ok(html.indexOf('NBA Video Analysis') < html.indexOf('Rakhsh'));
   assert.ok(html.indexOf('Rakhsh') < html.indexOf('Path of Exile League Tools'));
   assert.match(html, /ranking systems · agent systems · computer vision · evals/i);
-  assert.match(html, /show your evidence\s*or abstain/i);
+  // The hero states what exists; no site-wide thesis line.
+  assert.doesNotMatch(html, /show your evidence\s*or abstain/i);
   assert.match(html, /href="#work"[^>]*>explore the work/i);
   assert.match(html, /href="mailto:cyrus@hadavi.net"[^>]*>get in touch/i);
   assert.match(html, /class="nowrap-link"[^>]*>the longer version →<\/a>/i);
@@ -83,15 +84,6 @@ test('homepage opens with a typed-command intro sequence', async () => {
   // The video intro is gone from the homepage entirely.
   assert.doesNotMatch(html, /data-scroll-intro-video/);
   assert.doesNotMatch(html, /website-intro\.mp4/);
-});
-
-test('homepage surfaces the notes section', async () => {
-  const html = await read('dist/index.html');
-
-  assert.match(html, /class="notes-list"/);
-  assert.match(html, /benchmark the decision you actually need/i);
-  assert.match(html, /when the metric is anti-correlated with reality/i);
-  assert.match(html, /errors should degrade to abstention, not misassignment/i);
 });
 
 test('pages and structured data use the Kuros Persian spelling', async () => {
@@ -325,15 +317,11 @@ test('internal links resolve to built pages', async () => {
   const pages = [
     'dist/index.html',
     'dist/about/index.html',
-    'dist/notes/index.html',
     'dist/colophon/index.html',
     'dist/404.html',
     'dist/work/rakhsh/index.html',
     'dist/work/nba-video-analysis/index.html',
     'dist/work/poe-league-tools/index.html',
-    'dist/notes/benchmark-the-decision/index.html',
-    'dist/notes/anti-correlated-metrics/index.html',
-    'dist/notes/abstain-dont-guess/index.html',
   ];
   for (const page of pages) {
     const html = await read(page);
@@ -351,10 +339,10 @@ test('internal links resolve to built pages', async () => {
 
 test('internal page links use trailing slashes to avoid redirects', async () => {
   const html = await read('dist/index.html');
-  const workLinks = [...html.matchAll(/href="(\/(?:work|notes)\/[^"#]+)"/g)].map(
+  const workLinks = [...html.matchAll(/href="(\/work\/[^"#]+)"/g)].map(
     (match) => match[1]
   );
-  assert.ok(workLinks.length >= 4);
+  assert.ok(workLinks.length >= 3);
   for (const href of workLinks) {
     assert.ok(href.endsWith('/'), `missing trailing slash: ${href}`);
   }
@@ -374,7 +362,6 @@ test('pages include canonical, social, and structured metadata', async () => {
   for (const page of [
     'dist/index.html',
     'dist/about/index.html',
-    'dist/notes/index.html',
     'dist/colophon/index.html',
   ]) {
     const html = await read(page);
@@ -408,7 +395,6 @@ test('search-engine and agent discovery files are generated', async () => {
   assert.match(sitemap, /https:\/\/kuros\.io\/work\/nba-video-analysis\/<\/loc>/);
   assert.match(sitemap, /https:\/\/kuros\.io\/work\/poe-league-tools\/<\/loc>/);
   assert.match(sitemap, /https:\/\/kuros\.io\/work\/rakhsh\/<\/loc>/);
-  assert.match(sitemap, /https:\/\/kuros\.io\/notes\/<\/loc>/);
   assert.match(sitemap, /https:\/\/kuros\.io\/colophon\/<\/loc>/);
   assert.match(robots, /Sitemap: https:\/\/kuros\.io\/sitemap\.xml/);
   assert.match(llms, /Cyrus Hadavi/);

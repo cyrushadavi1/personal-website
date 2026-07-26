@@ -8,9 +8,6 @@ const allWork = (await getCollection('work')).sort(
 );
 const work = allWork.filter((entry) => entry.data.featured);
 const alsoWork = allWork.filter((entry) => !entry.data.featured);
-const notes = (await getCollection('notes')).sort(
-  (a, b) => a.data.order - b.data.order
-);
 ---
 
 <Base>
@@ -379,8 +376,7 @@ const notes = (await getCollection('notes')).sort(
       I build ranking systems that serve billions of people at Meta. On the
       side I build things that keep working while I sleep: an agent I text
       over iMessage, a pipeline that watches NBA broadcasts, a leveling
-      copilot for Path of Exile. One rule everywhere: show your evidence
-      or abstain.
+      copilot for Path of Exile.
     </p>
     <p class="role">staff software engineer · ads ranking ai @ meta · new york</p>
     <p class="specialties">ranking systems · agent systems · computer vision · evals</p>
@@ -425,24 +421,6 @@ const notes = (await getCollection('notes')).sort(
       )
     }
   </section>
-
-  {
-    notes.length > 0 && (
-      <section id="notes">
-        <h2 class="section-rule"><span class="star"><Khatam /></span> notes</h2>
-        <ol class="notes-list">
-          {notes.map((entry) => (
-            <li>
-              <a href={`/notes/${entry.id}/`}>
-                <span class="name">{entry.data.title}</span>
-                <span class="desc">{entry.data.description}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </section>
-    )
-  }
 
   <section>
     <h2 class="section-rule"><span class="star"><Khatam /></span> about</h2>
