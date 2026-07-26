@@ -69,9 +69,21 @@ test('homepage opens with a silent, scroll-controlled video intro', async () => 
   assert.match(html, /intro\.hidden = true/);
   assert.match(html, /shell\.inert = false/);
   assert.match(html, /classList\.add\(['"]intro-complete['"], ['"]intro-settling['"]\)/);
-  // The settle freeze must end on a fixed deadline; a user-resettable timer
-  // can lock scrolling forever while input keeps arriving.
-  assert.match(html, /setTimeout\(\(\) => \{[\s\S]*?classList\.remove\(['"]intro-settling['"]\)[\s\S]*?\}, \d+\)/);
+  // The intro is a first-arrival moment only: repeat visits this session,
+  // deep links, and reduced motion land on the page itself, and the full
+  // video is not fetched unless the intro actually runs.
+  assert.match(html, /<video[^>]*preload="metadata"/);
+  assert.match(html, /sessionStorage\.getItem\(['"]introSeen['"]\)/);
+  assert.match(html, /sessionStorage\.setItem\(['"]introSeen['"], ['"]1['"]\)/);
+  assert.match(html, /reduceMotion\.matches \|\| introSeen \|\| location\.hash/);
+  // "skip intro" completes immediately instead of fast-forwarding the scrub.
+  assert.match(html, /skip\?\.addEventListener\(['"]click['"],[\s\S]*?completeIntro\(\)/);
+  // A failed video hands the visitor the page instead of a black scrub.
+  assert.match(html, /video\.addEventListener\(['"]error['"], completeIntro\)/);
+  // The settle freeze must stay bounded: momentum release may come early,
+  // but the hard cap ends it no matter what input keeps arriving.
+  assert.match(html, /capTimer = window\.setTimeout\(release, \d+\)/);
+  assert.match(html, /classList\.remove\(['"]intro-settling['"]\)/);
   assert.doesNotMatch(html, /absorbMomentum/);
   assert.doesNotMatch(html, /preventDefault\(\)[\s\S]*?intro-settling/);
   assert.match(html, /window\.scrollTo\(\{ top: 0/);

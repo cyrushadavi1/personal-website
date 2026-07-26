@@ -8,7 +8,7 @@
   --border-soft: #1d211f;
 
   --text: #d7d3ca;
-  --muted: #8d897e;
+  --muted: #9a9587;
   --faint: #8a867b;
 
   /* firouzeh — Persian turquoise */
@@ -45,7 +45,7 @@ html[data-theme='light'] {
   --border-soft: #ded7ca;
   --text: #222622;
   --muted: #625f57;
-  --faint: #6a6559;
+  --faint: #716c5e;
   --accent: #06695f;
   --accent-dim: #0d5a52;
   --gold: #8b5d1d;
@@ -224,7 +224,9 @@ a:hover {
   overflow: hidden;
   background: #020304;
   isolation: isolate;
-  opacity: clamp(0, calc((1 - var(--intro-progress)) * 4), 1);
+  /* Hand off through black, never a crossfade: the film has already dimmed
+     out (see .scroll-intro-media) before this layer lifts off the shell. */
+  opacity: clamp(0, calc((1 - var(--intro-progress)) * 5), 1);
 }
 
 .scroll-intro-media {
@@ -233,6 +235,17 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /* The film dims to black over ~0.61-0.78 of the scrub, so the two visual
+     worlds never double-expose during the handoff. */
+  opacity: clamp(0, calc((0.78 - var(--intro-progress)) * 6), 1);
+}
+
+/* A 16:9 frame letterboxed into a portrait phone reads as a thin strip;
+   filling the viewport keeps the moment cinematic and the subject centered. */
+@media (orientation: portrait) {
+  .scroll-intro-media {
+    object-fit: cover;
+  }
 }
 
 .scroll-intro-shade {
@@ -257,14 +270,32 @@ a:hover {
 }
 
 .scroll-intro-skip {
-  top: max(1.25rem, env(safe-area-inset-top));
   right: max(1.25rem, env(safe-area-inset-right));
+  bottom: max(1.6rem, env(safe-area-inset-bottom));
   padding: 0.4rem;
+}
+
+.scroll-intro-skip::before {
+  content: '[' / '';
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.scroll-intro-skip::after {
+  content: ']' / '';
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .scroll-intro-skip:hover {
   color: #fff;
   text-decoration: none;
+}
+
+@media (pointer: coarse) {
+  .scroll-intro-skip {
+    right: max(0.85rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    padding: 1rem 1.1rem;
+  }
 }
 
 .scroll-intro-hint {
@@ -275,6 +306,16 @@ a:hover {
   gap: 0.25rem;
   transform: translateX(-50%);
   opacity: clamp(0, calc((0.16 - var(--intro-progress)) * 12), 1);
+}
+
+/* A stalled or starved scrub brings the guidance back mid-intro. */
+.scroll-intro.is-stalled .scroll-intro-hint,
+.scroll-intro.is-buffering .scroll-intro-hint {
+  opacity: 1;
+}
+
+.scroll-intro.is-buffering .scroll-intro-arrow {
+  display: none;
 }
 
 .scroll-intro-arrow {
@@ -307,7 +348,7 @@ a:hover {
   height: 100dvh;
   overflow: hidden;
   pointer-events: none;
-  opacity: clamp(0, calc((var(--intro-progress) - 0.72) * 3.58), 1);
+  opacity: clamp(0, calc((var(--intro-progress) - 0.8) * 5), 1);
   transform: scale(clamp(0.985, calc(0.985 + var(--intro-progress) * 0.015), 1));
 }
 
@@ -562,11 +603,12 @@ main {
 
 .hero h1 .cursor {
   display: inline-block;
+  /* baseline-aligned at cap height (0.73em in JetBrains Mono), so the
+     block spans exactly cap-top to baseline like the letters beside it */
   width: 0.55ch;
-  height: 0.95em;
+  height: 0.72em;
   margin-left: 0.18ch;
   background: var(--accent);
-  vertical-align: text-bottom;
   animation: blink 1.15s steps(2, jump-none) infinite;
 }
 
