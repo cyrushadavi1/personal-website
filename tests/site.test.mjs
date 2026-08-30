@@ -90,6 +90,20 @@ test('Spain decision board is a safe one-link, day-by-day choice list', async ()
     'second-madrid-museum'
   ]);
 
+  const contextualizedDecisions = [...html.matchAll(
+    /id: '([^']+)',[\s\S]*?options: \[([^\]]+)\],\s*\n\s*optionContext: \{([\s\S]*?)\n\s*\}/g
+  )];
+  assert.equal(contextualizedDecisions.length, 17, 'every choice needs decision context');
+  for (const [, id, optionSource, contextSource] of contextualizedDecisions) {
+    const options = [...optionSource.matchAll(/'([^']+)'/g)].map((match) => match[1]);
+    for (const option of options) {
+      assert.match(contextSource, new RegExp(`'${option.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}': '.+'`), `${id}: ${option} needs a tradeoff explanation`);
+    }
+  }
+  assert.match(html, /class="choice-context"/);
+  assert.match(html, /official interactive audio guide is currently free during its trial/i);
+  assert.doesNotMatch(html, /no official audio guide/i);
+
   let previous = -1;
   for (let day = 1; day <= 13; day += 1) {
     const index = html.indexOf(`day: ${day},`);

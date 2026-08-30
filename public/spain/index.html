@@ -263,23 +263,37 @@
       font-size: 0.92rem;
     }
     .choice-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
     }
     .choice-btn {
       min-height: 44px;
+      width: 100%;
       max-width: 100%;
-      padding: 8px 13px;
+      padding: 12px 14px;
       border: 1px solid var(--control-border);
       border-radius: 10px;
       background: #fffaf2;
       cursor: pointer;
       text-align: left;
-      line-height: 1.3;
+      line-height: 1.35;
     }
     .choice-btn:hover { border-color: var(--ink); }
+    .choice-label {
+      display: block;
+      color: var(--ink);
+      font-weight: 750;
+    }
+    .choice-context {
+      display: block;
+      margin-top: 5px;
+      color: #52605a;
+      font-size: 0.82rem;
+      font-weight: 450;
+      line-height: 1.45;
+    }
     .action-btn:disabled { cursor: not-allowed; opacity: 0.62; }
     .choice-btn[aria-pressed="true"] {
       border-color: var(--green);
@@ -287,6 +301,7 @@
       color: #143f34;
       font-weight: 750;
     }
+    .choice-btn[aria-pressed="true"] .choice-context { color: #2f574c; }
     .answers {
       display: flex;
       flex-wrap: wrap;
@@ -500,13 +515,21 @@
               id: 'palace-visit',
               title: 'Royal Palace: guided or self-guided?',
               detail: 'Official guided entry is about €26; self-guided entry about €18. The €24 Palace + Royal Collections combination is available only with self-guided Palace entry.',
-              options: ['Official guided visit', 'Self-guided visit']
+              options: ['Official guided visit', 'Self-guided visit'],
+              optionContext: {
+                'Official guided visit': 'Choose this for useful state-history context with no advance research. It costs about €8 more and means following a fixed group pace.',
+                'Self-guided visit': 'Choose this for a lower price, more control over your pace, and access to the €24 Palace + Royal Collections combination. The tradeoff is less interpretation.'
+              }
             },
             {
               id: 'royal-collections',
               title: 'Add the Royal Collections?',
               detail: 'About €14 alone. It pairs naturally with the Palace but uses most of the remaining day.',
-              options: ['Add Royal Collections', 'Skip it and explore old Madrid']
+              options: ['Add Royal Collections', 'Skip it and explore old Madrid'],
+              optionContext: {
+                'Add Royal Collections': 'Best if royal history, decorative arts, and a complete Palace day sound appealing. It is next door and efficient, but adds 90–120 museum-heavy minutes and about €14—or only about €6 via the self-guided combination.',
+                'Skip it and explore old Madrid': 'Best if the Palace already feels like enough indoor history. This preserves a flexible afternoon for streets, plazas, food, or Debod, but drops a major collection.'
+              }
             }
           ]
         },
@@ -521,13 +544,24 @@
               id: 'sunday-morning',
               title: 'What should Sunday morning be?',
               detail: 'El Rastro requires a later train; the other choices allow an earlier departure.',
-              options: ['El Rastro', 'Retiro', 'Quiet museum morning', 'Quiet breakfast walk']
+              options: ['El Rastro', 'Retiro', 'Quiet museum morning', 'Quiet breakfast walk'],
+              optionContext: {
+                'El Rastro': 'The only chance to experience Madrid’s Sunday market and La Latina at their liveliest. It brings crowds, luggage logistics, and the latest Toledo train.',
+                'Retiro': 'A restorative outdoor morning and the easiest default. It is low stress, but Retiro is already part of the final Madrid day, so this partly repeats the plan.',
+                'Quiet museum morning': 'Adds a focused indoor experience without market crowds. It risks museum fatigue and needs an opening-hours and luggage check before choosing a venue.',
+                'Quiet breakfast walk': 'The lowest-friction choice and the one that protects the most Toledo time. You gain an unhurried transfer but give up a marquee Madrid activity.'
+              }
             },
             {
               id: 'toledo-arrival',
               title: 'What should we do after reaching Toledo?',
               detail: 'Keep this subordinate to the wedding schedule.',
-              options: ['Old-town orientation walk (Zocodover, Cathedral exterior)', 'Mirador del Valle', 'Keep the evening open']
+              options: ['Old-town orientation walk (Zocodover, Cathedral exterior)', 'Mirador del Valle', 'Keep the evening open'],
+              optionContext: {
+                'Old-town orientation walk (Zocodover, Cathedral exterior)': 'Best for learning the lanes before the serious sightseeing day, with no ticket or transport commitment. It still uses arrival-day energy and does not include an interior.',
+                'Mirador del Valle': 'Gives the defining panoramic view while sunset light may be good. A taxi is the efficient choice, so this adds cost and a fixed outing after the transfer.',
+                'Keep the evening open': 'Protects check-in, wedding coordination, dinner, and recovery. It is the safest choice if timing is uncertain, but postpones Toledo’s orientation and panorama.'
+              }
             }
           ]
         },
@@ -542,7 +576,11 @@
               id: 'primada',
               title: 'How much Cathedral time should we protect?',
               detail: 'The temporary Primada exhibition needs a separate, non-refundable ticket of about €12 beyond normal Cathedral entry.',
-              options: ['Cathedral + Primada exhibition', 'Cathedral only']
+              options: ['Cathedral + Primada exhibition', 'Cathedral only'],
+              optionContext: {
+                'Cathedral + Primada exhibition': 'Choose this for one-time eighth-centenary art and restricted-space access before the exhibition ends October 14. It needs a separate non-refundable €12 ticket and roughly 3–3½ hours for both visits.',
+                'Cathedral only': 'The safer first-visit priority: the essential monument in about 90–120 minutes with more flexibility around the wedding. You save €12 but miss the temporary exhibition.'
+              }
             }
           ]
         },
@@ -557,13 +595,22 @@
               id: 'toledo-guide',
               title: 'Do we want a Three Cultures guide?',
               detail: 'Private quote required, and only useful if the wedding leaves a clean history block. Lower priority than an Alhambra guide.',
-              options: ['Hire a private guide', 'Explore independently']
+              options: ['Hire a private guide', 'Explore independently'],
+              optionContext: {
+                'Hire a private guide': 'Best if the Three Cultures story matters and a protected 2½–3 hour block exists. You gain coherent history and easier navigation, but accept a quote-dependent cost and fixed timing.',
+                'Explore independently': 'Best for wedding-day flexibility and selective stops at your own pace. It costs less, but you carry the route planning and may miss connections between the sites.'
+              }
             },
             {
               id: 'jewish-quarter-depth',
               title: 'How deep should the Jewish Quarter day go?',
               detail: 'Choose an effort tier, not a monument checklist.',
-              options: ['Full circuit: El Tránsito + Santo Tomé + Santa María la Blanca + San Juan', 'Core trio: Santo Tomé + Santa María la Blanca + San Juan', 'Wedding-first minimal walk']
+              options: ['Full circuit: El Tránsito + Santo Tomé + Santa María la Blanca + San Juan', 'Core trio: Santo Tomé + Santa María la Blanca + San Juan', 'Wedding-first minimal walk'],
+              optionContext: {
+                'Full circuit: El Tránsito + Santo Tomé + Santa María la Blanca + San Juan': 'The most complete Jewish Quarter and Three Cultures story, including the essential Sephardic Museum context. It needs the largest uninterrupted block and carries the most walking and monument fatigue.',
+                'Core trio: Santo Tomé + Santa María la Blanca + San Juan': 'Protects the strongest compact set if time is limited. It balances depth with the wedding schedule, but drops El Tránsito’s museum context.',
+                'Wedding-first minimal walk': 'Keeps commitments, meals, and recovery in control while still experiencing the old lanes. Choose it if the schedule is fragmented; the tradeoff is very little interior depth.'
+              }
             }
           ]
         },
@@ -578,7 +625,12 @@
               id: 'seville-arrival-evening',
               title: 'What should the first Seville evening be?',
               detail: 'Doing Plaza de España now keeps the next day calmer.',
-              options: ['Plaza de España', 'Santa Cruz + river walk', 'Dinner and rest']
+              options: ['Plaza de España', 'Santa Cruz + river walk', 'Dinner and rest'],
+              optionContext: {
+                'Plaza de España': 'Clears a defining Seville sight before the already-full Alcázar day and can be especially atmospheric near dusk. It requires the most energy and an extra outing after the long transfer.',
+                'Santa Cruz + river walk': 'A flexible first orientation that pairs naturally with dinner and can be shortened at any point. It leaves Plaza de España to compete with the next day’s core sights.',
+                'Dinner and rest': 'Best for recovering from the Toledo–Madrid–Seville transfer and starting the Alcázar day fresh. The cost is a denser Day 7 or accepting that one Seville sight may drop.'
+              }
             }
           ]
         },
@@ -593,13 +645,24 @@
               id: 'seville-cathedral',
               title: 'Cathedral: guided or standard entry?',
               detail: 'Official guided entry is about €20 versus about €13 standard. Choose guided only if its timing fits cleanly after the Alcázar.',
-              options: ['Official guided visit', 'Standard entry']
+              options: ['Official guided visit', 'Standard entry'],
+              optionContext: {
+                'Official guided visit': 'Adds an official interpreter for only about €7 more, a strong value if the available English time fits after the Alcázar. The fixed session creates the day’s tightest scheduling risk.',
+                'Standard entry': 'Keeps the Cathedral and Giralda flexible and costs about €13 online. You control the pace, but receive less historical and architectural explanation.'
+              }
             },
             {
               id: 'flamenco',
               title: 'Which flamenco evening?',
               detail: 'Show-only tickets are roughly €22–29. Choose one venue—or skip the show.',
-              options: ['Casa de la Memoria', 'Teatro Flamenco Triana', 'Museo del Baile', 'El Arenal', 'No flamenco show']
+              options: ['Casa de la Memoria', 'Teatro Flamenco Triana', 'Museo del Baile', 'El Arenal', 'No flamenco show'],
+              optionContext: {
+                'Casa de la Memoria': 'Best overall fit: central, intimate, traditional, about one hour, and roughly €22–24 show-only. The smaller room favors performance over spectacle, but popular sessions can sell out.',
+                'Teatro Flamenco Triana': 'Best if spending the evening in Triana matters; several daily times make scheduling easier. Expect a mid-€20s ticket and extra cross-river logistics.',
+                'Museo del Baile': 'Best if museum context would deepen the performance; the show is about €29 and the museum about €6. It is the priciest context-heavy option and can feel more packaged.',
+                'El Arenal': 'A larger, classic tablao atmosphere for anyone who wants a more theatrical room. Live show-only pricing needs checking, and the fixed dinner package is a poor fit for the food exclusions.',
+                'No flamenco show': 'Preserves a relaxed dinner and saves the ticket cost after a very full sightseeing day. You give up the trip’s strongest flamenco venue; the only remaining path is the Day 10 Sacromonte cave-show fallback.'
+              }
             }
           ]
         },
@@ -614,13 +677,27 @@
               id: 'seville-extra',
               title: 'Use the morning in Seville or leave early?',
               detail: 'A morning stop requires moving the currently targeted early-morning car pickup.',
-              options: ['Setas viewpoint', 'Casa de Pilatos', 'Palacio de las Dueñas', 'Triana walk', 'Leave early for Ronda']
+              options: ['Setas viewpoint', 'Casa de Pilatos', 'Palacio de las Dueñas', 'Triana walk', 'Leave early for Ronda'],
+              optionContext: {
+                'Setas viewpoint': 'A short, central skyline view and modern contrast to historic Seville, usually 45–60 minutes. It still pushes the car pickup later and is more about the view than cultural depth.',
+                'Casa de Pilatos': 'The strongest extra interior, with a compact palace visit of about 60–75 minutes. It adds meaningful Mudéjar and Renaissance detail but repeats some Alcázar themes.',
+                'Palacio de las Dueñas': 'A quieter aristocratic house and garden experience. It is beautiful but the most redundant choice after the Alcázar, so choose it instead of—not alongside—Pilatos.',
+                'Triana walk': 'A free, flexible neighborhood morning with markets, ceramics, and river atmosphere. It has the least ticket risk but still delays Ronda without adding one singular monument.',
+                'Leave early for Ronda': 'Maximizes daylight, protects the scenic drive and Ronda old-town loop, and removes pickup stress. You deliberately give up one final Seville extra.'
+              }
             },
             {
               id: 'ronda-interior',
               title: 'Which one Ronda interior matters most?',
               detail: 'The old town and bridge viewpoints remain the priority.',
-              options: ['Mondragón Palace', 'Bullring', 'Arab Baths', 'Water Mine (steep, wet steps)', 'Skip interiors']
+              options: ['Mondragón Palace', 'Bullring', 'Arab Baths', 'Water Mine (steep, wet steps)', 'Skip interiors'],
+              optionContext: {
+                'Mondragón Palace': 'Best for a compact mix of Ronda history, architecture, and gardens near the old-town route. It is pleasant rather than trip-defining and competes with golden-hour viewpoints.',
+                'Bullring': 'Best only if bullfighting history or the landmark’s architecture is a real interest. It is central and iconic, but the subject may be uncomfortable and the exterior may be enough.',
+                'Arab Baths': 'A core historical stop and an unusually well-preserved compact site. Choosing it here protects that priority but drops an additional palace or bullring interior, and the downhill detour adds a climb back.',
+                'Water Mine (steep, wet steps)': 'Offers the most physical, dramatic descent into the gorge. Choose it only for mobility confidence; the steep wet stairs add fatigue and overlap with the next morning’s gorge experience.',
+                'Skip interiors': 'Protects bridge viewpoints, the old-town walk, dinner, and sunset with no ticket timing. You keep Ronda scenic but lose most of its indoor historical context.'
+              }
             }
           ]
         },
@@ -635,13 +712,23 @@
               id: 'ronda-gorge',
               title: 'How should we handle the gorge?',
               detail: 'The route is roughly €5. Keep a hard departure cutoff so Granada wins.',
-              options: ['Reserve the gorge route', 'Viewpoints only', 'Skip for an early departure']
+              options: ['Reserve the gorge route', 'Viewpoints only', 'Skip for an early departure'],
+              optionContext: {
+                'Reserve the gorge route': 'Gives the missing below-bridge perspective for about €5 and is the strongest reason to keep the morning in Ronda. It is weather- and mobility-dependent and needs a hard departure cutoff.',
+                'Viewpoints only': 'Captures most of Ronda’s visual payoff with flexible timing and no reservation. You avoid the descent but miss the controlled route directly beneath Puente Nuevo.',
+                'Skip for an early departure': 'Best if Granada’s center monuments outrank one more Ronda angle or the weather is poor. It reduces driving pressure but gives up the defining below-bridge experience.'
+              }
             },
             {
               id: 'granada-arrival',
               title: 'What should the first Granada evening protect?',
               detail: 'Last realistic chance for Cathedral + Royal Chapel: Sunday is worship-restricted and we leave Monday. Skipping them tonight means accepting that they may be dropped.',
-              options: ['Cathedral + Royal Chapel, then Darro if energy allows', 'Viewpoints only — accept dropping Cathedral + Royal Chapel', 'Rest — accept dropping Cathedral + Royal Chapel']
+              options: ['Cathedral + Royal Chapel, then Darro if energy allows', 'Viewpoints only — accept dropping Cathedral + Royal Chapel', 'Rest — accept dropping Cathedral + Royal Chapel'],
+              optionContext: {
+                'Cathedral + Royal Chapel, then Darro if energy allows': 'Protects Granada’s major center monuments in their last realistic window before Sunday worship restrictions and Monday departure. It makes the arrival evening structured and potentially tiring after the drive.',
+                'Viewpoints only — accept dropping Cathedral + Royal Chapel': 'Trades interiors for Granada’s streets, Darro, and sunset atmosphere with fewer timed constraints. Choose it only if you are comfortable missing both center monuments on this trip.',
+                'Rest — accept dropping Cathedral + Royal Chapel': 'The best recovery choice before the long Alhambra day and the safest if the drive runs late. It intentionally sacrifices the Cathedral and Royal Chapel rather than creating a rushed promise.'
+              }
             }
           ]
         },
@@ -655,14 +742,23 @@
             {
               id: 'alhambra-guide',
               title: 'How should we experience the Alhambra?',
-              detail: 'This is the trip’s strongest case for paid interpretation. A licensed private guide requires a quote; no official audio guide is offered.',
-              options: ['Licensed private guide', 'Self-guided']
+              detail: 'This is the trip’s strongest case for paid interpretation. A licensed private guide requires a quote; the official interactive audio guide is currently free during its trial, so recheck it before the trip.',
+              options: ['Licensed private guide', 'Self-guided'],
+              optionContext: {
+                'Licensed private guide': 'The highest-value paid interpretation on the trip: complex history, symbolism, and route logic become easier to understand. It requires a quote, coordination around the existing timed ticket, and about three committed hours.',
+                'Self-guided': 'Keeps the visit fully flexible and adds no guide cost beyond the ticket already owned. The official interactive audio guide is currently free during its trial, but it cannot tailor the history or route to your questions.'
+              }
             },
             {
               id: 'granada-evening',
               title: 'What comes after the Alhambra?',
               detail: 'Keep it light. A cave show applies only if no Seville flamenco was chosen; Albaicín applies only if missed on Day 9.',
-              options: ['Sacromonte walk (cave show only if no Seville flamenco)', 'Albaicín stroll (only if missed Day 9)', 'Rest']
+              options: ['Sacromonte walk (cave show only if no Seville flamenco)', 'Albaicín stroll (only if missed Day 9)', 'Rest'],
+              optionContext: {
+                'Sacromonte walk (cave show only if no Seville flamenco)': 'Adds Granada’s cave district, hillside atmosphere, and a different view of the Alhambra. It involves more climbing after a long monument day; a cave show would duplicate Seville flamenco.',
+                'Albaicín stroll (only if missed Day 9)': 'Protects Granada’s classic lanes and Mirador de San Nicolás if arrival timing erased them. The steep cobbles can be tiring, and choosing it after already visiting would be needless repetition.',
+                'Rest': 'Protects recovery after four to five hours at the Alhambra and keeps dinner relaxed. You give up the last full evening for Granada’s historic hillside neighborhoods.'
+              }
             }
           ]
         },
@@ -686,7 +782,13 @@
               id: 'second-madrid-museum',
               title: 'Add one more museum—or stop after the Prado?',
               detail: 'Royal Collections applies only if skipped on Day 2. Reina Sofía is excluded because it is closed Tuesday.',
-              options: ['Thyssen', 'Royal Collections (only if skipped on Day 2)', 'Archaeological Museum', 'No second museum']
+              options: ['Thyssen', 'Royal Collections (only if skipped on Day 2)', 'Archaeological Museum', 'No second museum'],
+              optionContext: {
+                'Thyssen': 'The best art-history complement to the Prado because its broad chronology fills gaps rather than repeating only Spanish masters. It also creates the heaviest museum day and risks art fatigue.',
+                'Royal Collections (only if skipped on Day 2)': 'Best if monarchy and decorative arts matter more than another painting museum, and it recovers a missed Palace-day companion. It requires crossing back to Royal Madrid and should not be repeated.',
+                'Archaeological Museum': 'Best if history, archaeology, and material culture would be refreshing after paintings. It adds variety but still extends an already substantial museum day.',
+                'No second museum': 'Preserves Retiro, a long meal, neighborhood wandering, or an early final evening with no additional ticket. You end the trip with less collection coverage but a much better energy margin.'
+              }
             }
           ]
         },
@@ -708,6 +810,14 @@
         city: day.city,
         theme: day.theme
       })));
+      const missingOptionContext = allDecisions.flatMap((decision) =>
+        decision.options
+          .filter((option) => !decision.optionContext?.[option])
+          .map((option) => `${decision.id}: ${option}`)
+      );
+      if (missingOptionContext.length) {
+        throw new Error(`Missing choice context for ${missingOptionContext.join(', ')}`);
+      }
       const decisionById = new Map(allDecisions.map((decision) => [decision.id, decision]));
 
       const defaultState = () => ({
@@ -945,7 +1055,12 @@
                       <h3>${escapeHtml(decision.title)}</h3>
                       <p class="decision-copy">${escapeHtml(decision.detail)}</p>
                       <div class="choice-list" aria-label="Choose as ${escapeHtml(active)}">
-                        ${decision.options.map((option) => `<button class="choice-btn" type="button" data-choice="${escapeHtml(option)}" aria-pressed="${current.choice === option}">${escapeHtml(option)}</button>`).join('')}
+                        ${decision.options.map((option) => `
+                          <button class="choice-btn" type="button" data-choice="${escapeHtml(option)}" aria-pressed="${current.choice === option}">
+                            <span class="choice-label">${escapeHtml(option)}</span>
+                            <span class="choice-context">${escapeHtml(decision.optionContext[option])}</span>
+                          </button>
+                        `).join('')}
                       </div>
                       <div class="answers" aria-label="Current answers">
                         <span class="answer${cyrus.choice ? '' : ' empty'}"><strong>Cyrus:</strong> ${escapeHtml(cyrus.choice || '—')}</span>
