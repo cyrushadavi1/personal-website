@@ -53,24 +53,91 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
-test('Spain decision board is public-safe, local-only, and portable', async () => {
+test('Spain decision board is a safe one-link, day-by-day choice list', async () => {
   const html = await read('dist/spain/index.html');
 
   assert.match(html, /<meta name="robots" content="noindex,nofollow,noarchive">/);
-  assert.match(html, /Public link\./);
-  assert.match(html, /votes stay in this browser until exported/i);
-  assert.match(html, /kuros-spain-board-v1/);
-  assert.match(html, /kuros-spain-feedback/);
-  assert.match(html, /Export active traveler/);
-  assert.match(html, /Import choices/);
-  assert.match(html, /Disagreements only/);
-  assert.match(html, /Madrid[^<]*→[^<]*Toledo[^<]*→[^<]*Seville[^<]*→[^<]*Ronda[^<]*→[^<]*Granada/);
-  assert.match(html, /Official sellers first/i);
+  assert.match(html, /<meta name="referrer" content="no-referrer">/);
+  assert.match(html, /<h1>Decisions, day by day\.<\/h1>/);
+  assert.match(html, /Who are you\?/);
+  assert.match(html, /data-identity="Cyrus"/);
+  assert.match(html, /data-identity="Partner"/);
+  assert.match(html, /kuros-spain-day-board-v3/);
+  assert.match(html, /Copy Partner answers link/);
+  assert.match(html, /#choices=/);
+  assert.match(html, /existingParts\.join\(' and '\)/);
+  assert.match(html, /Most answers determine what gets booked/i);
+  assert.doesNotMatch(html, /Hispanidad event/i);
+  assert.match(html, /countNotes/);
+  assert.match(html, /kind: SHARE_KIND,[\s\S]*version: VERSION,[\s\S]*profile,[\s\S]*decisions/);
+  assert.doesNotMatch(html, /\{ k: SHARE_KIND, v: VERSION, p: profile, d: decisions \}/);
+  assert.match(html, /@media print[\s\S]*\.print-notes \{ display: block/);
+  assert.match(html, /<strong>Cyrus note:<\/strong>/);
+  assert.match(html, /<strong>Partner note:<\/strong>/);
+  assert.match(html, /payload\.profile !== 'Partner'/);
+  assert.match(html, /state\.activeProfile !== 'Cyrus'/);
+  assert.match(html, /copied = document\.execCommand\('copy'\)/);
+  assert.match(html, /Could not copy the answers link/);
+
+  const decisionIds = [...html.matchAll(/\bid: '([^']+)',\s*\n\s*title:/g)].map((match) => match[1]);
+  assert.deepEqual(decisionIds, [
+    'palace-visit', 'royal-collections', 'sunday-morning', 'toledo-arrival',
+    'primada', 'toledo-guide', 'jewish-quarter-depth', 'seville-arrival-evening',
+    'seville-cathedral', 'flamenco', 'seville-extra', 'ronda-interior',
+    'ronda-gorge', 'granada-arrival', 'alhambra-guide', 'granada-evening',
+    'second-madrid-museum'
+  ]);
+
+  let previous = -1;
+  for (let day = 1; day <= 13; day += 1) {
+    const index = html.indexOf(`day: ${day},`);
+    assert.ok(index > previous, `Day ${day} appears in order`);
+    previous = index;
+  }
+
+  assert.match(html, /day: 11,\s+weekday: 'Monday',\s+city: 'Granada → Madrid'/);
+  assert.match(html, /Decided by rule, not vote/i);
+  assert.match(html, /€26.*€18|€18.*€26/);
+  assert.match(html, /€22–29/);
+  assert.match(html, /Last realistic chance for Cathedral \+ Royal Chapel/i);
+  assert.match(html, /Old-town orientation walk \(Zocodover, Cathedral exterior\)/);
+  assert.match(html, /Santo Tomé, Santa María la Blanca, and San Juan de los Reyes/);
+  assert.match(html, /Core trio: Santo Tomé \+ Santa María la Blanca \+ San Juan/);
+  assert.doesNotMatch(html, /options: \[[^\]]*Reina Sofía/);
+  assert.doesNotMatch(html, /options: \[[^\]]*Official audio guide/);
+  assert.doesNotMatch(html, /id: 'arrival-evening'|id: 'toledo-wristband'|id: 'second-alhambra'|id: 'final-morning'/);
+  assert.doesNotMatch(html, /import-file|application\/json|Export my choices|Import their choices/);
+  assert.doesNotMatch(html, /data-tab=|view-book|city-filter|type-filter|Disagreements only/);
   assert.match(html, /Content-Security-Policy/);
   assert.match(html, /connect-src 'none'/);
   assert.doesNotMatch(html, /<script[^>]+src=/i);
   assert.doesNotMatch(html, /<form\b/i);
   assert.doesNotMatch(html, /(?:booking|confirmation|passport|hotel)Number\s*[:=]/i);
+
+  const luminance = (hex) => {
+    const channels = [1, 3, 5].map((i) => {
+      const channel = parseInt(hex.slice(i, i + 2), 16) / 255;
+      return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
+    });
+    return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+  };
+  const contrast = (a, b) => {
+    const [high, low] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+    return (high + 0.05) / (low + 0.05);
+  };
+  const paper = html.match(/--paper: (#[0-9a-f]{6})/)?.[1];
+  const paperStrong = html.match(/--paper-strong: (#[0-9a-f]{6})/)?.[1];
+  const muted = html.match(/--muted: (#[0-9a-f]{6})/)?.[1];
+  const controlBorder = html.match(/--control-border: (#[0-9a-f]{6})/)?.[1];
+  const placeholder = html.match(/\.note textarea::placeholder \{ color: (#[0-9a-f]{6});/)?.[1];
+  const unanswered = html.match(/\.answer\.empty \{ color: (#[0-9a-f]{6});/)?.[1];
+  for (const [label, color] of Object.entries({ paper, paperStrong, muted, controlBorder, placeholder, unanswered })) {
+    assert.ok(color, `missing Spain color ${label}`);
+  }
+  assert.ok(contrast(muted, paper) >= 4.5, 'muted text meets AA');
+  assert.ok(contrast(placeholder, '#fffaf2') >= 4.5, 'placeholder text meets AA');
+  assert.ok(contrast(unanswered, paperStrong) >= 4.5, 'unanswered text meets AA');
+  assert.ok(contrast(controlBorder, '#fffaf2') >= 3, 'control borders meet non-text contrast');
 });
 
 test('homepage opens with a typed-command intro sequence', async () => {
