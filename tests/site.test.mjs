@@ -53,6 +53,26 @@ test('homepage presents readable projects and clear next actions', async () => {
   );
 });
 
+test('Spain decision board is public-safe, local-only, and portable', async () => {
+  const html = await read('dist/spain/index.html');
+
+  assert.match(html, /<meta name="robots" content="noindex,nofollow,noarchive">/);
+  assert.match(html, /Public link\./);
+  assert.match(html, /votes stay in this browser until exported/i);
+  assert.match(html, /kuros-spain-board-v1/);
+  assert.match(html, /kuros-spain-feedback/);
+  assert.match(html, /Export active traveler/);
+  assert.match(html, /Import choices/);
+  assert.match(html, /Disagreements only/);
+  assert.match(html, /Madrid[^<]*→[^<]*Toledo[^<]*→[^<]*Seville[^<]*→[^<]*Ronda[^<]*→[^<]*Granada/);
+  assert.match(html, /Official sellers first/i);
+  assert.match(html, /Content-Security-Policy/);
+  assert.match(html, /connect-src 'none'/);
+  assert.doesNotMatch(html, /<script[^>]+src=/i);
+  assert.doesNotMatch(html, /<form\b/i);
+  assert.doesNotMatch(html, /(?:booking|confirmation|passport|hotel)Number\s*[:=]/i);
+});
+
 test('homepage opens with a typed-command intro sequence', async () => {
   const html = await read('dist/index.html');
 
