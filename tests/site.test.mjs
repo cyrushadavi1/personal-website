@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import test from 'node:test';
+import vm from 'node:vm';
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 const exists = (path) =>
@@ -8,6 +9,85 @@ const exists = (path) =>
     () => true,
     () => false
   );
+
+const renderSpainDecisionBoard = async () => {
+  const html = await read('dist/spain/index.html');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  assert.ok(script, 'Spain page has an inline application script');
+
+  const elements = new Map();
+  let document;
+  const element = (id) => {
+    if (!elements.has(id)) {
+      elements.set(id, {
+        id,
+        hidden: false,
+        innerHTML: '',
+        textContent: '',
+        value: '',
+        disabled: false,
+        title: '',
+        focus() { document.activeElement = this; },
+        replaceChildren() { this.innerHTML = ''; },
+        remove() {},
+        select() {}
+      });
+    }
+    return elements.get(id);
+  };
+  document = {
+    activeElement: null,
+    body: { append() {} },
+    getElementById: element,
+    querySelector(selector) {
+      if (selector === '[data-action="copy-link"]') return element('copy-link');
+      return null;
+    },
+    querySelectorAll() { return []; },
+    createElement() { return element(`created-${elements.size}`); },
+    addEventListener() {},
+    execCommand() { return false; }
+  };
+
+  const stored = JSON.stringify({
+    version: 3,
+    activeProfile: 'Cyrus',
+    identityChosen: true,
+    profiles: { Cyrus: {}, 'Cucu Tickle Lover': {} },
+    importedAt: {}
+  });
+  const storage = new Map([['kuros-spain-day-board-v3', stored]]);
+  const localStorage = {
+    getItem: (key) => storage.get(key) ?? null,
+    setItem: (key, value) => storage.set(key, value),
+    clear: () => storage.clear()
+  };
+  const location = { hash: '', origin: 'https://kuros.io', pathname: '/spain/', search: '' };
+  const window = { location, addEventListener() {} };
+  const history = { replaceState() { location.hash = ''; } };
+
+  vm.runInNewContext(script, {
+    document,
+    window,
+    history,
+    location,
+    localStorage,
+    navigator: {},
+    console,
+    confirm: () => true,
+    setTimeout,
+    clearTimeout,
+    TextEncoder,
+    TextDecoder,
+    Intl,
+    Date,
+    URL,
+    atob: (value) => Buffer.from(value, 'base64').toString('binary'),
+    btoa: (value) => Buffer.from(value, 'binary').toString('base64')
+  });
+
+  return element('day-list').innerHTML;
+};
 
 const readWorkScript = async () => {
   const html = await read('dist/work/nba-video-analysis/index.html');
@@ -90,17 +170,15 @@ test('Spain decision board is a safe one-link, day-by-day choice list', async ()
     'second-madrid-museum'
   ]);
 
-  const contextualizedDecisions = [...html.matchAll(
-    /id: '([^']+)',[\s\S]*?options: \[([^\]]+)\],\s*\n\s*optionContext: \{([\s\S]*?)\n\s*\}/g
-  )];
-  assert.equal(contextualizedDecisions.length, 17, 'every choice needs decision context');
-  for (const [, id, optionSource, contextSource] of contextualizedDecisions) {
-    const options = [...optionSource.matchAll(/'([^']+)'/g)].map((match) => match[1]);
-    for (const option of options) {
-      assert.match(contextSource, new RegExp(`'${option.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}': '.+'`), `${id}: ${option} needs a tradeoff explanation`);
-    }
-  }
-  assert.match(html, /class="choice-context"/);
+  assert.doesNotMatch(html, /optionContext:/, 'choice labels and context are stored together');
+  const renderedBoard = await renderSpainDecisionBoard();
+  const renderedLabels = [...renderedBoard.matchAll(/<span class="choice-label">([^<]+)<\/span>/g)].map((match) => match[1]);
+  const renderedContexts = [...renderedBoard.matchAll(/<span class="choice-context">([^<]+)<\/span>/g)].map((match) => match[1]);
+  assert.equal(renderedLabels.length, 53, 'all choices render');
+  assert.equal(renderedContexts.length, 53, 'every rendered choice has context');
+  assert.ok(renderedContexts.every((context) => context.trim().length >= 40), 'rendered context explains a meaningful tradeoff');
+  assert.match(renderedBoard, /Add Royal Collections[\s\S]*only about €6 via the self-guided combination/);
+  assert.match(renderedBoard, /Self-guided[\s\S]*official interactive audio guide is currently free during its trial/i);
   assert.match(html, /official interactive audio guide is currently free during its trial/i);
   assert.doesNotMatch(html, /no official audio guide/i);
 
@@ -143,16 +221,21 @@ test('Spain decision board is a safe one-link, day-by-day choice list', async ()
   };
   const paper = html.match(/--paper: (#[0-9a-f]{6})/)?.[1];
   const paperStrong = html.match(/--paper-strong: (#[0-9a-f]{6})/)?.[1];
+  const greenSoft = html.match(/--green-soft: (#[0-9a-f]{6})/)?.[1];
   const muted = html.match(/--muted: (#[0-9a-f]{6})/)?.[1];
   const controlBorder = html.match(/--control-border: (#[0-9a-f]{6})/)?.[1];
   const placeholder = html.match(/\.note textarea::placeholder \{ color: (#[0-9a-f]{6});/)?.[1];
   const unanswered = html.match(/\.answer\.empty \{ color: (#[0-9a-f]{6});/)?.[1];
-  for (const [label, color] of Object.entries({ paper, paperStrong, muted, controlBorder, placeholder, unanswered })) {
+  const choiceContext = html.match(/\.choice-context \{[\s\S]*?color: (#[0-9a-f]{6});/)?.[1];
+  const selectedChoiceContext = html.match(/\.choice-btn\[aria-pressed="true"\] \.choice-context \{ color: (#[0-9a-f]{6});/)?.[1];
+  for (const [label, color] of Object.entries({ paper, paperStrong, greenSoft, muted, controlBorder, placeholder, unanswered, choiceContext, selectedChoiceContext })) {
     assert.ok(color, `missing Spain color ${label}`);
   }
   assert.ok(contrast(muted, paper) >= 4.5, 'muted text meets AA');
   assert.ok(contrast(placeholder, '#fffaf2') >= 4.5, 'placeholder text meets AA');
   assert.ok(contrast(unanswered, paperStrong) >= 4.5, 'unanswered text meets AA');
+  assert.ok(contrast(choiceContext, '#fffaf2') >= 4.5, 'choice context meets AA');
+  assert.ok(contrast(selectedChoiceContext, greenSoft) >= 4.5, 'selected choice context meets AA');
   assert.ok(contrast(controlBorder, '#fffaf2') >= 3, 'control borders meet non-text contrast');
 });
 
