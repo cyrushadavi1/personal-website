@@ -437,11 +437,11 @@
         <summary>Compare answers</summary>
         <div class="share-panel">
           <div class="share-actions">
-            <button class="action-btn" type="button" data-action="copy-link">Copy Partner answers link</button>
+            <button class="action-btn" type="button" data-action="copy-link">Copy Cucu Tickle Lover answers link</button>
             <button class="action-btn" type="button" data-action="copy">Copy summary</button>
             <button class="action-btn" type="button" data-action="print">Print</button>
           </div>
-          <p class="share-help">Partner: answer once, copy the answers link, and send it to Cyrus. Cyrus: import once, discuss differences, then copy the final summary into Obsidian. If either of you added notes, also copy and send the readable summary.</p>
+          <p class="share-help">Cucu Tickle Lover: answer once, copy the answers link, and send it to Cyrus. Cyrus: import once, discuss differences, then copy the final summary into Obsidian. If either of you added notes, also copy and send the readable summary.</p>
           <p class="import-meta" id="import-meta" hidden></p>
         </div>
       </details>
@@ -454,7 +454,7 @@
       <p>Choose once so your answers are stored under the right traveler. You can switch later.</p>
       <div class="identity-actions">
         <button class="identity-btn" type="button" data-identity="Cyrus">I’m Cyrus</button>
-        <button class="identity-btn" type="button" data-identity="Partner">I’m Partner</button>
+        <button class="identity-btn" type="button" data-identity="Cucu Tickle Lover">I’m Cucu Tickle Lover</button>
       </div>
     </section>
     <section class="import-banner" id="import-banner" aria-live="polite" hidden></section>
@@ -474,6 +474,10 @@
       const STORAGE_KEY = 'kuros-spain-day-board-v3';
       const VERSION = 3;
       const SHARE_KIND = 'kuros-spain-day-choices-link';
+      const CYRUS = 'Cyrus';
+      const CUCU = 'Cucu Tickle Lover';
+      const LEGACY_PARTNER = 'Partner';
+      const PROFILES = [CYRUS, CUCU];
 
       const days = [
         {
@@ -710,7 +714,7 @@
         version: VERSION,
         activeProfile: '',
         identityChosen: false,
-        profiles: { Cyrus: {}, Partner: {} },
+        profiles: { [CYRUS]: {}, [CUCU]: {} },
         importedAt: {}
       });
 
@@ -727,16 +731,23 @@
           const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
           if (!parsed || parsed.version !== VERSION) return defaultState();
           const clean = defaultState();
-          clean.identityChosen = parsed.identityChosen === true && ['Cyrus', 'Partner'].includes(parsed.activeProfile);
-          clean.activeProfile = clean.identityChosen ? parsed.activeProfile : '';
-          for (const profile of ['Cyrus', 'Partner']) {
+          const activeProfile = parsed.activeProfile === LEGACY_PARTNER ? CUCU : parsed.activeProfile;
+          clean.identityChosen = parsed.identityChosen === true && PROFILES.includes(activeProfile);
+          clean.activeProfile = clean.identityChosen ? activeProfile : '';
+          for (const profile of PROFILES) {
+            const storedProfile = profile === CUCU
+              ? (parsed.profiles?.[CUCU] || parsed.profiles?.Partner)
+              : parsed.profiles?.[CYRUS];
             for (const decision of allDecisions) {
-              if (parsed.profiles?.[profile]?.[decision.id]) {
-                clean.profiles[profile][decision.id] = sanitizeEntry(decision.id, parsed.profiles[profile][decision.id]);
+              if (storedProfile?.[decision.id]) {
+                clean.profiles[profile][decision.id] = sanitizeEntry(decision.id, storedProfile[decision.id]);
               }
             }
           }
-          clean.importedAt = parsed.importedAt && typeof parsed.importedAt === 'object' ? parsed.importedAt : {};
+          if (parsed.importedAt && typeof parsed.importedAt === 'object') {
+            clean.importedAt[CYRUS] = parsed.importedAt[CYRUS];
+            clean.importedAt[CUCU] = parsed.importedAt[CUCU] || parsed.importedAt.Partner;
+          }
           return clean;
         } catch {
           return defaultState();
@@ -804,9 +815,9 @@
       const countAnswers = (profile) => allDecisions.filter((decision) => getEntry(profile, decision.id).choice).length;
       const countNotes = (profile) => allDecisions.filter((decision) => getEntry(profile, decision.id).note.trim()).length;
       const hasConflict = (id) => {
-        const cyrus = getEntry('Cyrus', id).choice;
-        const partner = getEntry('Partner', id).choice;
-        return Boolean(cyrus && partner && cyrus !== partner);
+        const cyrus = getEntry(CYRUS, id).choice;
+        const cucu = getEntry(CUCU, id).choice;
+        return Boolean(cyrus && cucu && cyrus !== cucu);
       };
 
       const encodePayload = (payload) => {
@@ -831,7 +842,7 @@
         history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
         try {
           const payload = decodePayload(encodedChoices);
-          if (payload?.kind !== SHARE_KIND || payload.version !== VERSION || payload.profile !== 'Partner') {
+          if (payload?.kind !== SHARE_KIND || payload.version !== VERSION || ![CUCU, LEGACY_PARTNER].includes(payload.profile)) {
             throw new Error('incompatible');
           }
           const decisions = {};
@@ -839,7 +850,7 @@
             const choice = payload.decisions?.[decision.id];
             if (decision.options.includes(choice)) decisions[decision.id] = choice;
           }
-          return { profile: payload.profile, decisions };
+          return { profile: CUCU, decisions };
         } catch {
           showToast('That answers link is invalid or outdated.');
           return null;
@@ -856,8 +867,8 @@
         const profile = pendingImport.profile;
         if (state.activeProfile !== 'Cyrus') {
           banner.innerHTML = `
-            <strong>Partner’s answers link is ready for Cyrus.</strong>
-            <p>Switch to Cyrus before importing so Partner’s local answers are not overwritten.</p>
+            <strong>Cucu Tickle Lover’s answers link is ready for Cyrus.</strong>
+            <p>Switch to Cyrus before importing so Cucu Tickle Lover’s local answers are not overwritten.</p>
             <div class="import-actions">
               <button type="button" data-action="switch-to-cyrus">Switch to Cyrus</button>
               <button type="button" data-action="dismiss-import">Ignore link</button>
@@ -894,7 +905,7 @@
       };
 
       const render = () => {
-        const chosen = state.identityChosen && ['Cyrus', 'Partner'].includes(state.activeProfile);
+        const chosen = state.identityChosen && PROFILES.includes(state.activeProfile);
         const identity = document.getElementById('identity-step');
         const controls = document.getElementById('control-shell');
         const list = document.getElementById('day-list');
@@ -911,10 +922,10 @@
         const active = state.activeProfile;
         document.getElementById('profile-label').textContent = `You: ${active}`;
         const copyLinkButton = document.querySelector('[data-action="copy-link"]');
-        copyLinkButton.disabled = active !== 'Partner';
-        copyLinkButton.title = active === 'Partner'
-          ? 'Copy Partner’s choices into a private answer link.'
-          : 'Switch to Partner to copy the answer link.';
+        copyLinkButton.disabled = active !== CUCU;
+        copyLinkButton.title = active === CUCU
+          ? 'Copy Cucu Tickle Lover’s choices into a private answer link.'
+          : 'Switch to Cucu Tickle Lover to copy the answer link.';
         list.innerHTML = days.map((day) => `
           <section class="day" id="day-${day.day}" aria-labelledby="day-${day.day}-heading">
             <header class="day-head">
@@ -926,8 +937,8 @@
               <div class="decision-list">
                 ${day.decisions.map((decision) => {
                   const current = getEntry(active, decision.id);
-                  const cyrus = getEntry('Cyrus', decision.id);
-                  const partner = getEntry('Partner', decision.id);
+                  const cyrus = getEntry(CYRUS, decision.id);
+                  const cucu = getEntry(CUCU, decision.id);
                   const conflict = hasConflict(decision.id);
                   return `
                     <article class="decision" data-decision-id="${decision.id}">
@@ -938,7 +949,7 @@
                       </div>
                       <div class="answers" aria-label="Current answers">
                         <span class="answer${cyrus.choice ? '' : ' empty'}"><strong>Cyrus:</strong> ${escapeHtml(cyrus.choice || '—')}</span>
-                        <span class="answer${partner.choice ? '' : ' empty'}"><strong>Partner:</strong> ${escapeHtml(partner.choice || '—')}</span>
+                        <span class="answer${cucu.choice ? '' : ' empty'}"><strong>Cucu Tickle Lover:</strong> ${escapeHtml(cucu.choice || '—')}</span>
                         ${conflict ? '<span class="discuss">Discuss</span>' : ''}
                       </div>
                       <details class="note" ${current.note ? 'open' : ''}>
@@ -947,7 +958,7 @@
                       </details>
                       <div class="print-notes">
                         ${cyrus.note ? `<p class="print-note"><strong>Cyrus note:</strong> ${escapeHtml(cyrus.note)}</p>` : ''}
-                        ${partner.note ? `<p class="print-note"><strong>Partner note:</strong> ${escapeHtml(partner.note)}</p>` : ''}
+                        ${cucu.note ? `<p class="print-note"><strong>Cucu Tickle Lover note:</strong> ${escapeHtml(cucu.note)}</p>` : ''}
                       </div>
                     </article>
                   `;
@@ -961,7 +972,7 @@
         const conflicts = allDecisions.filter((decision) => hasConflict(decision.id)).length;
         document.getElementById('progress').textContent = `${active}: ${completed}/${allDecisions.length}${conflicts ? ` · ${conflicts} to discuss` : ''}`;
 
-        const imports = ['Cyrus', 'Partner']
+        const imports = PROFILES
           .filter((profile) => state.importedAt[profile])
           .map((profile) => `${profile}'s answers imported ${formatImportDate(state.importedAt[profile])}`);
         const importMeta = document.getElementById('import-meta');
@@ -973,8 +984,8 @@
       const focusDayStart = () => document.getElementById('day-1-heading')?.focus();
 
       const buildAnswersLink = () => {
-        if (state.activeProfile !== 'Partner') return null;
-        const profile = 'Partner';
+        if (state.activeProfile !== CUCU) return null;
+        const profile = CUCU;
         const decisions = {};
         for (const decision of allDecisions) {
           const choice = getEntry(profile, decision.id).choice;
@@ -993,19 +1004,19 @@
       const copyAnswersLink = async () => {
         const link = buildAnswersLink();
         if (!link) {
-          showToast('Switch to Partner before copying the answers link.');
+          showToast('Switch to Cucu Tickle Lover before copying the answers link.');
           return;
         }
         try {
           await writeClipboard(link);
-          showToast('Partner’s answers link copied.');
+          showToast('Cucu Tickle Lover’s answers link copied.');
         } catch {
           showToast('Could not copy the answers link. Try again or use Print.');
         }
       };
 
       const acceptImport = () => {
-        if (!pendingImport || state.activeProfile !== 'Cyrus' || pendingImport.profile !== 'Partner') return;
+        if (!pendingImport || state.activeProfile !== CYRUS || pendingImport.profile !== CUCU) return;
         const clean = {};
         for (const decision of allDecisions) {
           const choice = pendingImport.decisions[decision.id];
@@ -1025,19 +1036,19 @@
         const lines = ['SPAIN — DAY-BY-DAY DECISIONS', ''];
         for (const day of days) {
           const answered = day.decisions.filter((decision) => {
-            const cyrus = getEntry('Cyrus', decision.id);
-            const partner = getEntry('Partner', decision.id);
-            return cyrus.choice || partner.choice || cyrus.note || partner.note;
+            const cyrus = getEntry(CYRUS, decision.id);
+            const cucu = getEntry(CUCU, decision.id);
+            return cyrus.choice || cucu.choice || cyrus.note || cucu.note;
           });
           if (!answered.length && !day.rule) continue;
           lines.push(`DAY ${day.day} — ${day.weekday.toUpperCase()} — ${day.city.toUpperCase()} — ${day.theme.toUpperCase()}`);
           if (day.rule) lines.push(`• Rule: ${day.rule}`);
           for (const decision of answered) {
-            const cyrus = getEntry('Cyrus', decision.id);
-            const partner = getEntry('Partner', decision.id);
+            const cyrus = getEntry(CYRUS, decision.id);
+            const cucu = getEntry(CUCU, decision.id);
             lines.push(`• ${decision.title}`);
             lines.push(`  Cyrus: ${cyrus.choice || '—'}${cyrus.note ? ` — ${cyrus.note}` : ''}`);
-            lines.push(`  Partner: ${partner.choice || '—'}${partner.note ? ` — ${partner.note}` : ''}`);
+            lines.push(`  Cucu Tickle Lover: ${cucu.choice || '—'}${cucu.note ? ` — ${cucu.note}` : ''}`);
             if (hasConflict(decision.id)) lines.push('  DISCUSS');
           }
           lines.push('');
@@ -1085,7 +1096,7 @@
         const action = event.target.closest('[data-action]')?.dataset.action;
         if (!action) return;
         if (action === 'switch') {
-          state.activeProfile = state.activeProfile === 'Cyrus' ? 'Partner' : 'Cyrus';
+          state.activeProfile = state.activeProfile === CYRUS ? CUCU : CYRUS;
           saveState();
           render();
         }

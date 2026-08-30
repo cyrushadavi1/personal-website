@@ -61,9 +61,9 @@ test('Spain decision board is a safe one-link, day-by-day choice list', async ()
   assert.match(html, /<h1>Decisions, day by day\.<\/h1>/);
   assert.match(html, /Who are you\?/);
   assert.match(html, /data-identity="Cyrus"/);
-  assert.match(html, /data-identity="Partner"/);
+  assert.match(html, /data-identity="Cucu Tickle Lover"/);
   assert.match(html, /kuros-spain-day-board-v3/);
-  assert.match(html, /Copy Partner answers link/);
+  assert.match(html, /Copy Cucu Tickle Lover answers link/);
   assert.match(html, /#choices=/);
   assert.match(html, /existingParts\.join\(' and '\)/);
   assert.match(html, /Most answers determine what gets booked/i);
@@ -73,9 +73,11 @@ test('Spain decision board is a safe one-link, day-by-day choice list', async ()
   assert.doesNotMatch(html, /\{ k: SHARE_KIND, v: VERSION, p: profile, d: decisions \}/);
   assert.match(html, /@media print[\s\S]*\.print-notes \{ display: block/);
   assert.match(html, /<strong>Cyrus note:<\/strong>/);
-  assert.match(html, /<strong>Partner note:<\/strong>/);
-  assert.match(html, /payload\.profile !== 'Partner'/);
+  assert.match(html, /<strong>Cucu Tickle Lover note:<\/strong>/);
+  assert.match(html, /!\[CUCU, LEGACY_PARTNER\]\.includes\(payload\.profile\)/);
   assert.match(html, /state\.activeProfile !== 'Cyrus'/);
+  assert.match(html, /parsed\.profiles\?\.Partner/);
+  assert.doesNotMatch(html, />I’m Partner<|Copy Partner answers link|<strong>Partner:<\/strong>|<strong>Partner note:<\/strong>/);
   assert.match(html, /copied = document\.execCommand\('copy'\)/);
   assert.match(html, /Could not copy the answers link/);
 
