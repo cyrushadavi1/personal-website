@@ -1,0 +1,2804 @@
+{
+  "words": [
+    {
+      "word": "abandon",
+      "pos": "v.",
+      "def_en": "to give up or leave behind completely",
+      "def_zh": "放弃；抛弃",
+      "example": "Faced with repeated crop failures, the settlers abandoned the valley within a decade.",
+      "example_zh": "由于庄稼连年歉收，定居者在十年内就放弃了这片河谷。",
+      "distractors": [
+        "inherit",
+        "postpone",
+        "record"
+      ],
+      "band": 1
+    },
+    {
+      "word": "abundant",
+      "pos": "adj.",
+      "def_en": "present in very large quantities",
+      "def_zh": "丰富的；大量的",
+      "example": "Fossils are abundant in the limestone of this region, so specimens are easy to collect.",
+      "example_zh": "该地区的石灰岩中化石十分丰富，因此标本很容易采集。",
+      "distractors": [
+        "fragile",
+        "recent",
+        "costly"
+      ],
+      "band": 2
+    },
+    {
+      "word": "accelerate",
+      "pos": "v.",
+      "def_en": "to make something happen faster",
+      "def_zh": "加速；加快",
+      "example": "Warmer temperatures accelerate the chemical weathering of exposed rock.",
+      "example_zh": "较高的气温会加速裸露岩石的化学风化。",
+      "distractors": [
+        "postpone",
+        "conceal",
+        "measure"
+      ],
+      "band": 2
+    },
+    {
+      "word": "accommodate",
+      "pos": "v.",
+      "def_en": "to provide enough room for; to adjust to fit needs",
+      "def_zh": "容纳；适应",
+      "example": "The lecture hall was rebuilt to accommodate twice as many students.",
+      "example_zh": "报告厅经过重建，可以容纳两倍的学生。",
+      "distractors": [
+        "exclude",
+        "criticize",
+        "dismantle"
+      ],
+      "band": 2
+    },
+    {
+      "word": "accumulate",
+      "pos": "v.",
+      "def_en": "to increase gradually in amount over time",
+      "def_zh": "积累；堆积",
+      "example": "Sediment accumulates on the lake bed at a rate of about one millimeter a year.",
+      "example_zh": "沉积物在湖底以每年约一毫米的速度堆积。",
+      "distractors": [
+        "scatter",
+        "purify",
+        "borrow"
+      ],
+      "band": 1
+    },
+    {
+      "word": "accurate",
+      "pos": "adj.",
+      "def_en": "correct in every detail",
+      "def_zh": "准确的；精确的",
+      "example": "Only an accurate measurement of the star's brightness can settle the dispute.",
+      "example_zh": "只有对该恒星亮度的精确测量才能解决这一争论。",
+      "distractors": [
+        "urgent",
+        "optional",
+        "lengthy"
+      ],
+      "band": 1
+    },
+    {
+      "word": "acquire",
+      "pos": "v.",
+      "def_en": "to get or come to possess something",
+      "def_zh": "获得；取得",
+      "example": "Infants acquire the sound system of their native language before their first birthday.",
+      "example_zh": "婴儿在一岁之前就掌握了母语的语音系统。",
+      "distractors": [
+        "discard",
+        "translate",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "adapt",
+      "pos": "v.",
+      "def_en": "to change in order to suit new conditions",
+      "def_zh": "适应；改造",
+      "example": "Desert plants have adapted to drought by storing water in thick stems.",
+      "example_zh": "沙漠植物通过在粗壮的茎中储水来适应干旱。",
+      "distractors": [
+        "resist",
+        "inherit",
+        "measure"
+      ],
+      "band": 1
+    },
+    {
+      "word": "adequate",
+      "pos": "adj.",
+      "def_en": "enough for a particular purpose",
+      "def_zh": "足够的；适当的",
+      "example": "The soil provides adequate nitrogen for grasses but not for cultivated grain.",
+      "example_zh": "这种土壤为草类提供了足够的氮，但不足以支持栽培谷物。",
+      "distractors": [
+        "superior",
+        "temporary",
+        "obvious"
+      ],
+      "band": 1
+    },
+    {
+      "word": "adjacent",
+      "pos": "adj.",
+      "def_en": "next to or very near something",
+      "def_zh": "邻近的；毗连的",
+      "example": "The workshops stood adjacent to the temple, so artisans could deliver goods quickly.",
+      "example_zh": "作坊紧邻神庙，因此工匠可以迅速交付货物。",
+      "distractors": [
+        "ancient",
+        "identical",
+        "hidden"
+      ],
+      "band": 2
+    },
+    {
+      "word": "advocate",
+      "pos": "v.",
+      "def_en": "to publicly support or argue for",
+      "def_zh": "提倡；主张",
+      "example": "Several economists advocate taxing emissions rather than capping them.",
+      "example_zh": "一些经济学家主张对排放征税，而不是设定上限。",
+      "distractors": [
+        "prohibit",
+        "summarize",
+        "postpone"
+      ],
+      "band": 2
+    },
+    {
+      "word": "aesthetic",
+      "pos": "adj.",
+      "def_en": "concerned with beauty or artistic effect",
+      "def_zh": "美学的；审美的",
+      "example": "The changes were aesthetic rather than structural, since the bridge was already sound.",
+      "example_zh": "这些改动属于审美层面而非结构层面，因为桥梁本身已经很牢固。",
+      "distractors": [
+        "economic",
+        "medicinal",
+        "statistical"
+      ],
+      "band": 3
+    },
+    {
+      "word": "alleviate",
+      "pos": "v.",
+      "def_en": "to make a problem or pain less severe",
+      "def_zh": "减轻；缓解",
+      "example": "Irrigation canals alleviated the effects of the drought but did not end it.",
+      "example_zh": "灌溉渠缓解了旱情的影响，但并未彻底解决问题。",
+      "distractors": [
+        "intensify",
+        "postpone",
+        "classify"
+      ],
+      "band": 2
+    },
+    {
+      "word": "alter",
+      "pos": "v.",
+      "def_en": "to change something partly",
+      "def_zh": "改变；更改",
+      "example": "Dams alter the temperature of the river far downstream of the wall.",
+      "example_zh": "水坝会改变大坝下游很远处河水的温度。",
+      "distractors": [
+        "preserve",
+        "measure",
+        "observe"
+      ],
+      "band": 2
+    },
+    {
+      "word": "ambiguous",
+      "pos": "adj.",
+      "def_en": "having more than one possible meaning; unclear",
+      "def_zh": "模棱两可的；含糊的",
+      "example": "The inscription is ambiguous, and scholars read it as either a date or a name.",
+      "example_zh": "这段铭文含义模糊，学者们把它读作日期或人名皆有。",
+      "distractors": [
+        "decisive",
+        "lengthy",
+        "famous"
+      ],
+      "band": 3
+    },
+    {
+      "word": "analogy",
+      "pos": "n.",
+      "def_en": "a comparison that shows how two things are alike",
+      "def_zh": "类比；比喻",
+      "example": "The professor drew an analogy between the brain and a telephone switchboard.",
+      "example_zh": "教授把大脑与电话交换台作了类比。",
+      "distractors": [
+        "summary",
+        "exception",
+        "obstacle"
+      ],
+      "band": 2
+    },
+    {
+      "word": "anomaly",
+      "pos": "n.",
+      "def_en": "something that differs from what is normal or expected",
+      "def_zh": "异常；反常现象",
+      "example": "The unusually warm winter was treated as an anomaly rather than a trend.",
+      "example_zh": "那个异常温暖的冬天被视为反常现象，而不是趋势。",
+      "distractors": [
+        "precedent",
+        "majority",
+        "routine"
+      ],
+      "band": 3
+    },
+    {
+      "word": "anticipate",
+      "pos": "v.",
+      "def_en": "to expect something and prepare for it",
+      "def_zh": "预料；预期",
+      "example": "Merchants anticipated the shortage and stored grain the previous autumn.",
+      "example_zh": "商人预料到了这次短缺，在前一年秋天就储存了粮食。",
+      "distractors": [
+        "recall",
+        "ignore",
+        "imitate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "apparent",
+      "pos": "adj.",
+      "def_en": "easily seen or understood; clear",
+      "def_zh": "明显的；显而易见的",
+      "example": "The damage to the outer wall was apparent even from a distance.",
+      "example_zh": "外墙的损坏即使从远处也清晰可见。",
+      "distractors": [
+        "gradual",
+        "costly",
+        "private"
+      ],
+      "band": 1
+    },
+    {
+      "word": "arbitrary",
+      "pos": "adj.",
+      "def_en": "based on personal choice rather than reason or rule",
+      "def_zh": "任意的；武断的",
+      "example": "The boundary was arbitrary, since it followed no river, ridge, or ethnic division.",
+      "example_zh": "这条边界是任意划定的，因为它既不沿河流、山脊，也不依族群分布。",
+      "distractors": [
+        "deliberate",
+        "expensive",
+        "traditional"
+      ],
+      "band": 2
+    },
+    {
+      "word": "articulate",
+      "pos": "v.",
+      "def_en": "to express an idea clearly in words",
+      "def_zh": "清晰表达；阐明",
+      "example": "The report articulates a standard that earlier committees had only implied.",
+      "example_zh": "这份报告清晰地阐明了此前各委员会只是含蓄提及的标准。",
+      "distractors": [
+        "conceal",
+        "exaggerate",
+        "postpone"
+      ],
+      "band": 3
+    },
+    {
+      "word": "assess",
+      "pos": "v.",
+      "def_en": "to judge the value, quality, or amount of",
+      "def_zh": "评估；评定",
+      "example": "Ecologists assess the health of a reef by counting fish species.",
+      "example_zh": "生态学家通过统计鱼类物种数量来评估珊瑚礁的健康状况。",
+      "distractors": [
+        "ignore",
+        "enlarge",
+        "distribute"
+      ],
+      "band": 1
+    },
+    {
+      "word": "assume",
+      "pos": "v.",
+      "def_en": "to accept something as true without proof",
+      "def_zh": "假定；假设",
+      "example": "The model assumes that the population grows at a constant rate.",
+      "example_zh": "该模型假定人口以恒定速率增长。",
+      "distractors": [
+        "verify",
+        "reject",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "attain",
+      "pos": "v.",
+      "def_en": "to reach or achieve something after effort",
+      "def_zh": "达到；获得",
+      "example": "Some redwoods attain a height of more than one hundred meters.",
+      "example_zh": "有些红杉能长到一百多米高。",
+      "distractors": [
+        "approach",
+        "estimate",
+        "abandon"
+      ],
+      "band": 2
+    },
+    {
+      "word": "attribute",
+      "pos": "v.",
+      "def_en": "to say that something is caused by a particular thing",
+      "def_zh": "归因于；把…归于",
+      "example": "Historians attribute the city's decline to the silting of its harbor.",
+      "example_zh": "历史学家把这座城市的衰落归因于港口的淤塞。",
+      "distractors": [
+        "deny",
+        "measure",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "augment",
+      "pos": "v.",
+      "def_en": "to add to something in order to make it greater",
+      "def_zh": "增加；增强",
+      "example": "Farmers augmented their income by weaving cloth during the winter months.",
+      "example_zh": "农民在冬季通过织布来增加收入。",
+      "distractors": [
+        "restrict",
+        "replace",
+        "conceal"
+      ],
+      "band": 3
+    },
+    {
+      "word": "autonomous",
+      "pos": "adj.",
+      "def_en": "able to govern or act independently",
+      "def_zh": "自主的；自治的",
+      "example": "Each colony remained autonomous, collecting its own taxes and writing its own laws.",
+      "example_zh": "每个殖民地都保持自治，自行征税并制定自己的法律。",
+      "distractors": [
+        "fragile",
+        "crowded",
+        "temporary"
+      ],
+      "band": 3
+    },
+    {
+      "word": "available",
+      "pos": "adj.",
+      "def_en": "able to be obtained or used",
+      "def_zh": "可获得的；可用的",
+      "example": "Iron was widely available in the region, so bronze tools quickly disappeared.",
+      "example_zh": "该地区铁矿广泛可得，因此青铜工具很快消失了。",
+      "distractors": [
+        "expensive",
+        "imported",
+        "fragile"
+      ],
+      "band": 1
+    },
+    {
+      "word": "benign",
+      "pos": "adj.",
+      "def_en": "gentle and not harmful",
+      "def_zh": "良性的；温和的",
+      "example": "The climate of the valley was benign enough to permit two harvests a year.",
+      "example_zh": "这个河谷的气候相当温和，足以一年两熟。",
+      "distractors": [
+        "severe",
+        "humid",
+        "variable"
+      ],
+      "band": 3
+    },
+    {
+      "word": "coherent",
+      "pos": "adj.",
+      "def_en": "logically connected and easy to follow",
+      "def_zh": "连贯的；条理清楚的",
+      "example": "The scattered notes were finally organized into a coherent argument.",
+      "example_zh": "这些零散的笔记最终被整理成一个条理清晰的论证。",
+      "distractors": [
+        "lengthy",
+        "original",
+        "popular"
+      ],
+      "band": 2
+    },
+    {
+      "word": "coincide",
+      "pos": "v.",
+      "def_en": "to happen at the same time; to be in agreement",
+      "def_zh": "同时发生；相符",
+      "example": "The eruption coincided with a sharp drop in global temperatures.",
+      "example_zh": "这次火山喷发与全球气温的骤降同时发生。",
+      "distractors": [
+        "precede",
+        "prevent",
+        "exceed"
+      ],
+      "band": 3
+    },
+    {
+      "word": "collapse",
+      "pos": "v.",
+      "def_en": "to fall down suddenly; to fail completely",
+      "def_zh": "倒塌；崩溃",
+      "example": "The trade network collapsed once the coastal cities lost their fleets.",
+      "example_zh": "沿海城市失去船队后，这个贸易网络随即崩溃。",
+      "distractors": [
+        "expand",
+        "stabilize",
+        "migrate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "compensate",
+      "pos": "v.",
+      "def_en": "to make up for a loss or weakness",
+      "def_zh": "补偿；弥补",
+      "example": "Nocturnal animals compensate for poor color vision with acute hearing.",
+      "example_zh": "夜行动物以敏锐的听觉弥补色觉的不足。",
+      "distractors": [
+        "worsen",
+        "postpone",
+        "imitate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "component",
+      "pos": "n.",
+      "def_en": "one of the parts that make up a whole",
+      "def_zh": "组成部分；成分",
+      "example": "Nitrogen is the largest component of the atmosphere by volume.",
+      "example_zh": "按体积计算，氮是大气中含量最大的成分。",
+      "distractors": [
+        "boundary",
+        "summary",
+        "outcome"
+      ],
+      "band": 1
+    },
+    {
+      "word": "comprehensive",
+      "pos": "adj.",
+      "def_en": "including everything relevant; complete",
+      "def_zh": "全面的；综合的",
+      "example": "The survey was comprehensive, covering every village in the province.",
+      "example_zh": "这项调查十分全面，覆盖了该省的每一个村庄。",
+      "distractors": [
+        "preliminary",
+        "informal",
+        "costly"
+      ],
+      "band": 2
+    },
+    {
+      "word": "comprise",
+      "pos": "v.",
+      "def_en": "to consist of; to be made up of",
+      "def_zh": "包括；由…组成",
+      "example": "The archipelago comprises more than two hundred small volcanic islands.",
+      "example_zh": "这个群岛由两百多个火山小岛组成。",
+      "distractors": [
+        "surround",
+        "resemble",
+        "govern"
+      ],
+      "band": 2
+    },
+    {
+      "word": "conclude",
+      "pos": "v.",
+      "def_en": "to decide something after considering evidence",
+      "def_zh": "得出结论；断定",
+      "example": "The team concluded that the pottery had been imported rather than made locally.",
+      "example_zh": "研究团队断定这些陶器是进口的，而非本地制造。",
+      "distractors": [
+        "assume",
+        "publish",
+        "observe"
+      ],
+      "band": 1
+    },
+    {
+      "word": "confine",
+      "pos": "v.",
+      "def_en": "to keep within limits or in an enclosed space",
+      "def_zh": "限制；局限",
+      "example": "The species is confined to a single valley in the northern highlands.",
+      "example_zh": "该物种仅局限于北部高地的一个山谷。",
+      "distractors": [
+        "release",
+        "distribute",
+        "enlarge"
+      ],
+      "band": 2
+    },
+    {
+      "word": "conform",
+      "pos": "v.",
+      "def_en": "to behave according to accepted rules or patterns",
+      "def_zh": "遵守；符合",
+      "example": "The new data do not conform to the predictions of the older model.",
+      "example_zh": "新数据与旧模型的预测并不相符。",
+      "distractors": [
+        "object",
+        "originate",
+        "exceed"
+      ],
+      "band": 2
+    },
+    {
+      "word": "consequence",
+      "pos": "n.",
+      "def_en": "a result of an earlier action or event",
+      "def_zh": "结果；后果",
+      "example": "One consequence of clearing the forest was the loss of topsoil.",
+      "example_zh": "砍伐森林的一个后果是表层土壤的流失。",
+      "distractors": [
+        "motive",
+        "procedure",
+        "estimate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "conserve",
+      "pos": "v.",
+      "def_en": "to protect something from loss or waste",
+      "def_zh": "保存；节约",
+      "example": "Hibernating mammals conserve energy by lowering their body temperature.",
+      "example_zh": "冬眠的哺乳动物通过降低体温来节省能量。",
+      "distractors": [
+        "consume",
+        "transport",
+        "publicize"
+      ],
+      "band": 2
+    },
+    {
+      "word": "considerable",
+      "pos": "adj.",
+      "def_en": "large in size, amount, or importance",
+      "def_zh": "相当大的；可观的",
+      "example": "The library holds a considerable collection of medieval maps.",
+      "example_zh": "该图书馆藏有相当数量的中世纪地图。",
+      "distractors": [
+        "negligible",
+        "recent",
+        "fragile"
+      ],
+      "band": 1
+    },
+    {
+      "word": "constitute",
+      "pos": "v.",
+      "def_en": "to form or make up something",
+      "def_zh": "构成；组成",
+      "example": "Women constituted nearly half of the factory workforce by 1890.",
+      "example_zh": "到1890年，女性已占工厂劳动力的近一半。",
+      "distractors": [
+        "destroy",
+        "supervise",
+        "imitate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "contemporary",
+      "pos": "adj.",
+      "def_en": "belonging to the same period of time; modern",
+      "def_zh": "同时代的；当代的",
+      "example": "Contemporary accounts of the flood survive in three separate chronicles.",
+      "example_zh": "关于这场洪水的同时代记载保存在三部不同的编年史中。",
+      "distractors": [
+        "anonymous",
+        "legendary",
+        "fragmentary"
+      ],
+      "band": 2
+    },
+    {
+      "word": "contingent",
+      "pos": "adj.",
+      "def_en": "depending on something else that may or may not happen",
+      "def_zh": "视情况而定的；取决于…的",
+      "example": "Funding for the excavation was contingent on the discovery of intact tombs.",
+      "example_zh": "发掘工作的资金取决于是否能发现完整的墓葬。",
+      "distractors": [
+        "mandatory",
+        "permanent",
+        "voluntary"
+      ],
+      "band": 3
+    },
+    {
+      "word": "contrast",
+      "pos": "n.",
+      "def_en": "a clear difference between two things compared",
+      "def_zh": "对比；反差",
+      "example": "The contrast between the two soils explains the difference in crop yields.",
+      "example_zh": "两种土壤之间的差异解释了作物产量的不同。",
+      "distractors": [
+        "similarity",
+        "sequence",
+        "estimate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "contribute",
+      "pos": "v.",
+      "def_en": "to give a share toward a result",
+      "def_zh": "贡献；促成",
+      "example": "Overgrazing contributed to the spread of the dunes across the plain.",
+      "example_zh": "过度放牧促成了沙丘在平原上的扩展。",
+      "distractors": [
+        "prevent",
+        "observe",
+        "inherit"
+      ],
+      "band": 1
+    },
+    {
+      "word": "controversial",
+      "pos": "adj.",
+      "def_en": "causing strong public disagreement",
+      "def_zh": "有争议的",
+      "example": "The dating of the site remains controversial among archaeologists.",
+      "example_zh": "该遗址的年代测定在考古学家中仍有争议。",
+      "distractors": [
+        "expensive",
+        "routine",
+        "obsolete"
+      ],
+      "band": 2
+    },
+    {
+      "word": "converge",
+      "pos": "v.",
+      "def_en": "to come together at one point",
+      "def_zh": "汇聚；趋同",
+      "example": "Three trade routes converged at the oasis, making it unusually wealthy.",
+      "example_zh": "三条商路在这片绿洲汇合，使其格外富庶。",
+      "distractors": [
+        "diverge",
+        "dissolve",
+        "postpone"
+      ],
+      "band": 3
+    },
+    {
+      "word": "correlate",
+      "pos": "v.",
+      "def_en": "to have a mutual relationship or connection",
+      "def_zh": "相关联；相互关联",
+      "example": "Tree ring width correlates closely with rainfall in that century.",
+      "example_zh": "在那个世纪，年轮宽度与降雨量密切相关。",
+      "distractors": [
+        "contradict",
+        "precede",
+        "replace"
+      ],
+      "band": 2
+    },
+    {
+      "word": "criterion",
+      "pos": "n.",
+      "def_en": "a standard used for judging or deciding",
+      "def_zh": "标准；准则",
+      "example": "Size alone is a poor criterion for classifying these organisms.",
+      "example_zh": "仅凭大小是划分这些生物的糟糕标准。",
+      "distractors": [
+        "outcome",
+        "estimate",
+        "exception"
+      ],
+      "band": 2
+    },
+    {
+      "word": "crucial",
+      "pos": "adj.",
+      "def_en": "extremely important; decisive",
+      "def_zh": "关键的；至关重要的",
+      "example": "Access to fresh water was crucial to the survival of the early settlement.",
+      "example_zh": "获取淡水对早期定居点的存续至关重要。",
+      "distractors": [
+        "optional",
+        "temporary",
+        "expensive"
+      ],
+      "band": 1
+    },
+    {
+      "word": "cultivate",
+      "pos": "v.",
+      "def_en": "to prepare and use land for crops; to develop carefully",
+      "def_zh": "耕种；培养",
+      "example": "Farmers cultivated terraces on slopes too steep for ordinary fields.",
+      "example_zh": "农民在过陡而无法开辟普通农田的坡地上修筑梯田耕种。",
+      "distractors": [
+        "abandon",
+        "purchase",
+        "survey"
+      ],
+      "band": 2
+    },
+    {
+      "word": "decline",
+      "pos": "v.",
+      "def_en": "to decrease in number, quality, or strength",
+      "def_zh": "下降；衰退",
+      "example": "Bird populations declined sharply after the wetlands were drained.",
+      "example_zh": "湿地排干之后，鸟类种群数量急剧下降。",
+      "distractors": [
+        "recover",
+        "migrate",
+        "fluctuate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "define",
+      "pos": "v.",
+      "def_en": "to state the exact meaning or limits of",
+      "def_zh": "定义；界定",
+      "example": "The author defines culture broadly enough to include technology.",
+      "example_zh": "作者对文化的界定十分宽泛，甚至把技术也包括在内。",
+      "distractors": [
+        "dispute",
+        "translate",
+        "illustrate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "deliberate",
+      "pos": "adj.",
+      "def_en": "done on purpose after careful thought",
+      "def_zh": "故意的；深思熟虑的",
+      "example": "The asymmetry of the facade was deliberate, not the result of poor planning.",
+      "example_zh": "立面的不对称是有意为之，而非规划不当的结果。",
+      "distractors": [
+        "accidental",
+        "hasty",
+        "obvious"
+      ],
+      "band": 2
+    },
+    {
+      "word": "delineate",
+      "pos": "v.",
+      "def_en": "to describe or mark the boundaries of something precisely",
+      "def_zh": "描绘；界定",
+      "example": "The report delineates three stages in the collapse of the fishery.",
+      "example_zh": "该报告清晰描述了渔业崩溃的三个阶段。",
+      "distractors": [
+        "blur",
+        "exaggerate",
+        "dispute"
+      ],
+      "band": 3
+    },
+    {
+      "word": "demonstrate",
+      "pos": "v.",
+      "def_en": "to show clearly by evidence or example",
+      "def_zh": "证明；表明",
+      "example": "The experiment demonstrates that seedlings grow faster in diffuse light.",
+      "example_zh": "实验表明幼苗在散射光下生长得更快。",
+      "distractors": [
+        "assume",
+        "conceal",
+        "estimate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "derive",
+      "pos": "v.",
+      "def_en": "to obtain something from a particular source",
+      "def_zh": "得自；源于",
+      "example": "The islanders derive most of their protein from shellfish.",
+      "example_zh": "岛民的蛋白质大多来自贝类。",
+      "distractors": [
+        "donate",
+        "refuse",
+        "postpone"
+      ],
+      "band": 2
+    },
+    {
+      "word": "detect",
+      "pos": "v.",
+      "def_en": "to discover or notice something not easily seen",
+      "def_zh": "察觉；探测",
+      "example": "Instruments detected a faint tremor hours before the eruption.",
+      "example_zh": "仪器在喷发前数小时探测到轻微震动。",
+      "distractors": [
+        "ignore",
+        "prevent",
+        "announce"
+      ],
+      "band": 1
+    },
+    {
+      "word": "deteriorate",
+      "pos": "v.",
+      "def_en": "to become progressively worse",
+      "def_zh": "恶化；退化",
+      "example": "The manuscripts deteriorated rapidly once the humidity control failed.",
+      "example_zh": "湿度控制失效后，这些手稿迅速损坏。",
+      "distractors": [
+        "improve",
+        "stabilize",
+        "circulate"
+      ],
+      "band": 3
+    },
+    {
+      "word": "diminish",
+      "pos": "v.",
+      "def_en": "to become or make smaller or less",
+      "def_zh": "减少；削弱",
+      "example": "The influence of the guilds diminished as factories multiplied.",
+      "example_zh": "随着工厂增多，行会的影响力逐渐减弱。",
+      "distractors": [
+        "expand",
+        "persist",
+        "originate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "discern",
+      "pos": "v.",
+      "def_en": "to perceive or recognize something with difficulty",
+      "def_zh": "辨别；察觉",
+      "example": "It is hard to discern a pattern in such an incomplete record.",
+      "example_zh": "在如此不完整的记录中很难辨认出规律。",
+      "distractors": [
+        "invent",
+        "conceal",
+        "exaggerate"
+      ],
+      "band": 3
+    },
+    {
+      "word": "discrete",
+      "pos": "adj.",
+      "def_en": "separate and distinct from others",
+      "def_zh": "分离的；不连续的",
+      "example": "The deposits fall into four discrete layers, each with its own fossils.",
+      "example_zh": "这些沉积物分为四个彼此分开的层，各有其化石。",
+      "distractors": [
+        "continuous",
+        "fragile",
+        "abundant"
+      ],
+      "band": 3
+    },
+    {
+      "word": "disparate",
+      "pos": "adj.",
+      "def_en": "essentially different and unrelated in kind",
+      "def_zh": "迥然不同的",
+      "example": "The theory draws on disparate fields, from linguistics to geology.",
+      "example_zh": "该理论借鉴了从语言学到地质学等迥异的领域。",
+      "distractors": [
+        "identical",
+        "adjacent",
+        "modern"
+      ],
+      "band": 3
+    },
+    {
+      "word": "displace",
+      "pos": "v.",
+      "def_en": "to force something or someone out of its usual place",
+      "def_zh": "取代；使离开原位",
+      "example": "The introduced grass displaced native species within a single decade.",
+      "example_zh": "这种引入的草在十年内就取代了本地物种。",
+      "distractors": [
+        "accompany",
+        "preserve",
+        "resemble"
+      ],
+      "band": 2
+    },
+    {
+      "word": "distinct",
+      "pos": "adj.",
+      "def_en": "clearly different or separate; easy to notice",
+      "def_zh": "独特的；明显的",
+      "example": "The two dialects have distinct vowel systems despite a shared vocabulary.",
+      "example_zh": "尽管词汇相通，这两种方言的元音系统截然不同。",
+      "distractors": [
+        "frequent",
+        "fragile",
+        "gradual"
+      ],
+      "band": 1
+    },
+    {
+      "word": "distribute",
+      "pos": "v.",
+      "def_en": "to spread or share out over an area or group",
+      "def_zh": "分布；分配",
+      "example": "The seeds are distributed by wind across several kilometers.",
+      "example_zh": "这些种子随风散布到数公里之外。",
+      "distractors": [
+        "collect",
+        "classify",
+        "preserve"
+      ],
+      "band": 1
+    },
+    {
+      "word": "diverse",
+      "pos": "adj.",
+      "def_en": "varied; of many different kinds",
+      "def_zh": "多样的；各种各样的",
+      "example": "The reef supports a diverse community of fish and invertebrates.",
+      "example_zh": "这片珊瑚礁养育着种类繁多的鱼类和无脊椎动物。",
+      "distractors": [
+        "uniform",
+        "fragile",
+        "distant"
+      ],
+      "band": 2
+    },
+    {
+      "word": "dominate",
+      "pos": "v.",
+      "def_en": "to have controlling power or the largest presence",
+      "def_zh": "支配；占主导",
+      "example": "Conifers dominate the forest above nine hundred meters.",
+      "example_zh": "在九百米以上，针叶树在森林中占主导地位。",
+      "distractors": [
+        "accompany",
+        "abandon",
+        "imitate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "elaborate",
+      "pos": "adj.",
+      "def_en": "complicated and carefully worked out in detail",
+      "def_zh": "精心制作的；复杂的",
+      "example": "The tombs contained elaborate carvings that took years to complete.",
+      "example_zh": "这些墓中有耗时数年才完成的精美雕刻。",
+      "distractors": [
+        "plain",
+        "recent",
+        "damaged"
+      ],
+      "band": 2
+    },
+    {
+      "word": "elicit",
+      "pos": "v.",
+      "def_en": "to draw out a response or reaction",
+      "def_zh": "引出；诱发",
+      "example": "The recorded call elicited an immediate alarm response from the flock.",
+      "example_zh": "录音的叫声立刻引起了鸟群的警戒反应。",
+      "distractors": [
+        "suppress",
+        "imitate",
+        "postpone"
+      ],
+      "band": 3
+    },
+    {
+      "word": "eliminate",
+      "pos": "v.",
+      "def_en": "to remove or get rid of completely",
+      "def_zh": "消除；排除",
+      "example": "Drainage eliminated the mosquito breeding grounds near the port.",
+      "example_zh": "排水工程清除了港口附近的蚊虫滋生地。",
+      "distractors": [
+        "preserve",
+        "identify",
+        "enlarge"
+      ],
+      "band": 1
+    },
+    {
+      "word": "elusive",
+      "pos": "adj.",
+      "def_en": "difficult to find, catch, or describe",
+      "def_zh": "难以捉摸的；难以找到的",
+      "example": "The cause of the extinction remains elusive despite decades of study.",
+      "example_zh": "尽管研究了数十年，这次灭绝的原因仍然难以确定。",
+      "distractors": [
+        "conspicuous",
+        "costly",
+        "temporary"
+      ],
+      "band": 3
+    },
+    {
+      "word": "emerge",
+      "pos": "v.",
+      "def_en": "to come into view or become known",
+      "def_zh": "出现；显现",
+      "example": "A clear seasonal pattern emerged once the data were plotted by month.",
+      "example_zh": "按月份绘图后，明显的季节性规律就显现出来了。",
+      "distractors": [
+        "vanish",
+        "persist",
+        "decline"
+      ],
+      "band": 1
+    },
+    {
+      "word": "emphasize",
+      "pos": "v.",
+      "def_en": "to give special importance or attention to",
+      "def_zh": "强调；着重",
+      "example": "The lecture emphasizes trade rather than warfare as the engine of change.",
+      "example_zh": "这堂课强调贸易而非战争是变革的动力。",
+      "distractors": [
+        "overlook",
+        "translate",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "empirical",
+      "pos": "adj.",
+      "def_en": "based on observation or experiment rather than theory",
+      "def_zh": "经验的；实证的",
+      "example": "Empirical support for the model came from three field seasons of data.",
+      "example_zh": "该模型的实证支持来自三个野外季的数据。",
+      "distractors": [
+        "theoretical",
+        "preliminary",
+        "official"
+      ],
+      "band": 2
+    },
+    {
+      "word": "enable",
+      "pos": "v.",
+      "def_en": "to make it possible for something to happen",
+      "def_zh": "使能够；使成为可能",
+      "example": "The stirrup enabled riders to fight effectively with heavy weapons.",
+      "example_zh": "马镫使骑手能够有效使用重型武器作战。",
+      "distractors": [
+        "prevent",
+        "require",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "endure",
+      "pos": "v.",
+      "def_en": "to continue to exist; to bear hardship",
+      "def_zh": "持续；忍受",
+      "example": "The pigments endured for centuries because the cave stayed dry.",
+      "example_zh": "由于洞穴保持干燥，这些颜料留存了数百年。",
+      "distractors": [
+        "fade",
+        "spread",
+        "dissolve"
+      ],
+      "band": 2
+    },
+    {
+      "word": "enhance",
+      "pos": "v.",
+      "def_en": "to improve the quality or value of",
+      "def_zh": "提高；增强",
+      "example": "Adding lime enhanced the fertility of the acidic soil.",
+      "example_zh": "施加石灰提高了这种酸性土壤的肥力。",
+      "distractors": [
+        "reduce",
+        "replace",
+        "measure"
+      ],
+      "band": 2
+    },
+    {
+      "word": "ensure",
+      "pos": "v.",
+      "def_en": "to make certain that something happens",
+      "def_zh": "确保；保证",
+      "example": "Thick walls ensured that the granary stayed cool through the summer.",
+      "example_zh": "厚墙确保粮仓整个夏天都保持凉爽。",
+      "distractors": [
+        "risk",
+        "estimate",
+        "delay"
+      ],
+      "band": 1
+    },
+    {
+      "word": "entail",
+      "pos": "v.",
+      "def_en": "to involve something as a necessary part or result",
+      "def_zh": "牵涉；必然包含",
+      "example": "Domesticating the plant entailed a long period of selective breeding.",
+      "example_zh": "驯化这种植物必然要经过长期的选择育种。",
+      "distractors": [
+        "exclude",
+        "resemble",
+        "postpone"
+      ],
+      "band": 3
+    },
+    {
+      "word": "equivalent",
+      "pos": "adj.",
+      "def_en": "equal in value, amount, or meaning",
+      "def_zh": "相等的；等同的",
+      "example": "One barrel of the oil yields energy equivalent to a ton of coal.",
+      "example_zh": "一桶这种石油产生的能量相当于一吨煤。",
+      "distractors": [
+        "superior",
+        "adjacent",
+        "temporary"
+      ],
+      "band": 2
+    },
+    {
+      "word": "erode",
+      "pos": "v.",
+      "def_en": "to wear away gradually by wind or water",
+      "def_zh": "侵蚀；腐蚀",
+      "example": "Winter storms eroded nearly a meter of the cliff face each year.",
+      "example_zh": "冬季风暴每年侵蚀掉将近一米的崖面。",
+      "distractors": [
+        "deposit",
+        "freeze",
+        "enlarge"
+      ],
+      "band": 2
+    },
+    {
+      "word": "establish",
+      "pos": "v.",
+      "def_en": "to set up or found; to prove firmly",
+      "def_zh": "建立；确立",
+      "example": "The society established a laboratory for testing local water supplies.",
+      "example_zh": "该学会建立了一间实验室来检测当地的供水。",
+      "distractors": [
+        "dissolve",
+        "inherit",
+        "postpone"
+      ],
+      "band": 1
+    },
+    {
+      "word": "estimate",
+      "pos": "v.",
+      "def_en": "to judge an amount or value approximately",
+      "def_zh": "估计；估算",
+      "example": "Researchers estimate the herd at roughly four thousand animals.",
+      "example_zh": "研究人员估计这个畜群约有四千头。",
+      "distractors": [
+        "confirm",
+        "distribute",
+        "exceed"
+      ],
+      "band": 1
+    },
+    {
+      "word": "evidence",
+      "pos": "n.",
+      "def_en": "facts that support a conclusion",
+      "def_zh": "证据；根据",
+      "example": "There is little evidence that the temple was ever finished.",
+      "example_zh": "几乎没有证据表明这座神庙曾经建成。",
+      "distractors": [
+        "opinion",
+        "procedure",
+        "exception"
+      ],
+      "band": 1
+    },
+    {
+      "word": "evolve",
+      "pos": "v.",
+      "def_en": "to develop gradually into a different form",
+      "def_zh": "进化；逐渐发展",
+      "example": "The writing system evolved from a set of accounting marks.",
+      "example_zh": "这套文字系统由一组记账符号逐渐演变而来。",
+      "distractors": [
+        "decline",
+        "imitate",
+        "stabilize"
+      ],
+      "band": 1
+    },
+    {
+      "word": "exceed",
+      "pos": "v.",
+      "def_en": "to be greater than a limit or expected amount",
+      "def_zh": "超过；超出",
+      "example": "Summer rainfall exceeded the annual average in a single week.",
+      "example_zh": "一周之内的夏季降雨量就超过了全年平均值。",
+      "distractors": [
+        "approach",
+        "restrict",
+        "estimate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "exclude",
+      "pos": "v.",
+      "def_en": "to keep out or leave out",
+      "def_zh": "排除；不包括",
+      "example": "The census excluded households outside the city walls.",
+      "example_zh": "这次人口普查未把城墙以外的住户计算在内。",
+      "distractors": [
+        "contain",
+        "record",
+        "dominate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "exert",
+      "pos": "v.",
+      "def_en": "to apply force, influence, or effort",
+      "def_zh": "施加；发挥",
+      "example": "The moon exerts a stronger pull on the near side of the earth.",
+      "example_zh": "月球对地球近侧施加的引力更强。",
+      "distractors": [
+        "absorb",
+        "measure",
+        "resist"
+      ],
+      "band": 3
+    },
+    {
+      "word": "exhibit",
+      "pos": "v.",
+      "def_en": "to show or display a quality or object",
+      "def_zh": "展现；展出",
+      "example": "The alloy exhibits unusual strength at very low temperatures.",
+      "example_zh": "这种合金在极低温下表现出异常的强度。",
+      "distractors": [
+        "conceal",
+        "acquire",
+        "weaken"
+      ],
+      "band": 2
+    },
+    {
+      "word": "expand",
+      "pos": "v.",
+      "def_en": "to become larger in size or scope",
+      "def_zh": "扩大；膨胀",
+      "example": "The empire expanded rapidly along the river valleys.",
+      "example_zh": "帝国沿着河谷迅速扩张。",
+      "distractors": [
+        "contract",
+        "stabilize",
+        "divide"
+      ],
+      "band": 1
+    },
+    {
+      "word": "explicit",
+      "pos": "adj.",
+      "def_en": "stated clearly and directly, leaving no doubt",
+      "def_zh": "明确的；清楚的",
+      "example": "The treaty is explicit about fishing rights but silent on mineral claims.",
+      "example_zh": "该条约对捕鱼权规定明确，但对矿产权只字未提。",
+      "distractors": [
+        "implied",
+        "lengthy",
+        "informal"
+      ],
+      "band": 2
+    },
+    {
+      "word": "exploit",
+      "pos": "v.",
+      "def_en": "to make full use of a resource, often unfairly",
+      "def_zh": "开发利用；剥削",
+      "example": "Whalers exploited the northern grounds until the stocks collapsed.",
+      "example_zh": "捕鲸者不断开采北部渔场，直到种群崩溃。",
+      "distractors": [
+        "conserve",
+        "survey",
+        "abandon"
+      ],
+      "band": 2
+    },
+    {
+      "word": "facilitate",
+      "pos": "v.",
+      "def_en": "to make a process easier",
+      "def_zh": "促进；使便利",
+      "example": "The new canal facilitated the movement of grain to the coast.",
+      "example_zh": "新运河使粮食运往沿海更加便利。",
+      "distractors": [
+        "hinder",
+        "finance",
+        "measure"
+      ],
+      "band": 2
+    },
+    {
+      "word": "factor",
+      "pos": "n.",
+      "def_en": "one of the things that influences a result",
+      "def_zh": "因素；要素",
+      "example": "Soil depth is the decisive factor in where the trees can grow.",
+      "example_zh": "土层深度是决定树木能否生长的关键因素。",
+      "distractors": [
+        "outcome",
+        "summary",
+        "boundary"
+      ],
+      "band": 1
+    },
+    {
+      "word": "feature",
+      "pos": "n.",
+      "def_en": "a noticeable part or characteristic",
+      "def_zh": "特征；特点",
+      "example": "A distinctive feature of the style is the use of unbroken curves.",
+      "example_zh": "这种风格的一个显著特征是使用连续不断的曲线。",
+      "distractors": [
+        "defect",
+        "summary",
+        "stage"
+      ],
+      "band": 1
+    },
+    {
+      "word": "fluctuate",
+      "pos": "v.",
+      "def_en": "to rise and fall irregularly",
+      "def_zh": "波动；起伏",
+      "example": "Lake levels fluctuated widely during the last two thousand years.",
+      "example_zh": "在过去两千年里，湖面高度大幅波动。",
+      "distractors": [
+        "stabilize",
+        "evaporate",
+        "accumulate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "foster",
+      "pos": "v.",
+      "def_en": "to encourage the growth or development of",
+      "def_zh": "培养；促进",
+      "example": "Cheap printing fostered a new market for scientific journals.",
+      "example_zh": "廉价印刷催生了科学期刊的新市场。",
+      "distractors": [
+        "suppress",
+        "inherit",
+        "regulate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "fundamental",
+      "pos": "adj.",
+      "def_en": "forming a necessary base; most basic",
+      "def_zh": "基本的；根本的",
+      "example": "Symmetry is a fundamental property of the crystal, not an accident of growth.",
+      "example_zh": "对称性是这种晶体的基本性质，而非生长中的偶然。",
+      "distractors": [
+        "superficial",
+        "recent",
+        "optional"
+      ],
+      "band": 1
+    },
+    {
+      "word": "generate",
+      "pos": "v.",
+      "def_en": "to produce or create something",
+      "def_zh": "产生；生成",
+      "example": "Decaying vegetation generates enough heat to keep the nest warm.",
+      "example_zh": "腐烂的植物产生的热量足以使巢保持温暖。",
+      "distractors": [
+        "absorb",
+        "measure",
+        "restrict"
+      ],
+      "band": 1
+    },
+    {
+      "word": "hierarchy",
+      "pos": "n.",
+      "def_en": "a system in which things are ranked one above another",
+      "def_zh": "等级制度；层级",
+      "example": "The excavation revealed a clear hierarchy of house sizes.",
+      "example_zh": "发掘揭示出房屋规模上明显的等级差别。",
+      "distractors": [
+        "boundary",
+        "exception",
+        "sequence"
+      ],
+      "band": 2
+    },
+    {
+      "word": "hypothesis",
+      "pos": "n.",
+      "def_en": "a proposed explanation to be tested",
+      "def_zh": "假设；假说",
+      "example": "The hypothesis predicts that the isotopes will differ between the two sites.",
+      "example_zh": "该假说预测两处遗址的同位素会有差别。",
+      "distractors": [
+        "conclusion",
+        "procedure",
+        "measurement"
+      ],
+      "band": 2
+    },
+    {
+      "word": "identify",
+      "pos": "v.",
+      "def_en": "to recognize or establish what something is",
+      "def_zh": "识别；确认",
+      "example": "Chemists identified the residue as beeswax rather than resin.",
+      "example_zh": "化学家确认这种残留物是蜂蜡而非树脂。",
+      "distractors": [
+        "conceal",
+        "estimate",
+        "dissolve"
+      ],
+      "band": 1
+    },
+    {
+      "word": "impede",
+      "pos": "v.",
+      "def_en": "to slow down or block the progress of",
+      "def_zh": "阻碍；妨碍",
+      "example": "Dense undergrowth impeded the survey team for weeks.",
+      "example_zh": "茂密的灌木丛使勘测队受阻数周。",
+      "distractors": [
+        "assist",
+        "measure",
+        "attract"
+      ],
+      "band": 3
+    },
+    {
+      "word": "imply",
+      "pos": "v.",
+      "def_en": "to suggest something without stating it directly",
+      "def_zh": "暗示；意味着",
+      "example": "The wear on the tools implies that they were used for cutting bone.",
+      "example_zh": "工具上的磨损暗示它们曾被用来切割骨头。",
+      "distractors": [
+        "declare",
+        "refute",
+        "measure"
+      ],
+      "band": 1
+    },
+    {
+      "word": "impose",
+      "pos": "v.",
+      "def_en": "to force something on someone; to establish by authority",
+      "def_zh": "强加；征收",
+      "example": "The government imposed a tax on imported dyes.",
+      "example_zh": "政府对进口染料征税。",
+      "distractors": [
+        "remove",
+        "request",
+        "calculate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "incentive",
+      "pos": "n.",
+      "def_en": "something that encourages a person to act",
+      "def_zh": "激励；动机",
+      "example": "Land grants gave settlers an incentive to move west.",
+      "example_zh": "土地授予给了定居者向西迁移的动力。",
+      "distractors": [
+        "penalty",
+        "obstacle",
+        "procedure"
+      ],
+      "band": 2
+    },
+    {
+      "word": "incorporate",
+      "pos": "v.",
+      "def_en": "to include something as part of a whole",
+      "def_zh": "纳入；包含",
+      "example": "Later builders incorporated the older wall into the new foundation.",
+      "example_zh": "后来的建造者把旧墙纳入了新的地基。",
+      "distractors": [
+        "exclude",
+        "demolish",
+        "purchase"
+      ],
+      "band": 2
+    },
+    {
+      "word": "indicate",
+      "pos": "v.",
+      "def_en": "to show or point to something",
+      "def_zh": "表明；指示",
+      "example": "Ice cores indicate that the cooling began abruptly.",
+      "example_zh": "冰芯表明这次降温是突然开始的。",
+      "distractors": [
+        "conceal",
+        "doubt",
+        "enlarge"
+      ],
+      "band": 1
+    },
+    {
+      "word": "indigenous",
+      "pos": "adj.",
+      "def_en": "originating naturally in a particular place",
+      "def_zh": "本土的；原产的",
+      "example": "The potato is indigenous to the Andes and was carried elsewhere later.",
+      "example_zh": "马铃薯原产于安第斯地区，后来才被带往别处。",
+      "distractors": [
+        "imported",
+        "endangered",
+        "cultivated"
+      ],
+      "band": 3
+    },
+    {
+      "word": "inevitable",
+      "pos": "adj.",
+      "def_en": "certain to happen and impossible to avoid",
+      "def_zh": "不可避免的",
+      "example": "Given the shrinking harbor, the decline of the port was inevitable.",
+      "example_zh": "鉴于港口不断淤浅，其衰落是不可避免的。",
+      "distractors": [
+        "unlikely",
+        "gradual",
+        "desirable"
+      ],
+      "band": 2
+    },
+    {
+      "word": "infer",
+      "pos": "v.",
+      "def_en": "to reach a conclusion from evidence rather than direct statement",
+      "def_zh": "推断；推论",
+      "example": "From the pollen record we infer that oaks replaced pines here.",
+      "example_zh": "从花粉记录可以推断，此地的松树被橡树取代。",
+      "distractors": [
+        "observe",
+        "announce",
+        "dispute"
+      ],
+      "band": 2
+    },
+    {
+      "word": "inherent",
+      "pos": "adj.",
+      "def_en": "existing as a natural and permanent part of something",
+      "def_zh": "固有的；内在的",
+      "example": "The method has an inherent limit: it cannot date material older than fifty thousand years.",
+      "example_zh": "这种方法有其固有的局限：它无法测定五万年以上的材料。",
+      "distractors": [
+        "acquired",
+        "obvious",
+        "temporary"
+      ],
+      "band": 3
+    },
+    {
+      "word": "inhibit",
+      "pos": "v.",
+      "def_en": "to prevent or slow down a process",
+      "def_zh": "抑制；阻止",
+      "example": "Cold water inhibits the growth of the bacteria responsible for decay.",
+      "example_zh": "低温水会抑制导致腐败的细菌生长。",
+      "distractors": [
+        "stimulate",
+        "measure",
+        "dissolve"
+      ],
+      "band": 2
+    },
+    {
+      "word": "initial",
+      "pos": "adj.",
+      "def_en": "occurring at the beginning; first",
+      "def_zh": "最初的；开始的",
+      "example": "The initial survey missed the smaller mounds entirely.",
+      "example_zh": "最初的勘测完全遗漏了较小的土丘。",
+      "distractors": [
+        "final",
+        "thorough",
+        "official"
+      ],
+      "band": 1
+    },
+    {
+      "word": "innovation",
+      "pos": "n.",
+      "def_en": "a new method, idea, or device",
+      "def_zh": "创新；革新",
+      "example": "The heavy plow was the key innovation of medieval agriculture.",
+      "example_zh": "重犁是中世纪农业的关键创新。",
+      "distractors": [
+        "tradition",
+        "obstacle",
+        "estimate"
+      ],
+      "band": 2
+    },
+    {
+      "word": "integrate",
+      "pos": "v.",
+      "def_en": "to combine parts into a working whole",
+      "def_zh": "整合；使结合",
+      "example": "The atlas integrates satellite images with older ground surveys.",
+      "example_zh": "这本地图集把卫星影像与早期地面勘测整合在一起。",
+      "distractors": [
+        "separate",
+        "publish",
+        "simplify"
+      ],
+      "band": 2
+    },
+    {
+      "word": "interpret",
+      "pos": "v.",
+      "def_en": "to explain the meaning of something",
+      "def_zh": "解释；诠释",
+      "example": "Scholars interpret the mural as a record of a royal marriage.",
+      "example_zh": "学者们把这幅壁画解读为一次王室联姻的记录。",
+      "distractors": [
+        "restore",
+        "translate",
+        "conceal"
+      ],
+      "band": 1
+    },
+    {
+      "word": "intervene",
+      "pos": "v.",
+      "def_en": "to become involved in order to change a situation",
+      "def_zh": "干预；介入",
+      "example": "Managers intervened by removing the predators from the island.",
+      "example_zh": "管理者通过清除岛上的捕食者进行了干预。",
+      "distractors": [
+        "withdraw",
+        "observe",
+        "postpone"
+      ],
+      "band": 2
+    },
+    {
+      "word": "intricate",
+      "pos": "adj.",
+      "def_en": "having many small parts arranged in a complicated way",
+      "def_zh": "错综复杂的；精细的",
+      "example": "The clock contains an intricate arrangement of gears and springs.",
+      "example_zh": "这座钟内部有一套精密复杂的齿轮和弹簧结构。",
+      "distractors": [
+        "plain",
+        "sturdy",
+        "modern"
+      ],
+      "band": 3
+    },
+    {
+      "word": "involve",
+      "pos": "v.",
+      "def_en": "to include as a necessary part; to concern",
+      "def_zh": "涉及；包含",
+      "example": "The process involves heating the ore to more than a thousand degrees.",
+      "example_zh": "该工艺涉及把矿石加热到一千度以上。",
+      "distractors": [
+        "exclude",
+        "conclude",
+        "simplify"
+      ],
+      "band": 1
+    },
+    {
+      "word": "isolate",
+      "pos": "v.",
+      "def_en": "to separate something from others",
+      "def_zh": "隔离；使孤立",
+      "example": "Rising seas isolated the population for the next ten thousand years.",
+      "example_zh": "海平面上升使这一族群在此后一万年间与世隔绝。",
+      "distractors": [
+        "connect",
+        "identify",
+        "preserve"
+      ],
+      "band": 1
+    },
+    {
+      "word": "justify",
+      "pos": "v.",
+      "def_en": "to show that something is reasonable or right",
+      "def_zh": "证明…正当；为…辩护",
+      "example": "The scarcity of the metal justified its use only in ceremonial objects.",
+      "example_zh": "这种金属的稀缺使其只用于礼器成为合理之举。",
+      "distractors": [
+        "conceal",
+        "postpone",
+        "exaggerate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "lucrative",
+      "pos": "adj.",
+      "def_en": "producing a large profit",
+      "def_zh": "盈利丰厚的",
+      "example": "The spice trade was lucrative enough to finance whole fleets.",
+      "example_zh": "香料贸易利润丰厚，足以资助整支船队。",
+      "distractors": [
+        "risky",
+        "seasonal",
+        "illegal"
+      ],
+      "band": 3
+    },
+    {
+      "word": "magnitude",
+      "pos": "n.",
+      "def_en": "great size or importance; the measured size of something",
+      "def_zh": "巨大；量级",
+      "example": "No one grasped the magnitude of the loss until the survey was complete.",
+      "example_zh": "直到勘查结束，人们才明白损失之巨。",
+      "distractors": [
+        "duration",
+        "frequency",
+        "location"
+      ],
+      "band": 2
+    },
+    {
+      "word": "maintain",
+      "pos": "v.",
+      "def_en": "to keep something in the same condition or state",
+      "def_zh": "维持；保持",
+      "example": "Coastal fog maintains the humidity that these ferns require.",
+      "example_zh": "沿海雾气维持着这些蕨类所需的湿度。",
+      "distractors": [
+        "disrupt",
+        "increase",
+        "record"
+      ],
+      "band": 1
+    },
+    {
+      "word": "manipulate",
+      "pos": "v.",
+      "def_en": "to handle or control skillfully, often unfairly",
+      "def_zh": "操纵；控制",
+      "example": "Researchers manipulated light levels to test the plant's response.",
+      "example_zh": "研究人员通过调控光照水平来检验该植物的反应。",
+      "distractors": [
+        "observe",
+        "classify",
+        "abandon"
+      ],
+      "band": 2
+    },
+    {
+      "word": "method",
+      "pos": "n.",
+      "def_en": "a planned way of doing something",
+      "def_zh": "方法；办法",
+      "example": "The dating method depends on the steady decay of a radioactive isotope.",
+      "example_zh": "这种测年方法依赖放射性同位素的稳定衰变。",
+      "distractors": [
+        "outcome",
+        "obstacle",
+        "estimate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "meticulous",
+      "pos": "adj.",
+      "def_en": "showing extreme care about small details",
+      "def_zh": "一丝不苟的；细致的",
+      "example": "The meticulous notes let later scholars repeat the experiment exactly.",
+      "example_zh": "这些一丝不苟的笔记使后来的学者能够精确重复实验。",
+      "distractors": [
+        "hasty",
+        "informal",
+        "ambitious"
+      ],
+      "band": 3
+    },
+    {
+      "word": "migrate",
+      "pos": "v.",
+      "def_en": "to move from one region to another",
+      "def_zh": "迁徙；迁移",
+      "example": "The herds migrate north as the snow line retreats.",
+      "example_zh": "随着雪线后退，兽群向北迁徙。",
+      "distractors": [
+        "settle",
+        "reproduce",
+        "forage"
+      ],
+      "band": 2
+    },
+    {
+      "word": "minimal",
+      "pos": "adj.",
+      "def_en": "as small in amount or degree as possible",
+      "def_zh": "极小的；最低限度的",
+      "example": "The repairs caused minimal disturbance to the surrounding stonework.",
+      "example_zh": "修缮对周围石构件的扰动极小。",
+      "distractors": [
+        "extensive",
+        "costly",
+        "permanent"
+      ],
+      "band": 2
+    },
+    {
+      "word": "mitigate",
+      "pos": "v.",
+      "def_en": "to make something bad less severe",
+      "def_zh": "缓和；减轻",
+      "example": "Planting windbreaks mitigated the erosion along the field edges.",
+      "example_zh": "种植防风林减轻了田边的水土流失。",
+      "distractors": [
+        "aggravate",
+        "postpone",
+        "document"
+      ],
+      "band": 3
+    },
+    {
+      "word": "modify",
+      "pos": "v.",
+      "def_en": "to change something slightly to improve it",
+      "def_zh": "修改；调整",
+      "example": "Engineers modified the design after the first bridge failed.",
+      "example_zh": "第一座桥失事后，工程师修改了设计。",
+      "distractors": [
+        "preserve",
+        "approve",
+        "duplicate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "mutual",
+      "pos": "adj.",
+      "def_en": "shared by two or more parties",
+      "def_zh": "相互的；共同的",
+      "example": "The relationship is mutual, since each species feeds the other.",
+      "example_zh": "这种关系是互惠的，因为两个物种彼此供养。",
+      "distractors": [
+        "temporary",
+        "hostile",
+        "accidental"
+      ],
+      "band": 2
+    },
+    {
+      "word": "negligible",
+      "pos": "adj.",
+      "def_en": "so small that it can be ignored",
+      "def_zh": "微不足道的",
+      "example": "The effect on global temperature was negligible compared with that of the oceans.",
+      "example_zh": "与海洋的作用相比，其对全球气温的影响微不足道。",
+      "distractors": [
+        "substantial",
+        "measurable",
+        "gradual"
+      ],
+      "band": 3
+    },
+    {
+      "word": "notion",
+      "pos": "n.",
+      "def_en": "a belief or general idea about something",
+      "def_zh": "观念；想法",
+      "example": "The notion that deserts are lifeless is contradicted by the survey data.",
+      "example_zh": "认为沙漠没有生命的观念与调查数据相矛盾。",
+      "distractors": [
+        "evidence",
+        "procedure",
+        "outcome"
+      ],
+      "band": 2
+    },
+    {
+      "word": "nuance",
+      "pos": "n.",
+      "def_en": "a very slight difference in meaning or quality",
+      "def_zh": "细微差别",
+      "example": "Translators often lose the nuance that distinguishes the two verbs.",
+      "example_zh": "译者常常丢失区分这两个动词的细微差别。",
+      "distractors": [
+        "summary",
+        "exaggeration",
+        "contradiction"
+      ],
+      "band": 3
+    },
+    {
+      "word": "obscure",
+      "pos": "adj.",
+      "def_en": "not well known; difficult to understand",
+      "def_zh": "晦涩的；不为人知的",
+      "example": "The technique was described in an obscure journal and ignored for decades.",
+      "example_zh": "这项技术发表在一本不知名的期刊上，几十年间无人问津。",
+      "distractors": [
+        "famous",
+        "recent",
+        "costly"
+      ],
+      "band": 2
+    },
+    {
+      "word": "obtain",
+      "pos": "v.",
+      "def_en": "to get or acquire something",
+      "def_zh": "获得；取得",
+      "example": "The dye was obtained from the shells of a single species of snail.",
+      "example_zh": "这种染料是从一种海螺的壳中提取的。",
+      "distractors": [
+        "discard",
+        "refine",
+        "export"
+      ],
+      "band": 1
+    },
+    {
+      "word": "obvious",
+      "pos": "adj.",
+      "def_en": "easy to see or understand",
+      "def_zh": "明显的；显然的",
+      "example": "The advantage of the wheel was obvious on level ground but not in the mountains.",
+      "example_zh": "轮子的优势在平地上显而易见，但在山区并非如此。",
+      "distractors": [
+        "subtle",
+        "costly",
+        "recent"
+      ],
+      "band": 1
+    },
+    {
+      "word": "occur",
+      "pos": "v.",
+      "def_en": "to happen or take place",
+      "def_zh": "发生；出现",
+      "example": "Such eruptions occur roughly once every four centuries.",
+      "example_zh": "这类喷发大约每四百年发生一次。",
+      "distractors": [
+        "cease",
+        "persist",
+        "accelerate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "offset",
+      "pos": "v.",
+      "def_en": "to balance out the effect of something",
+      "def_zh": "抵消；补偿",
+      "example": "Gains in the highlands offset the losses along the coast.",
+      "example_zh": "高地的增长抵消了沿海的损失。",
+      "distractors": [
+        "magnify",
+        "record",
+        "postpone"
+      ],
+      "band": 2
+    },
+    {
+      "word": "optimal",
+      "pos": "adj.",
+      "def_en": "best or most favorable for a purpose",
+      "def_zh": "最佳的；最适宜的",
+      "example": "The optimal depth for planting the seed is about three centimeters.",
+      "example_zh": "播种的最佳深度约为三厘米。",
+      "distractors": [
+        "minimal",
+        "average",
+        "permissible"
+      ],
+      "band": 2
+    },
+    {
+      "word": "paradox",
+      "pos": "n.",
+      "def_en": "a statement or situation that seems contradictory but may be true",
+      "def_zh": "悖论；矛盾现象",
+      "example": "The paradox is that the poorest soils supported the richest flora.",
+      "example_zh": "矛盾之处在于，最贫瘠的土壤却孕育了最丰富的植物群。",
+      "distractors": [
+        "consensus",
+        "precedent",
+        "hypothesis"
+      ],
+      "band": 3
+    },
+    {
+      "word": "parallel",
+      "pos": "adj.",
+      "def_en": "similar and occurring at the same time or in the same way",
+      "def_zh": "平行的；类似的",
+      "example": "Writing developed in parallel ways in two unconnected regions.",
+      "example_zh": "文字在两个互不相干的地区以相似的方式发展起来。",
+      "distractors": [
+        "opposite",
+        "gradual",
+        "accidental"
+      ],
+      "band": 2
+    },
+    {
+      "word": "perceive",
+      "pos": "v.",
+      "def_en": "to notice or become aware of something",
+      "def_zh": "察觉；感知",
+      "example": "Bees perceive ultraviolet patterns that are invisible to people.",
+      "example_zh": "蜜蜂能感知人眼看不见的紫外线图案。",
+      "distractors": [
+        "ignore",
+        "produce",
+        "imitate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "persist",
+      "pos": "v.",
+      "def_en": "to continue to exist or to keep doing something",
+      "def_zh": "持续；坚持",
+      "example": "The drought persisted for eleven consecutive growing seasons.",
+      "example_zh": "干旱持续了连续十一个生长季。",
+      "distractors": [
+        "cease",
+        "intensify",
+        "recur"
+      ],
+      "band": 1
+    },
+    {
+      "word": "pervasive",
+      "pos": "adj.",
+      "def_en": "spread throughout every part of something",
+      "def_zh": "普遍存在的；弥漫的",
+      "example": "The influence of the workshop was pervasive in later provincial pottery.",
+      "example_zh": "该作坊的影响在后来的地方陶器中无处不在。",
+      "distractors": [
+        "localized",
+        "recent",
+        "superficial"
+      ],
+      "band": 3
+    },
+    {
+      "word": "phenomenon",
+      "pos": "n.",
+      "def_en": "an observable fact or event",
+      "def_zh": "现象",
+      "example": "The phenomenon appears only when the air is unusually still.",
+      "example_zh": "这一现象只在空气异常静止时才出现。",
+      "distractors": [
+        "hypothesis",
+        "procedure",
+        "instrument"
+      ],
+      "band": 2
+    },
+    {
+      "word": "plausible",
+      "pos": "adj.",
+      "def_en": "seeming reasonable and likely to be true",
+      "def_zh": "似乎有理的；可信的",
+      "example": "A plausible explanation is that the river shifted course after the flood.",
+      "example_zh": "一个合理的解释是，洪水之后河道发生了改道。",
+      "distractors": [
+        "proven",
+        "absurd",
+        "complicated"
+      ],
+      "band": 3
+    },
+    {
+      "word": "precede",
+      "pos": "v.",
+      "def_en": "to come or happen before something else",
+      "def_zh": "先于；在…之前",
+      "example": "A long dry spell preceded the collapse of the terraces.",
+      "example_zh": "梯田崩塌之前有一段漫长的干旱期。",
+      "distractors": [
+        "follow",
+        "cause",
+        "accompany"
+      ],
+      "band": 2
+    },
+    {
+      "word": "preclude",
+      "pos": "v.",
+      "def_en": "to make something impossible in advance",
+      "def_zh": "排除；阻止…发生",
+      "example": "The thin atmosphere precludes the presence of liquid water at the surface.",
+      "example_zh": "稀薄的大气使地表不可能存在液态水。",
+      "distractors": [
+        "permit",
+        "delay",
+        "require"
+      ],
+      "band": 3
+    },
+    {
+      "word": "predominant",
+      "pos": "adj.",
+      "def_en": "most common or most powerful",
+      "def_zh": "主要的；占优势的",
+      "example": "Wheat was the predominant crop on the northern plain.",
+      "example_zh": "小麦是北部平原上的主要作物。",
+      "distractors": [
+        "scarce",
+        "imported",
+        "seasonal"
+      ],
+      "band": 3
+    },
+    {
+      "word": "prevail",
+      "pos": "v.",
+      "def_en": "to be most common; to prove stronger in the end",
+      "def_zh": "盛行；占上风",
+      "example": "Westerly winds prevail over the region for most of the year.",
+      "example_zh": "一年中大部分时间，该地区盛行西风。",
+      "distractors": [
+        "subside",
+        "alternate",
+        "originate"
+      ],
+      "band": 3
+    },
+    {
+      "word": "previous",
+      "pos": "adj.",
+      "def_en": "coming before in time",
+      "def_zh": "先前的；以前的",
+      "example": "The previous edition of the map omitted the eastern tributaries.",
+      "example_zh": "这幅地图的上一版漏掉了东部的支流。",
+      "distractors": [
+        "current",
+        "detailed",
+        "official"
+      ],
+      "band": 1
+    },
+    {
+      "word": "primary",
+      "pos": "adj.",
+      "def_en": "first in importance or order",
+      "def_zh": "主要的；首要的",
+      "example": "The primary source of the sediment is a glacier fifty kilometers away.",
+      "example_zh": "这些沉积物的主要来源是五十公里外的一条冰川。",
+      "distractors": [
+        "secondary",
+        "distant",
+        "artificial"
+      ],
+      "band": 1
+    },
+    {
+      "word": "profound",
+      "pos": "adj.",
+      "def_en": "very great or intense; showing deep insight",
+      "def_zh": "深刻的；深远的",
+      "example": "The invention had a profound effect on how information was stored.",
+      "example_zh": "这项发明对信息的存储方式产生了深远影响。",
+      "distractors": [
+        "slight",
+        "immediate",
+        "practical"
+      ],
+      "band": 3
+    },
+    {
+      "word": "proliferate",
+      "pos": "v.",
+      "def_en": "to increase rapidly in number",
+      "def_zh": "激增；扩散",
+      "example": "Algae proliferated once fertilizer runoff reached the lake.",
+      "example_zh": "化肥径流进入湖中后，藻类迅速繁殖。",
+      "distractors": [
+        "dwindle",
+        "stabilize",
+        "migrate"
+      ],
+      "band": 3
+    },
+    {
+      "word": "prominent",
+      "pos": "adj.",
+      "def_en": "easily noticed; important and well known",
+      "def_zh": "显著的；杰出的",
+      "example": "A prominent ridge divides the two watersheds.",
+      "example_zh": "一道显眼的山脊将两个流域分开。",
+      "distractors": [
+        "hidden",
+        "fragile",
+        "temporary"
+      ],
+      "band": 2
+    },
+    {
+      "word": "provoke",
+      "pos": "v.",
+      "def_en": "to cause a strong reaction",
+      "def_zh": "激起；引发",
+      "example": "The proposal provoked objections from every coastal province.",
+      "example_zh": "这项提案激起了各沿海省份的反对。",
+      "distractors": [
+        "settle",
+        "postpone",
+        "summarize"
+      ],
+      "band": 2
+    },
+    {
+      "word": "range",
+      "pos": "n.",
+      "def_en": "the full extent of variation between limits",
+      "def_zh": "范围；幅度",
+      "example": "The species tolerates a narrow range of temperatures.",
+      "example_zh": "该物种只能忍受很窄的温度范围。",
+      "distractors": [
+        "average",
+        "origin",
+        "density"
+      ],
+      "band": 1
+    },
+    {
+      "word": "refine",
+      "pos": "v.",
+      "def_en": "to improve something by making small changes; to purify",
+      "def_zh": "改进；提炼",
+      "example": "Later chemists refined the technique until it could detect trace amounts.",
+      "example_zh": "后来的化学家不断改进这一技术，直到它能检测微量物质。",
+      "distractors": [
+        "discard",
+        "duplicate",
+        "publish"
+      ],
+      "band": 2
+    },
+    {
+      "word": "reinforce",
+      "pos": "v.",
+      "def_en": "to make something stronger or more convincing",
+      "def_zh": "加强；强化",
+      "example": "The second excavation reinforced the conclusion drawn from the first.",
+      "example_zh": "第二次发掘强化了从第一次发掘中得出的结论。",
+      "distractors": [
+        "weaken",
+        "question",
+        "replace"
+      ],
+      "band": 2
+    },
+    {
+      "word": "reluctant",
+      "pos": "adj.",
+      "def_en": "unwilling and hesitant to do something",
+      "def_zh": "不情愿的；勉强的",
+      "example": "Farmers were reluctant to adopt the new seed until yields were demonstrated.",
+      "example_zh": "在产量得到证明之前，农民不愿采用这种新种子。",
+      "distractors": [
+        "eager",
+        "unable",
+        "careless"
+      ],
+      "band": 2
+    },
+    {
+      "word": "render",
+      "pos": "v.",
+      "def_en": "to cause something to be in a certain state; to provide",
+      "def_zh": "使成为；给予",
+      "example": "The salt in the soil rendered the fields useless within a generation.",
+      "example_zh": "土壤中的盐分在一代人的时间内使这些田地变得无用。",
+      "distractors": [
+        "prevent",
+        "postpone",
+        "measure"
+      ],
+      "band": 3
+    },
+    {
+      "word": "resemble",
+      "pos": "v.",
+      "def_en": "to look or be similar to something",
+      "def_zh": "像；类似于",
+      "example": "The larvae resemble small worms rather than adult insects.",
+      "example_zh": "幼虫看上去更像小蠕虫，而不像成年昆虫。",
+      "distractors": [
+        "outnumber",
+        "consume",
+        "precede"
+      ],
+      "band": 2
+    },
+    {
+      "word": "resilient",
+      "pos": "adj.",
+      "def_en": "able to recover quickly after difficulty or damage",
+      "def_zh": "有韧性的；能迅速恢复的",
+      "example": "Grasslands proved more resilient than forests after the fire.",
+      "example_zh": "火灾之后，草原比森林更能迅速恢复。",
+      "distractors": [
+        "fragile",
+        "abundant",
+        "ancient"
+      ],
+      "band": 2
+    },
+    {
+      "word": "restrict",
+      "pos": "v.",
+      "def_en": "to keep within limits",
+      "def_zh": "限制；约束",
+      "example": "Poor drainage restricts root growth to the upper soil layer.",
+      "example_zh": "排水不良使根系生长限制在表层土壤中。",
+      "distractors": [
+        "extend",
+        "encourage",
+        "measure"
+      ],
+      "band": 1
+    },
+    {
+      "word": "retain",
+      "pos": "v.",
+      "def_en": "to keep or continue to hold something",
+      "def_zh": "保留；保持",
+      "example": "Clay soils retain water long after sandy soils have dried.",
+      "example_zh": "在沙土早已干燥之后，黏土仍能长时间保水。",
+      "distractors": [
+        "release",
+        "absorb",
+        "transport"
+      ],
+      "band": 1
+    },
+    {
+      "word": "reveal",
+      "pos": "v.",
+      "def_en": "to make something known or visible",
+      "def_zh": "揭示；显露",
+      "example": "The low tide revealed a pavement of fossil footprints.",
+      "example_zh": "退潮露出了一整片化石足迹铺成的地面。",
+      "distractors": [
+        "conceal",
+        "destroy",
+        "estimate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "rigid",
+      "pos": "adj.",
+      "def_en": "stiff and not able to bend; strictly fixed",
+      "def_zh": "僵硬的；严格的",
+      "example": "The rigid shell protects the animal but limits its growth.",
+      "example_zh": "坚硬的外壳保护着这种动物，却限制了它的生长。",
+      "distractors": [
+        "flexible",
+        "porous",
+        "fragile"
+      ],
+      "band": 2
+    },
+    {
+      "word": "rudimentary",
+      "pos": "adj.",
+      "def_en": "basic and undeveloped; at an early stage",
+      "def_zh": "初步的；未发育完全的",
+      "example": "The earliest models had only a rudimentary system for correcting errors.",
+      "example_zh": "最早的机型只有一套简陋的纠错系统。",
+      "distractors": [
+        "elaborate",
+        "expensive",
+        "reliable"
+      ],
+      "band": 3
+    },
+    {
+      "word": "salient",
+      "pos": "adj.",
+      "def_en": "most noticeable or important",
+      "def_zh": "显著的；最重要的",
+      "example": "The salient feature of the design is the absence of interior columns.",
+      "example_zh": "该设计最突出的特点是内部没有立柱。",
+      "distractors": [
+        "trivial",
+        "costly",
+        "recent"
+      ],
+      "band": 3
+    },
+    {
+      "word": "scarce",
+      "pos": "adj.",
+      "def_en": "available in very small quantities",
+      "def_zh": "稀少的；不足的",
+      "example": "Timber was scarce, so the builders relied on mud brick.",
+      "example_zh": "木材稀缺，因此建造者依赖泥砖。",
+      "distractors": [
+        "heavy",
+        "valuable",
+        "imported"
+      ],
+      "band": 2
+    },
+    {
+      "word": "scrutiny",
+      "pos": "n.",
+      "def_en": "careful and detailed examination",
+      "def_zh": "仔细审查",
+      "example": "The claim collapsed under the scrutiny of a second laboratory.",
+      "example_zh": "在第二家实验室的仔细审查下，这一说法站不住脚了。",
+      "distractors": [
+        "approval",
+        "publicity",
+        "neglect"
+      ],
+      "band": 3
+    },
+    {
+      "word": "sequence",
+      "pos": "n.",
+      "def_en": "an ordered series of events or things",
+      "def_zh": "顺序；序列",
+      "example": "The sequence of layers records four separate eruptions.",
+      "example_zh": "这些地层的先后顺序记录了四次独立的喷发。",
+      "distractors": [
+        "duration",
+        "summary",
+        "boundary"
+      ],
+      "band": 1
+    },
+    {
+      "word": "spontaneous",
+      "pos": "adj.",
+      "def_en": "happening naturally without external cause or planning",
+      "def_zh": "自发的；自然发生的",
+      "example": "The reaction is spontaneous and requires no added heat.",
+      "example_zh": "该反应是自发的，不需要额外加热。",
+      "distractors": [
+        "deliberate",
+        "gradual",
+        "violent"
+      ],
+      "band": 3
+    },
+    {
+      "word": "stable",
+      "pos": "adj.",
+      "def_en": "not likely to change or fail; firmly fixed",
+      "def_zh": "稳定的；牢固的",
+      "example": "The climate remained stable for nearly three thousand years.",
+      "example_zh": "气候在近三千年间保持稳定。",
+      "distractors": [
+        "volatile",
+        "humid",
+        "temporary"
+      ],
+      "band": 1
+    },
+    {
+      "word": "stagnant",
+      "pos": "adj.",
+      "def_en": "not moving or developing",
+      "def_zh": "停滞的；不流动的",
+      "example": "Trade remained stagnant until the road through the pass reopened.",
+      "example_zh": "在山口道路重新开通之前，贸易一直停滞不前。",
+      "distractors": [
+        "flowing",
+        "profitable",
+        "seasonal"
+      ],
+      "band": 3
+    },
+    {
+      "word": "stimulate",
+      "pos": "v.",
+      "def_en": "to encourage activity or growth",
+      "def_zh": "刺激；促进",
+      "example": "Cheap credit stimulated construction in the port cities.",
+      "example_zh": "低息信贷刺激了港口城市的建设。",
+      "distractors": [
+        "suppress",
+        "regulate",
+        "finance"
+      ],
+      "band": 2
+    },
+    {
+      "word": "subsequent",
+      "pos": "adj.",
+      "def_en": "coming after something in time",
+      "def_zh": "随后的；后来的",
+      "example": "Subsequent studies confirmed the pattern in three other valleys.",
+      "example_zh": "随后的研究在另外三个河谷证实了这一规律。",
+      "distractors": [
+        "earlier",
+        "related",
+        "preliminary"
+      ],
+      "band": 2
+    },
+    {
+      "word": "subtle",
+      "pos": "adj.",
+      "def_en": "so slight as to be difficult to notice",
+      "def_zh": "微妙的；细微的",
+      "example": "The difference in glaze color is subtle but consistent.",
+      "example_zh": "釉色的差别虽细微，却始终如一。",
+      "distractors": [
+        "striking",
+        "permanent",
+        "costly"
+      ],
+      "band": 3
+    },
+    {
+      "word": "sufficient",
+      "pos": "adj.",
+      "def_en": "as much as is needed",
+      "def_zh": "足够的",
+      "example": "Rainfall alone is sufficient for the crop in most years.",
+      "example_zh": "在大多数年份，仅靠降雨就足以满足这种作物的需求。",
+      "distractors": [
+        "excessive",
+        "seasonal",
+        "reliable"
+      ],
+      "band": 1
+    },
+    {
+      "word": "sustain",
+      "pos": "v.",
+      "def_en": "to support or keep something going over time",
+      "def_zh": "维持；支撑",
+      "example": "The lagoon can sustain a fishery only if the inlet stays open.",
+      "example_zh": "只有入海口保持畅通，这片潟湖才能维持渔业。",
+      "distractors": [
+        "exhaust",
+        "establish",
+        "measure"
+      ],
+      "band": 2
+    },
+    {
+      "word": "synthesis",
+      "pos": "n.",
+      "def_en": "the combining of separate parts into a whole",
+      "def_zh": "综合；合成",
+      "example": "The book is a synthesis of field data and archival research.",
+      "example_zh": "这本书是野外数据与档案研究的综合。",
+      "distractors": [
+        "analysis",
+        "summary",
+        "critique"
+      ],
+      "band": 3
+    },
+    {
+      "word": "tangible",
+      "pos": "adj.",
+      "def_en": "real and able to be clearly seen or touched",
+      "def_zh": "有形的；实实在在的",
+      "example": "The project produced tangible results within the first season.",
+      "example_zh": "这个项目在第一个季度就取得了实实在在的成果。",
+      "distractors": [
+        "theoretical",
+        "gradual",
+        "costly"
+      ],
+      "band": 3
+    },
+    {
+      "word": "temporary",
+      "pos": "adj.",
+      "def_en": "lasting for only a limited time",
+      "def_zh": "暂时的；临时的",
+      "example": "The camp was temporary and was rebuilt each spring.",
+      "example_zh": "这个营地是临时的，每年春天重建一次。",
+      "distractors": [
+        "permanent",
+        "crowded",
+        "distant"
+      ],
+      "band": 1
+    },
+    {
+      "word": "tenuous",
+      "pos": "adj.",
+      "def_en": "weak and not well supported",
+      "def_zh": "脆弱的；牵强的",
+      "example": "The link between the two cultures rests on tenuous evidence.",
+      "example_zh": "这两种文化之间的联系建立在薄弱的证据之上。",
+      "distractors": [
+        "convincing",
+        "recent",
+        "complex"
+      ],
+      "band": 3
+    },
+    {
+      "word": "threshold",
+      "pos": "n.",
+      "def_en": "the point at which something begins to take effect",
+      "def_zh": "临界点；门槛",
+      "example": "Below a certain threshold of light, the leaves stop producing sugar.",
+      "example_zh": "低于某一光照临界值时，叶片就停止合成糖分。",
+      "distractors": [
+        "average",
+        "interval",
+        "surplus"
+      ],
+      "band": 2
+    },
+    {
+      "word": "transform",
+      "pos": "v.",
+      "def_en": "to change completely in form or nature",
+      "def_zh": "改变；转变",
+      "example": "The railway transformed a market town into an industrial center.",
+      "example_zh": "铁路把一个集镇变成了工业中心。",
+      "distractors": [
+        "preserve",
+        "relocate",
+        "describe"
+      ],
+      "band": 1
+    },
+    {
+      "word": "transmit",
+      "pos": "v.",
+      "def_en": "to pass something on from one place or person to another",
+      "def_zh": "传送；传播",
+      "example": "Mosquitoes transmit the parasite between hosts.",
+      "example_zh": "蚊子在宿主之间传播这种寄生虫。",
+      "distractors": [
+        "absorb",
+        "destroy",
+        "cultivate"
+      ],
+      "band": 1
+    },
+    {
+      "word": "ubiquitous",
+      "pos": "adj.",
+      "def_en": "found everywhere at the same time",
+      "def_zh": "无处不在的",
+      "example": "Microplastics are now ubiquitous in ocean sediments.",
+      "example_zh": "微塑料如今在海洋沉积物中无处不在。",
+      "distractors": [
+        "scarce",
+        "harmless",
+        "visible"
+      ],
+      "band": 3
+    },
+    {
+      "word": "undermine",
+      "pos": "v.",
+      "def_en": "to weaken something gradually",
+      "def_zh": "逐渐削弱；破坏",
+      "example": "The new dates undermine the traditional account of the migration.",
+      "example_zh": "这些新的年代数据削弱了关于这次迁徙的传统说法。",
+      "distractors": [
+        "reinforce",
+        "clarify",
+        "postpone"
+      ],
+      "band": 3
+    },
+    {
+      "word": "vary",
+      "pos": "v.",
+      "def_en": "to differ or change from one case to another",
+      "def_zh": "变化；不同",
+      "example": "Leaf size varies with altitude across the mountain range.",
+      "example_zh": "在整个山脉中，叶片大小随海拔而变化。",
+      "distractors": [
+        "persist",
+        "increase",
+        "depend"
+      ],
+      "band": 1
+    },
+    {
+      "word": "viable",
+      "pos": "adj.",
+      "def_en": "capable of working or surviving successfully",
+      "def_zh": "可行的；能存活的",
+      "example": "The colony was never viable without shipments from the mainland.",
+      "example_zh": "没有大陆的补给，这个殖民地从来无法维持。",
+      "distractors": [
+        "expensive",
+        "remote",
+        "temporary"
+      ],
+      "band": 3
+    },
+    {
+      "word": "volatile",
+      "pos": "adj.",
+      "def_en": "likely to change suddenly; easily evaporating",
+      "def_zh": "易变的；易挥发的",
+      "example": "Grain prices were volatile in years when the harvest was uncertain.",
+      "example_zh": "在收成不确定的年份，粮价波动剧烈。",
+      "distractors": [
+        "steady",
+        "costly",
+        "abundant"
+      ],
+      "band": 3
+    },
+    {
+      "word": "vulnerable",
+      "pos": "adj.",
+      "def_en": "easily harmed or attacked",
+      "def_zh": "易受伤害的；脆弱的",
+      "example": "Shallow reefs are especially vulnerable to warming water.",
+      "example_zh": "浅水珊瑚礁尤其容易受到水温升高的影响。",
+      "distractors": [
+        "resistant",
+        "abundant",
+        "distant"
+      ],
+      "band": 2
+    },
+    {
+      "word": "yield",
+      "pos": "v.",
+      "def_en": "to produce or provide a result or amount",
+      "def_zh": "产生；出产",
+      "example": "The trench yielded more than a thousand pottery fragments.",
+      "example_zh": "这条探沟出土了一千多块陶片。",
+      "distractors": [
+        "consume",
+        "conceal",
+        "require"
+      ],
+      "band": 1
+    }
+  ]
+}

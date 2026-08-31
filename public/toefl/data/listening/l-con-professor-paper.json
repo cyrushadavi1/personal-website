@@ -1,0 +1,170 @@
+{
+  "id": "l-con-professor-paper",
+  "kind": "conversation",
+  "title": "Narrowing the Thesis",
+  "topic": "campus",
+  "difficulty": 2,
+  "setting_en": "In a history professor's office during office hours.",
+  "setting_zh": "在历史系教授的办公室，答疑时间。",
+  "speakers": [
+    {
+      "id": "prof",
+      "label_en": "Professor",
+      "label_zh": "教授",
+      "voice": "male-b"
+    },
+    {
+      "id": "student",
+      "label_en": "Student",
+      "label_zh": "学生",
+      "voice": "female-a"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "student",
+      "text": "Professor Ahn? Do you have a minute? You said to come by if the proposal came back with comments."
+    },
+    {
+      "speaker": "prof",
+      "text": "Come in, come in. Sit down. I've got your one pager here somewhere. Here we go. Okay. So, the good news first, because there is good news. You can write. The prose is clean, you're not padding it out, and you did the reading."
+    },
+    {
+      "speaker": "student",
+      "text": "I'm hearing a but."
+    },
+    {
+      "speaker": "prof",
+      "text": "You're hearing a but. Your thesis is the size of a textbook. Let me read it back to you. The Industrial Revolution transformed the lives of working families in Britain. That's the thesis."
+    },
+    {
+      "speaker": "student",
+      "text": "Is it, um, is it not arguable enough?"
+    },
+    {
+      "speaker": "prof",
+      "text": "It's not that it isn't arguable. It's that nobody would disagree with it. Something big changed something big, over a hundred and fifty years, across an entire country. Where's the fight? A thesis has to be a claim that a reasonable, well informed person could look at and say, no, I don't think that's right. Yours gives them nothing to push against."
+    },
+    {
+      "speaker": "student",
+      "text": "Okay. So I make it smaller."
+    },
+    {
+      "speaker": "prof",
+      "text": "Smaller, yes, but that's not the whole move, and this is where students usually get stuck. Narrowing isn't just lopping off decades. If you write, the Industrial Revolution transformed working families in Manchester between eighteen forty and eighteen sixty, you've made it shorter. You haven't made it a thesis. It's still just, a big thing happened, only in one city."
+    },
+    {
+      "speaker": "student",
+      "text": "Right."
+    },
+    {
+      "speaker": "prof",
+      "text": "What you want is a specific claim about a specific thing that somebody has actually argued the other way. So tell me. When you were doing the reading, was there a moment where two of your sources annoyed you by disagreeing?"
+    },
+    {
+      "speaker": "student",
+      "text": "Um. Sort of? There was this thing about household budgets. One reading said factory work gave women an independent wage for the first time, and another said the wage was real, but it went into the household pot and the woman didn't control how any of it got spent."
+    },
+    {
+      "speaker": "prof",
+      "text": "There. That's your paper. You just handed it to me and didn't even notice."
+    },
+    {
+      "speaker": "student",
+      "text": "That felt like a side detail, though."
+    },
+    {
+      "speaker": "prof",
+      "text": "It's a side detail in a survey course. It's a whole paper at fifteen pages. Look at what you've got. Two positions in the literature. A concrete unit of analysis, the household budget. A defined population, wage earning women. Now you take a side. Something like, women's factory wages in the eighteen forties expanded their earning but not their spending authority. Somebody can argue with that."
+    },
+    {
+      "speaker": "student",
+      "text": "That feels really narrow, though. Can I get fifteen pages out of household budgets?"
+    },
+    {
+      "speaker": "prof",
+      "text": "You'll get twenty and you'll be cutting. Narrow topics are deep. Broad ones are shallow, and shallow papers get shallow grades, because there's nothing in them but summary. So here's what I want. Two paragraphs by Friday. New thesis at the top, and under it, three pieces of evidence, with page numbers."
+    },
+    {
+      "speaker": "student",
+      "text": "Okay. Friday."
+    },
+    {
+      "speaker": "prof",
+      "text": "And listen, this isn't a rescue operation. This is the normal step. Everybody's first proposal is too big."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student come to the professor's office?",
+      "options": [
+        "To ask for an extension on her research paper",
+        "To follow up on the comments she received on her paper proposal",
+        "To request additional readings on the Industrial Revolution",
+        "To dispute the grade she received on an earlier assignment"
+      ],
+      "answer": 1,
+      "explanation_en": "Her first line says the professor told her to come by if the proposal came back with comments. No deadline change is ever discussed, and the proposal has not been graded.",
+      "explanation_zh": "她开口就说，教授让她在提案返回并附有评语时过来。全程没有谈延期，提案也还没有打分。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "What is the professor's main criticism of the student's thesis?",
+      "options": [
+        "It relies on sources that are out of date.",
+        "It covers a period the course has not yet reached.",
+        "It is written in prose that is unclear and padded.",
+        "It states something no informed reader would dispute."
+      ],
+      "answer": 3,
+      "explanation_en": "He says the problem is not that the claim is unarguable in principle but that nobody would disagree with it, so there is no fight in it. Choice C contradicts his praise of her clean, unpadded prose.",
+      "explanation_zh": "他说问题不在于这个说法不能论证，而在于没人会反对它，因此毫无争点。选项C与他称赞她文笔干净、不注水相矛盾。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. Why does the professor say this:",
+      "replayLine": 11,
+      "options": [
+        "To point out that the student has already identified a workable topic without realizing it",
+        "To indicate that the student has submitted the wrong draft",
+        "To warn the student that her sources contradict each other too sharply",
+        "To praise the student for choosing a topic before the deadline"
+      ],
+      "answer": 0,
+      "explanation_en": "The student has just described two readings that disagree about women's wages, and the professor recognizes that disagreement as the paper itself. Choice C misreads him, since the contradiction is exactly what he considers valuable.",
+      "explanation_zh": "学生刚描述了两份读物在女性工资问题上的分歧，教授立刻认定这个分歧本身就是论文。选项C理解反了，这种矛盾正是他看重的东西。"
+    },
+    {
+      "id": "q4",
+      "type": "connecting-content",
+      "stem": "Why does the professor mention the version of the thesis limited to Manchester between eighteen forty and eighteen sixty?",
+      "options": [
+        "To recommend it as the revision the student should adopt",
+        "To show that shortening a claim does not by itself make it arguable",
+        "To suggest that the student's sources focus on that city",
+        "To explain why regional studies are harder than national ones"
+      ],
+      "answer": 1,
+      "explanation_en": "He offers the Manchester version as an example of a thesis that is shorter but still just says a big thing happened. He explicitly says it is not what he wants, which rules out choice A.",
+      "explanation_zh": "他把曼彻斯特那一版当作反例：句子变短了，但仍然只是在说“发生了一件大事”。他明确表示这不是他想要的，因此排除选项A。"
+    },
+    {
+      "id": "q5",
+      "type": "attitude",
+      "stem": "What is the professor's attitude at the end of the conversation?",
+      "options": [
+        "He is doubtful that the student can finish the paper on time.",
+        "He is annoyed that the student did not narrow the topic on her own.",
+        "He is reassuring, treating the revision as an ordinary part of the process.",
+        "He is uncertain whether the new topic will yield enough material."
+      ],
+      "answer": 2,
+      "explanation_en": "His closing lines say this is not a rescue and that everybody's first proposal is too big, which normalizes the situation. He is direct throughout but never expresses irritation or doubt about her.",
+      "explanation_zh": "他最后说这不是“救火”，每个人的第一版提案都太大，把情况说成常态。他全程直率，但从未表现出恼火或对她的怀疑。"
+    }
+  ]
+}

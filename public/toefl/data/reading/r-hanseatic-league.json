@@ -1,0 +1,177 @@
+{
+  "id": "r-hanseatic-league",
+  "title": "The Hanseatic League",
+  "topic": "history",
+  "difficulty": 2,
+  "paragraphs": [
+    "In the twelfth century the coasts of the Baltic and North Seas were linked by a growing traffic in bulky, low-value goods: grain, timber, salt, dried fish, wax, and furs. Merchants who carried such cargoes faced hazards that no single trader could manage alone. Ships were wrecked, cargoes were seized by pirates, and foreign rulers taxed visiting traders at whatever rate seemed convenient. In response, merchants from the German-speaking towns of the region began to travel in convoys and to negotiate as groups rather than as individuals. Out of these informal partnerships grew the association later known as the Hanseatic League, a network of trading towns that dominated northern European commerce for roughly three centuries.",
+    "The League was never a state. It had no permanent army, no common treasury, and no ruler, and its members remained subject to whichever prince or bishop governed their territory. What held it together was a shared body of commercial practice and the periodic assembly known as the Hansetag, at which delegates from member towns debated policy and issued resolutions. Attendance was irregular and decisions were not easily enforced, since a town that disliked a resolution could simply ignore it. The League's real instrument of discipline was economic. A town or a foreign ruler that violated Hanseatic privileges could be placed under an embargo, cutting it off from the grain and salt on which northern populations depended.",
+    "Abroad, the League operated through fortified trading stations called Kontore, the most important of which stood at Bruges, London, Bergen, and Novgorod. Each Kontor housed resident merchants under its own regulations, which governed everything from the quality of goods to the conduct of apprentices. These enclaves gave Hanseatic traders advantages that scattered individuals could not obtain: warehouses for storing goods until prices rose, courts for settling disputes among members, and a permanent presence for pressing their case with local authorities. The privileges granted to the Kontore were substantial. In London the Hanseatic merchants paid lower customs duties than English merchants themselves, an arrangement that generated lasting resentment and that would eventually be used against the League.",
+    "Several conditions favored the League's rise. The cog, a broad, flat-bottomed sailing vessel with high sides, could carry roughly three times the cargo of earlier northern ships while requiring a smaller crew, which sharply lowered the cost of moving heavy goods over long distances. At the same time the political landscape of northern Europe was fragmented, and no single monarchy was strong enough to control the Baltic trade or to bargain effectively with the towns. The League also benefited from an unusual coincidence of resources. Herring spawned in enormous numbers off the coast of Scania, and the salt needed to preserve them came from Luneburg, close to the Hanseatic ports.",
+    "The same conditions eventually reversed. In the fifteenth century the herring shoals shifted from the Baltic to the North Sea, where Dutch fishermen were better placed to exploit them, and Dutch shippers, sailing cheaper and more efficient vessels, began to undersell Hanseatic carriers in the bulk trades. Meanwhile the fragmented political landscape gave way to consolidated states. England, Denmark, Sweden, and the emerging Dutch republic each had reason to end the tax exemptions their predecessors had granted, and each was now strong enough to do so. The London Kontor was closed in 1598, and the Bergen station passed out of Hanseatic hands in the following century.",
+    "Internal weakness compounded these pressures. Because the League had no mechanism for compelling members to contribute to a common defense, wars against Denmark and against pirate fleets were financed by whichever towns felt most threatened, and those towns increasingly concluded that the costs outweighed the benefits. Some historians argue that the decline should not be described as a failure of organization at all. The loose structure was precisely what allowed a group of legally independent towns to cooperate for so long, and a more centralized body would probably have collapsed far earlier under the rivalries of its members. On this view the League did not break down so much as become unnecessary."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, what difficulty did merchants trading along the Baltic and North Sea coasts face?",
+      "options": [
+        "The goods they carried were too valuable to be shipped in ordinary vessels.",
+        "Acting alone, they could not protect their ships and cargoes or resist arbitrary taxation.",
+        "Local rulers refused to allow foreign traders to enter their ports.",
+        "There was little demand in the region for grain, timber, and salt."
+      ],
+      "answer": 1,
+      "explanation_en": "Paragraph 1 lists wrecks, piracy, and rulers taxing at whatever rate seemed convenient as hazards no single trader could manage alone. Choice 0 reverses the text, which says the goods were bulky and low in value.",
+      "explanation_zh": "第一段指出沉船、海盗劫货和统治者随意征税，都是单个商人无法应对的风险。选项一与原文相反，原文说这些货物体积大、价值低。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 1,
+      "stem": "The word \"hazards\" in paragraph 1 is closest in meaning to",
+      "highlight": "hazards",
+      "options": [
+        "dangers",
+        "expenses",
+        "delays",
+        "obligations"
+      ],
+      "answer": 0,
+      "explanation_en": "The following sentence explains the word with wrecks, piracy, and seizure, all of which are dangers. Expenses is tempting because taxation is mentioned, but wrecks and piracy are not costs of doing business in the ordinary sense.",
+      "explanation_zh": "下一句用沉船、海盗和货物被扣来解释该词，这些都是危险。选“花费”是因为提到了征税，但沉船和海盗并非普通的经营成本。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, how did the League bring pressure on those who violated its privileges?",
+      "options": [
+        "It sent an army against towns that refused to comply.",
+        "It removed member towns from the authority of local princes.",
+        "It cut off their supply of essential goods such as grain and salt.",
+        "It required every member town to attend the Hansetag."
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph says the League's real instrument of discipline was economic, specifically the embargo that cut a target off from grain and salt. Choice 0 contradicts the statement that the League had no permanent army.",
+      "explanation_zh": "该段说汉萨同盟真正的纪律手段是经济手段，即切断粮食和盐供应的禁运。选项一与“没有常备军”的说法矛盾。"
+    },
+    {
+      "id": "q4",
+      "type": "rhetorical-purpose",
+      "paragraph": 3,
+      "stem": "Why does the author mention that Hanseatic merchants in London paid lower customs duties than English merchants did?",
+      "options": [
+        "To show that the Kontore were managed more efficiently than local trading houses.",
+        "To explain why the London Kontor was the largest of the four.",
+        "To argue that English rulers were indifferent to the interests of their own merchants.",
+        "To show how far Hanseatic privileges extended and why they later provoked hostility."
+      ],
+      "answer": 3,
+      "explanation_en": "The detail follows the claim that the privileges were substantial and is immediately linked to lasting resentment that was later used against the League. Choice 2 overstates a point the passage never makes about English rulers' attitudes.",
+      "explanation_zh": "这一细节紧跟“特权相当可观”的说法，并直接与后来被用来对付同盟的长期怨恨相连。选项三对英国统治者态度的推断超出了原文。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 4,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 4?",
+      "highlight": "The cog, a broad, flat-bottomed sailing vessel with high sides, could carry roughly three times the cargo of earlier northern ships while requiring a smaller crew, which sharply lowered the cost of moving heavy goods over long distances.",
+      "options": [
+        "The cog was so large that northern shipbuilders had difficulty constructing it.",
+        "Because the cog carried far more cargo with a smaller crew, it made shipping heavy goods over long distances much cheaper.",
+        "The cog's flat bottom and high sides allowed it to sail safely in shallow coastal water.",
+        "Earlier northern ships needed larger crews because the cargo they carried was more valuable."
+      ],
+      "answer": 1,
+      "explanation_en": "The sentence pairs greater capacity with a smaller crew and states the result, a sharp fall in the cost of long-distance bulk transport. Choice 2 uses details from the sentence but supplies a consequence the sentence never states.",
+      "explanation_zh": "该句把更大的载货量与更少的船员结合起来，结论是长途运输重货的成本大幅下降。选项三借用了句中的细节，却给出了原句没有提到的结果。"
+    },
+    {
+      "id": "q6",
+      "type": "negative-factual",
+      "paragraph": 4,
+      "stem": "According to paragraph 4, all of the following helped the Hanseatic League prosper EXCEPT",
+      "options": [
+        "a ship that carried more cargo at lower cost",
+        "abundant herring off the coast of Scania",
+        "a nearby supply of salt from Luneburg",
+        "a strong monarchy that protected Baltic shipping"
+      ],
+      "answer": 3,
+      "explanation_en": "Paragraph 4 says the political landscape was fragmented and no monarchy was strong enough to control the Baltic trade, so a strong monarchy was not an advantage but its absence was. The other three are named directly.",
+      "explanation_zh": "第四段说当时政治格局分裂，没有哪个王权强大到能控制波罗的海贸易，所以有利的是强大王权的缺席而非存在。其余三项原文均直接提到。"
+    },
+    {
+      "id": "q7",
+      "type": "insert-text",
+      "paragraph": 5,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 5. Where would the sentence best fit?",
+      "insertSentence": "Hanseatic carriers could not match those costs without giving up the privileges that had made them profitable.",
+      "insertAfter": [
+        "The same conditions eventually reversed.",
+        "In the fifteenth century the herring shoals shifted from the Baltic to the North Sea, where Dutch fishermen were better placed to exploit them, and Dutch shippers, sailing cheaper and more efficient vessels, began to undersell Hanseatic carriers in the bulk trades.",
+        "Meanwhile the fragmented political landscape gave way to consolidated states.",
+        "England, Denmark, Sweden, and the emerging Dutch republic each had reason to end the tax exemptions their predecessors had granted, and each was now strong enough to do so."
+      ],
+      "answer": 1,
+      "explanation_en": "The inserted sentence refers to \"those costs,\" which must follow the mention of cheaper and more efficient Dutch vessels underselling Hanseatic carriers. After the third sentence the topic has already shifted to state consolidation, so the reference would be stranded.",
+      "explanation_zh": "待插句中的“那些成本”必须紧接在荷兰人用更便宜高效的船只压低价格之后。第三句以后话题已转向国家整合，指代就失去了对象。"
+    },
+    {
+      "id": "q8",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 implies that the tax exemptions enjoyed by Hanseatic merchants abroad",
+      "options": [
+        "had never been recognized by the English crown",
+        "expired automatically at the end of the fifteenth century",
+        "had been granted by rulers who lacked the power to refuse them",
+        "mattered more to the League than the herring trade did"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph says earlier rulers granted the exemptions and that their successors were now strong enough to end them, which implies the original grants reflected weakness. Choice 1 invents a legal expiry that the passage never mentions.",
+      "explanation_zh": "该段说早先的统治者授予了这些免税权，而其继承者如今强大到足以取消它们，这暗示最初的授予源于软弱。选项二凭空捏造了原文没有的到期时间。"
+    },
+    {
+      "id": "q9",
+      "type": "reference",
+      "paragraph": 6,
+      "stem": "The phrase \"those towns\" in paragraph 6 refers to",
+      "highlight": "those towns",
+      "options": [
+        "the towns that felt most threatened",
+        "the towns that had founded the League",
+        "the Danish towns",
+        "the towns that housed Kontore"
+      ],
+      "answer": 0,
+      "explanation_en": "The phrase picks up \"whichever towns felt most threatened\" earlier in the same sentence, the towns that actually paid for the wars. The Kontore were overseas stations, not member towns bearing war costs.",
+      "explanation_zh": "该短语指的是同一句前面提到的“最感到威胁的那些城镇”，即实际承担战费的城镇。商馆是海外据点，并非承担战费的成员城镇。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "The Hanseatic League was a network of northern European trading towns that dominated regional commerce for about three centuries.",
+      "options": [
+        "Merchants banded together for protection and bargaining power, and the resulting association governed its members through assemblies and the threat of embargo.",
+        "The League maintained a standing navy that patrolled the Baltic and suppressed piracy for three centuries.",
+        "Fortified stations abroad gave Hanseatic traders storage, courts, and trading privileges that local merchants did not enjoy.",
+        "Herring caught off Scania were salted at Luneburg before being shipped to Bruges and London.",
+        "Shifts in shipping, fish stocks, and the rise of consolidated states gradually removed the advantages on which the League depended.",
+        "The Hansetag met every year at Lubeck, and its resolutions were binding on all member towns."
+      ],
+      "answer": [
+        0,
+        2,
+        4
+      ],
+      "explanation_en": "The three keys cover the League's origins and internal discipline, its overseas organization, and the causes of its decline. Choice 1 contradicts the statement that the League had no permanent army, choice 5 contradicts the account of irregular attendance and unenforceable resolutions, and choice 3 is a minor detail.",
+      "explanation_zh": "三个正确选项分别概括了同盟的起源与内部纪律、海外组织形式以及衰落原因。选项二与“没有常备军”矛盾，选项六与出席不定、决议难以执行的描述矛盾，选项四只是细枝末节。"
+    }
+  ]
+}

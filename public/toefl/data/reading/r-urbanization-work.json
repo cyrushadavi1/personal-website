@@ -1,0 +1,183 @@
+{
+  "id": "r-urbanization-work",
+  "title": "Industrial Cities and the Reorganization of Household Labor",
+  "topic": "social-science",
+  "difficulty": 2,
+  "paragraphs": [
+    "Before the growth of industrial cities, the household in much of western Europe and North America functioned as a unit of production as well as a place of residence. Farming families raised crops and animals, processed food, spun thread, and made clothing on the same ground where they slept. Artisans worked in shops attached to their homes, and apprentices often lived with the master's family. Production and consumption occurred under one roof. Work and domestic life were not separate spheres but interwoven activities, and the labor of women and children was visible, necessary, and economically counted. A weaver's wife who prepared yarn was understood to be contributing to the family trade rather than performing a service for the family.",
+    "The concentration of manufacturing in factories broke this arrangement apart. Machinery driven by water and later by steam was too large and too costly to be housed in a dwelling, so production moved into buildings owned by employers and located near power sources and transport. Workers now traveled to a workplace, sold their time for a wage, and returned home at the end of a shift. Employers also gained the ability to supervise labor directly, imposing rules on attendance, breaks, and conversation that no artisan household had needed. The rhythm of labor changed as well, since the clock rather than the season or the task now determined when work began and ended. By the middle of the nineteenth century most manufacturing in industrial regions was carried out beyond the walls of any home.",
+    "This separation transformed the work that remained inside the house. Cooking, cleaning, laundry, and the care of children continued to be necessary, but they were no longer performed alongside income-producing tasks, and they produced no wage. Because the market increasingly defined labor as activity exchanged for money, domestic work came to be classified as something other than work. Census takers in several countries stopped recording the occupations of women who managed households, and household labor disappeared from the emerging statistics of national production. The quantity of that labor did not fall; in growing cities, where fuel and water had to be carried and where coal smoke soiled everything it touched, it often rose.",
+    "An ideology developed that presented the new division as natural. Writers of advice manuals described the home as a refuge from commerce and the wife as its moral guardian, a doctrine historians call the ideology of separate spheres. The description fit the circumstances of prosperous families more closely than those of the poor. In working-class households a single wage was rarely sufficient, and women took in laundry, boarded lodgers, sewed garments for merchants, or entered factories themselves. Such earnings were frequently irregular and were recorded, when they were recorded at all, as supplementary, which understated both their size and the number of households that depended on them.",
+    "The position of children changed along similar lines. On a farm a child of seven could perform useful tasks under the supervision of relatives, but factory labor removed young workers from that setting and exposed them to hazards that attracted public attention. Legislation restricting the hours and ages of child employment spread through industrial countries during the second half of the century, and compulsory schooling followed. School attendance also occupied hours that had once been available for chores at home. A child gradually ceased to be a contributor to household income and became a dependent whose maintenance and education represented a long-term expense. Families responded, over several decades, by having fewer of them.",
+    "The reorganization was therefore not a simple movement of labor from one place to another. It redefined which activities counted as work, who was expected to perform them, and how they were compensated, and it fixed a boundary between home and workplace that had scarcely existed before. The boundary was social as well as physical, and it was maintained in law, in architecture, and in ordinary conversation. Many of the arrangements that later societies treated as traditional, including the expectation that a household would be supported by a single earner, were in fact recent products of industrial reorganization, and they proved less durable than the changes in production that had created them."
+  ],
+  "glossary": [
+    {
+      "term": "ideology of separate spheres",
+      "def_en": "the nineteenth-century belief that men properly belong to the world of paid work and women to the home",
+      "def_zh": "分离领域观念：十九世纪认为男性应属于有酬工作领域、女性应属于家庭领域的观念"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, the labor of women and children in preindustrial households was",
+      "options": [
+        "recognized as a necessary part of the family's economic activity",
+        "limited to tasks that could be performed indoors",
+        "paid at rates lower than those given to adult men",
+        "supervised by officials who visited artisan workshops"
+      ],
+      "answer": 0,
+      "explanation_en": "Paragraph 1 says this labor was visible, necessary, and economically counted, and it gives the weaver's wife as an example of work understood as part of the family trade. Nothing in the paragraph concerns wage rates, so choice C introduces an idea the text never raises.",
+      "explanation_zh": "第一段说这类劳动是可见的、必要的，并被计入经济活动，并以织工的妻子为例说明其工作被视为家庭行业的一部分。该段完全没有提到工资水平，因此选项C引入了文中未涉及的内容。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"dwelling\" in paragraph 2 is closest in meaning to",
+      "highlight": "dwelling",
+      "options": [
+        "workshop",
+        "region",
+        "machine",
+        "home"
+      ],
+      "answer": 3,
+      "explanation_en": "The sentence contrasts machinery too large for a dwelling with production that moved into buildings owned by employers, so a dwelling is a place where people live. A workshop is a place of work, which is precisely the contrast the sentence draws.",
+      "explanation_zh": "该句把过于庞大而无法安置在 dwelling 中的机器与迁入雇主所有建筑的生产相对比，因此 dwelling 指人们居住的地方。workshop 指工作场所，恰恰是该句所要对比的一方。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, the timing of the working day changed because",
+      "options": [
+        "factories operated only during the warmest months of the year",
+        "the clock rather than the season or the task now set when work began and ended",
+        "workers were required to live within walking distance of the factory",
+        "employers reduced the number of hours worked in a single shift"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph states directly that the clock, rather than the season or the task, determined when work began and ended. Choice D reverses the paragraph, which describes tighter rules rather than shorter hours.",
+      "explanation_zh": "该段直接说明是时钟而非季节或任务决定工作的起止。选项D与该段相反，文中描述的是更严格的规则，而不是更短的工时。"
+    },
+    {
+      "id": "q4",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+      "highlight": "The quantity of that labor did not fall; in growing cities, where fuel and water had to be carried and where coal smoke soiled everything it touched, it often rose.",
+      "options": [
+        "Housework became lighter once families moved from the countryside into industrial cities.",
+        "The dirt and smoke of industrial cities made housework unpleasant but not more time consuming.",
+        "Housework did not decrease and in urban conditions often increased, even though it no longer counted as work.",
+        "Carrying fuel and water was the most demanding of all the tasks performed in urban households."
+      ],
+      "answer": 2,
+      "explanation_en": "The sentence says the quantity of domestic labor did not fall and often rose in cities where fuel and water had to be carried and soot was constant. Choice B keeps the urban conditions but denies the increase, which is the sentence's main point.",
+      "explanation_zh": "原句说家务劳动的数量并未减少，在需要搬运燃料和水、煤烟无处不在的城市里往往还增加了。选项B保留了城市条件却否认了增加，而增加正是原句的重点。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "paragraph": 3,
+      "stem": "It can be inferred from paragraph 3 that nineteenth-century statistics of national production",
+      "options": [
+        "were collected more carefully in cities than in rural districts",
+        "understated the total amount of labor performed in the society",
+        "counted domestic work at a lower value than factory work",
+        "were the first records of any kind to describe women's occupations"
+      ],
+      "answer": 1,
+      "explanation_en": "If household labor continued or increased but was no longer recorded, the totals must have omitted a large body of real work. Choice C is wrong because the paragraph says domestic work disappeared from the statistics entirely rather than being valued at a lower rate.",
+      "explanation_zh": "如果家务劳动持续存在甚至增加，却不再被记录，那么统计总量必然遗漏了大量真实劳动。选项C不对，因为该段说家务劳动从统计中完全消失，而不是被按较低价值计入。"
+    },
+    {
+      "id": "q6",
+      "type": "insert-text",
+      "paragraph": 4,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 4. Where would the sentence best fit?",
+      "insertSentence": "Their contribution was therefore easy to overlook.",
+      "insertAfter": [
+        "An ideology developed that presented the new division as natural.",
+        "Writers of advice manuals described the home as a refuge from commerce and the wife as its moral guardian, a doctrine historians call the ideology of separate spheres.",
+        "The description fit the circumstances of prosperous families more closely than those of the poor.",
+        "In working-class households a single wage was rarely sufficient, and women took in laundry, boarded lodgers, sewed garments for merchants, or entered factories themselves."
+      ],
+      "answer": 3,
+      "explanation_en": "The pronoun \"Their\" needs the working-class women just described as its antecedent, and the sentence prepares for the following statement about earnings recorded as merely supplementary. Earlier positions leave the pronoun without a plural antecedent.",
+      "explanation_zh": "代词“Their”需要以刚提到的工人阶级妇女为先行词，而该句也为随后关于收入被记为“补充性”的说法作了铺垫。放在更前的位置会使该代词缺少复数先行词。"
+    },
+    {
+      "id": "q7",
+      "type": "negative-factual",
+      "paragraph": 4,
+      "stem": "Paragraph 4 mentions all of the following as ways working-class women earned money EXCEPT",
+      "options": [
+        "washing clothes for other households",
+        "renting rooms to lodgers",
+        "sewing garments for merchants",
+        "teaching in newly established schools"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph lists laundry, lodgers, sewing for merchants, and factory work; teaching is never mentioned. Schools appear only in paragraph 5, and in connection with children rather than women's earnings.",
+      "explanation_zh": "该段列举了洗衣、出租房间给房客、为商人缝制衣物以及进入工厂，从未提及教书。学校只出现在第五段，且与儿童有关，而非妇女的收入。"
+    },
+    {
+      "id": "q8",
+      "type": "rhetorical-purpose",
+      "paragraph": 5,
+      "stem": "Why does the author mention a child of seven performing useful tasks on a farm?",
+      "options": [
+        "To contrast work done under the eye of relatives with the conditions children met in factories",
+        "To argue that farm labor was more dangerous than factory labor for young children",
+        "To explain why rural families were the first to send their children to school",
+        "To show that agricultural work required more skill than industrial work"
+      ],
+      "answer": 0,
+      "explanation_en": "The farm child is introduced as a baseline against which factory labor, which removed children from family supervision and exposed them to hazards, is measured. Choice B reverses the comparison the sentence makes.",
+      "explanation_zh": "农场上的孩子被用作参照，以衡量工厂劳动如何把儿童带离家人监管并使其面临危险。选项B把该句所作的比较颠倒了。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 suggests that families eventually had fewer children because",
+      "options": [
+        "child labor laws made it illegal to employ children of any age",
+        "urban housing could not accommodate large families",
+        "a child had become a long-term expense rather than a source of income",
+        "schools charged fees that poor households could not afford"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph describes children shifting from contributors to dependents whose upkeep and schooling cost money, and then notes the decline in family size. Choice A is too extreme, since the legislation described restricted hours and ages rather than banning child employment outright.",
+      "explanation_zh": "该段描述儿童从家庭收入的贡献者变为需要抚养和教育、耗费金钱的受抚养者，随后指出家庭规模下降。选项A过于绝对，因为文中的立法只限制工时和年龄，并未彻底禁止雇用儿童。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Directions: An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Industrial urbanization moved production out of the household and changed both the organization and the meaning of work done at home.",
+      "options": [
+        "Factory production separated the workplace from the home, so workers left the house to sell their time for wages.",
+        "Household tasks continued or increased but produced no wage and were dropped from official accounts of work.",
+        "A doctrine of separate spheres presented the new arrangement as natural, although few working-class families could live by it.",
+        "Steam engines proved more efficient than water wheels and gradually replaced them in most industries.",
+        "Compulsory schooling was introduced chiefly in order to prepare children for factory employment.",
+        "Most married women in industrial cities were employed as census takers and statisticians."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage traces the removal of production from the home, the resulting reclassification of unpaid domestic labor, and the ideology that justified the new division. Choice D is outside the passage's concerns, choice E misstates the purpose of schooling, and choice F is contradicted by the description of women's actual earnings.",
+      "explanation_zh": "全文依次说明生产迁出家庭、无酬家务劳动因此被重新归类，以及为这种新分工辩护的意识形态。选项D超出文章讨论范围，选项E歪曲了义务教育的目的，选项F与文中对妇女实际收入的描述相矛盾。"
+    }
+  ]
+}

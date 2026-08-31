@@ -1,0 +1,183 @@
+{
+  "id": "r-language-acquisition",
+  "title": "How Young Children Learn Words",
+  "topic": "social-science",
+  "difficulty": 1,
+  "paragraphs": [
+    "Children learn words at a remarkable rate. A typical child produces a first word at about twelve months of age and knows roughly fifty words by eighteen months. From that point the pace increases sharply, and by the age of six most children understand well over ten thousand words. This works out to an average of several new words a day, learned without formal instruction and usually without anyone explaining what the words mean. The growth is not steady, and individual children vary widely in when they begin. Researchers who study language development treat this speed as the central puzzle of early vocabulary learning, because the task looks far harder than the results suggest.",
+    "The difficulty is that a word rarely arrives with a clear label attached. Suppose an adult points toward a garden and says the word rabbit. The child must decide whether the word names the animal, its ears, its color, its movement, the grass around it, or the whole scene. Philosophers have used this example to argue that observation alone cannot fix the meaning of a word. In principle the number of possible meanings is very large, yet children almost never spend weeks testing alternatives. They settle on a reasonable meaning quickly, often after a single encounter.",
+    "Psychologists call this rapid initial linking of a word to a meaning fast mapping. In a standard experiment, a child is shown two objects, one familiar and one unfamiliar, and is asked to hand over the object with an unfamiliar name. Children as young as two reliably choose the unfamiliar object. They appear to assume that a new word refers to something that does not already have a name, and that assumption narrows the field of candidate meanings sharply. The strategy is not perfect, and children sometimes apply a new word too broadly, calling every four-legged animal a dog for a time. A single exposure of this kind does not produce full knowledge of a word, but it produces enough for the child to recognize the word later and refine its meaning through further encounters.",
+    "Fast mapping does not operate on its own. Children also rely heavily on social cues, and especially on where a speaker is looking. Gaze, gesture, and tone of voice all narrow the range of things a speaker is likely to mean. In one well-known study, an experimenter announced that she was looking for an object with an unfamiliar name, examined several containers with visible disappointment, and then reacted with pleasure on opening one of them. Children attached the new word to the object in that final container rather than to whatever object they happened to be holding. The result indicates that young learners track the intention of the speaker rather than a simple coincidence of sound and sight.",
+    "The speech that adults direct to children supports the process further. Caregivers in many communities speak to infants in a distinctive style, using a higher pitch, exaggerated intonation, slower delivery, and shorter sentences. These features make word boundaries clearer than they are in speech between adults. New words tend to appear at the ends of these short sentences, where they are easiest to notice, and they are often repeated within a brief span of time. Caregivers also tend to name what a child is already attending to instead of redirecting the child's attention, and studies show that vocabulary grows faster when adults follow the child's focus in this way.",
+    "The amount and kind of input a child receives varies considerably, and the variation has measurable effects. Children who hear more speech addressed to them personally, as opposed to speech overheard from a television or from conversation among adults, tend to build larger vocabularies. Conversational exchanges appear to matter more than the sheer quantity of words, because a response to what a child has just said supplies both attention and feedback. Cultural practices differ, and children in communities where adults address infants less often still acquire language successfully, which suggests that the particular route matters less than the availability of some reliable connection between words and the situations in which they are used."
+  ],
+  "glossary": [
+    {
+      "term": "fast mapping",
+      "def_en": "the rapid formation of a first link between a new word and a probable meaning, often after a single hearing",
+      "def_zh": "快速映射：往往只听到一次就在新词与可能含义之间迅速建立初步联系"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, a typical child knows about fifty words by the age of",
+      "options": [
+        "six months",
+        "twelve months",
+        "eighteen months",
+        "six years"
+      ],
+      "answer": 2,
+      "explanation_en": "Paragraph 1 states that a child produces a first word at about twelve months and knows roughly fifty words by eighteen months. Twelve months is the age of the first word, not of a fifty-word vocabulary.",
+      "explanation_zh": "第一段说孩子大约在十二个月时说出第一个词，到十八个月时掌握约五十个词。十二个月是说出第一个词的年龄，而不是掌握五十个词的年龄。"
+    },
+    {
+      "id": "q2",
+      "type": "rhetorical-purpose",
+      "paragraph": 2,
+      "stem": "Why does the author describe an adult pointing toward a garden and saying the word rabbit?",
+      "options": [
+        "To show that children learn animal names before other kinds of words",
+        "To illustrate how many different meanings a single new word could have",
+        "To suggest that pointing is the most effective way of teaching vocabulary",
+        "To explain why adults often repeat a new word several times"
+      ],
+      "answer": 1,
+      "explanation_en": "The example is introduced to show that the word could name the animal, a part of it, its color, its motion, or the whole scene, which is the problem the paragraph is defining. Choice C reverses the point, since the example shows that pointing leaves the meaning open.",
+      "explanation_zh": "这个例子用来说明该词可能指动物本身、它的某个部位、颜色、动作或整个场景，这正是该段要提出的问题。选项C与原意相反，因为例子说明指点并不能确定含义。"
+    },
+    {
+      "id": "q3",
+      "type": "vocabulary",
+      "paragraph": 3,
+      "stem": "The word \"reliably\" in paragraph 3 is closest in meaning to",
+      "highlight": "reliably",
+      "options": [
+        "consistently",
+        "reluctantly",
+        "accidentally",
+        "eventually"
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence reports an experimental result in which two-year-olds choose the unfamiliar object again and again, so the word means consistently. Eventually would suggest a delay, which the experiment does not describe.",
+      "explanation_zh": "该句报告的实验结果是两岁儿童一再选择陌生物体，因此该词意为“一贯地”。eventually 含有延迟之意，而实验中并没有这种描述。"
+    },
+    {
+      "id": "q4",
+      "type": "factual",
+      "paragraph": 3,
+      "stem": "According to paragraph 3, in the standard fast mapping experiment children are asked to",
+      "options": [
+        "repeat a new word after hearing an adult say it",
+        "name two objects placed in front of them",
+        "point to the object that they like better",
+        "hand over the object that has an unfamiliar name"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph says the child sees one familiar and one unfamiliar object and is asked to hand over the object with an unfamiliar name. The child is not asked to produce the word, so choices A and B describe a different task.",
+      "explanation_zh": "该段说孩子看到一个熟悉物体和一个陌生物体，并被要求把有陌生名称的那个递过来。孩子并不需要说出这个词，因此选项A和B描述的是另一种任务。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+      "highlight": "A single exposure of this kind does not produce full knowledge of a word, but it produces enough for the child to recognize the word later and refine its meaning through further encounters.",
+      "options": [
+        "One hearing of a word is enough for a child to learn its full meaning.",
+        "Children need many exposures to a word before they can recognize it at all.",
+        "One hearing gives a child a partial hold on a word that later encounters can sharpen.",
+        "Words that a child hears only once are usually forgotten within a short time."
+      ],
+      "answer": 2,
+      "explanation_en": "The sentence says a single exposure yields partial rather than full knowledge, but enough for later recognition and refinement. Choice A overstates the result by claiming full knowledge from one hearing.",
+      "explanation_zh": "原句说单次接触带来的是部分而非完整的词汇知识，但足以让孩子日后识别并逐步细化其含义。选项A夸大了结果，声称一次听到就掌握了完整含义。"
+    },
+    {
+      "id": "q6",
+      "type": "insert-text",
+      "paragraph": 4,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 4. Where would the sentence best fit?",
+      "insertSentence": "Mere co-occurrence of the word and an object would have led them to a different choice.",
+      "insertAfter": [
+        "Children also rely heavily on social cues, and especially on where a speaker is looking.",
+        "Gaze, gesture, and tone of voice all narrow the range of things a speaker is likely to mean.",
+        "In one well-known study, an experimenter announced that she was looking for an object with an unfamiliar name, examined several containers with visible disappointment, and then reacted with pleasure on opening one of them.",
+        "Children attached the new word to the object in that final container rather than to whatever object they happened to be holding."
+      ],
+      "answer": 3,
+      "explanation_en": "The inserted sentence comments on the children's choice by contrasting it with what simple co-occurrence would predict, so it belongs immediately after the sentence reporting that choice. Placing it earlier leaves \"them\" and \"a different choice\" without reference.",
+      "explanation_zh": "插入句通过与“单纯同时出现”所预测的结果作对比来评述儿童的选择，因此应紧跟报告该选择的那一句。放在更前面会使“them”和“a different choice”失去所指。"
+    },
+    {
+      "id": "q7",
+      "type": "factual",
+      "paragraph": 5,
+      "stem": "According to paragraph 5, new words are easy for children to notice in caregiver speech partly because the words",
+      "options": [
+        "are spoken more quietly than the rest of the sentence",
+        "occur at the ends of short sentences",
+        "are always accompanied by a gesture",
+        "belong to categories the child already knows"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph states that new words tend to appear at the ends of these short sentences, where they are easiest to notice. Gesture is discussed in paragraph 4 and is never described as always accompanying a new word.",
+      "explanation_zh": "该段指出新词往往出现在这些短句的末尾，最容易被注意到。手势见于第四段，而且文中从未说手势总是伴随新词出现。"
+    },
+    {
+      "id": "q8",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "Paragraph 5 mentions all of the following as features of the speech caregivers direct to infants EXCEPT",
+      "options": [
+        "a higher pitch",
+        "a slower delivery",
+        "shorter sentences",
+        "a larger proportion of rare words"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph lists higher pitch, exaggerated intonation, slower delivery, and shorter sentences, all of which simplify the signal. A greater use of rare words would work against that simplification and is not mentioned.",
+      "explanation_zh": "该段列举了更高的音调、夸张的语调、更慢的语速和更短的句子，这些都使语音信号更简单。更多使用生僻词与这种简化背道而驰，文中也未提及。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 6,
+      "stem": "It can be inferred from paragraph 6 that speech a child overhears from a television",
+      "options": [
+        "contributes less to vocabulary growth than speech addressed to the child",
+        "is harder for children to hear clearly than adult conversation",
+        "prevents children from learning words in the usual way",
+        "is the main source of new words for most young children"
+      ],
+      "answer": 0,
+      "explanation_en": "The paragraph contrasts speech addressed to the child, which is linked to larger vocabularies, with overheard speech from a television, so the latter must contribute less. Choice C is too strong, since the paragraph says nothing about overheard speech preventing learning.",
+      "explanation_zh": "该段把与更大词汇量相关的“对孩子说的话”与从电视上听到的话相对比，因此后者的作用较小。选项C过于绝对，该段并未说旁听到的话会阻碍学习。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Directions: An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Young children build vocabulary quickly by combining rapid word learning with close attention to the people who speak to them.",
+      "options": [
+        "Children link a new word to a likely meaning after very few exposures, often assuming that it names something not already labeled.",
+        "Learners use gaze, gesture, and other signs of a speaker's intention to decide what a new word refers to.",
+        "The style of speech caregivers use, and how much they respond to the child, affect how fast vocabulary grows.",
+        "Children who begin speaking later than average rarely reach an ordinary vocabulary size.",
+        "Most children have mastered the grammar of their language completely by the age of three.",
+        "Experimenters usually hide unfamiliar objects in containers so that children cannot see them."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage covers fast mapping, the use of social cues, and the effects of caregiver input, which are the three main ideas. Choice D is contradicted by the statement that children vary widely in when they begin, choice E is outside the passage, and choice F distorts a detail of one experiment.",
+      "explanation_zh": "全文讨论了快速映射、社会线索的运用以及照料者语言输入的影响，这三点是主要观点。选项D与文中“开始说话时间因人而异”的说法矛盾，选项E超出文章范围，选项F歪曲了某个实验中的细节。"
+    }
+  ]
+}

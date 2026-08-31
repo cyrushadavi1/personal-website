@@ -1,0 +1,132 @@
+{
+ "id": "l-con-professor-paper",
+ "duration": 188.975,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 6.775,
+   "end": 13.325
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 13.875,
+   "end": 27.125
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 27.675,
+   "end": 29.425
+  },
+  {
+   "line": 3,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 29.975,
+   "end": 42.15
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 42.7,
+   "end": 45.825
+  },
+  {
+   "line": 5,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 46.375,
+   "end": 65.225
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 65.775,
+   "end": 68.425
+  },
+  {
+   "line": 7,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 68.975,
+   "end": 88.725
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 89.275,
+   "end": 90.575
+  },
+  {
+   "line": 9,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 91.125,
+   "end": 104.85
+  },
+  {
+   "line": 10,
+   "speaker": "student",
+   "label": "Student",
+   "start": 105.4,
+   "end": 122.8
+  },
+  {
+   "line": 11,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 123.35,
+   "end": 128.05
+  },
+  {
+   "line": 12,
+   "speaker": "student",
+   "label": "Student",
+   "start": 128.6,
+   "end": 131.225
+  },
+  {
+   "line": 13,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 131.775,
+   "end": 152.15
+  },
+  {
+   "line": 14,
+   "speaker": "student",
+   "label": "Student",
+   "start": 152.7,
+   "end": 158.375
+  },
+  {
+   "line": 15,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 158.925,
+   "end": 177.7
+  },
+  {
+   "line": 16,
+   "speaker": "student",
+   "label": "Student",
+   "start": 178.25,
+   "end": 180.375
+  },
+  {
+   "line": 17,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 180.925,
+   "end": 188.375
+  }
+ ]
+}

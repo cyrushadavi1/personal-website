@@ -1,0 +1,106 @@
+{
+  "id": "l-con-library-research",
+  "kind": "conversation",
+  "title": "Finding the Leaflet Itself",
+  "topic": "campus",
+  "difficulty": 2,
+  "setting_en": "At the reference desk in the university library.",
+  "setting_zh": "在大学图书馆的咨询台。",
+  "speakers": [
+    { "id": "student", "label_en": "Student", "label_zh": "学生", "voice": "male-a" },
+    { "id": "librarian", "label_en": "Librarian", "label_zh": "图书馆员", "voice": "female-b" }
+  ],
+  "script": [
+    { "speaker": "student", "text": "Excuse me, are you the research librarian? I asked upstairs and they sent me back down here." },
+    { "speaker": "librarian", "text": "Down here is right for this. What are you working on?" },
+    { "speaker": "student", "text": "It's a paper for History three forty, on the nineteen forty six textile strikes. My professor handed the drafts back with a note saying I need primary sources. And I thought I had primary sources." },
+    { "speaker": "librarian", "text": "What did you use?" },
+    { "speaker": "student", "text": "Books, mostly. And some journal articles. There's a chapter in one of them that quotes strike leaflets, so I cited that." },
+    { "speaker": "librarian", "text": "Okay, so that's exactly the distinction he's after. Quoting a leaflet inside a book you're reading is still a secondary source, because somebody else already chose which leaflet to show you and told you what it meant. He wants you looking at the leaflet." },
+    { "speaker": "student", "text": "Right. So where would the leaflet be?" },
+    { "speaker": "librarian", "text": "Two places, and they work quite differently, so let me take them in order. The first is microfilm. We hold the local newspapers on film going back to eighteen ninety, and for a nineteen forty six strike the daily papers are your workhorse. Day by day coverage, wage figures, the actual language both sides were using." },
+    { "speaker": "student", "text": "Microfilm is the, the machines in the back corner?" },
+    { "speaker": "librarian", "text": "Those, yes. Don't be intimidated by them, they look worse than they are. You load a reel, you scroll, and you can send a page to yourself as a PDF. The thing nobody tells you is that it's slow, so go in with dates. Don't go in planning to browse a whole year." },
+    { "speaker": "student", "text": "Okay. And the second place?" },
+    { "speaker": "librarian", "text": "Special collections, third floor. That's where the manuscript material lives, and we happen to hold the papers of a local union branch from exactly that period. Correspondence, meeting minutes, and I believe some of the leaflets themselves." },
+    { "speaker": "student", "text": "Can I just go up and pull them off the shelf?" },
+    { "speaker": "librarian", "text": "No, and this is the part students get caught by, so plan for it. Special collections is closed stacks, by appointment. You email a request with the collection number and the boxes you want, at least two business days ahead. Then you come in, you leave your bag in a locker, pencils only, no pens, and a staff member brings you one box at a time." },
+    { "speaker": "student", "text": "Two business days. My paper's due in two weeks." },
+    { "speaker": "librarian", "text": "Then you're fine, but request this week, not next. Here, start with the finding aid. It's the online inventory of what's in each box, and it will tell you exactly which boxes to ask for. Once you have those numbers the request form takes three minutes." },
+    { "speaker": "student", "text": "That's really helpful. Should I do the microfilm first?" },
+    { "speaker": "librarian", "text": "Do the newspapers first, honestly. They'll give you the timeline, and then you'll know what to look for in the union papers." }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student come to the reference desk?",
+      "options": [
+        "To renew books that are overdue for a history course",
+        "To ask for help locating primary sources for a history paper",
+        "To find out whether his professor will accept a late draft",
+        "To request that a microfilm machine be repaired"
+      ],
+      "answer": 1,
+      "explanation_en": "He explains that his draft came back with a note requiring primary sources, and the rest of the conversation is about where to find them. Nothing is said about overdue books, a late draft, or broken equipment.",
+      "explanation_zh": "他说草稿被退回，要求补充第一手资料，之后整段对话都在讲去哪里找。对话没有提到逾期还书、迟交论文或设备故障。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "According to the librarian, why does a leaflet quoted in a book not count as a primary source?",
+      "options": [
+        "Books published long after an event are usually inaccurate",
+        "The wording of leaflets was often changed before publication",
+        "Another writer has already selected the leaflet and interpreted it",
+        "Only material held on microfilm is considered primary"
+      ],
+      "answer": 2,
+      "explanation_en": "She says somebody else already chose which leaflet to show him and told him what it meant, which is what makes it secondary. She does not claim the books are inaccurate, and format is not what defines a primary source.",
+      "explanation_zh": "她说别人已经替他挑好了展示哪份传单并给出了解读，这正是二手资料的特征。她并没有说这些书不准确，载体形式也不是判定第一手资料的标准。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. Why does the student say this:",
+      "replayLine": 14,
+      "options": [
+        "To express worry that the waiting period may not leave him enough time",
+        "To point out that the librarian has given him incorrect information",
+        "To ask for an extension on the assignment deadline",
+        "To indicate that he has decided to use newspapers instead"
+      ],
+      "answer": 0,
+      "explanation_en": "Placing the two day wait next to his two week deadline signals concern about whether the schedule works, and the librarian answers by reassuring him and urging him to request this week. He is not correcting her or asking her for an extension, which she could not grant anyway.",
+      "explanation_zh": "他把两个工作日的等待和两周的截止日期并列，表达的是时间够不够的担忧，图书馆员随即安慰他并催他这周就提交申请。他不是在纠正她，也不是在向她要延期，她本来也无权批准。"
+    },
+    {
+      "id": "q4",
+      "type": "detail",
+      "stem": "What does the librarian say is required to use the special collections material?",
+      "options": [
+        "A letter of permission from the course instructor",
+        "A request submitted at least two business days in advance",
+        "Payment of a small fee for each box retrieved",
+        "Completion of an online training session on handling manuscripts"
+      ],
+      "answer": 1,
+      "explanation_en": "She describes closed stacks and appointments, with an emailed request naming the collection number and boxes at least two business days ahead. No instructor letter, fee, or training module is mentioned.",
+      "explanation_zh": "她说那里是闭架、需预约，要提前至少两个工作日发邮件申请，注明藏品编号和箱号。对话没有提到导师证明、费用或线上培训。"
+    },
+    {
+      "id": "q5",
+      "type": "connecting-content",
+      "stem": "Why does the librarian recommend that the student use the newspapers before the union papers?",
+      "options": [
+        "The union papers may be unavailable until later in the term",
+        "Newspaper coverage is generally more reliable than union records",
+        "The newspapers will establish a timeline that guides his search of the boxes",
+        "Microfilm pages can be printed, while manuscripts cannot be copied"
+      ],
+      "answer": 2,
+      "explanation_en": "She says the papers will give him the timeline so he will know what to look for in the union material. She never ranks the two sources for reliability, and she has already told him to request the boxes this week.",
+      "explanation_zh": "她说报纸能帮他梳理出时间线，之后在工会档案里就知道该找什么。她没有比较两类资料的可靠性，而且她已经让他这周就去申请箱子。"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "id": "r-cave-art-purpose",
+  "title": "Interpreting Upper Paleolithic Cave Art",
+  "topic": "arts",
+  "difficulty": 2,
+  "paragraphs": [
+    "The painted caves of southwestern France and northern Spain were decorated over a period of more than twenty thousand years, beginning around 37,000 years ago. The images are dominated by large mammals: horses, bison, aurochs, deer, and, in the earliest sites, lions and rhinoceroses. Human figures are rare and, when they appear, are drawn with far less care than the animals. Alongside the animals are geometric marks, including dots, grids, and rows of lines, whose meaning remains disputed. Because the people who made these images left no writing, every account of their purpose is an inference drawn from the pictures themselves, from their placement within the caves, and from the debris left behind by the artists.",
+    "The first influential explanation was proposed early in the twentieth century by the French prehistorian Henri Breuil, who argued that the paintings were instruments of hunting magic. On this account, depicting an animal gave the hunter a measure of power over it, and the ritual was performed in the deepest galleries because secrecy increased its efficacy. Supporters pointed to a small number of images in which animals appear to be pierced by spears or marked with wounds, and to the extraordinary difficulty of reaching certain painted chambers, which lie hundreds of meters from any entrance and can be approached only by crawling. Art of this kind, it was argued, was not made in order to be admired.",
+    "The hunting magic hypothesis lost ground as excavation data accumulated. At many sites the animals most often painted are not the animals most often eaten. At Lascaux, for example, horses and aurochs dominate the walls while reindeer bones dominate the food debris, an inconsistency that is hard to reconcile with an art meant to secure the next meal. Images showing wounds are also far less common than early descriptions suggested, and most animals are shown intact, standing or moving, with no hunters anywhere near them. These findings did not disprove the hypothesis, but they removed its main empirical support.",
+    "A second explanation, developed most fully by the archaeologist David Lewis-Williams, treats the caves as settings for altered states of consciousness. Research on the human nervous system indicates that people in trance states of any origin tend to see similar geometric forms, sometimes called entoptic images, before their visions become fully figurative. The grids and dot patterns on cave walls resemble these forms closely. The hypothesis also accounts for the composite figures, part human and part animal, that appear in several caves, and for the practice of painting on irregular surfaces so that a bulge in the rock becomes the shoulder of a bison, as though the wall were a membrane between this world and another.",
+    "Critics have raised objections of several kinds. The neurological evidence establishes only that trance imagery is possible, not that it produced any particular painting, and comparable geometric marks occur in decorative traditions that have nothing to do with trance. The ethnographic comparisons on which the hypothesis relies are drawn largely from southern African rock art, and applying them to a Europe twenty thousand years older assumes a continuity that cannot be tested. Most seriously, the model is difficult to falsify, since almost any image can be read as a vision or as the memory of one.",
+    "A third line of interpretation abandons the search for a single ritual purpose and treats the marks as a system for storing information. On this view the rows of dots and lines associated with particular animals record something countable, such as the interval between the start of the year and the season when a species mates or gives birth, information valuable to a mobile population and difficult to hold in memory across generations. The proposal has the advantage of making testable predictions, since the counts should correspond to observable biological cycles, and several recent analyses report such correspondences. It also has an obvious limitation, in that it explains the signs far better than it explains the animals. Given that the tradition lasted longer than the whole of recorded history, most specialists now doubt that any single explanation will account for all of it."
+  ],
+  "glossary": [
+    {
+      "term": "entoptic images",
+      "def_en": "geometric visual forms generated within the visual system itself, commonly reported in trance states",
+      "def_zh": "由视觉系统本身产生的几何形象，常见于恍惚状态的报告中"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, which of the following is true of the human figures in the painted caves?",
+      "options": [
+        "They outnumber the images of large mammals.",
+        "They are uncommon and drawn less carefully than the animals.",
+        "They are always shown in the act of hunting.",
+        "They occur only in the earliest sites."
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph says human figures are rare and, when present, drawn with far less care than the animals. Choice 3 misapplies a statement that was made about lions and rhinoceroses.",
+      "explanation_zh": "该段说人像很少见，出现时也远不如动物画得精细。选项四把关于狮子和犀牛的说法错安到人像上。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"efficacy\" in paragraph 2 is closest in meaning to",
+      "highlight": "efficacy",
+      "options": [
+        "effectiveness",
+        "secrecy",
+        "danger",
+        "duration"
+      ],
+      "answer": 0,
+      "explanation_en": "The clause claims that secrecy made the ritual work better, so the word means the power to produce the intended result. Secrecy is the stated cause in the same clause, not the meaning of the word itself.",
+      "explanation_zh": "该分句说保密使仪式更奏效，所以该词指产生预期效果的能力。“保密”是同一分句中给出的原因，并不是这个词的意思。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, supporters of the hunting magic hypothesis cited which of the following as evidence?",
+      "options": [
+        "Signs of writing beside some of the animal images.",
+        "The resemblance of the paintings to later African rock art.",
+        "The remoteness and inaccessibility of certain painted chambers.",
+        "The large quantity of reindeer bones found beneath the paintings."
+      ],
+      "answer": 2,
+      "explanation_en": "Supporters pointed to wounded animals and to chambers hundreds of meters from any entrance that can be reached only by crawling. The reindeer bones appear in paragraph 3 as evidence used against the hypothesis.",
+      "explanation_zh": "支持者援引的是受伤动物的图像以及需匍匐数百米才能到达的洞室。驯鹿骨出现在第三段，是用来反驳该假说的证据。"
+    },
+    {
+      "id": "q4",
+      "type": "rhetorical-purpose",
+      "paragraph": 3,
+      "stem": "Why does the author discuss the reindeer bones found at Lascaux?",
+      "options": [
+        "To identify the animal that Paleolithic artists found hardest to draw.",
+        "To show that the species painted are not the species actually eaten.",
+        "To establish the date at which the Lascaux paintings were made.",
+        "To explain why the artists preferred to work in the deepest galleries."
+      ],
+      "answer": 1,
+      "explanation_en": "Lascaux is offered as the example of a general claim made in the preceding sentence about a mismatch between painted and eaten animals. Choice 3 restates a point from paragraph 2 that has nothing to do with the bones.",
+      "explanation_zh": "拉斯科是用来支持前一句总述的例子，即所画动物与所食动物不一致。选项四重复的是第二段的内容，与骨骼证据无关。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3?",
+      "highlight": "These findings did not disprove the hypothesis, but they removed its main empirical support.",
+      "options": [
+        "The new findings proved that the hunting magic hypothesis was mistaken.",
+        "The findings agreed with the hypothesis but were too few to matter.",
+        "The hypothesis remained possible, but the evidence that had supported it was gone.",
+        "The hypothesis grew stronger once the excavation data were properly understood."
+      ],
+      "answer": 2,
+      "explanation_en": "The sentence concedes that the hypothesis was not refuted while stating that its empirical support was removed. Choice 0 is too strong, since the sentence says explicitly that the findings did not disprove the hypothesis.",
+      "explanation_zh": "原句一方面承认该假说未被推翻，另一方面指出其经验支持已不复存在。选项一说得太绝对，原句明确说这些发现并未推翻假说。"
+    },
+    {
+      "id": "q6",
+      "type": "factual",
+      "paragraph": 4,
+      "stem": "According to paragraph 4, entoptic images are",
+      "options": [
+        "geometric forms that people in trance states commonly see",
+        "composite figures that are part human and part animal",
+        "natural bulges in the rock that suggest an animal's body",
+        "paintings made by shamans in southern Africa"
+      ],
+      "answer": 0,
+      "explanation_en": "The paragraph defines them as the similar geometric forms seen in trance states before visions become figurative. The composite figures are a separate phenomenon the hypothesis also claims to explain.",
+      "explanation_zh": "该段把它们定义为恍惚状态下、在幻象具象化之前所见的相似几何形状。人兽合体形象是该假说另外解释的现象。"
+    },
+    {
+      "id": "q7",
+      "type": "insert-text",
+      "paragraph": 5,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 5. Where would the sentence best fit?",
+      "insertSentence": "None of these objections shows that trance played no part at all in the tradition.",
+      "insertAfter": [
+        "Critics have raised objections of several kinds.",
+        "The neurological evidence establishes only that trance imagery is possible, not that it produced any particular painting, and comparable geometric marks occur in decorative traditions that have nothing to do with trance.",
+        "The ethnographic comparisons on which the hypothesis relies are drawn largely from southern African rock art, and applying them to a Europe twenty thousand years older assumes a continuity that cannot be tested.",
+        "Most seriously, the model is difficult to falsify, since almost any image can be read as a vision or as the memory of one."
+      ],
+      "answer": 3,
+      "explanation_en": "\"None of these objections\" must come after the full list of objections, the last of which is the problem of falsifiability. Earlier positions would leave the plural reference pointing at only one or two objections.",
+      "explanation_zh": "“这些反对意见都不能……”必须出现在全部反驳列举完之后，最后一条是不可证伪的问题。放在更前面，复数指代就只涵盖一两条反驳。"
+    },
+    {
+      "id": "q8",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "Paragraph 5 mentions all of the following as difficulties with the shamanic hypothesis EXCEPT",
+      "options": [
+        "No composite human and animal figures have been found in the caves.",
+        "Similar geometric marks occur in traditions unconnected with trance.",
+        "The ethnographic parallels come from a distant region and a much later period.",
+        "Almost any image can be interpreted as a vision, which makes the model hard to test."
+      ],
+      "answer": 0,
+      "explanation_en": "Paragraph 4 states that composite figures do appear in several caves, so their absence is not among the objections. The other three are the three criticisms actually listed.",
+      "explanation_zh": "第四段说人兽合体形象确实出现在若干洞穴中，因此“不存在”并不属于反对意见。其余三项正是文中列出的三条批评。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 6,
+      "stem": "Paragraph 6 suggests that the information storage proposal is easier to test than its rivals because",
+      "options": [
+        "it applies to every image found in the caves",
+        "it predicts patterns that can be checked against animal biology",
+        "it rests on comparison with living peoples",
+        "it assumes that all the marks were made by one artist"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph says the counts should correspond to observable biological cycles and that analyses report such correspondences. Choice 0 contradicts the admitted limitation that the proposal explains the signs better than the animals.",
+      "explanation_zh": "该段说这些计数应与可观察的生物周期对应，并且已有分析报告了这种对应。选项一与文中承认的局限矛盾，该假说对符号的解释远好于对动物的解释。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Scholars have proposed competing explanations for the images painted in Upper Paleolithic caves.",
+      "options": [
+        "Human figures were painted as carefully as animals and usually occupy the center of the compositions.",
+        "An early hypothesis held that depicting animals gave hunters power over them, but excavation showed that the painted species were often not the hunted ones.",
+        "A later approach treats the marks as records of countable information such as seasonal cycles, which yields testable predictions but leaves the animal images unexplained.",
+        "The deepest galleries can be reached only by crawling for several hundred meters from the entrance.",
+        "Another hypothesis links the images to trance experience, citing geometric forms, composite figures, and the use of the rock surface itself.",
+        "Radiocarbon dating has shown that all the painted caves were decorated within a single millennium."
+      ],
+      "answer": [
+        1,
+        2,
+        4
+      ],
+      "explanation_en": "The three keys are the three competing explanations and the main evidential problem raised against the first. Choice 0 and choice 5 contradict paragraph 1, and choice 3 is a supporting detail rather than a major idea.",
+      "explanation_zh": "三个正确选项对应三种相互竞争的解释，并包含针对第一种解释的主要证据问题。选项一和选项六与第一段矛盾，选项四只是支撑性细节而非主要观点。"
+    }
+  ]
+}

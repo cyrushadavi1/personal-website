@@ -1,0 +1,193 @@
+{
+  "id": "r-soil-formation",
+  "title": "The Formation of Soil Horizons",
+  "topic": "life-science",
+  "difficulty": 2,
+  "paragraphs": [
+    "To a geologist, soil is not simply loose material at the surface of the earth but an organized body with an internal structure. A vertical cut through a mature soil exposes a sequence of layers, called horizons, that differ from one another in color, texture, chemistry, and the amount of decayed organic matter they contain. The whole sequence, from surface to unaltered rock, is a soil profile. Horizons are not laid down one on top of another in the way that sedimentary beds are; they develop in place, as material at the surface is altered and as dissolved substances travel downward through the column. The processes involved are slow, and a profile is best read as a record of everything that has happened at that spot over thousands of years.",
+    "Soil formation begins with the breakdown of parent material, the rock or sediment from which the soil develops. Physical weathering fragments that material without changing its composition, as when water freezing in cracks pries them apart or repeated heating loosens grains at the surface. Chemical weathering alters the minerals themselves. Rainwater, made slightly acidic by dissolved carbon dioxide, converts feldspar into clay and carries away calcium, sodium, and potassium in solution. The physical kind accelerates the chemical kind by exposing far more surface area to attack, so the two proceed together. Parent material sets the raw ingredients: soils on granite are sandy and acidic, soils on limestone are rich in calcium, and soils on volcanic ash are unusually fertile because their minerals weather quickly.",
+    "The second ingredient arrives from above. Leaves, stems, and dead roots accumulate at the surface and are broken down by bacteria, fungi, earthworms, and insects into humus, a dark residue that itself decomposes only slowly. Where litter is abundant, an O horizon of recognizable plant debris forms at the very top. Beneath it lies the A horizon, in which humus is thoroughly mixed with mineral grains, giving it the dark color associated with fertile ground. Humus holds water, releases nitrogen as it breaks down, and binds mineral particles into crumbs that allow air and roots to penetrate. A soil with no organic component supports little life however favorable its mineral content may be.",
+    "Water moving down through the profile redistributes material as well as creating it. In the process called eluviation, percolating water strips clay particles, iron, and aluminum from the upper layers and carries them lower. Where this is intense it leaves a pale, sandy E horizon immediately below the A horizon. The material removed accumulates in the B horizon beneath, which is correspondingly denser, redder, and richer in clay, and which in some soils becomes hard enough to obstruct roots and drainage. Below the B horizon lies the C horizon, weathered parent material that has been broken up but not otherwise altered, grading downward into intact rock.",
+    "Climate governs how far these processes go. Chemical reactions roughly double in rate for every ten degrees of warming, and they require water, so weathering is fastest where the climate is both hot and wet. In the humid tropics, prolonged heavy rain removes nearly every soluble mineral and leaves deep red soils of iron and aluminum oxides, which are chemically exhausted even though they support luxuriant forest, since most nutrients in such systems are held in the vegetation rather than the ground. In deserts, where evaporation exceeds rainfall, water moves upward rather than downward for much of the year, and dissolved calcium carbonate is deposited as a white cemented layer within the profile. In cold coniferous forests, acidic needle litter drives intense eluviation and produces a strikingly pale E horizon above a dark, iron-stained B horizon.",
+    "Time and relief complete the account. A profile on fresh volcanic ash or on a recently drained lake bed may show a faint A horizon within a century, but a fully differentiated profile with a well developed B horizon generally requires several thousand years, and the deep tropical soils described above represent hundreds of thousands. Steep slopes lose material to erosion as fast as it forms and carry thin, immature profiles, while the foot of the same slope may accumulate a deep one. The regional pattern that results is systematic rather than accidental. Two sites on the same parent rock under different climates develop different soils, and two sites under the same climate on different rock converge toward similar soils given enough time, which is why soil maps of large areas follow climate belts more closely than the underlying geology."
+  ],
+  "glossary": [
+    {
+      "term": "horizon",
+      "def_en": "a distinct layer within a soil, roughly parallel to the surface, that differs from the layers above and below it",
+      "def_zh": "土壤层：土壤中与地表大致平行、与上下各层不同的一个明显层次。"
+    },
+    {
+      "term": "parent material",
+      "def_en": "the rock or sediment from which a soil develops",
+      "def_zh": "母质：土壤由以形成的岩石或沉积物。"
+    },
+    {
+      "term": "eluviation",
+      "def_en": "the removal of clay and dissolved minerals from an upper soil layer by water moving downward",
+      "def_zh": "淋溶：水向下运动将黏粒和溶解矿物质从上层土壤中带走的过程。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, how do soil horizons differ from sedimentary beds?",
+      "options": [
+        "They are considerably thicker than sedimentary beds.",
+        "They form in place rather than by deposition from above.",
+        "They contain no organic matter of any kind.",
+        "They take only a few years to develop."
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph explicitly contrasts the two, saying horizons develop in place rather than being laid down one on top of another. The paragraph also stresses that the processes are slow, which rules out the choice about a few years.",
+      "explanation_zh": "该段明确对比二者，指出土壤层是就地发育的，而不是一层层沉积上去的。段落还强调过程缓慢，因此“只需几年”的选项也被排除。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"pries\" in paragraph 2 is closest in meaning to",
+      "highlight": "pries",
+      "options": [
+        "dissolves",
+        "seals",
+        "forces",
+        "warms"
+      ],
+      "answer": 2,
+      "explanation_en": "The word describes ice widening cracks mechanically, so it means to push apart with force. \"Dissolves\" would describe chemical weathering, which the paragraph treats separately.",
+      "explanation_zh": "该词描述的是冰以机械方式撑开裂缝，因此意为用力撑开。dissolves 指化学风化，而该段是把化学风化单独讨论的。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, why are soils formed on volcanic ash unusually fertile?",
+      "options": [
+        "Their minerals weather quickly.",
+        "They contain a great deal of calcium.",
+        "They are sandy and acidic.",
+        "They are protected from chemical weathering."
+      ],
+      "answer": 0,
+      "explanation_en": "The last sentence gives rapid weathering of the minerals as the reason. Abundant calcium is the property assigned to soils formed on limestone.",
+      "explanation_zh": "最后一句给出的原因是矿物风化迅速。富含钙是石灰岩上发育的土壤的特点。"
+    },
+    {
+      "id": "q4",
+      "type": "rhetorical-purpose",
+      "paragraph": 3,
+      "stem": "Why does the author state that a soil with no organic component supports little life however favorable its mineral content may be?",
+      "options": [
+        "To argue that mineral weathering plays no part in fertility",
+        "To explain why humus decomposes more slowly than fresh litter",
+        "To emphasize that organic matter is necessary and not merely helpful",
+        "To show that the O horizon is thicker than the A horizon"
+      ],
+      "answer": 2,
+      "explanation_en": "The sentence closes a list of the things humus does and makes the point that minerals alone are not enough. It does not deny that minerals matter, only that they are sufficient.",
+      "explanation_zh": "该句为腐殖质各项作用的罗列作结，指出仅有矿物质是不够的。它并不否认矿物质的作用，只是否认矿物质足够。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 4,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 4?",
+      "highlight": "The material removed accumulates in the B horizon beneath, which is correspondingly denser, redder, and richer in clay, and which in some soils becomes hard enough to obstruct roots and drainage.",
+      "options": [
+        "The B horizon collects what the upper layers lose, becoming dense and clay-rich, and can grow hard enough to block roots and water.",
+        "Clay and iron are stripped from the B horizon and carried down into the C horizon.",
+        "The B horizon is denser than the E horizon because it holds more organic matter.",
+        "Roots and water are blocked wherever an E horizon forms above a B horizon."
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence says the B horizon receives what eluviation removes, describes the resulting texture, and adds that it can become a barrier. The second choice reverses the direction of the transfer.",
+      "explanation_zh": "该句说 B 层接收淋溶带走的物质，描述由此形成的质地，并补充说它可能成为障碍层。第二个选项把物质迁移的方向弄反了。"
+    },
+    {
+      "id": "q6",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "According to paragraph 5, all of the following are effects of climate on a soil profile EXCEPT",
+      "options": [
+        "the removal of soluble minerals under heavy tropical rainfall",
+        "the deposition of a cemented layer of calcium carbonate in deserts",
+        "the formation of a pale E horizon beneath acidic needle litter",
+        "the mixing of humus with mineral grains by earthworms"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph names the tropical, desert, and coniferous cases. The work of earthworms belongs to paragraph 3 and is presented there as part of the supply of organic matter, not as an effect of climate.",
+      "explanation_zh": "该段列举的是热带、沙漠和针叶林三种情形。蚯蚓的作用出现在第三段，被当作有机质来源的一部分，而不是气候的作用。"
+    },
+    {
+      "id": "q7",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 suggests that clearing a tropical rain forest would most likely",
+      "options": [
+        "increase the rate of chemical weathering in the soil",
+        "leave ground that is poor in nutrients",
+        "produce a cemented layer of calcium carbonate",
+        "cause a pale E horizon to develop"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph says the soil itself is chemically exhausted and that the nutrients are held in the vegetation, so removing the vegetation removes the nutrients. The cemented layer and the pale horizon belong to deserts and to cold forests.",
+      "explanation_zh": "该段说土壤本身在化学上已经耗竭，养分保存在植被中，因此清除植被就等于带走养分。胶结层和灰白色淋溶层分别属于沙漠和寒冷森林。"
+    },
+    {
+      "id": "q8",
+      "type": "factual",
+      "paragraph": 6,
+      "stem": "According to paragraph 6, how long does a fully differentiated profile with a well developed B horizon generally take to form?",
+      "options": [
+        "About a century",
+        "A few decades",
+        "Several thousand years",
+        "Hundreds of thousands of years"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph gives several thousand years for a fully differentiated profile. A century is the figure for a faint A horizon, and hundreds of thousands of years is the figure for deep tropical soils.",
+      "explanation_zh": "该段指出发育完全的剖面需要数千年。一个世纪是形成微弱 A 层的时间，几十万年则是深厚热带土壤的时间。"
+    },
+    {
+      "id": "q9",
+      "type": "insert-text",
+      "paragraph": 6,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 6. Where would the sentence best fit?",
+      "insertSentence": "Slope matters because it determines how long material stays where it forms.",
+      "insertAfter": [
+        "Time and relief complete the account.",
+        "A profile on fresh volcanic ash or on a recently drained lake bed may show a faint A horizon within a century, but a fully differentiated profile with a well developed B horizon generally requires several thousand years, and the deep tropical soils described above represent hundreds of thousands.",
+        "Steep slopes lose material to erosion as fast as it forms and carry thin, immature profiles, while the foot of the same slope may accumulate a deep one.",
+        "The regional pattern that results is systematic rather than accidental."
+      ],
+      "answer": 1,
+      "explanation_en": "The sentence turns from time to relief and introduces the contrast between steep slopes and their bases that follows immediately. Placed after that contrast, it would restate a point already made.",
+      "explanation_zh": "该句由时间转向地形，引出紧随其后的陡坡与坡脚的对比。若放在这一对比之后，就成了对已说明内容的重复。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "A soil develops in place as a layered profile, and its character is set by a small number of controlling factors.",
+      "options": [
+        "Physical and chemical weathering of the parent material supplies the mineral component and fixes its chemistry.",
+        "Organic matter accumulating at the surface forms the upper horizons and makes the soil biologically productive.",
+        "Climate, together with time and slope, governs how far weathering and downward transport proceed, so soils differ from region to region.",
+        "Horizons are deposited in sequence, with the oldest layer at the top and the youngest at the base.",
+        "Soils formed on limestone and soils formed on granite become indistinguishable within a century.",
+        "Tropical soils are the richest on earth because they support the densest forest."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage builds the profile from weathered mineral matter and organic matter and then explains regional variation by climate, time, and relief. Horizons are said not to be deposited in sequence, convergence on similar soils requires far more than a century, and tropical soils are described as chemically exhausted.",
+      "explanation_zh": "文章先用风化的矿物质和有机质构建土壤剖面，再用气候、时间和地形解释区域差异。文中说土壤层并非依次沉积，趋同为相似土壤所需时间远超一个世纪，而热带土壤在化学上是贫瘠的。"
+    }
+  ]
+}

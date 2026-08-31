@@ -1,0 +1,177 @@
+{
+  "id": "l-lec-ocean-currents",
+  "kind": "lecture",
+  "title": "The Ocean's Deep Engine",
+  "topic": "physical-science",
+  "difficulty": 3,
+  "setting_en": "In an oceanography class.",
+  "setting_zh": "在一节海洋学课上。",
+  "speakers": [
+    {
+      "id": "prof",
+      "label_en": "Professor",
+      "label_zh": "教授",
+      "voice": "female-b"
+    },
+    {
+      "id": "s1",
+      "label_en": "Male student",
+      "label_zh": "男学生",
+      "voice": "male-a"
+    },
+    {
+      "id": "s2",
+      "label_en": "Female student",
+      "label_zh": "女学生",
+      "voice": "female-a"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "prof",
+      "text": "All right, let's get into ocean circulation. When most people picture currents, they picture wind driven surface currents. The Gulf Stream, the Kuroshio, water pushed around by the atmosphere. That's real, but it's only the top few hundred meters. Today I want the other engine, the deep one. It's called the thermohaline circulation. Thermo for temperature, haline for salt. The name gives you the whole mechanism, because what drives it is density, and the density of seawater depends on exactly those two things."
+    },
+    {
+      "speaker": "prof",
+      "text": "So here's the rule to hang onto. Cold water is denser than warm water. Salty water is denser than fresh water. Make water cold enough and salty enough and it sinks. That's the motor."
+    },
+    {
+      "speaker": "prof",
+      "text": "Now where does that actually happen? Two main regions. The northern North Atlantic, so the Greenland, Iceland, and Norwegian seas, and then the water around Antarctica. Take the North Atlantic case. Warm salty water travels north near the surface, gives up a lot of heat to the atmosphere, and cools. It's already salty from evaporation back down in the subtropics. So now it's cold and salty, it becomes denser than the water underneath it, and it sinks. That water becomes North Atlantic Deep Water, and it flows back south a couple of kilometers down, past the equator."
+    },
+    {
+      "speaker": "s1",
+      "text": "So how does it get back up? It can't pile up down there."
+    },
+    {
+      "speaker": "prof",
+      "text": "Right, it can't, and that return path is one of the harder parts of the problem. Some of it upwells around Antarctica, where winds pull deep water toward the surface. Some mixes upward gradually across the whole ocean, driven partly by tides and partly by wind. The circuit does close. It just closes slowly. A parcel that sinks in the North Atlantic might not see daylight again for a thousand years."
+    },
+    {
+      "speaker": "s2",
+      "text": "A thousand years? Then how can it matter for climate on a timescale we care about?"
+    },
+    {
+      "speaker": "prof",
+      "text": "Good question, and the answer is that the heat transport doesn't depend on the loop time. Think about it this way. The surface branch moving north is warm. The deep branch moving south is cold. So the system continuously carries warm water poleward and returns cold water toward the tropics, no matter how long one parcel takes. The Atlantic overturning moves something on the order of a petawatt of heat northward. It's part of why northwestern Europe is milder than places at the same latitude in eastern Canada. Only part, though. Prevailing winds do a lot of that work too, and people routinely overstate the ocean's share."
+    },
+    {
+      "speaker": "prof",
+      "text": "Okay. Now the caveats, which is really why I put this lecture here. The whole mechanism depends on surface water in the far North Atlantic getting dense enough to sink. Anything that freshens that water works against sinking, because fresh water is less dense. And we have several freshening sources at once. Melting of the Greenland ice sheet. Increased river discharge into the Arctic. More precipitation at high latitudes, because a warmer atmosphere carries more moisture. And sea ice melting, which puts fresh water right at the surface."
+    },
+    {
+      "speaker": "prof",
+      "text": "So the qualitative story is straightforward. Freshening and warming both reduce density, both oppose sinking, and models generally show a weakening overturning this century. But the quantitative story is a mess, and I want you to be honest about why."
+    },
+    {
+      "speaker": "s1",
+      "text": "Is it that we don't have long enough measurements?"
+    },
+    {
+      "speaker": "prof",
+      "text": "That's one piece of it. Continuous direct monitoring of the Atlantic overturning only begins in two thousand four, with an instrument array strung across the basin at twenty six degrees north. So call it two decades of data, against a system with natural swings on decadal timescales. You can't cleanly separate a trend from a wiggle yet. But there's a deeper problem than record length. Sinking happens in narrow plumes, tens of kilometers across, sometimes less. A global climate model with a grid spacing of fifty or a hundred kilometers cannot resolve that. It has to stand in for the process with a parameterization, an approximate rule. And different, perfectly reasonable rules give noticeably different sensitivities to freshwater."
+    },
+    {
+      "speaker": "prof",
+      "text": "There's also evidence from paleoclimate that this system may not respond smoothly. Ice cores from the last glacial period record abrupt shifts, warming of several degrees over Greenland in a decade or two, and many researchers connect those events to reorganizations of the overturning. So we're asking a possibly nonlinear system where its threshold is, using models that can't resolve the process."
+    },
+    {
+      "speaker": "s2",
+      "text": "That sounds like we basically can't predict it."
+    },
+    {
+      "speaker": "prof",
+      "text": "No, I wouldn't go that far. We can bound it. Nearly every line of evidence points the same direction, weaker rather than stronger, and a complete shutdown this century is judged unlikely in most assessments. What we can't give you is a confident number or a date. Uncertainty about magnitude isn't knowing nothing."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the lecture mainly about?",
+      "options": [
+        "Why wind driven surface currents dominate ocean heat transport",
+        "How deep ocean circulation works and why its future is hard to predict",
+        "The history of instrument arrays used to measure ocean currents",
+        "Evidence for abrupt climate change during the last glacial period"
+      ],
+      "answer": 1,
+      "explanation_en": "The professor first lays out the density mechanism and heat transport, then devotes the second half to the caveats that make prediction difficult. Wind driven currents are set aside in the opening, and the glacial record is one piece of evidence inside the uncertainty discussion.",
+      "explanation_zh": "教授先讲密度驱动的机制和热量输送，后半段专门讲为什么难以预测。风生流在开头就被放到一边，冰期记录只是不确定性讨论中的一条证据。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "According to the professor, why does surface water sink in the northern North Atlantic?",
+      "options": [
+        "Strong winds physically push surface water downward there.",
+        "River discharge from the Arctic increases its density.",
+        "Sea ice forming above it presses it toward the seafloor.",
+        "It has become both cold and salty, making it denser than the water below."
+      ],
+      "answer": 3,
+      "explanation_en": "Water travels north already salty from subtropical evaporation, loses heat to the atmosphere, and so becomes denser than the water beneath it. River discharge is named later as a freshening source that opposes sinking, not a cause of it.",
+      "explanation_zh": "海水北上时因副热带蒸发已经偏咸，再向大气释放热量而变冷，密度超过下层水体，于是下沉。河流径流在后文是“淡化”因素，作用是阻碍下沉，而不是促成下沉。"
+    },
+    {
+      "id": "q3",
+      "type": "multi-detail",
+      "stem": "The professor names several processes that add fresh water to the far North Atlantic. Choose TWO that she mentions.",
+      "options": [
+        "Melting of the Greenland ice sheet",
+        "Higher rates of evaporation in the subtropics",
+        "Increased precipitation at high latitudes",
+        "Deep water upwelling around Antarctica"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation_en": "Her list of freshening sources is Greenland melt, Arctic river discharge, more high latitude precipitation, and sea ice melt. Subtropical evaporation makes water saltier, not fresher, and Antarctic upwelling is part of the return path, not a freshwater source.",
+      "explanation_zh": "她列出的淡化来源是：格陵兰冰盖融化、北极河流径流增加、高纬度降水增多、海冰融化。副热带蒸发只会让水更咸；南极上升流属于回流路径，不是淡水来源。"
+    },
+    {
+      "id": "q4",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the student say this:",
+      "replayLine": 12,
+      "options": [
+        "To ask the professor to repeat the explanation of model resolution",
+        "To draw a strong conclusion from the difficulties the professor has described",
+        "To agree with the professor's stated position on prediction",
+        "To suggest that the twenty year data record should be discarded"
+      ],
+      "answer": 1,
+      "explanation_en": "The student is pushing the professor's list of problems to an extreme conclusion, which the professor then immediately rejects. Choice C is wrong because the professor had not said prediction was impossible; her next line corrects the student.",
+      "explanation_zh": "学生把教授列出的种种困难推向一个极端结论，而教授随即否定了它。选项C不成立，因为教授并没有说无法预测，她下一句正是在纠正学生。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "stem": "What can be inferred about global climate models from the professor's discussion of plumes?",
+      "options": [
+        "They exclude the thermohaline circulation entirely.",
+        "They will produce identical results once the data record is longer.",
+        "Their disagreement about freshwater sensitivity comes partly from how they approximate sinking.",
+        "They are more reliable in the Southern Ocean than in the North Atlantic."
+      ],
+      "answer": 2,
+      "explanation_en": "Because sinking plumes are far smaller than a model grid cell, each model substitutes an approximate rule, and different reasonable rules give different sensitivities. Choice B is wrong because the resolution problem is separate from record length; longer data would not make the models agree.",
+      "explanation_zh": "下沉羽流远小于模式网格，因此每个模式只能用近似规则代替，而不同的合理规则会得出不同的淡水敏感度。选项B错误，分辨率问题与观测年限无关，数据再长也不会让模式结果一致。"
+    },
+    {
+      "id": "q6",
+      "type": "attitude",
+      "stem": "What is the professor's attitude toward the claim that ocean circulation keeps northwestern Europe mild?",
+      "options": [
+        "She accepts it, but warns that the ocean's role is commonly exaggerated.",
+        "She rejects it as an outdated textbook error.",
+        "She considers it untestable with current instruments.",
+        "She treats it as the strongest argument for studying overturning."
+      ],
+      "answer": 0,
+      "explanation_en": "She says the overturning is part of why Europe is milder, then explicitly cautions that prevailing winds do much of the work and that people overstate the ocean's share. She never calls the claim false, so choice B goes too far.",
+      "explanation_zh": "她说翻转环流是欧洲较温和的原因“之一”，随后明确提醒盛行西风也起了很大作用，人们常常夸大海洋的贡献。她从未说这个说法是错的，所以选项B过头了。"
+    }
+  ]
+}

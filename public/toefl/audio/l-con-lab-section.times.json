@@ -1,0 +1,132 @@
+{
+ "id": "l-con-lab-section",
+ "duration": 155.725,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 5.7,
+   "end": 12.625
+  },
+  {
+   "line": 1,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 13.175,
+   "end": 15.475
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 16.025,
+   "end": 29.675
+  },
+  {
+   "line": 3,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 30.225,
+   "end": 31.675
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 32.225,
+   "end": 39.8
+  },
+  {
+   "line": 5,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 40.35,
+   "end": 53.275
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 53.825,
+   "end": 60.725
+  },
+  {
+   "line": 7,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 61.275,
+   "end": 65.5
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 66.05,
+   "end": 72.225
+  },
+  {
+   "line": 9,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 72.775,
+   "end": 83.05
+  },
+  {
+   "line": 10,
+   "speaker": "student",
+   "label": "Student",
+   "start": 83.6,
+   "end": 88.325
+  },
+  {
+   "line": 11,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 88.875,
+   "end": 102.625
+  },
+  {
+   "line": 12,
+   "speaker": "student",
+   "label": "Student",
+   "start": 103.175,
+   "end": 108.1
+  },
+  {
+   "line": 13,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 108.65,
+   "end": 121.9
+  },
+  {
+   "line": 14,
+   "speaker": "student",
+   "label": "Student",
+   "start": 122.45,
+   "end": 125.225
+  },
+  {
+   "line": 15,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 125.775,
+   "end": 141.975
+  },
+  {
+   "line": 16,
+   "speaker": "student",
+   "label": "Student",
+   "start": 142.525,
+   "end": 147.725
+  },
+  {
+   "line": 17,
+   "speaker": "advisor",
+   "label": "Academic advisor",
+   "start": 148.275,
+   "end": 155.125
+  }
+ ]
+}

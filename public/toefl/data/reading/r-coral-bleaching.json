@@ -1,0 +1,189 @@
+{
+  "id": "r-coral-bleaching",
+  "title": "Coral Bleaching and Reef Resilience",
+  "topic": "life-science",
+  "difficulty": 2,
+  "paragraphs": [
+    "Reef-building corals are animals, but their success depends on a partnership with a plant-like organism. Within the tissues of a single coral polyp live millions of single-celled algae known as zooxanthellae. These algae capture sunlight and pass as much as ninety percent of the sugars they produce to the host animal. In return, the coral supplies the algae with shelter and with the nitrogen and phosphorus compounds contained in its waste. The arrangement allows reefs to flourish in tropical seas that are otherwise so poor in nutrients that biologists once described them as marine deserts. Reefs occupy less than one percent of the ocean floor, yet they shelter roughly a quarter of all marine species.",
+    "The partnership is productive but narrow in its tolerances. When water temperatures rise even one degree Celsius above the local summer maximum and remain there for several weeks, the photosynthetic machinery of the algae begins to malfunction. Instead of sugars, it produces unstable molecules that damage coral tissue. The polyp responds by expelling its algae, and because the algae supply nearly all of the color in coral tissue, the white limestone skeleton becomes visible through the transparent animal above it. This is the condition known as bleaching. Unusually intense sunlight, sudden flooding with fresh water, and pollution can produce the same response, but heat is by far the most common trigger.",
+    "A bleached coral is stressed rather than dead. If temperatures fall within a few weeks, surviving algae multiply and the colony regains its color, although it may not grow or reproduce for a year or more afterward. If the heat persists, the starving polyps die and the skeleton is quickly colonized by turf algae, which prevent new coral larvae from attaching. The outcome therefore depends less on whether bleaching occurs than on how long the stressful conditions last. Surveys carried out after the severe warming of the 1990s found colonies on a single reef ranging from complete recovery to total mortality within a few hundred meters. Recovery is also uneven across species, since fast-growing branching corals bleach readily but recolonize quickly, while massive boulder corals resist heat longer and replace themselves far more slowly.",
+    "Corals are not entirely passive in the face of warming. Zooxanthellae belong to several genetically distinct lineages, and some of these are markedly more heat tolerant than others. A colony that survives a bleaching event is sometimes recolonized by a more tolerant lineage, and its threshold temperature rises by a degree or so. Corals that have experienced a mild heat episode in one season also bleach less readily in the next, a response that resembles the acclimatization of other animals to altitude or cold. Populations at the warm edge of a species range, such as those in the Persian Gulf, already tolerate temperatures that would kill their relatives elsewhere. Such adjustments, however, appear to raise tolerance by fractions of a degree rather than by several degrees.",
+    "How much protection these mechanisms afford is disputed. One group of researchers emphasizes the speed of the adjustments observed so far and argues that reef communities will reorganize around hardier species rather than disappear. A second group notes that heat-tolerant algal lineages transfer fewer sugars to their hosts, so that corals harboring them grow more slowly and build weaker skeletons. On this view, an apparently resilient reef may be a structurally impoverished one. The disagreement is difficult to settle because systematic reef monitoring began only in the 1980s. Conditions in earlier centuries must be inferred indirectly from growth bands preserved in coral skeletons, and those bands register only disturbances severe enough to interrupt growth.",
+    "What both camps accept is that the interval between severe heat events matters more than the severity of any single event. A fast-growing branching coral needs roughly a decade to rebuild a damaged colony, and massive corals need considerably longer. Mass bleaching was essentially unrecorded before 1980 and now recurs on many reefs every six years or so. Adaptation that would be adequate against a disturbance arriving once a century offers little protection against one that arrives before the previous recovery is complete. The pace of disturbance, rather than the capacity of corals to adjust, is what most researchers now treat as the central question."
+  ],
+  "glossary": [
+    {
+      "term": "zooxanthellae",
+      "def_en": "single-celled algae that live inside the tissues of corals and other marine animals and supply them with food made by photosynthesis",
+      "def_zh": "虫黄藻：生活在珊瑚等海洋动物组织内的单细胞藻类，通过光合作用为宿主提供养分。"
+    },
+    {
+      "term": "polyp",
+      "def_en": "the individual soft-bodied animal that builds and occupies one cup in a coral skeleton",
+      "def_zh": "珊瑚虫：构筑并栖居于珊瑚骨骼小杯中的单个软体动物。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, what do the algae receive from the coral polyp?",
+      "options": [
+        "Shelter and compounds containing nitrogen and phosphorus",
+        "Sugars produced by photosynthesis",
+        "Protection from unusually intense sunlight",
+        "Access to seawater that is rich in nutrients"
+      ],
+      "answer": 0,
+      "explanation_en": "Paragraph 1 states that in return the coral supplies the algae with shelter and with the nitrogen and phosphorus compounds in its waste. The choice about sugars reverses the exchange, since the sugars flow from the algae to the coral.",
+      "explanation_zh": "第一段说，作为回报，珊瑚为藻类提供庇护以及排泄物中所含的氮、磷化合物。提到糖分的选项把方向弄反了，糖是藻类提供给珊瑚的。"
+    },
+    {
+      "id": "q2",
+      "type": "rhetorical-purpose",
+      "paragraph": 1,
+      "stem": "Why does the author mention that biologists once described tropical seas as marine deserts?",
+      "options": [
+        "To explain why reef-building corals are classified as animals",
+        "To emphasize that reefs could not thrive in such water without the algal partnership",
+        "To argue that early biologists misunderstood the biology of reefs",
+        "To contrast tropical reefs with reefs that grow in colder water"
+      ],
+      "answer": 1,
+      "explanation_en": "The phrase appears in a sentence explaining what the partnership makes possible, so it stresses how nutrient-poor the water is and therefore how essential the algae are. Nothing in the paragraph criticizes earlier biologists or compares warm and cold reefs.",
+      "explanation_zh": "这一说法出现在解释共生关系作用的句子里，用来强调海水多么贫瘠，因而藻类多么关键。该段既没有批评早期生物学家，也没有比较冷暖水域的珊瑚礁。"
+    },
+    {
+      "id": "q3",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"expelling\" in paragraph 2 is closest in meaning to",
+      "highlight": "expelling",
+      "options": [
+        "absorbing",
+        "weakening",
+        "driving out",
+        "reproducing"
+      ],
+      "answer": 2,
+      "explanation_en": "The polyp gets rid of its algae, which is why the white skeleton becomes visible; \"driving out\" captures this. \"Absorbing\" would mean taking the algae in, the opposite of what happens.",
+      "explanation_zh": "珊瑚虫把藻类排出体外，所以白色骨骼才会显露出来，因此 driving out 最贴切。absorbing 表示吸收进去，与文意相反。"
+    },
+    {
+      "id": "q4",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3?",
+      "highlight": "The outcome therefore depends less on whether bleaching occurs than on how long the stressful conditions last.",
+      "options": [
+        "Bleaching is harmful only when the conditions that cause it are unusually severe.",
+        "Colonies that bleach repeatedly are less likely to survive than colonies that bleach once.",
+        "Bleaching has no effect on a colony unless the colony is already weakened.",
+        "Survival depends mainly on how long the stress lasts, not on bleaching itself."
+      ],
+      "answer": 3,
+      "explanation_en": "The sentence contrasts the fact of bleaching with the duration of the stress and says duration is what decides the result. The choice about repeated bleaching introduces a comparison the sentence never makes.",
+      "explanation_zh": "该句把“是否白化”与“胁迫持续多久”作对比，指出后者才决定结果。提到反复白化的选项引入了原句没有的比较。"
+    },
+    {
+      "id": "q5",
+      "type": "factual",
+      "paragraph": 3,
+      "stem": "According to paragraph 3, what happens to the skeleton of a colony whose polyps die?",
+      "options": [
+        "It dissolves within a few weeks.",
+        "It is covered by turf algae that block new coral larvae.",
+        "It is recolonized by more heat-tolerant algae.",
+        "It continues to grow slowly for about a year."
+      ],
+      "answer": 1,
+      "explanation_en": "Paragraph 3 says the skeleton is quickly colonized by turf algae, which prevent new coral larvae from attaching. Recolonization by heat-tolerant algae is described in paragraph 4 and applies to colonies that survive.",
+      "explanation_zh": "第三段说骨骼很快被草皮状藻类占据，阻止新的珊瑚幼虫附着。耐热藻类重新定居见于第四段，且只适用于存活下来的群体。"
+    },
+    {
+      "id": "q6",
+      "type": "negative-factual",
+      "paragraph": 4,
+      "stem": "According to paragraph 4, all of the following can raise a coral colony's tolerance of heat EXCEPT",
+      "options": [
+        "recolonization by a more heat-tolerant lineage of algae",
+        "earlier exposure to a mild episode of warming",
+        "living at the warm edge of the range of the species",
+        "a reduction in the sugar the algae transfer to the host"
+      ],
+      "answer": 3,
+      "explanation_en": "Paragraph 4 lists tolerant lineages, prior mild warming, and warm-edge populations. Reduced sugar transfer appears in paragraph 5 and is presented as a cost of heat tolerance, not a cause of it.",
+      "explanation_zh": "第四段列出的是耐热藻系、此前经历的轻度升温以及分布区暖端的种群。糖分传输减少出现在第五段，是耐热带来的代价，而非提高耐热性的原因。"
+    },
+    {
+      "id": "q7",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 suggests that a reef dominated by heat-tolerant corals might",
+      "options": [
+        "be less likely to bleach but also less likely to survive",
+        "recover from bleaching without the loss of any species",
+        "grow more slowly and form a weaker structure than reefs of the past",
+        "have been monitored continuously since well before the 1980s"
+      ],
+      "answer": 2,
+      "explanation_en": "The second group of researchers argues that tolerant algae supply fewer sugars, so their hosts grow slowly and build weak skeletons, which is why such a reef may be structurally impoverished. The first choice contradicts the point that these corals bleach less readily and persist.",
+      "explanation_zh": "第二派研究者认为耐热藻输送的糖分较少，宿主生长缓慢、骨骼较弱，因此这样的珊瑚礁在结构上可能是贫化的。第一个选项与“这类珊瑚不易白化且能存活”相矛盾。"
+    },
+    {
+      "id": "q8",
+      "type": "vocabulary",
+      "paragraph": 5,
+      "stem": "The word \"impoverished\" in paragraph 5 is closest in meaning to",
+      "highlight": "impoverished",
+      "options": [
+        "diminished",
+        "crowded",
+        "unstable",
+        "unfamiliar"
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence contrasts an apparently resilient reef with one that is weaker in structure, so the word means reduced or depleted. \"Unstable\" suggests a risk of collapse rather than the loss of substance the paragraph describes.",
+      "explanation_zh": "该句把“看似有韧性的礁体”与结构上更弱的礁体对比，因此该词意为“削弱、贫乏”。unstable 指易崩溃的风险，而非段落所说的实质性减少。"
+    },
+    {
+      "id": "q9",
+      "type": "insert-text",
+      "paragraph": 6,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 6. Where would the sentence best fit?",
+      "insertSentence": "Recovery, however, is not measured in months.",
+      "insertAfter": [
+        "What both camps accept is that the interval between severe heat events matters more than the severity of any single event.",
+        "A fast-growing branching coral needs roughly a decade to rebuild a damaged colony, and massive corals need considerably longer.",
+        "Mass bleaching was essentially unrecorded before 1980 and now recurs on many reefs every six years or so.",
+        "Adaptation that would be adequate against a disturbance arriving once a century offers little protection against one that arrives before the previous recovery is complete."
+      ],
+      "answer": 0,
+      "explanation_en": "The inserted sentence introduces the idea of slow recovery, which the next sentence then quantifies with the decade needed by branching corals. Placed later, it would interrupt the comparison between the frequency of bleaching and the time required to recover.",
+      "explanation_zh": "插入句引出“恢复缓慢”这一点，紧接着的句子用分枝珊瑚需要十年来具体说明。若放在后面，就会打断白化频率与恢复时间之间的比较。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "The partnership between reef-building corals and the algae in their tissues is highly productive but is easily disrupted by heat.",
+      "options": [
+        "Corals expel their algae under prolonged heat stress, and whether a colony survives depends chiefly on how long the stress lasts.",
+        "Corals can adjust somewhat, notably by acquiring more heat-tolerant algal lineages and through earlier exposure to mild warming.",
+        "Researchers disagree about whether such adjustments preserve functioning reefs or only slower-growing, weaker ones.",
+        "Bleaching was first observed in the Persian Gulf, where corals tolerate the highest temperatures ever recorded.",
+        "Turf algae are the main food source of coral polyps on reefs that have been damaged by heat.",
+        "Monitoring programs begun in the 1980s have settled the question of how resilient reefs are."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage moves from the mechanism of bleaching, to the limited capacity of corals to adapt, to the dispute over what that capacity means for reefs. The Persian Gulf is given only as an example of a warm-edge population, turf algae smother reefs rather than feed corals, and the passage says the monitoring record is too short to settle the dispute.",
+      "explanation_zh": "文章依次讲述白化的机制、珊瑚有限的适应能力，以及围绕这种能力意义的争论。波斯湾只是暖端种群的例子，草皮状藻类是覆盖礁体而非珊瑚的食物，文中还说监测记录太短，无法解决争论。"
+    }
+  ]
+}

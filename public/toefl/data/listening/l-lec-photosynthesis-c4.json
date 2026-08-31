@@ -1,0 +1,111 @@
+{
+  "id": "l-lec-photosynthesis-c4",
+  "kind": "lecture",
+  "title": "Why C Four Photosynthesis Evolved",
+  "topic": "life-science",
+  "difficulty": 2,
+  "setting_en": "In a botany class.",
+  "setting_zh": "在植物学课上。",
+  "speakers": [
+    { "id": "prof", "label_en": "Professor", "label_zh": "教授", "voice": "male-a" },
+    { "id": "student", "label_en": "Student", "label_zh": "学生", "voice": "female-a" }
+  ],
+  "script": [
+    { "speaker": "prof", "text": "Okay, so last time we finished up with the basic chemistry of photosynthesis, the standard pathway, and today I want to look at a variation on it. A pretty famous variation, actually. It's called C four photosynthesis. And the reason we care about it is that it tells us something about how plants respond to stress, and it also explains why certain grasslands look the way they do. So. Let's start with the problem that C four solves." },
+    { "speaker": "prof", "text": "In ordinary photosynthesis, what we call C three photosynthesis, the plant grabs carbon dioxide out of the air and attaches it to a five carbon sugar. The enzyme that does this is called rubisco. Now, rubisco is probably the most abundant protein on the planet, and it is also, frankly, a little sloppy. Because sometimes, instead of grabbing carbon dioxide, it grabs oxygen. And when that happens, the plant doesn't make sugar. It makes a compound it then has to spend energy cleaning up. We call that photorespiration. Think of it as waste. Wasted carbon, wasted energy." },
+    { "speaker": "prof", "text": "And here's the thing. How often rubisco makes that mistake depends on conditions. When it's hot, and when it's dry, the error rate goes way up. Why dry? Well, on a dry day a plant closes the little pores on its leaves, the stomata, to keep from losing water. But when those pores shut, fresh carbon dioxide can't get in either, and the oxygen from the plant's own reactions builds up inside the leaf. So now rubisco is sitting in a chamber full of oxygen with hardly any carbon dioxide around, and the error rate climbs. In a hot, dry climate a C three plant can lose something like a quarter of the carbon it fixes just to photorespiration." },
+    { "speaker": "prof", "text": "So, C four. C four plants solve this with, essentially, plumbing. They split the job between two different kinds of cells. In the outer cells, the mesophyll cells, a different enzyme does the initial capture. That enzyme has no interest in oxygen at all, and it's much better at pulling in carbon dioxide even at low concentrations. It makes a four carbon compound, and that is where the name comes from. Four carbons. Then that compound gets shipped inward to a second set of cells, the bundle sheath cells, packed tightly around the veins. And there it releases the carbon dioxide again, right next to rubisco. So rubisco ends up working in a little pocket where the carbon dioxide concentration is, oh, maybe ten times what it would be in open air. Under those conditions it almost never makes the oxygen mistake." },
+    { "speaker": "student", "text": "So if it's that much better, why doesn't everything do it?" },
+    { "speaker": "prof", "text": "Ah. Well, nothing in a plant is free." },
+    { "speaker": "prof", "text": "That pump runs on energy. Every carbon dioxide molecule delivered into the bundle sheath costs the plant extra ATP compared with the C three route. In a cool, wet, cloudy place, photorespiration isn't much of a problem anyway, so you would be paying for insurance you don't need, and a C three plant will simply outgrow you. It's only when the heat and the water stress get bad enough that the savings beat the cost." },
+    { "speaker": "prof", "text": "Which brings us to where these plants actually live. If you map C four grasses, you get a very clean picture. They dominate tropical and warm temperate grasslands, savannas, hot open country. Move into a cool climate, or into deep forest shade, and they mostly disappear. There's a well known pattern in North America, for instance, where the proportion of grass species using C four rises steadily as you move south. Growing season temperature predicts it almost perfectly." },
+    { "speaker": "prof", "text": "One more thing, and this is the part I find remarkable. C four is not a single invention. It has evolved independently something like sixty separate times, in a lot of unrelated plant families. Sixty. That tells us it isn't a fluke. The raw materials, the enzymes, the cell types, were already sitting there in ordinary C three plants, and the environment kept pushing in the same direction. And most of that happened in the last thirty million years, as global carbon dioxide levels fell and photorespiration got steadily worse. So the story isn't only about heat. It's about a changing atmosphere too." }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the lecture mainly about?",
+      "options": [
+        "The chemical steps by which rubisco assembles sugar molecules",
+        "A photosynthetic pathway that reduces a specific inefficiency, and the conditions that favor it",
+        "The role of stomata in controlling water loss in desert plants",
+        "Recent changes in the global distribution of tropical grasslands"
+      ],
+      "answer": 1,
+      "explanation_en": "The professor frames the whole lecture around the problem C four solves (photorespiration), how it solves it, and where such plants dominate. Stomata and grassland distribution are supporting details inside that argument, not the topic.",
+      "explanation_zh": "教授全程围绕 C4 途径要解决的问题（光呼吸）、它的解决方式，以及这类植物分布在哪里展开。气孔和草原分布只是论证中的支撑细节，不是主题。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "According to the professor, why does dry weather increase photorespiration?",
+      "options": [
+        "High temperatures cause rubisco molecules to break down inside the leaf",
+        "Plants growing in dry soil produce less rubisco overall",
+        "Closed stomata trap oxygen inside the leaf while blocking incoming carbon dioxide",
+        "Dry air carries a higher proportion of oxygen than humid air does"
+      ],
+      "answer": 2,
+      "explanation_en": "The professor explains that a plant shuts its stomata to save water, which also keeps fresh carbon dioxide out while oxygen from its own reactions accumulates. Nothing is said about rubisco breaking down or about the oxygen content of dry air.",
+      "explanation_zh": "教授说植物为了保水会关闭气孔，这同时挡住了外界二氧化碳，而自身反应产生的氧气在叶内积聚。讲座没有提到 rubisco 分解，也没说干燥空气含氧比例更高。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the professor say this:",
+      "replayLine": 5,
+      "options": [
+        "To introduce the idea that the C four pathway carries an energy cost",
+        "To suggest that the student's question cannot really be answered",
+        "To remind students that plants obtain energy only from sunlight",
+        "To correct a misunderstanding about how the bundle sheath cells work"
+      ],
+      "answer": 0,
+      "explanation_en": "The line answers the student's question by previewing the point developed immediately afterward: the carbon dioxide pump costs extra ATP. He is not dismissing the question, and he goes on to answer it directly.",
+      "explanation_zh": "这句话是在回答学生的提问，预告紧接着展开的要点：这个二氧化碳泵要额外消耗 ATP。他并没有回避问题，随后就直接作了解答。"
+    },
+    {
+      "id": "q4",
+      "type": "connecting-content",
+      "stem": "What does the professor imply would happen if a C four plant and a C three plant grew together in a cool, cloudy, wet region?",
+      "options": [
+        "Both would shut their stomata for most of the growing season",
+        "The C four plant would fix carbon faster because its enzyme ignores oxygen",
+        "Neither plant could complete photosynthesis without additional ATP",
+        "The C three plant would grow better because the C four plant's pump is not worth its cost there"
+      ],
+      "answer": 3,
+      "explanation_en": "He says that where photorespiration is not a serious problem, the C four plant pays for insurance it does not need and a C three plant will outgrow it. The enzyme's indifference to oxygen is real but brings no advantage under those conditions.",
+      "explanation_zh": "他说在光呼吸不严重的地方，C4 植物是在为用不上的保险付费，C3 植物会长得更快。C4 酶不结合氧气是事实，但在那种条件下并不带来优势。"
+    },
+    {
+      "id": "q5",
+      "type": "detail",
+      "stem": "What is the significance of the bundle sheath cells in C four plants?",
+      "options": [
+        "They open and close in response to daily changes in humidity",
+        "They concentrate carbon dioxide around rubisco to about ten times outside air levels",
+        "They store the four carbon compound until nighttime, when rubisco becomes active",
+        "They are the site where the plant first captures carbon dioxide from the air"
+      ],
+      "answer": 1,
+      "explanation_en": "The four carbon compound is shipped inward and releases carbon dioxide next to rubisco, giving roughly ten times the open air concentration. Initial capture happens in the mesophyll cells, not here, and no nighttime storage is mentioned.",
+      "explanation_zh": "四碳化合物被运进来，在 rubisco 旁释放二氧化碳，浓度约为空气中的十倍。最初的固定发生在叶肉细胞，不在这里，讲座也没提夜间储存。"
+    },
+    {
+      "id": "q6",
+      "type": "inference",
+      "stem": "What can be inferred from the professor's remark that C four has evolved about sixty separate times?",
+      "options": [
+        "C four plants are more closely related to one another than was once believed",
+        "The pathway must have first appeared well before flowering plants existed",
+        "The change required no new components, only repeated selective pressure of the same kind",
+        "Most C three plant families will eventually acquire the pathway as well"
+      ],
+      "answer": 2,
+      "explanation_en": "He says explicitly that the enzymes and cell types were already present in C three plants and that the environment kept pushing the same way, so repetition shows pressure rather than coincidence. Repeated independent origins argue against close relatedness, and he makes no prediction about the future.",
+      "explanation_zh": "他明确指出所需的酶和细胞类型在 C3 植物中本来就有，而环境不断朝同一方向施压，所以反复出现说明的是选择压力而非巧合。多次独立起源恰恰说明这些植物亲缘关系不近，他也没有对未来作预测。"
+    }
+  ]
+}

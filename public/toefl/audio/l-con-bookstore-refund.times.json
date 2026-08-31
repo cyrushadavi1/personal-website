@@ -1,0 +1,146 @@
+{
+ "id": "l-con-bookstore-refund",
+ "duration": 161.55,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 4.75,
+   "end": 9.6
+  },
+  {
+   "line": 1,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 10.15,
+   "end": 12.675
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 13.225,
+   "end": 17.35
+  },
+  {
+   "line": 3,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 17.9,
+   "end": 25.7
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 26.25,
+   "end": 41.025
+  },
+  {
+   "line": 5,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 41.575,
+   "end": 43.725
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 44.275,
+   "end": 46.25
+  },
+  {
+   "line": 7,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 46.8,
+   "end": 62.125
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 62.675,
+   "end": 68.675
+  },
+  {
+   "line": 9,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 69.225,
+   "end": 76.725
+  },
+  {
+   "line": 10,
+   "speaker": "student",
+   "label": "Student",
+   "start": 77.275,
+   "end": 78.6
+  },
+  {
+   "line": 11,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 79.15,
+   "end": 94.925
+  },
+  {
+   "line": 12,
+   "speaker": "student",
+   "label": "Student",
+   "start": 95.475,
+   "end": 100.425
+  },
+  {
+   "line": 13,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 100.975,
+   "end": 114.825
+  },
+  {
+   "line": 14,
+   "speaker": "student",
+   "label": "Student",
+   "start": 115.375,
+   "end": 118.2
+  },
+  {
+   "line": 15,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 118.75,
+   "end": 131.525
+  },
+  {
+   "line": 16,
+   "speaker": "student",
+   "label": "Student",
+   "start": 132.075,
+   "end": 138.775
+  },
+  {
+   "line": 17,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 139.325,
+   "end": 147.65
+  },
+  {
+   "line": 18,
+   "speaker": "student",
+   "label": "Student",
+   "start": 148.2,
+   "end": 156.075
+  },
+  {
+   "line": 19,
+   "speaker": "clerk",
+   "label": "Bookstore employee",
+   "start": 156.625,
+   "end": 160.95
+  }
+ ]
+}

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /toefl/
 
 Sitemap: https://kuros.io/sitemap.xml

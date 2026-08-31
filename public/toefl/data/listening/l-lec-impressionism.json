@@ -1,0 +1,115 @@
+{
+  "id": "l-lec-impressionism",
+  "kind": "lecture",
+  "title": "Painting in the Open Air",
+  "topic": "arts",
+  "difficulty": 2,
+  "setting_en": "In an art history class.",
+  "setting_zh": "在一节艺术史课上。",
+  "speakers": [
+    { "id": "prof", "label_en": "Professor", "label_zh": "教授", "voice": "male-a" },
+    { "id": "s1", "label_en": "Student", "label_zh": "学生", "voice": "female-a" }
+  ],
+  "script": [
+    { "speaker": "prof", "text": "Okay, so last week we finished up with the Barbizon painters, and today I want to pick up right where that left off, with the Impressionists. And I want to focus on something that sounds almost too practical to matter, which is where these painters actually stood when they made a picture. Because for most of the history of European painting, the answer was, in a studio. Indoors. You'd go out to the countryside, make a quick sketch, maybe a watercolor, and then carry that sketch home and build the real painting from it over weeks." },
+    { "speaker": "prof", "text": "The Impressionists changed that. They painted outdoors, in front of the thing they were painting, start to finish. The French term is plein air, which just means open air. Now, why does that matter? Well, if you're working from a sketch in a studio, you're painting your memory of the light. If you're standing in a field at four in the afternoon, you're painting the light. And light moves. It moves fast. So the whole way you handle paint has to change. You can't blend for three days. You put the color down and you leave it." },
+    { "speaker": "s1", "text": "So is that why the brushwork looks so, I don't know, unfinished?" },
+    { "speaker": "prof", "text": "That's exactly why. Those short broken strokes, that's not carelessness, that's a clock. You've got maybe two hours before the shadows have swung around and the picture you started isn't there anymore. Monet dealt with this by working on several canvases at once. He'd have one for the morning light, one for midday, and he'd rotate through them day after day, same subject, same hour, over and over." },
+    { "speaker": "prof", "text": "Okay, but here's the part I really want you to sit with. None of this was possible before some fairly boring technology showed up. Two things in particular." },
+    { "speaker": "prof", "text": "First, the paint tube. Before about eighteen forty, a painter or a painter's assistant ground pigment by hand, mixed it with oil, and stored it in a little pouch made from a pig's bladder. You'd pierce the pouch with a tack to get the paint out, then plug it again. It leaked, it dried out, and you could not realistically carry a full palette of it up a hill. Then an American painter named John Rand patented a collapsible metal tube with a screw cap. And that sounds like nothing. It's a tube. But suddenly paint keeps for months, it doesn't leak, and you can put twenty colors in a box and walk to a riverbank with it. Renoir said later that without the tube of paint there would have been no Impressionism. I think that's only a slight exaggeration." },
+    { "speaker": "prof", "text": "The second thing is the pigments themselves. The nineteenth century was a boom time for industrial chemistry, and chemistry gave painters colors that simply had not existed before, or had existed only at enormous cost. Cobalt blue, cerulean blue, chrome yellow, synthetic ultramarine. Bright, intense, and cheap. So when you look at an Impressionist shadow and it's violet or blue instead of brown, part of what you're seeing is an observation about how light actually behaves, sure, but part of it is that the artist could now afford to squeeze out a lot of blue." },
+    { "speaker": "s1", "text": "Did people at the time know that? Like, did the critics realize the materials had changed?" },
+    { "speaker": "prof", "text": "Some did, and mostly they hated the result. Let's talk about the reception, because it's worth being accurate here. When the group put on their own independent exhibition in eighteen seventy four, the reviews were rough. One critic, Louis Leroy, wrote a sarcastic piece built around Monet's painting Impression, Sunrise, and he used the word impressionist as an insult. His complaint was that wallpaper in its early stages was more finished than that seascape." },
+    { "speaker": "prof", "text": "And you have to understand what he was measuring against. The official Salon rewarded a very high polish, invisible brushwork, and serious subject matter, history, mythology, that sort of thing. By that yardstick, a canvas of some people having lunch on the grass, painted in visible dabs, looked like a sketch somebody had submitted by mistake." },
+    { "speaker": "prof", "text": "It wasn't that the critics couldn't see what the painters were doing. It's that they thought it was the first ten percent of a painting." },
+    { "speaker": "s1", "text": "But the name stuck anyway." },
+    { "speaker": "prof", "text": "The name stuck. The artists took it for themselves, which is what usually happens with an insult that's too good. And by the middle of the eighteen eighties dealers were selling this work steadily, a lot of it to American buyers. Right. For Thursday, read the chapter on leisure and the railway, and start thinking about the question I'll put to you then, which is how much of this movement we explain by artistic intention and how much by trains, tubes, and chemistry." }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the lecture mainly about?",
+      "options": [
+        "The career of Claude Monet and his series paintings",
+        "How working outdoors, and the materials that made it possible, shaped Impressionist painting",
+        "The organization and judging standards of the official French Salon",
+        "The development of synthetic pigments in nineteenth century chemistry"
+      ],
+      "answer": 1,
+      "explanation_en": "The professor frames the whole lecture around painting outdoors and then explains the technology that allowed it and the criticism it drew. Choice D names only one supporting section, and Monet and the Salon are examples inside the argument, not the argument itself.",
+      "explanation_zh": "教授全程围绕“户外作画”展开，先讲这一转变，再讲使其成为可能的材料技术，最后讲当时的批评。选项D只是其中一个支撑部分，莫奈和沙龙也只是论证中的例子，而非主题。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "According to the professor, what was the problem with storing paint in animal bladders?",
+      "options": [
+        "The bladders changed the color of the pigment over time.",
+        "They leaked, dried out, and were impractical to carry in quantity.",
+        "They were far more expensive than metal tubes.",
+        "They could hold only the darker earth colors."
+      ],
+      "answer": 1,
+      "explanation_en": "The professor says the pouches leaked, dried out, and could not realistically be carried up a hill in a full palette. Cost is never mentioned as the bladders' drawback; cheapness is discussed only in connection with the new pigments.",
+      "explanation_zh": "教授说猪膀胱袋会漏、会干掉，而且不可能带着一整套颜色爬山。价格问题从未针对膀胱袋提出，“便宜”只出现在讲新颜料的部分。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the professor say this:",
+      "replayLine": 10,
+      "options": [
+        "To argue that the critics were not paying close attention to the paintings",
+        "To suggest that the critics secretly admired the new brushwork",
+        "To explain that the critics understood the technique but judged the pictures unfinished",
+        "To point out that the critics preferred mythological subjects to landscapes"
+      ],
+      "answer": 2,
+      "explanation_en": "The line concedes that the critics saw the technique clearly and locates the disagreement in their standard of finish. Choice A reverses the concession the professor is making, and the subject matter point belongs to the previous line, not this one.",
+      "explanation_zh": "这句话承认批评家看得懂这种技法，分歧在于他们的“完成度”标准。选项A把教授的让步说反了；题材偏好属于上一句的内容，不是这句。"
+    },
+    {
+      "id": "q4",
+      "type": "connecting-content",
+      "stem": "Why does the professor mention that Monet worked on several canvases at once?",
+      "options": [
+        "To show how a painter coped with the fact that outdoor light keeps changing",
+        "To illustrate how expensive canvas had become by the eighteen seventies",
+        "To explain why Monet exhibited more works than the other Impressionists",
+        "To demonstrate that Monet still finished his paintings in a studio"
+      ],
+      "answer": 0,
+      "explanation_en": "The Monet example comes directly after the point that a painter has about two hours before the shadows move, so it is a solution to the moving light problem. Choice D contradicts the lecture, which stresses that these painters worked outdoors from start to finish.",
+      "explanation_zh": "莫奈的例子紧接在“光影两小时就变了”之后，是应对光线变化的办法。选项D与讲座矛盾，教授强调他们是在户外从头画到尾。"
+    },
+    {
+      "id": "q5",
+      "type": "attitude",
+      "stem": "What is the professor's attitude toward Renoir's claim that there would have been no Impressionism without the paint tube?",
+      "options": [
+        "He thinks it is a joke that later writers took too seriously.",
+        "He thinks it is close to true, though slightly overstated.",
+        "He thinks it is wrong because pigments mattered more than tubes.",
+        "He thinks it cannot be evaluated without more evidence."
+      ],
+      "answer": 1,
+      "explanation_en": "He says the remark is \"only a slight exaggeration,\" which is mild endorsement rather than rejection. He does treat pigments as a second factor, but he never ranks them above the tube.",
+      "explanation_zh": "教授说这话“只是略有夸张”，属于基本认同而非否定。他确实把颜料作为第二个因素来讲，但从未说颜料比颜料管更重要。"
+    },
+    {
+      "id": "q6",
+      "type": "organization",
+      "stem": "How does the professor organize the lecture?",
+      "options": [
+        "By comparing two rival groups of nineteenth century painters",
+        "By tracing one painter's career from early work to late work",
+        "By listing paintings in the order they were exhibited",
+        "By describing a change in practice, then its material causes, then its reception"
+      ],
+      "answer": 3,
+      "explanation_en": "The lecture moves from the shift to outdoor painting, to the tube and the new pigments, to the hostile reviews of eighteen seventy four. There is no sustained comparison of rival groups, and no single career is traced through the lecture.",
+      "explanation_zh": "讲座顺序是：户外作画这一转变，颜料管与新颜料这些物质原因，最后是一八七四年的负面评论。全篇没有持续比较两个对立画派，也没有追溯某位画家的完整生涯。"
+    }
+  ]
+}

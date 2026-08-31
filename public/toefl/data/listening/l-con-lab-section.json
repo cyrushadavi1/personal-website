@@ -1,0 +1,106 @@
+{
+  "id": "l-con-lab-section",
+  "kind": "conversation",
+  "title": "A Lab That Will Not Fit",
+  "topic": "campus",
+  "difficulty": 1,
+  "setting_en": "In an academic advisor's office.",
+  "setting_zh": "在学业顾问的办公室。",
+  "speakers": [
+    { "id": "student", "label_en": "Student", "label_zh": "学生", "voice": "female-a" },
+    { "id": "advisor", "label_en": "Academic advisor", "label_zh": "学业顾问", "voice": "male-b" }
+  ],
+  "script": [
+    { "speaker": "student", "text": "Hi, um, do you have a minute? I registered for Biology two ten, but there's a problem with the lab." },
+    { "speaker": "advisor", "text": "Sure, have a seat. What's going on?" },
+    { "speaker": "student", "text": "So the lecture part is fine, that's Monday and Wednesday mornings. But the lab is required, and every section of it meets Tuesday or Thursday afternoon. And I work Tuesday and Thursday afternoons." },
+    { "speaker": "advisor", "text": "Off campus?" },
+    { "speaker": "student", "text": "Yeah, at the clinic downtown. It's fifteen hours a week and honestly I can't drop it. That's how I'm paying rent." },
+    { "speaker": "advisor", "text": "Okay. No, that's a real constraint, we're not going to pretend it isn't. Let me pull up the schedule. Biology two ten, yes, here it is. Four lab sections, all of them Tuesday and Thursday, one to four." },
+    { "speaker": "student", "text": "Right. So I was thinking I'd just push the whole class to next fall and take something else this term instead." },
+    { "speaker": "advisor", "text": "You could. But before you do that, let's think about whether you have to." },
+    { "speaker": "student", "text": "I mean, it's a prerequisite for the physiology sequence, and I want to start that in the spring." },
+    { "speaker": "advisor", "text": "Then fall is tighter than it sounds, because if anything goes wrong in the fall you've lost the spring too. Hm. Let me ask you something. Have you looked at the summer session?" },
+    { "speaker": "student", "text": "Summer? I didn't think... I mean, do they even run the labs in the summer?" },
+    { "speaker": "advisor", "text": "They run a compressed version. It's a six week term, and the biology department has offered two ten in the second summer session for three years running now. Lecture and lab are bundled into the same block, four mornings a week." },
+    { "speaker": "student", "text": "Mornings. That would actually work. I don't start at the clinic until one." },
+    { "speaker": "advisor", "text": "That's what I was hoping. Now, I want to be straight with you about the tradeoff. Six weeks is fast. It's the same amount of material, so you're doing roughly twice the work per week, and the lab reports come at you very quickly." },
+    { "speaker": "student", "text": "But it's mornings, and then it's over." },
+    { "speaker": "advisor", "text": "It's over, and you walk into the physiology sequence in the spring with the prerequisite already in hand, which is what you actually wanted. Registration for summer opens in March. What I'd do is put a reminder in your phone right now, because the compressed sections do fill up." },
+    { "speaker": "student", "text": "Okay. Yeah. Can I still register for something in place of it this term?" },
+    { "speaker": "advisor", "text": "You have until Friday to add a course. Come back Thursday with two or three options and we'll look at them together." }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student go to see the advisor?",
+      "options": [
+        "Because a required lab meets at times when she has to be at work",
+        "Because she wants permission to drop a course after the deadline",
+        "Because she was not admitted to the physiology sequence",
+        "Because she needs the advisor to sign off on a summer job"
+      ],
+      "answer": 0,
+      "explanation_en": "She opens by saying there is a problem with the lab for Biology two ten, and explains that every section conflicts with her clinic shifts. Nothing is said about being denied entry to physiology or about approving her job.",
+      "explanation_zh": "她一开口就说生物二一零的实验课有问题，并说明每个班次都和她在诊所的班冲突。对话没有提到她被生理学课程拒收，也没提要批准她的工作。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "Why does the student say she cannot give up her job?",
+      "options": [
+        "It counts toward credit in her major",
+        "She has already signed a contract for the full year",
+        "It is how she pays her rent",
+        "The clinic is the only place hiring students this term"
+      ],
+      "answer": 2,
+      "explanation_en": "She says the fifteen hour a week clinic job is how she is paying rent. No contract, no course credit, and no claim about other employers is mentioned.",
+      "explanation_zh": "她说每周十五小时的诊所工作是她付房租的来源。对话没有提到合同、学分，也没说别处不招人。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. What does the advisor mean when he says this:",
+      "replayLine": 7,
+      "options": [
+        "He is warning her that postponing the course is against policy",
+        "He is signaling that he wants to explore an alternative before she postpones",
+        "He is agreeing that postponing the course is the best available plan",
+        "He is asking her to explain why she chose that particular course"
+      ],
+      "answer": 1,
+      "explanation_en": "You could concedes that postponing is possible, but the following clause sets it aside so he can look for another route, which turns out to be the summer session. He never says it is forbidden, and he does not endorse it.",
+      "explanation_zh": "“你可以”承认延后是可行的，但后半句立刻把它放在一边，好让他去找别的办法，也就是暑期课程。他既没说这样违规，也没有表示赞同。"
+    },
+    {
+      "id": "q4",
+      "type": "detail",
+      "stem": "What drawback does the advisor mention about the summer version of the course?",
+      "options": [
+        "It does not satisfy the prerequisite for the physiology sequence",
+        "The lab meetings are held in the afternoon",
+        "It covers less material than the regular term version",
+        "The same material is covered in half the time, so the workload per week doubles"
+      ],
+      "answer": 3,
+      "explanation_en": "He says six weeks is fast, the content is identical, and so the weekly workload is roughly double, with lab reports arriving quickly. He states the summer course does satisfy the prerequisite and meets in the mornings.",
+      "explanation_zh": "他说六周很赶，内容一样多，因此每周的工作量大约翻倍，实验报告接连而来。他明确说暑期课能满足先修要求，而且是上午上课。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "stem": "What will the student most likely do next?",
+      "options": [
+        "Reduce her hours at the clinic to three days a week",
+        "Return later in the week with possible replacement courses",
+        "Register for the summer section immediately after the meeting",
+        "Ask the biology department to open an additional lab section"
+      ],
+      "answer": 1,
+      "explanation_en": "The advisor tells her the add deadline is Friday and asks her to come back Thursday with two or three options. Summer registration does not open until March, so she cannot sign up now.",
+      "explanation_zh": "顾问告诉她加课截止到周五，并让她周四带两三个备选课程再来。暑期选课三月才开放，所以她现在还没法报名。"
+    }
+  ]
+}

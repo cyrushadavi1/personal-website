@@ -5,15 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run build:toefl && astro build",
     "build:sites": "npm run build && node scripts/prepare-sites.mjs",
     "preview": "astro preview",
     "test": "npm run build && npm run test:built",
-    "test:built": "node --test tests/*.test.mjs"
+    "test:built": "node --test tests/*.test.mjs",
+    "build:toefl": "node scripts/build-toefl.mjs",
+    "toefl:audio": "VIRTUAL_ENV=$PWD/.venv-tts .venv-tts/bin/python scripts/gen_audio.py",
+    "test:e2e": "npm run build && node scripts/e2e-toefl.mjs"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/vazirmatn": "^5.2.5",
     "astro": "^5.12.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
   }
 }

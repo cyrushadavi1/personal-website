@@ -1,0 +1,118 @@
+{
+ "id": "l-lec-urban-heat-island",
+ "duration": 287.725,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 4.85,
+   "end": 25.85
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 26.13,
+   "end": 53.905
+  },
+  {
+   "line": 2,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 54.455,
+   "end": 56.805
+  },
+  {
+   "line": 3,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 57.355,
+   "end": 73.255
+  },
+  {
+   "line": 4,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 73.535,
+   "end": 100.66
+  },
+  {
+   "line": 5,
+   "speaker": "s2",
+   "label": "Female student",
+   "start": 101.21,
+   "end": 104.585
+  },
+  {
+   "line": 6,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 105.135,
+   "end": 122.885
+  },
+  {
+   "line": 7,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 123.165,
+   "end": 147.315
+  },
+  {
+   "line": 8,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 147.865,
+   "end": 149.59
+  },
+  {
+   "line": 9,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 150.14,
+   "end": 174.765
+  },
+  {
+   "line": 10,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 175.045,
+   "end": 197.645
+  },
+  {
+   "line": 11,
+   "speaker": "s2",
+   "label": "Female student",
+   "start": 198.195,
+   "end": 201.17
+  },
+  {
+   "line": 12,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 201.72,
+   "end": 220.445
+  },
+  {
+   "line": 13,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 220.725,
+   "end": 261.225
+  },
+  {
+   "line": 14,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 261.775,
+   "end": 267.35
+  },
+  {
+   "line": 15,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 267.9,
+   "end": 287.125
+  }
+ ]
+}

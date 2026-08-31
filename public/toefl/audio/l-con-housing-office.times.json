@@ -1,0 +1,125 @@
+{
+ "id": "l-con-housing-office",
+ "duration": 172.94,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 5.275,
+   "end": 12.875
+  },
+  {
+   "line": 1,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 13.425,
+   "end": 20.8
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 21.35,
+   "end": 29.175
+  },
+  {
+   "line": 3,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 29.725,
+   "end": 31.8
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 32.35,
+   "end": 56.075
+  },
+  {
+   "line": 5,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 56.625,
+   "end": 59.45
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 60.0,
+   "end": 67.3
+  },
+  {
+   "line": 7,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 67.85,
+   "end": 70.675
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 71.225,
+   "end": 73.5
+  },
+  {
+   "line": 9,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 74.05,
+   "end": 91.1
+  },
+  {
+   "line": 10,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 91.38,
+   "end": 107.83
+  },
+  {
+   "line": 11,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 108.11,
+   "end": 126.935
+  },
+  {
+   "line": 12,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 127.215,
+   "end": 145.165
+  },
+  {
+   "line": 13,
+   "speaker": "student",
+   "label": "Student",
+   "start": 145.715,
+   "end": 148.615
+  },
+  {
+   "line": 14,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 149.165,
+   "end": 157.99
+  },
+  {
+   "line": 15,
+   "speaker": "student",
+   "label": "Student",
+   "start": 158.54,
+   "end": 163.215
+  },
+  {
+   "line": 16,
+   "speaker": "officer",
+   "label": "Housing officer",
+   "start": 163.765,
+   "end": 172.34
+  }
+ ]
+}

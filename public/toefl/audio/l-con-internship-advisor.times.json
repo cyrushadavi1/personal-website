@@ -1,0 +1,146 @@
+{
+ "id": "l-con-internship-advisor",
+ "duration": 209.0,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 5.4,
+   "end": 13.825
+  },
+  {
+   "line": 1,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 14.375,
+   "end": 17.95
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 18.5,
+   "end": 29.825
+  },
+  {
+   "line": 3,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 30.375,
+   "end": 32.1
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 32.65,
+   "end": 44.875
+  },
+  {
+   "line": 5,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 45.425,
+   "end": 48.575
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 49.125,
+   "end": 59.325
+  },
+  {
+   "line": 7,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 59.875,
+   "end": 75.2
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 75.75,
+   "end": 78.875
+  },
+  {
+   "line": 9,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 79.425,
+   "end": 95.225
+  },
+  {
+   "line": 10,
+   "speaker": "student",
+   "label": "Student",
+   "start": 95.775,
+   "end": 106.075
+  },
+  {
+   "line": 11,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 106.625,
+   "end": 126.575
+  },
+  {
+   "line": 12,
+   "speaker": "student",
+   "label": "Student",
+   "start": 127.125,
+   "end": 129.825
+  },
+  {
+   "line": 13,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 130.375,
+   "end": 149.775
+  },
+  {
+   "line": 14,
+   "speaker": "student",
+   "label": "Student",
+   "start": 150.325,
+   "end": 153.775
+  },
+  {
+   "line": 15,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 154.325,
+   "end": 168.425
+  },
+  {
+   "line": 16,
+   "speaker": "student",
+   "label": "Student",
+   "start": 168.975,
+   "end": 174.925
+  },
+  {
+   "line": 17,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 175.475,
+   "end": 189.6
+  },
+  {
+   "line": 18,
+   "speaker": "student",
+   "label": "Student",
+   "start": 190.15,
+   "end": 196.6
+  },
+  {
+   "line": 19,
+   "speaker": "advisor",
+   "label": "Career advisor",
+   "start": 197.15,
+   "end": 208.4
+  }
+ ]
+}

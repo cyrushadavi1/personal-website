@@ -1,0 +1,188 @@
+{
+  "id": "r-glacial-varves",
+  "title": "Glacial Varves and the Dating of Past Climate",
+  "topic": "physical-science",
+  "difficulty": 2,
+  "paragraphs": [
+    "Many lakes that lie near the margins of glaciers accumulate sediment in a strikingly regular pattern. Each year the layer of material deposited on the lake floor consists of two distinct bands, and the pair together is called a varve. The lower band is thick and pale, made of relatively coarse silt; the upper band is thin and dark, made of fine clay and organic particles. The contrast between the two arises from the seasonal rhythm of meltwater. During the warm months, streams fed by melting ice carry a heavy load of ground rock into the lake, and the larger grains settle quickly. When the lake freezes over in winter, inflow ceases, the water becomes still, and the smallest particles that remained suspended drift slowly to the bottom.",
+    "The sediment itself is a product of glacial erosion. As a glacier advances, rock fragments frozen into its base are dragged across bedrock, grinding the surface into a powder that geologists call rock flour. Meltwater streams carry this powder away in such quantity that glacial lakes often appear milky or turquoise. Because the supply of rock flour depends on how much ice melts, the thickness of the summer band records the intensity of the melt season. A warm summer produces abundant meltwater, a strong sediment load, and a thick pale band; a cool summer produces the reverse. The winter band, by contrast, varies little from year to year, since it reflects only the slow settling of particles already present in the water.",
+    "The regularity of this cycle gives varves an unusual value as a record of time. A core taken from the floor of a former glacial lake may contain thousands of paired bands, and each pair represents one year. Counting downward from the surface therefore yields an age in calendar years rather than an estimate. In the late nineteenth century the Swedish geologist Gerard De Geer recognized that varve sequences from different lakes could be matched to one another. The thicknesses of successive summer bands form a distinctive pattern, much like the rings of a tree, and a pattern found in one deposit can be identified in another deposit some distance away. By linking overlapping sequences, De Geer assembled a chronology extending back more than ten thousand years.",
+    "Varves also preserve information about conditions beyond the lake itself. Pollen grains blown onto the water surface sink and become sealed within the annual layers, so the changing composition of the surrounding vegetation can be read year by year. Chemical analysis of the sediment reveals shifts in the source of the meltwater, and occasional coarse layers mark floods or the sudden drainage of an ice-dammed lake. Volcanic ash falls, which settle within a single season, appear as thin distinctive bands that can be matched to eruptions dated by other means. Each of these features allows a varve record to be tied to events recorded elsewhere, and the combination converts a simple pile of mud into a detailed archive.",
+    "The method has limits that must be respected. Not every lake produces varves, since the sediment will be disturbed if the water is shallow enough for waves to reach the bottom or if burrowing organisms are present. Deep, cold, oxygen-poor lakes preserve the layers best because few organisms can survive there to mix them. Even in favorable settings, a single year may deposit more than one pair of bands if a storm interrupts the summer flow, or may deposit none at all if the melt season fails. Counters can therefore accumulate small errors, and a sequence of ten thousand layers may carry an uncertainty of several decades.",
+    "Modern work addresses these difficulties by combining varve counts with independent methods. Radiocarbon dating of plant fragments buried in the layers provides an approximate age that can be compared with the count, and disagreements point to intervals where layers were missed or double counted. Sequences from several lakes in the same region are also compared, on the assumption that an error in one core is unlikely to be repeated in another. Where such checks agree, the resulting chronology is among the most precise available for the period following the last ice age, and it now serves as a standard against which other dating techniques are calibrated."
+  ],
+  "glossary": [
+    {
+      "term": "varve",
+      "def_en": "a pair of sediment bands, one coarse and pale and one fine and dark, deposited in a lake during a single year",
+      "def_zh": "纹泥：湖底一年内沉积的一对沉积层，一层较粗且颜色浅，一层较细且颜色深"
+    },
+    {
+      "term": "rock flour",
+      "def_en": "very fine rock powder produced when a glacier grinds against bedrock",
+      "def_zh": "岩粉：冰川磨蚀基岩时产生的极细岩石粉末"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, the thin dark band of a varve is composed mainly of",
+      "options": [
+        "coarse silt carried into the lake by summer streams",
+        "fine clay and organic particles that settle in still water",
+        "ground rock deposited during the strongest part of the melt season",
+        "ice crystals that form when the surface of the lake freezes"
+      ],
+      "answer": 1,
+      "explanation_en": "Paragraph 1 states that the upper band is thin and dark and is made of fine clay and organic particles, which settle after the lake freezes and the water becomes still. Choice A describes the pale lower band, not the dark one.",
+      "explanation_zh": "第一段说明上层薄而暗的条带由细黏土和有机颗粒组成，是湖面封冻、水体静止后沉降形成的。选项A描述的是浅色的下层条带，不是暗色条带。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 1,
+      "stem": "The word \"ceases\" in paragraph 1 is closest in meaning to",
+      "highlight": "ceases",
+      "options": [
+        "stops",
+        "reverses",
+        "freezes",
+        "increases"
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence says that when the lake freezes over, inflow ceases and the water becomes still, so the word means that the inflow stops. It does not reverse direction; the water simply stops entering.",
+      "explanation_zh": "该句说湖面封冻后水流 ceases、水体变得静止，因此该词意为“停止”。水流并没有反向流动，只是不再流入。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, the thickness of the pale summer band in a given year depends chiefly on",
+      "options": [
+        "the depth of the lake in which the sediment settles",
+        "how long the lake surface remains frozen",
+        "how much ice melts during that season",
+        "the amount of pollen carried onto the water"
+      ],
+      "answer": 2,
+      "explanation_en": "Paragraph 2 states that the supply of rock flour depends on how much ice melts, so the summer band records the intensity of the melt season. The length of the frozen period is linked to the winter band, which the paragraph says varies little.",
+      "explanation_zh": "第二段指出岩粉的供应量取决于融冰量，因此夏季条带记录了融化季的强度。封冻时间长短关系到冬季条带，而文中说冬季条带年际变化很小。"
+    },
+    {
+      "id": "q4",
+      "type": "rhetorical-purpose",
+      "paragraph": 2,
+      "stem": "Why does the author mention that glacial lakes often appear milky or turquoise?",
+      "options": [
+        "To explain why such lakes support very few organisms",
+        "To show that the color of a lake can be used to date its sediment",
+        "To contrast glacial lakes with lakes fed by rainfall",
+        "To indicate how much rock flour meltwater streams deliver to these lakes"
+      ],
+      "answer": 3,
+      "explanation_en": "The color is offered as visible evidence of the sheer quantity of rock flour that meltwater carries into the lake. The paragraph never claims that color itself is used for dating, which is what choice B wrongly suggests.",
+      "explanation_zh": "湖水的颜色被用作可见证据，说明融水带入湖中的岩粉数量之大。该段从未说颜色本身可用于测年，选项B属于错误推断。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+      "highlight": "The thicknesses of successive summer bands form a distinctive pattern, much like the rings of a tree, and a pattern found in one deposit can be identified in another deposit some distance away.",
+      "options": [
+        "Because year-to-year changes in summer band thickness create a recognizable sequence, the same sequence can be located in deposits from other lakes.",
+        "Tree rings and varves are formed by the same process and therefore record the same climatic events.",
+        "The summer bands in a single deposit become steadily thicker with distance from the glacier.",
+        "Only deposits that lie close together contain patterns of summer bands that resemble one another."
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence says the varying thicknesses form a distinctive pattern that can be recognized in a deposit some distance away. Choice D reverses this by denying that distant deposits can be matched, which is the opposite of the point.",
+      "explanation_zh": "原句说夏季条带厚度的变化构成独特的图案，可以在相隔一定距离的沉积中识别出来。选项D否认远处沉积可以对比，与原意相反。"
+    },
+    {
+      "id": "q6",
+      "type": "insert-text",
+      "paragraph": 4,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 4. Where would the sentence best fit?",
+      "insertSentence": "Such a layer therefore provides a fixed point that can be recognized in cores from widely separated lakes.",
+      "insertAfter": [
+        "Varves also preserve information about conditions beyond the lake itself.",
+        "Pollen grains blown onto the water surface sink and become sealed within the annual layers, so the changing composition of the surrounding vegetation can be read year by year.",
+        "Chemical analysis of the sediment reveals shifts in the source of the meltwater, and occasional coarse layers mark floods or the sudden drainage of an ice-dammed lake.",
+        "Volcanic ash falls, which settle within a single season, appear as thin distinctive bands that can be matched to eruptions dated by other means."
+      ],
+      "answer": 3,
+      "explanation_en": "The inserted sentence begins with \"Such a layer\" and describes a marker that can be matched between lakes, so it must follow the sentence about volcanic ash bands that can be tied to dated eruptions. Placed earlier, \"such a layer\" would have no antecedent.",
+      "explanation_zh": "插入句以“Such a layer”开头，描述可在不同湖泊之间对比的标志层，因此必须紧跟讲火山灰层可与已定年喷发对应的那一句。放在更前面则“such a layer”没有指代对象。"
+    },
+    {
+      "id": "q7",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "According to paragraph 5, all of the following can interfere with the formation or preservation of a reliable varve record EXCEPT",
+      "options": [
+        "water shallow enough for waves to reach the lake floor",
+        "the settling of ash from a nearby volcanic eruption",
+        "organisms that burrow into the sediment",
+        "a storm that interrupts the flow of meltwater in summer"
+      ],
+      "answer": 1,
+      "explanation_en": "Paragraph 5 lists shallow water, burrowing organisms, storms, and failed melt seasons as problems; volcanic ash is discussed in paragraph 4, where it is an aid to correlation rather than a source of error. Choice C is explicitly named as a reason varves are not preserved.",
+      "explanation_zh": "第五段列举了水浅、掘穴生物、风暴以及融化季失效等问题；火山灰出现在第四段，且被视为对比的帮助而非误差来源。选项C在文中被明确列为纹泥无法保存的原因。"
+    },
+    {
+      "id": "q8",
+      "type": "factual",
+      "paragraph": 6,
+      "stem": "According to paragraph 6, comparing cores taken from several lakes in one region is useful because",
+      "options": [
+        "an error in one core is unlikely to be repeated in the others",
+        "lakes in one region always freeze on the same date",
+        "only one core in a region contains countable layers",
+        "radiocarbon dating cannot be applied to lake sediment"
+      ],
+      "answer": 0,
+      "explanation_en": "The paragraph states the assumption directly: an error in one core is unlikely to be repeated in another. Choice D contradicts the paragraph, which describes radiocarbon dating of plant fragments in the layers.",
+      "explanation_zh": "该段直接说明了这一假设：某个岩芯中的误差不太可能在另一个岩芯中重复出现。选项D与该段矛盾，因为文中提到对层中植物碎片进行放射性碳测年。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 6,
+      "stem": "It can be inferred from paragraph 6 that varve chronologies are now valuable partly because they",
+      "options": [
+        "have replaced radiocarbon dating for all recent periods",
+        "can be constructed from any lake regardless of depth",
+        "provide a standard used to check other dating methods",
+        "extend further into the past than any other technique"
+      ],
+      "answer": 2,
+      "explanation_en": "The last sentence says the chronology serves as a standard against which other dating techniques are calibrated, which implies its use as a reference. Choice A is too extreme: radiocarbon dating is presented as a complement to varve counting, not something it replaced.",
+      "explanation_zh": "最后一句说该年表被用作校准其他测年方法的标准，暗示它起参照作用。选项A过于绝对：文中把放射性碳测年视为纹泥计数的补充，而非被其取代。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Directions: An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Annual sediment layers called varves record the yearly cycle of a glacial lake and provide a way of dating the recent geological past.",
+      "options": [
+        "Each varve consists of a coarse pale summer band and a fine dark winter band produced by the seasonal pattern of meltwater.",
+        "Counting varves and matching sequences between lakes yields chronologies measured in calendar years.",
+        "Glacial lakes look milky because rock flour remains suspended in the water for long periods.",
+        "Pollen, volcanic ash, and chemical signals sealed in the layers tie the record to events outside the lake.",
+        "Varves can form only in lakes that lie within a short distance of an active glacier.",
+        "Radiocarbon dating has replaced varve counting as the standard method for the period after the last ice age."
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation_en": "The passage is organized around how varves form, how they are counted and correlated to build a chronology, and what additional material they trap. Choice C is a minor supporting detail, choice E is not stated, and choice F contradicts the description of radiocarbon dating as a cross-check.",
+      "explanation_zh": "全文围绕纹泥如何形成、如何计数与对比以建立年表，以及层中还封存了哪些物质展开。选项C只是次要细节，选项E文中未提，选项F与把放射性碳测年作为交叉检验的说法相矛盾。"
+    }
+  ]
+}

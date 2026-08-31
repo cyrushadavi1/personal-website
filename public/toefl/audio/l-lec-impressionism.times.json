@@ -1,0 +1,97 @@
+{
+ "id": "l-lec-impressionism",
+ "duration": 294.33,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 4.525,
+   "end": 38.2
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 38.48,
+   "end": 67.53
+  },
+  {
+   "line": 2,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 68.08,
+   "end": 72.305
+  },
+  {
+   "line": 3,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 72.855,
+   "end": 97.905
+  },
+  {
+   "line": 4,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 98.185,
+   "end": 109.085
+  },
+  {
+   "line": 5,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 109.365,
+   "end": 154.915
+  },
+  {
+   "line": 6,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 155.195,
+   "end": 194.295
+  },
+  {
+   "line": 7,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 194.845,
+   "end": 200.87
+  },
+  {
+   "line": 8,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 201.42,
+   "end": 230.32
+  },
+  {
+   "line": 9,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 230.6,
+   "end": 253.45
+  },
+  {
+   "line": 10,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 253.73,
+   "end": 261.905
+  },
+  {
+   "line": 11,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 262.455,
+   "end": 264.63
+  },
+  {
+   "line": 12,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 265.18,
+   "end": 293.73
+  }
+ ]
+}

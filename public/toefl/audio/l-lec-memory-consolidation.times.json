@@ -1,0 +1,104 @@
+{
+ "id": "l-lec-memory-consolidation",
+ "duration": 298.16,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 4.4,
+   "end": 31.475
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 31.755,
+   "end": 53.33
+  },
+  {
+   "line": 2,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 53.61,
+   "end": 76.36
+  },
+  {
+   "line": 3,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 76.64,
+   "end": 99.99
+  },
+  {
+   "line": 4,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 100.54,
+   "end": 106.64
+  },
+  {
+   "line": 5,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 107.19,
+   "end": 135.465
+  },
+  {
+   "line": 6,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 135.745,
+   "end": 155.845
+  },
+  {
+   "line": 7,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 156.125,
+   "end": 182.375
+  },
+  {
+   "line": 8,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 182.925,
+   "end": 188.825
+  },
+  {
+   "line": 9,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 189.375,
+   "end": 206.425
+  },
+  {
+   "line": 10,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 206.705,
+   "end": 235.605
+  },
+  {
+   "line": 11,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 235.885,
+   "end": 263.21
+  },
+  {
+   "line": 12,
+   "speaker": "s1",
+   "label": "Student",
+   "start": 263.76,
+   "end": 268.035
+  },
+  {
+   "line": 13,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 268.585,
+   "end": 297.56
+  }
+ ]
+}

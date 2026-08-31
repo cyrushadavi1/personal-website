@@ -1,0 +1,189 @@
+{
+  "id": "r-silk-road-textiles",
+  "title": "Silk and the Overland Routes",
+  "topic": "arts",
+  "difficulty": 1,
+  "paragraphs": [
+    "Silk begins with a caterpillar. The domesticated silkworm, Bombyx mori, feeds only on the leaves of the white mulberry tree, and after about a month of eating it spins a cocoon from a single continuous filament that may run more than eight hundred meters. To keep that filament whole, the cocoon is heated before the moth can emerge and break it. The cocoons are then softened in hot water, and workers catch the loose ends of several filaments at once and wind them together onto a reel. The resulting thread is strong, light, and takes dye more readily than wool or linen. Chinese farmers were producing silk in this way at least four thousand years ago.",
+    "For centuries the process was known only in China, and the Chinese state had every reason to keep matters that way. Silk was not merely a luxury fabric. Bolts of plain silk served as a form of currency: soldiers on the northwestern frontier were paid in them, taxes could be settled in them, and officials used them as gifts to foreign rulers. Because a bolt was light and durable, it was far easier to carry across the deserts of Central Asia than an equivalent value in coin. Traders who accepted silk in payment at one oasis could spend it at the next, and in this way the fabric moved westward long before the knowledge of making it did.",
+    "That knowledge escaped eventually, and the stories of its escape were told long afterward. One account, recorded in Khotan among the oasis kingdoms south of the Taklamakan Desert, describes a Chinese princess sent to marry the local king who hid silkworm eggs and mulberry seeds in her headdress, knowing that the border guards would not search it. Another, written down in Byzantium, credits two monks who carried eggs to the emperor Justinian inside hollow canes in the sixth century. Neither story can be verified. What the archaeological and textual record does show is that silk weaving was established in Central Asia by the fourth century and in the eastern Mediterranean by the sixth.",
+    "Moving the silkworm was only part of the problem. A working silk industry required mulberry trees, which take years to grow and will not thrive in every climate; workers trained to reel filaments without breaking them; and looms able to handle a thread far finer than wool. Each of these had to be acquired separately, and each took time. The regions that succeeded were those that already possessed strong weaving traditions and merchants wealthy enough to wait. Sogdian towns such as Samarkand, sitting astride the overland routes, were especially well placed, and by the seventh century Sogdian workshops were exporting silks of their own.",
+    "The new producers did not simply copy Chinese cloth. Sogdian and Persian weavers worked in a different structure, the weft-faced compound weave, which suited the drawlooms they already used and produced bold, strongly repeating designs. Their characteristic motif was the roundel, a circle framed by a ring of pearls and enclosing a confronted pair of animals such as rams, boars, or winged horses. These fabrics traveled east as well as west. Roundel silks have been excavated from tombs in northwestern China, and Chinese workshops of the Tang period began weaving pearl medallions of their own, sometimes replacing the Persian animals with lions or with flowers drawn from Chinese ornament.",
+    "The exchange reached fabrics other than silk as well. Wool and linen weavers in Central Asia and around the Mediterranean adopted the medallion layout for their own cloth, and motifs that had begun as court imagery in one place turned up as border decoration in another. By the ninth century a merchant traveling the overland routes would have encountered textiles whose weave, pattern, and dye came from three different traditions at once. The technology had spread, but so had a shared visual vocabulary, and the second proved harder to trace to any single origin than the first."
+  ],
+  "glossary": [
+    {
+      "term": "Bombyx mori",
+      "def_en": "the domesticated silkworm moth, whose caterpillar spins the cocoon used for silk",
+      "def_zh": "家蚕，其幼虫吐丝结茧，用于生产丝绸"
+    },
+    {
+      "term": "weft-faced compound weave",
+      "def_en": "a weave structure in which the horizontal threads cover the vertical ones, used for bold repeating patterns",
+      "def_zh": "纬面复合组织，一种由横向纬线覆盖纵向经线的织法，适合织出醒目的重复图案"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, why is the cocoon heated before the moth emerges?",
+      "options": [
+        "To kill parasites carried in on the mulberry leaves.",
+        "To make the filament absorb dye more evenly.",
+        "To keep the moth from breaking the continuous filament.",
+        "To loosen the cocoon from the mulberry branch."
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph states that the cocoon is heated to keep the filament whole, since an emerging moth would break it. Dyeing is mentioned later and concerns the finished thread, not the cocoon.",
+      "explanation_zh": "该段说加热是为了保持丝的完整，因为蚕蛾破茧而出会弄断长丝。染色在后文提到，说的是成丝而不是茧。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 1,
+      "stem": "The word \"readily\" in paragraph 1 is closest in meaning to",
+      "highlight": "readily",
+      "options": [
+        "easily",
+        "slowly",
+        "evenly",
+        "rarely"
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence praises silk thread by comparison with wool and linen, so the word marks an advantage, meaning without difficulty. Evenly describes quality of coverage, which the sentence does not discuss.",
+      "explanation_zh": "该句把丝线与羊毛和亚麻作比较以突出其优点，所以该词表示“不费力地”。“均匀地”说的是上色效果，原句并未涉及。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, silk worked well as a currency in Central Asia because",
+      "options": [
+        "it could be exchanged only at official frontier posts",
+        "it was light and durable enough to be carried long distances",
+        "it was produced at every oasis along the routes",
+        "foreign rulers refused to accept Chinese coins"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph says a bolt was light and durable and therefore easier to carry across the deserts than the same value in coin. Choice 2 contradicts the point that production was confined to China.",
+      "explanation_zh": "该段说一匹绢又轻又耐用，因此比同等价值的钱币更便于穿越沙漠携带。选项三与“生产仅限于中国”这一点矛盾。"
+    },
+    {
+      "id": "q4",
+      "type": "rhetorical-purpose",
+      "paragraph": 3,
+      "stem": "Why does the author state that neither story can be verified?",
+      "options": [
+        "To argue that silk weaving never actually reached Central Asia.",
+        "To suggest that the Khotanese account is more reliable than the Byzantine one.",
+        "To explain why the emperor Justinian became interested in silk.",
+        "To separate the legends from the evidence given in the following sentence."
+      ],
+      "answer": 3,
+      "explanation_en": "The short sentence marks a turn from the two traditional stories to what the archaeological and textual record actually shows. Choice 1 is wrong because the author treats both stories as equally unverifiable.",
+      "explanation_zh": "这一短句标志着从两则传说转向考古与文献记录实际能证明的内容。选项二不对，作者把两则故事一视同仁，都认为无法证实。"
+    },
+    {
+      "id": "q5",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3?",
+      "highlight": "What the archaeological and textual record does show is that silk weaving was established in Central Asia by the fourth century and in the eastern Mediterranean by the sixth.",
+      "options": [
+        "Evidence indicates that silk was being woven in Central Asia by the fourth century and near the Mediterranean by the sixth.",
+        "Records from Central Asia and the Mediterranean describe the theft of silkworm eggs.",
+        "Silk weaving spread from the Mediterranean into Central Asia over two centuries.",
+        "Archaeologists have found no evidence of silk weaving before the sixth century."
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence reports what the physical and written evidence establishes: two regions and two dates. Choice 2 reverses the direction of the spread, which ran from east to west.",
+      "explanation_zh": "原句陈述实物和文献证据所确立的内容：两个地区、两个时间点。选项三把传播方向弄反了，实际是自东向西。"
+    },
+    {
+      "id": "q6",
+      "type": "vocabulary",
+      "paragraph": 4,
+      "stem": "The word \"thrive\" in paragraph 4 is closest in meaning to",
+      "highlight": "thrive",
+      "options": [
+        "grow well",
+        "be planted",
+        "be harvested",
+        "spread quickly"
+      ],
+      "answer": 0,
+      "explanation_en": "The clause explains that mulberry trees take years to grow and do not do well everywhere, so the word concerns healthy growth. Trees can be planted in an unsuitable climate, which is why being planted is not the point.",
+      "explanation_zh": "该分句说桑树要长很多年，而且并非在任何气候下都长得好，所以该词指长势良好。树在不适宜的气候里也能种下，因此“被种植”不是重点。"
+    },
+    {
+      "id": "q7",
+      "type": "insert-text",
+      "paragraph": 4,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 4. Where would the sentence best fit?",
+      "insertSentence": "A stolen batch of eggs was therefore of little use on its own.",
+      "insertAfter": [
+        "Moving the silkworm was only part of the problem.",
+        "A working silk industry required mulberry trees, which take years to grow and will not thrive in every climate; workers trained to reel filaments without breaking them; and looms able to handle a thread far finer than wool.",
+        "Each of these had to be acquired separately, and each took time.",
+        "The regions that succeeded were those that already possessed strong weaving traditions and merchants wealthy enough to wait."
+      ],
+      "answer": 2,
+      "explanation_en": "The word \"therefore\" requires the full list of separate requirements and the statement that each took time to come first. Placed after the opening sentence, the conclusion would arrive before the reasons that support it.",
+      "explanation_zh": "“因此”要求先给出各项独立条件的列举以及每项都需要时间的说明。若放在首句之后，结论就出现在支持它的理由之前。"
+    },
+    {
+      "id": "q8",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "According to paragraph 5, all of the following are true of Sogdian and Persian silks EXCEPT",
+      "options": [
+        "They were made using a weft-faced compound weave.",
+        "They often showed circles framed by rings of pearls.",
+        "Examples have been found in tombs in northwestern China.",
+        "They reproduced Chinese designs without alteration."
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph opens by saying the new producers did not simply copy Chinese cloth, and then describes their own weave and motifs. The other three statements appear directly in the paragraph.",
+      "explanation_zh": "该段开头就说新的生产者并非简单模仿中国织物，随后描述了他们自己的织法和纹样。其余三项在段中都有直接陈述。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 6,
+      "stem": "Paragraph 6 suggests that by the ninth century",
+      "options": [
+        "silk weaving had been given up in China",
+        "textile designs had circulated so widely that their origins were hard to identify",
+        "wool and linen had replaced silk on the overland routes",
+        "merchants no longer traveled the full length of the routes"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph describes cloth combining three traditions at once and says the shared visual vocabulary was harder to trace to a single origin than the technology. Choice 2 mistakes the spread of a design layout to other fabrics for the replacement of silk.",
+      "explanation_zh": "该段描述一件织物同时融合三种传统，并说共享的视觉语汇比技术更难追溯到单一源头。选项三把纹样布局向其他织物的扩散误解为丝绸被取代。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Silk making began in China and spread westward along the overland trade routes, altering weaving traditions along the way.",
+      "options": [
+        "Bombyx mori caterpillars will feed only on the leaves of the white mulberry tree.",
+        "Because silk was light, durable, and valuable, the fabric traveled west as a form of money long before the craft itself moved.",
+        "Chinese officials eventually published detailed instructions for silk production in order to encourage foreign workshops.",
+        "Setting up production elsewhere required trees, trained reelers, and suitable looms, so it succeeded first where weaving traditions were already strong.",
+        "Excavations in the Taklamakan Desert have confirmed the story of the Khotanese princess.",
+        "Western workshops developed their own weaves and motifs, and those designs then spread back east and into other fabrics."
+      ],
+      "answer": [
+        1,
+        3,
+        5
+      ],
+      "explanation_en": "The three keys trace the fabric's movement, the conditions needed to transfer the craft, and the two-way exchange of design that followed. Choice 2 contradicts the Chinese effort to keep the process secret, choice 4 contradicts the statement that neither story can be verified, and choice 0 is a minor biological detail.",
+      "explanation_zh": "三个正确选项依次概括织物的西传、技术转移所需的条件，以及随后双向的纹样交流。选项三与中国保密的做法矛盾，选项五与“两则故事都无法证实”矛盾，选项一只是次要的生物学细节。"
+    }
+  ]
+}

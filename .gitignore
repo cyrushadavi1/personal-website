@@ -4,3 +4,4 @@ dist/
 .DS_Store
 website_video.mp4
 .impeccable/
+.venv-tts/

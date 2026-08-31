@@ -1,0 +1,189 @@
+{
+  "id": "r-seed-dispersal",
+  "title": "How Plants Move Their Seeds",
+  "topic": "life-science",
+  "difficulty": 1,
+  "paragraphs": [
+    "A flowering plant spends its entire life in one place, but its offspring must not. Seeds that fall directly beneath the parent land in deep shade, compete with the parent and with one another for water and minerals, and are easily found by the insects and fungi that specialize on that species. Seeds that travel even a short distance escape most of these hazards, and a few that travel a long distance may reach ground the species has never occupied. Dispersal is therefore not an incidental feature of seed plants but a central part of their reproductive strategy. Three broad methods have evolved: transport by wind, transport by water, and transport by animals. Each carries a characteristic set of advantages and costs.",
+    "Wind dispersal is the simplest of the three, because it requires no partner. The plant produces seeds light enough to be carried by moving air, usually with structures that slow their fall. Dandelion seeds hang beneath a parachute of fine bristles, and maple seeds carry a single stiff wing, called a samara, that makes them spin as they descend. Orchid seeds are so minute, sometimes weighing less than a millionth of a gram, that ordinary breezes lift them thousands of meters into the air. The advantage of the method is reach at very low cost per seed. The cost is precision, since the wind carries a seed wherever the wind happens to be going. Most seeds land on rock, on water, or on ground already occupied, and wind-dispersed plants compensate by producing enormous numbers of tiny seeds with little stored food.",
+    "Water dispersal is available only to plants that grow beside water or in it, and it depends on seeds that float and resist soaking. The coconut is the familiar example, since a fibrous husk traps air while a waterproof shell protects the embryo and a large supply of stored food during a voyage that may last several months. Mangrove seedlings drop from the parent already germinated and drift upright until a root touches mud. The advantage of water dispersal is distance, and ocean currents have carried coastal species from one continent to another. The cost is that the route is fixed. A river or a current delivers seeds only to places downstream, and a seed that lands in open ocean, or on a shore of the wrong kind, is lost.",
+    "Animal dispersal works in two quite different ways. In the first, the plant surrounds its seeds with sugary, brightly colored flesh, and an animal eats the fruit and later deposits the seeds in its droppings, often far away and in a package of fertilizer. The seed coat of such species is tough enough to survive digestion, and in some plants germination will not occur at all until the coat has been worn down inside an animal gut. In the second, the seed carries hooks, barbs, or a sticky coating and attaches itself to fur or feathers without offering any reward at all. The burs of burdock, which inspired the design of hook-and-loop fasteners, are carried until the animal grooms them off. A third variation involves animals that bury seeds for later use, since squirrels and jays recover most of what they store but the seeds they forget are left at a favorable depth.",
+    "The great advantage of animal dispersal is that it is directed rather than random. Fruit-eating birds move between patches of forest and drop seeds where perches exist, which is where other plants already grow well. Buried seeds are placed at the depth that suits germination. The cost is expense and dependence. Fleshy fruit is metabolically costly to produce, and the plant must produce it in the season when its dispersers are present. A species that relies on a single kind of animal is vulnerable if that animal declines, and several tropical trees with very large fruits now have almost no dispersers, apparently because the large mammals that once ate them are extinct.",
+    "No single method is best. Wind favors quantity over placement, water favors distance over control, and animals favor placement over independence. Many species hedge by combining strategies, and a few produce two kinds of seed on the same plant, one heavy and one light. The method a species uses is a good predictor of where it can be found, since wind dispersal dominates in open and disturbed habitats, water dispersal along coasts and rivers, and animal dispersal in dense forest, where still air makes wind unreliable and fruit-eating animals are abundant."
+  ],
+  "glossary": [
+    {
+      "term": "samara",
+      "def_en": "a dry fruit with a flat wing of tissue that makes it spin and slows its fall through the air",
+      "def_zh": "翅果：带有扁平翅状组织的干果，下落时会旋转，从而减慢下降速度。"
+    },
+    {
+      "term": "seed coat",
+      "def_en": "the hard outer covering that protects the embryo inside a seed",
+      "def_zh": "种皮：包裹并保护种子内胚的坚硬外层。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, what is one disadvantage for seeds that land directly beneath the parent plant?",
+      "options": [
+        "They are easily found by pests that specialize on that species.",
+        "They germinate before the growing season has begun.",
+        "They are too heavy to be lifted by the wind.",
+        "They receive too much direct sunlight."
+      ],
+      "answer": 0,
+      "explanation_en": "Paragraph 1 lists deep shade, competition, and discovery by specialized insects and fungi. Too much sunlight is the opposite of the deep shade the paragraph describes.",
+      "explanation_zh": "第一段列出的是浓荫、竞争，以及被专食该物种的昆虫和真菌轻易找到。阳光过强与段落所说的浓荫正好相反。"
+    },
+    {
+      "id": "q2",
+      "type": "rhetorical-purpose",
+      "paragraph": 2,
+      "stem": "Why does the author mention orchid seeds in paragraph 2?",
+      "options": [
+        "To show that some wind-dispersed seeds are too small to germinate",
+        "To illustrate how far ordinary breezes can carry extremely small seeds",
+        "To contrast wind dispersal with dispersal by water",
+        "To explain why orchids are uncommon in open habitats"
+      ],
+      "answer": 1,
+      "explanation_en": "The orchid example follows the claim that wind dispersal offers great reach, and its weight and distance figures illustrate that reach. The paragraph never says that small seeds fail to germinate.",
+      "explanation_zh": "兰花的例子紧跟在“风传播覆盖范围极广”这一说法之后，用重量和距离的数字加以说明。该段从未说小种子无法萌发。"
+    },
+    {
+      "id": "q3",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"minute\" in paragraph 2 is closest in meaning to",
+      "highlight": "minute",
+      "options": [
+        "brief",
+        "fragile",
+        "tiny",
+        "numerous"
+      ],
+      "answer": 2,
+      "explanation_en": "The word is explained immediately by the weight given, less than a millionth of a gram, so it refers to size. \"Brief\" would refer to time, which is not at issue here.",
+      "explanation_zh": "该词紧接着就由“不到百万分之一克”的重量加以说明，因此指的是体积大小。brief 指时间短，与此处无关。"
+    },
+    {
+      "id": "q4",
+      "type": "factual",
+      "paragraph": 3,
+      "stem": "According to paragraph 3, what protects the embryo of a coconut during a long voyage?",
+      "options": [
+        "A parachute of fine bristles",
+        "A waterproof shell",
+        "A sticky outer coating",
+        "A root that grows before the seed lands"
+      ],
+      "answer": 1,
+      "explanation_en": "Paragraph 3 says the husk traps air while a waterproof shell protects the embryo and its stored food. The early root belongs to the mangrove example in the next sentence.",
+      "explanation_zh": "第三段说纤维外壳保存空气，而防水的硬壳保护胚和储存的养分。提前长出的根属于下一句中的红树林例子。"
+    },
+    {
+      "id": "q5",
+      "type": "negative-factual",
+      "paragraph": 4,
+      "stem": "Paragraph 4 mentions all of the following ways that animals move seeds EXCEPT",
+      "options": [
+        "eating fruit and depositing the seeds in droppings",
+        "carrying seeds that cling to fur or feathers",
+        "burying seeds and failing to recover all of them",
+        "gathering seeds as material for building nests"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph describes fleshy fruit, hooked or sticky seeds, and seeds buried and forgotten. Nest building is never mentioned.",
+      "explanation_zh": "该段描述的是肉质果实、带钩或黏性的种子，以及被埋藏后遗忘的种子。筑巢材料从未被提及。"
+    },
+    {
+      "id": "q6",
+      "type": "sentence-simplification",
+      "paragraph": 4,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 4?",
+      "highlight": "The seed coat of such species is tough enough to survive digestion, and in some plants germination will not occur at all until the coat has been worn down inside an animal gut.",
+      "options": [
+        "These seeds survive digestion, and some of them sprout only after a gut has worn the coat down.",
+        "Seeds with tough coats are less likely to be eaten than seeds with thin coats.",
+        "Animals prefer fruit whose seeds have coats that are easily digested.",
+        "A seed is prevented from germinating whenever it passes through an animal."
+      ],
+      "answer": 0,
+      "explanation_en": "The sentence makes two points: the coat withstands digestion, and for some plants digestion is required before germination. The last choice reverses the second point.",
+      "explanation_zh": "该句包含两层意思：种皮能耐受消化；对某些植物而言，必须经过消化才能萌发。最后一个选项把第二层意思弄反了。"
+    },
+    {
+      "id": "q7",
+      "type": "reference",
+      "paragraph": 5,
+      "stem": "The word \"them\" in paragraph 5 refers to",
+      "highlight": "them",
+      "options": [
+        "dispersers",
+        "several tropical trees",
+        "very large fruits",
+        "large mammals"
+      ],
+      "answer": 2,
+      "explanation_en": "The clause says the mammals once ate them, and what mammals eat is the fruit, so the pronoun points back to the very large fruits. The trees themselves were not eaten.",
+      "explanation_zh": "从句说这些哺乳动物过去吃它们，而哺乳动物吃的是果实，因此代词指的是那些很大的果实。树本身并不是被吃掉的对象。"
+    },
+    {
+      "id": "q8",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 implies that a plant whose fruit ripens when its usual dispersers are absent would",
+      "options": [
+        "produce seeds with hooks instead of flesh",
+        "gain little in return for the energy invested in the fruit",
+        "be dispersed by water instead",
+        "produce a larger number of smaller seeds"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph stresses that fleshy fruit is costly and must be produced when dispersers are present, so fruit produced at the wrong time is wasted effort. Switching to hooks or to water is a change in strategy the paragraph never suggests a plant can make within its lifetime.",
+      "explanation_zh": "该段强调肉质果实代价高昂，必须在传播者出现的季节结出，因此时机不对的果实就是白费力气。改用钩刺或水传播是策略上的转变，段落并未暗示植物能在一生中做出这种改变。"
+    },
+    {
+      "id": "q9",
+      "type": "insert-text",
+      "paragraph": 6,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 6. Where would the sentence best fit?",
+      "insertSentence": "The heavy seeds stay close to the parent, while the light ones travel.",
+      "insertAfter": [
+        "No single method is best.",
+        "Wind favors quantity over placement, water favors distance over control, and animals favor placement over independence.",
+        "Many species hedge by combining strategies, and a few produce two kinds of seed on the same plant, one heavy and one light.",
+        "The method a species uses is a good predictor of where it can be found, since wind dispersal dominates in open and disturbed habitats, water dispersal along coasts and rivers, and animal dispersal in dense forest, where still air makes wind unreliable and fruit-eating animals are abundant."
+      ],
+      "answer": 2,
+      "explanation_en": "The sentence explains the two kinds of seed just mentioned, so it belongs immediately after that mention. Placed at the end, it would interrupt the closing generalization about habitats.",
+      "explanation_zh": "该句解释的正是刚刚提到的两种种子，因此应紧跟其后。若放在最后，就会打断关于生境的总结性概括。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Flowering plants move their seeds away from the parent by wind, by water, or by animals, and each method involves a trade-off.",
+      "options": [
+        "Wind dispersal is cheap and far-reaching but imprecise, so wind-dispersed plants make very large numbers of tiny seeds.",
+        "Water dispersal can carry seeds between continents, but currents fix the route and most seeds are lost.",
+        "Animal dispersal places seeds in favorable sites but is costly to the plant and depends on the animals involved.",
+        "Orchids and dandelions produce the largest seeds of any flowering plants.",
+        "Most plants gave up wind dispersal once fruit-eating animals had evolved.",
+        "Seeds buried by squirrels and jays almost never germinate."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage devotes one section to each method and states the benefit and the cost of each. Orchid and dandelion seeds are described as extremely small, no historical replacement of wind dispersal is mentioned, and forgotten buried seeds are said to germinate well.",
+      "explanation_zh": "文章为每种方式各设一段，并说明其利与弊。兰花和蒲公英的种子被描述为极小，文中没有提到风传播被取代的历史过程，被遗忘的埋藏种子反而能顺利萌发。"
+    }
+  ]
+}

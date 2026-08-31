@@ -1,0 +1,90 @@
+{
+ "id": "l-lec-pueblo-architecture",
+ "duration": 268.6,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 4.45,
+   "end": 36.225
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 36.505,
+   "end": 54.08
+  },
+  {
+   "line": 2,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 54.36,
+   "end": 75.71
+  },
+  {
+   "line": 3,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 76.26,
+   "end": 81.685
+  },
+  {
+   "line": 4,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 82.235,
+   "end": 118.06
+  },
+  {
+   "line": 5,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 118.34,
+   "end": 153.515
+  },
+  {
+   "line": 6,
+   "speaker": "s2",
+   "label": "Female student",
+   "start": 154.065,
+   "end": 159.54
+  },
+  {
+   "line": 7,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 160.09,
+   "end": 185.74
+  },
+  {
+   "line": 8,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 186.02,
+   "end": 216.045
+  },
+  {
+   "line": 9,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 216.595,
+   "end": 219.47
+  },
+  {
+   "line": 10,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 220.02,
+   "end": 241.37
+  },
+  {
+   "line": 11,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 241.65,
+   "end": 268.0
+  }
+ ]
+}

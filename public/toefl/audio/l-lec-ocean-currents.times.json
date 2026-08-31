@@ -1,0 +1,104 @@
+{
+ "id": "l-lec-ocean-currents",
+ "duration": 303.2,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 4.65,
+   "end": 35.95
+  },
+  {
+   "line": 1,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 36.23,
+   "end": 48.43
+  },
+  {
+   "line": 2,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 48.71,
+   "end": 82.91
+  },
+  {
+   "line": 3,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 83.46,
+   "end": 87.585
+  },
+  {
+   "line": 4,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 88.135,
+   "end": 112.36
+  },
+  {
+   "line": 5,
+   "speaker": "s2",
+   "label": "Female student",
+   "start": 112.91,
+   "end": 118.46
+  },
+  {
+   "line": 6,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 119.01,
+   "end": 157.16
+  },
+  {
+   "line": 7,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 157.44,
+   "end": 189.19
+  },
+  {
+   "line": 8,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 189.47,
+   "end": 205.17
+  },
+  {
+   "line": 9,
+   "speaker": "s1",
+   "label": "Male student",
+   "start": 205.72,
+   "end": 209.12
+  },
+  {
+   "line": 10,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 209.67,
+   "end": 253.995
+  },
+  {
+   "line": 11,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 254.275,
+   "end": 278.825
+  },
+  {
+   "line": 12,
+   "speaker": "s2",
+   "label": "Female student",
+   "start": 279.375,
+   "end": 282.525
+  },
+  {
+   "line": 13,
+   "speaker": "prof",
+   "label": "Professor",
+   "start": 283.075,
+   "end": 302.6
+  }
+ ]
+}

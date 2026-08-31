@@ -1,0 +1,132 @@
+{
+ "id": "l-con-library-research",
+ "duration": 180.075,
+ "lines": [
+  {
+   "line": 0,
+   "speaker": "student",
+   "label": "Student",
+   "start": 6.5,
+   "end": 13.25
+  },
+  {
+   "line": 1,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 13.8,
+   "end": 17.525
+  },
+  {
+   "line": 2,
+   "speaker": "student",
+   "label": "Student",
+   "start": 18.075,
+   "end": 31.825
+  },
+  {
+   "line": 3,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 32.375,
+   "end": 34.475
+  },
+  {
+   "line": 4,
+   "speaker": "student",
+   "label": "Student",
+   "start": 35.025,
+   "end": 43.325
+  },
+  {
+   "line": 5,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 43.875,
+   "end": 58.375
+  },
+  {
+   "line": 6,
+   "speaker": "student",
+   "label": "Student",
+   "start": 58.925,
+   "end": 61.775
+  },
+  {
+   "line": 7,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 62.325,
+   "end": 82.025
+  },
+  {
+   "line": 8,
+   "speaker": "student",
+   "label": "Student",
+   "start": 82.575,
+   "end": 86.65
+  },
+  {
+   "line": 9,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 87.2,
+   "end": 102.725
+  },
+  {
+   "line": 10,
+   "speaker": "student",
+   "label": "Student",
+   "start": 103.275,
+   "end": 105.925
+  },
+  {
+   "line": 11,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 106.475,
+   "end": 121.375
+  },
+  {
+   "line": 12,
+   "speaker": "student",
+   "label": "Student",
+   "start": 121.925,
+   "end": 125.1
+  },
+  {
+   "line": 13,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 125.65,
+   "end": 146.075
+  },
+  {
+   "line": 14,
+   "speaker": "student",
+   "label": "Student",
+   "start": 146.625,
+   "end": 150.575
+  },
+  {
+   "line": 15,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 151.125,
+   "end": 166.725
+  },
+  {
+   "line": 16,
+   "speaker": "student",
+   "label": "Student",
+   "start": 167.275,
+   "end": 171.5
+  },
+  {
+   "line": 17,
+   "speaker": "librarian",
+   "label": "Librarian",
+   "start": 172.05,
+   "end": 179.475
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+  "id": "l-con-internship-advisor",
+  "kind": "conversation",
+  "title": "Two Offers, One Summer",
+  "topic": "campus",
+  "difficulty": 2,
+  "setting_en": "In the career services office.",
+  "setting_zh": "在就业指导中心。",
+  "speakers": [
+    {
+      "id": "student",
+      "label_en": "Student",
+      "label_zh": "学生",
+      "voice": "female-b"
+    },
+    {
+      "id": "advisor",
+      "label_en": "Career advisor",
+      "label_zh": "就业顾问",
+      "voice": "male-a"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "student",
+      "text": "Thanks for fitting me in. I have two summer offers, and I have to answer both by Friday. I've been going back and forth all week."
+    },
+    {
+      "speaker": "advisor",
+      "text": "Okay. Let's lay them out. What's the first one?"
+    },
+    {
+      "speaker": "student",
+      "text": "A paid internship at a hospital network, in their data analytics group. Ten weeks, twenty two dollars an hour, mostly cleaning and reporting on patient scheduling data."
+    },
+    {
+      "speaker": "advisor",
+      "text": "And the second?"
+    },
+    {
+      "speaker": "student",
+      "text": "A research position in Professor Okafor's lab, on the sleep and cognition study. Unpaid. Well, there's a small housing stipend, twelve hundred dollars for the whole summer, but that's it."
+    },
+    {
+      "speaker": "advisor",
+      "text": "And what do you want to be doing in four years?"
+    },
+    {
+      "speaker": "student",
+      "text": "That's the problem. I think a doctoral program in cognitive science, but I'm not certain, and my parents keep pointing out that the hospital pays real money."
+    },
+    {
+      "speaker": "advisor",
+      "text": "They're not wrong about that. Let's be concrete, though. Ten weeks at twenty two dollars, full time, is around eight thousand eight hundred before tax. Versus twelve hundred. So the gap is real, roughly seven thousand dollars."
+    },
+    {
+      "speaker": "student",
+      "text": "When you say it like that it sounds obvious."
+    },
+    {
+      "speaker": "advisor",
+      "text": "Does it? I'd wait a minute on that. Money is the easiest thing to compare, which is exactly why people let it decide by default. Tell me what you'd actually do in the lab. Would you be running participants, or would you be entering data?"
+    },
+    {
+      "speaker": "student",
+      "text": "Both, I think. Professor Okafor said I'd run the overnight sessions with a graduate student, and last year's undergraduate got a conference poster out of it."
+    },
+    {
+      "speaker": "advisor",
+      "text": "That's the part that matters. A poster with your name on it, and a professor who has watched you work for ten weeks and can write about it in detail, that's the currency doctoral admissions runs on. A hospital manager's letter saying you were reliable with spreadsheets is fine, but every applicant has one."
+    },
+    {
+      "speaker": "student",
+      "text": "So you're telling me to take the lab."
+    },
+    {
+      "speaker": "advisor",
+      "text": "I'm telling you what each one buys, which isn't the same thing. If you're not sure about the doctorate, the hospital job isn't a wasted summer either. Health analytics is growing, and that experience reads well for a master's program or a job. The real question is how uncertain you are."
+    },
+    {
+      "speaker": "student",
+      "text": "Pretty uncertain. That's why I've been stuck."
+    },
+    {
+      "speaker": "advisor",
+      "text": "Then here's a practical thought. That seven thousand dollars, can you cover it? Because if you'd be borrowing to take the lab position, that changes things, and I don't want to romanticize research at your expense."
+    },
+    {
+      "speaker": "student",
+      "text": "I'd have to work weekends. There's a cafe near campus that hires students in the summer."
+    },
+    {
+      "speaker": "advisor",
+      "text": "That's doable, but be honest about the overnight sessions. If you're up all night with participants and then working Saturday and Sunday, you'll be exhausted by July, and exhausted is when people do bad work."
+    },
+    {
+      "speaker": "student",
+      "text": "Okay, that's fair. Could I ask Professor Okafor if the stipend has any flexibility?"
+    },
+    {
+      "speaker": "advisor",
+      "text": "Absolutely, and do it today, not Thursday night. Ask whether there's departmental summer funding, most departments have a small pool. Then come back and see me."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student go to the career services office?",
+      "options": [
+        "To ask for help finding a paid summer position",
+        "To get help deciding between two summer offers",
+        "To request a letter of recommendation for a doctoral program",
+        "To complain that a research position is unpaid"
+      ],
+      "answer": 1,
+      "explanation_en": "She says she has two summer offers, must answer both by Friday, and has been going back and forth. She is not looking for a position, and no recommendation letter is requested.",
+      "explanation_zh": "她说自己有两个暑期录用，周五前必须答复，而且反复犹豫了一周。她不是来找工作的，也没有请求推荐信。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "What does the advisor say makes the research position valuable for doctoral admissions?",
+      "options": [
+        "The overnight sessions demonstrate physical stamina",
+        "A conference poster and a detailed letter from a professor who has observed her work",
+        "The stipend can be listed as competitive funding on an application",
+        "Cognitive science programs require prior hospital experience"
+      ],
+      "answer": 1,
+      "explanation_en": "He identifies a poster with her name on it plus a professor who can write in detail as \"the currency doctoral admissions runs on.\" He contrasts this with a generic letter about spreadsheet reliability.",
+      "explanation_zh": "他指出署有她名字的会议海报，加上一位观察了她十周的教授写的详细推荐信，才是博士申请真正看重的东西，并与一封泛泛称赞“表格做得可靠”的信作对比。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. Why does the advisor say this:",
+      "replayLine": 9,
+      "options": [
+        "To correct an arithmetic mistake the student has made",
+        "To resist letting the easiest comparison decide the question",
+        "To indicate that the salary figure he gave was only an estimate",
+        "To suggest that the student should consult her parents again"
+      ],
+      "answer": 1,
+      "explanation_en": "\"Does it? I'd wait a minute on that\" pushes back on the student's conclusion that the choice is obvious, and he immediately explains that money is easy to compare and therefore tends to decide by default. He is not questioning his own numbers.",
+      "explanation_zh": "“是吗？我倒觉得先别急着下结论”是在反驳学生“答案显而易见”的想法，紧接着他解释说钱最容易比较，所以往往会不知不觉地替人做决定。他并不是在质疑自己算的数字。"
+    },
+    {
+      "id": "q4",
+      "type": "attitude",
+      "stem": "What is the advisor's attitude toward the hospital internship?",
+      "options": [
+        "He regards it as a wasted summer for anyone interested in research",
+        "He considers it clearly superior because of the salary",
+        "He thinks it is a reasonable choice, particularly given her uncertainty",
+        "He doubts that health analytics offers real career prospects"
+      ],
+      "answer": 2,
+      "explanation_en": "He says the hospital job would not be a wasted summer, that health analytics is growing, and that the experience reads well for a master's program or a job. He declines to declare either option superior, framing the real question as how uncertain she is.",
+      "explanation_zh": "他说医院的工作并不算浪费一个暑假，健康数据分析是成长中的领域，这段经历对申请硕士或找工作都有帮助。他不肯直接说哪个更好，而是把问题归结为她到底有多不确定。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "stem": "What does the advisor imply about the student's plan to work weekends at a cafe?",
+      "options": [
+        "It would violate the terms of her housing stipend",
+        "It would leave her better off financially than the internship",
+        "Cafes rarely hire students for the summer months",
+        "It may be unsustainable when combined with overnight lab sessions"
+      ],
+      "answer": 3,
+      "explanation_en": "He calls it doable but warns that overnight sessions plus Saturday and Sunday shifts would leave her exhausted by July, which is when people do bad work. He never claims the plan is prohibited or more lucrative.",
+      "explanation_zh": "他说这可行，但提醒她通宵实验加上周六周日打工，到七月就会累垮，而人一累就做不好事。他从没说这违规，也没说这样收入会更高。"
+    }
+  ]
+}

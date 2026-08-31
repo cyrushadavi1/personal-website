@@ -1,0 +1,194 @@
+{
+  "id": "r-bird-navigation",
+  "title": "Compasses and Maps in Bird Migration",
+  "topic": "life-science",
+  "difficulty": 3,
+  "paragraphs": [
+    "A migratory songbird that breeds in northern Europe and winters in central Africa makes the journey alone, at night, and in many species without ever having made it before. Explaining it requires a distinction that is easy to overlook. A compass tells an animal which way is north; a map tells it where it currently is in relation to where it intends to be. A bird with only a compass can hold a heading, which suffices for a first migration if the heading is inherited, but cannot correct for being blown off course. The evidence that birds have compasses is extensive; the evidence for a map remains fragmentary, and the two problems are often conflated.",
+    "The oldest experimental work concerns celestial cues. Birds held in circular cages during the migratory season hop persistently toward one side, and the direction of that restlessness can be measured. Under an artificial planetarium sky, the birds oriented to the projected star pattern rather than the true one, and rotating the projection rotated their heading. Later work showed that they do not memorize constellations but extract the center of rotation of the night sky, learning it as nestlings. Young birds raised under a sky rotating about an arbitrary star treated that star as north. A separate sun compass, which needs an internal clock to correct for the movement of the sun, works by day and can be shifted by holding birds under light cycles offset by several hours.",
+    "Celestial cues are unavailable under heavy cloud, yet birds still orient, and attention has turned to magnetoreception. The avian magnetic compass is not a needle that points north. It responds instead to the inclination of the field, the angle at which field lines meet the surface of the earth, and it distinguishes poleward from equatorward rather than north from south. Reversing the horizontal component of an artificial field leaves the birds' choice of direction unchanged, whereas reversing the vertical component reverses it. Two mechanisms have been proposed, and they are not mutually exclusive.",
+    "The first involves cryptochromes, light-sensitive proteins in the retina in which absorbed photons generate molecule pairs whose chemistry is altered by the surrounding magnetic field. This proposal fits several findings: the compass fails in total darkness, works under blue and green light but not under red, and is disrupted by very weak radiofrequency fields of the kind predicted to interfere with such reactions. The second involves crystals of magnetite, an iron oxide, associated with the upper beak, which could register the intensity of the field as well as its direction. The evidence here is more contested, since anatomical work that once identified magnetite-bearing nerve cells in the beak was later attributed to iron-rich immune cells. Cutting the nerve serving the beak does not abolish compass orientation, but it does impair the ability of some species to detect changes in field intensity.",
+    "The map problem has proved harder. In displacement experiments, birds are captured on migration, carried hundreds or thousands of kilometers, and released. Experienced adults of several species compensate, adopting a heading that would return them to their route, while juveniles on a first migration hold the original heading and arrive in the wrong place. The result implies that adults acquire a map through experience while juveniles use an inherited heading alone. What the adult map consists of is unclear. Gradients of magnetic intensity and inclination could supply coordinates, but they are shallow, irregular, and slowly shifting. Homing pigeons whose olfactory nerves have been cut, or which are raised in filtered air, are severely impaired at returning from unfamiliar sites, which has been taken as evidence for a map based on odor; critics reply that such drastic treatment may disturb motivation instead.",
+    "The cues also interact. Many birds appear to recalibrate one system against another at twilight, when polarized light near the horizon provides a reference independent of both stars and magnetism. Which cue takes precedence when two conflict varies with species, age, season, and even the arrangement of the laboratory conflict, and several prominent experiments have resisted replication. This inconsistency need not indicate poor work. A system with redundant inputs should weight them by their reliability at the moment, and a bird under clear sky and a bird under cloud face different problems.",
+    "The consensus is therefore partial. Birds possess at least three compasses, use them in a flexible hierarchy, and calibrate them against one another. Whether they also possess a true map, and what its coordinates might be, remains open."
+  ],
+  "glossary": [
+    {
+      "term": "magnetoreception",
+      "def_en": "the ability of an animal to detect the magnetic field of the earth and use it for orientation",
+      "def_zh": "磁感受：动物探测地球磁场并利用它来定向的能力。"
+    },
+    {
+      "term": "cryptochrome",
+      "def_en": "a light-sensitive protein found in the eye whose chemical reactions may be affected by magnetic fields",
+      "def_zh": "隐花色素：存在于眼睛中的一种感光蛋白，其化学反应可能受磁场影响。"
+    },
+    {
+      "term": "magnetite",
+      "def_en": "a naturally magnetic iron oxide that forms tiny crystals in the tissues of some animals",
+      "def_zh": "磁铁矿：一种具有天然磁性的氧化铁，在某些动物组织中形成微小晶体。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, what is a bird equipped only with a compass unable to do?",
+      "options": [
+        "Hold a single heading for the length of a migration",
+        "Migrate during the hours of darkness",
+        "Correct its course after it has been blown off it",
+        "Inherit a direction of travel from its parents"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph says a compass allows a bird to hold an inherited heading but not to correct for displacement, which is what a map would provide. Holding a heading is precisely what a compass does allow.",
+      "explanation_zh": "该段说指南针能让鸟保持遗传得来的航向，却无法在被吹离航线后加以修正，那需要地图。保持航向恰恰是指南针能做到的。"
+    },
+    {
+      "id": "q2",
+      "type": "rhetorical-purpose",
+      "paragraph": 2,
+      "stem": "Why does the author mention birds raised under a sky rotating about an arbitrary star?",
+      "options": [
+        "To show that the star compass is learned rather than inherited in detail",
+        "To explain why certain species migrate during the day",
+        "To demonstrate that birds memorize individual constellations",
+        "To question the reliability of experiments done in planetariums"
+      ],
+      "answer": 0,
+      "explanation_en": "The example follows the claim that birds extract the center of rotation of the sky as nestlings, and it shows that whatever star occupies that center is adopted as north. It is offered as support for the planetarium work, not as a challenge to it.",
+      "explanation_zh": "这个例子紧接在“雏鸟通过观察星空旋转来提取旋转中心”之后，说明处在旋转中心的任何一颗星都会被当作北方。它是对天象仪实验的支持，而非质疑。"
+    },
+    {
+      "id": "q3",
+      "type": "factual",
+      "paragraph": 3,
+      "stem": "According to paragraph 3, what happens when the vertical component of an artificial magnetic field is reversed?",
+      "options": [
+        "The birds cease to orient in any direction.",
+        "The birds reverse the direction they prefer.",
+        "The choice the birds make is unaffected.",
+        "The birds switch to celestial cues instead."
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph contrasts the two components: reversing the horizontal one leaves the choice unchanged, while reversing the vertical one reverses it. The choice saying nothing changes describes the horizontal case.",
+      "explanation_zh": "该段对比了两个分量：反转水平分量不改变选择，反转垂直分量则使选择反转。说“毫无变化”的选项描述的是水平分量的情形。"
+    },
+    {
+      "id": "q4",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3?",
+      "highlight": "It responds instead to the inclination of the field, the angle at which field lines meet the surface of the earth, and it distinguishes poleward from equatorward rather than north from south.",
+      "options": [
+        "The compass measures the strength of the field and converts that strength into a heading.",
+        "Birds cannot tell north from south because field lines meet the surface at the same angle everywhere.",
+        "The angle of the magnetic field changes too rapidly for birds to rely on it.",
+        "The compass reads the angle of the field lines and shows which way the pole lies, not which way is north."
+      ],
+      "answer": 3,
+      "explanation_en": "The sentence says the compass uses inclination and yields a poleward or equatorward answer rather than a polarity. The choice about strength substitutes intensity for angle, which is the other property discussed later in the passage.",
+      "explanation_zh": "该句说这种指南针依据磁倾角，给出的是“朝极”或“朝赤道”，而不是南北极性。提到强度的选项把角度换成了强度，那是文章后面才讨论的另一种属性。"
+    },
+    {
+      "id": "q5",
+      "type": "negative-factual",
+      "paragraph": 4,
+      "stem": "According to paragraph 4, all of the following are cited as support for the cryptochrome mechanism EXCEPT",
+      "options": [
+        "the compass does not function in complete darkness",
+        "the compass works under blue and green light but not under red",
+        "very weak radiofrequency fields disrupt the compass",
+        "cutting the nerve that serves the beak abolishes orientation"
+      ],
+      "answer": 3,
+      "explanation_en": "The first three findings are listed in the sentence introducing the cryptochrome evidence. The nerve-cutting result belongs to the discussion of magnetite, and the passage says orientation is not abolished by it.",
+      "explanation_zh": "前三项都列在介绍隐花色素证据的那句话中。切断神经的结果属于磁铁矿部分的讨论，而且文中说这样做并不会消除定向能力。"
+    },
+    {
+      "id": "q6",
+      "type": "inference",
+      "paragraph": 4,
+      "stem": "It can be inferred from paragraph 4 that the magnetite hypothesis",
+      "options": [
+        "has been disproved by the anatomical work described",
+        "rests on weaker evidence than the alternative but has not been ruled out",
+        "accounts for the direction of the field but not for its intensity",
+        "is now accepted by most researchers as the only mechanism"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph calls the evidence more contested and reports a failed anatomical claim, yet it also reports that beak nerves matter for detecting intensity, so the hypothesis survives in weakened form. Saying it has been disproved goes further than the text allows.",
+      "explanation_zh": "该段称这方面的证据争议更大，并提到一项解剖学主张未能成立，但同时指出喙部神经与探测磁场强度有关，因此该假说仍以削弱的形式保留下来。说它已被推翻超出了原文的说法。"
+    },
+    {
+      "id": "q7",
+      "type": "vocabulary",
+      "paragraph": 5,
+      "stem": "The word \"shallow\" in paragraph 5 is closest in meaning to",
+      "highlight": "shallow",
+      "options": [
+        "narrow",
+        "gradual",
+        "unreliable",
+        "artificial"
+      ],
+      "answer": 1,
+      "explanation_en": "The word describes gradients, so it means that the quantity changes only slightly from place to place. \"Unreliable\" duplicates the separate objection that the gradients are irregular and shifting.",
+      "explanation_zh": "该词修饰的是梯度，意思是数值随位置变化很小。unreliable 与“不规则且会移动”这一独立的反对理由重复。"
+    },
+    {
+      "id": "q8",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "Paragraph 5 suggests that juveniles displaced on their first migration",
+      "options": [
+        "navigate more accurately than adults over long distances",
+        "depend on odor rather than on magnetic information",
+        "have no way of determining where they have been taken",
+        "learn the route from adult birds traveling with them"
+      ],
+      "answer": 2,
+      "explanation_en": "Juveniles keep the original heading after displacement, which is what a bird with a compass but no map would do. The passage states that the songbirds in question migrate alone, so learning from accompanying adults is excluded.",
+      "explanation_zh": "幼鸟在被移位后仍保持原来的航向，这正是只有指南针而没有地图的鸟会有的表现。文中说这些鸣禽是独自迁徙的，因此排除了跟随成鸟学习的可能。"
+    },
+    {
+      "id": "q9",
+      "type": "insert-text",
+      "paragraph": 6,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 6. Where would the sentence best fit?",
+      "insertSentence": "The direction of that calibration, however, is not consistent from one study to the next.",
+      "insertAfter": [
+        "The cues also interact.",
+        "Many birds appear to recalibrate one system against another at twilight, when polarized light near the horizon provides a reference independent of both stars and magnetism.",
+        "Which cue takes precedence when two conflict varies with species, age, season, and even the arrangement of the laboratory conflict, and several prominent experiments have resisted replication.",
+        "This inconsistency need not indicate poor work."
+      ],
+      "answer": 1,
+      "explanation_en": "The sentence refers back to the recalibration just described and introduces the inconsistency that the following sentences go on to document and then explain. Placed after the sentence about poor work, it would separate that comment from the explanation it introduces.",
+      "explanation_zh": "该句承接刚刚描述的重新校准，并引出后面几句所记录并加以解释的不一致现象。若放在谈“并非研究质量差”的那句之后，就会把这一评论与它所引出的解释隔开。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Research has established a good deal about how migratory birds hold a course, but much less about how they determine where they are.",
+      "options": [
+        "Birds use a star compass learned from the rotation of the night sky and a sun compass corrected by an internal clock.",
+        "The magnetic compass responds to the inclination of the field, and two proposed mechanisms for detecting it are still under investigation.",
+        "Displacement experiments indicate that adults but not juveniles can correct their course, although the basis of the adult map is unresolved.",
+        "Crystals of magnetite in the beak have been confirmed as the source of the magnetic compass.",
+        "Birds abandon celestial cues altogether once they have completed a first migration.",
+        "Work with homing pigeons has shown that odor plays no part in navigation."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage treats celestial compasses, the magnetic compass and its disputed mechanism, and the map problem raised by displacement experiments. The magnetite claim was in fact withdrawn, celestial cues are used throughout life alongside other cues, and the pigeon work is presented as evidence for an odor map rather than against one.",
+      "explanation_zh": "文章依次讨论天体罗盘、磁罗盘及其有争议的机制，以及位移实验提出的地图问题。磁铁矿的说法实际上已被撤回，天体线索终生与其他线索并用，而信鸽研究是支持而非否定嗅觉地图的证据。"
+    }
+  ]
+}

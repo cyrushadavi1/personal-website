@@ -1,0 +1,168 @@
+{
+  "id": "l-lec-memory-consolidation",
+  "kind": "lecture",
+  "title": "Sleep and Memory Consolidation",
+  "topic": "life-science",
+  "difficulty": 2,
+  "setting_en": "In a psychology class.",
+  "setting_zh": "在心理学课上。",
+  "speakers": [
+    {
+      "id": "prof",
+      "label_en": "Professor",
+      "label_zh": "教授",
+      "voice": "male-a"
+    },
+    {
+      "id": "s1",
+      "label_en": "Student",
+      "label_zh": "学生",
+      "voice": "female-a"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "prof",
+      "text": "Okay. So last week we spent most of our time on encoding, on how information gets into the memory system in the first place. Today I want to look at what happens after that, because encoding is really just the first step. A memory that has just been formed is fragile. It can be disrupted, it can be overwritten, it can just fade. And the process that stabilizes it, that turns it into something durable, is what we call consolidation."
+    },
+    {
+      "speaker": "prof",
+      "text": "Now, here's the part that surprises people. A lot of consolidation seems to happen while you're asleep. Not all of it, and I want to be careful about that, but a substantial amount. And that's a little strange, right? Sleep looks like downtime. The brain is not taking in new information. But it turns out that may be exactly the point."
+    },
+    {
+      "speaker": "prof",
+      "text": "Before we get to the evidence, we need a distinction. Two broad kinds of long term memory. The first is declarative memory. That's memory for facts and events. The capital of Peru, what you had for breakfast, the vocabulary list you studied last night. It's called declarative because, in principle, you can declare it. You can state it out loud."
+    },
+    {
+      "speaker": "prof",
+      "text": "The second kind is procedural memory. Memory for skills. Riding a bicycle, touch typing, playing a scale on the piano. And procedural memory is interesting because you often can't state it. If I ask you to explain, in words, exactly how you keep your balance on a bicycle, you'll probably struggle, even though your body knows perfectly well."
+    },
+    {
+      "speaker": "s1",
+      "text": "So are those actually separate systems, or is that just a convenient way to describe them?"
+    },
+    {
+      "speaker": "prof",
+      "text": "Good question, and the honest answer is that the evidence points to genuinely different systems, though they interact. Patients with damage to a structure called the hippocampus can lose the ability to form new declarative memories, they won't remember meeting you an hour ago, and yet they can still learn new motor skills. They get faster at a tracing task day after day while insisting they've never done it before. That's a pretty strong dissociation."
+    },
+    {
+      "speaker": "prof",
+      "text": "Okay, so back to sleep. The classic experimental design here is simple. You train two groups on the same task. One group then sleeps, the other stays awake for the same number of hours. Then you test everybody. And typically the sleep group performs better, sometimes substantially better."
+    },
+    {
+      "speaker": "prof",
+      "text": "But, and this matters, the benefit isn't uniform. It depends on the type of memory and it depends on which part of the night. Declarative memory seems to benefit most from deep, slow wave sleep, which is concentrated in the early hours after you fall asleep. Procedural memory, especially motor skills, seems tied more closely to a later stage, rapid eye movement sleep, which dominates toward morning."
+    },
+    {
+      "speaker": "s1",
+      "text": "So if I stay up late studying and then only sleep four hours, I'm getting the wrong half."
+    },
+    {
+      "speaker": "prof",
+      "text": "Well, you're getting a lot of slow wave sleep and very little rapid eye movement sleep, yes. For a vocabulary exam that might not be catastrophic. For a piano recital, I'd be more worried. But please don't take that as advice to sleep four hours."
+    },
+    {
+      "speaker": "prof",
+      "text": "Now, what's the mechanism? The leading account is called replay. During slow wave sleep, researchers recording from the rodent hippocampus have seen the same sequences of neurons fire that fired while the animal was running a maze earlier that day. Same order, just compressed, running much faster. The idea is that this replay gradually transfers the memory from the hippocampus, which is fast but temporary, out to the cortex, which is slow but durable."
+    },
+    {
+      "speaker": "prof",
+      "text": "And there's a clever experimental trick that supports this. Researchers had people learn the locations of objects on a screen while a particular odor, rose scent in one study, was present in the room. Then during slow wave sleep they released that same odor again. Those participants remembered more locations the next morning than participants who got no odor. The cue apparently biased which memories got replayed."
+    },
+    {
+      "speaker": "s1",
+      "text": "Couldn't the smell just have woken them up a little and helped somehow?"
+    },
+    {
+      "speaker": "prof",
+      "text": "That's exactly the right thing to ask, and the researchers checked. The odor was delivered at concentrations that didn't change the sleep recordings, and when they delivered it during rapid eye movement sleep instead, there was no benefit for that declarative task. So the effect is specific to the stage, which is hard to explain if it's just general arousal. Alright, for Thursday, read the Rasch and Born review, and come with one criticism of the replay account."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the lecture mainly about?",
+      "options": [
+        "The role of sleep in stabilizing different types of memory",
+        "Why patients with hippocampal damage cannot form new memories",
+        "Techniques students can use to study more efficiently at night",
+        "How odors become associated with emotional experiences"
+      ],
+      "answer": 0,
+      "explanation_en": "The professor introduces consolidation, distinguishes declarative from procedural memory, and then reviews evidence that different sleep stages support each type. The hippocampal patients are mentioned only briefly, as evidence for the two-system distinction, not as the lecture's topic.",
+      "explanation_zh": "教授先引入“巩固”这一概念，接着区分陈述性记忆和程序性记忆，然后讨论不同睡眠阶段如何分别支持这两类记忆。海马体受损患者只是用来支持“两套系统”的论据，并不是讲座主题。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "Why does the professor call one type of memory \"declarative\"?",
+      "options": [
+        "Because it is formed only when a person consciously decides to remember",
+        "Because it is stored permanently in the hippocampus",
+        "Because it is declared complete once consolidation has finished",
+        "Because the information can, in principle, be stated out loud"
+      ],
+      "answer": 3,
+      "explanation_en": "The professor says it is called declarative because you can declare it, that is, state it out loud. The hippocampus option contradicts the lecture, which says the hippocampus is temporary and the cortex is durable.",
+      "explanation_zh": "教授说之所以叫“陈述性”，是因为你可以把它说出来。选“永久储存在海马体”与讲座相反，教授说海马体是暂时的，皮层才是持久的。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the professor say this:",
+      "replayLine": 9,
+      "options": [
+        "To warn the student that her study plan will damage her memory",
+        "To correct a factual error the student made about sleep stages",
+        "To accept the student's basic point while discouraging her from acting on it",
+        "To suggest that vocabulary exams are easier than musical performances"
+      ],
+      "answer": 2,
+      "explanation_en": "The professor confirms the student's inference about which sleep stage she would lose, then explicitly adds that she should not treat it as advice to sleep four hours. He is agreeing with the reasoning but blocking the practical conclusion, not correcting an error.",
+      "explanation_zh": "教授先肯定学生关于会失去哪个睡眠阶段的推断，然后明确说这不能当作“只睡四小时”的建议。他是认同推理但阻止其付诸行动，并不是在纠正错误。"
+    },
+    {
+      "id": "q4",
+      "type": "connecting-content",
+      "stem": "According to the lecture, why do patients with hippocampal damage provide evidence for two memory systems?",
+      "options": [
+        "They improve at motor tasks while having no memory of practicing them",
+        "They recover declarative memory faster than procedural memory",
+        "They show normal replay during slow wave sleep",
+        "They can describe skills in words but cannot perform them"
+      ],
+      "answer": 0,
+      "explanation_en": "The professor says such patients get faster at a tracing task day after day while insisting they have never done it before, which separates skill learning from fact learning. The last option reverses the actual pattern.",
+      "explanation_zh": "教授说这类病人一天天在描摹任务上越来越快，却坚称自己从没做过，这就把技能学习和事实记忆分离开了。最后一个选项把实际情况说反了。"
+    },
+    {
+      "id": "q5",
+      "type": "detail",
+      "stem": "What did the odor experiment find?",
+      "options": [
+        "Participants slept longer when a familiar scent was present",
+        "Participants exposed to the scent during slow wave sleep recalled more object locations",
+        "The scent improved memory only when delivered during rapid eye movement sleep",
+        "The scent helped participants learn new motor skills overnight"
+      ],
+      "answer": 1,
+      "explanation_en": "Re-presenting the learning odor during slow wave sleep improved recall of object locations. The rapid eye movement option is precisely the control condition that showed no benefit for that declarative task.",
+      "explanation_zh": "在慢波睡眠期间重新释放学习时的气味，提高了物体位置的回忆成绩。快速眼动睡眠那一项正是对照条件，对该陈述性任务没有效果。"
+    },
+    {
+      "id": "q6",
+      "type": "attitude",
+      "stem": "What is the professor's attitude toward the replay account of consolidation?",
+      "options": [
+        "He considers it fully established and no longer open to debate",
+        "He rejects it in favor of an explanation based on general arousal",
+        "He treats it as the leading account but still worth criticizing",
+        "He believes it applies only to procedural memory"
+      ],
+      "answer": 2,
+      "explanation_en": "He calls replay \"the leading account,\" presents supporting evidence, and then assigns students to come with one criticism of it, which shows he does not regard it as settled. He addresses the arousal explanation only to rule it out for the odor study.",
+      "explanation_zh": "他称“重放”是主流解释，给出支持证据，但又要求学生带一条批评意见来，说明他并不认为已成定论。至于“唤醒”解释，他只是用来排除气味实验的替代可能。"
+    }
+  ]
+}

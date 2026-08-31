@@ -1,0 +1,166 @@
+{
+  "id": "l-con-housing-office",
+  "kind": "conversation",
+  "title": "Three Levels of Mediation",
+  "topic": "campus",
+  "difficulty": 1,
+  "setting_en": "In the campus housing office.",
+  "setting_zh": "在学校住宿管理办公室。",
+  "speakers": [
+    {
+      "id": "student",
+      "label_en": "Student",
+      "label_zh": "学生",
+      "voice": "female-a"
+    },
+    {
+      "id": "officer",
+      "label_en": "Housing officer",
+      "label_zh": "住宿管理员",
+      "voice": "male-b"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "student",
+      "text": "Hi, um, is this where I sign up to talk to somebody about a housing problem? The front desk sent me down here."
+    },
+    {
+      "speaker": "officer",
+      "text": "You're in the right place. Have a seat. I'm Daniel, I handle residence conflicts for the north quad. So what's going on?"
+    },
+    {
+      "speaker": "student",
+      "text": "It's my roommate. And it's not, like, a big dramatic thing. We're not fighting or anything. It's about the desk, mainly."
+    },
+    {
+      "speaker": "officer",
+      "text": "Okay. Tell me about the desk."
+    },
+    {
+      "speaker": "student",
+      "text": "Our room has one long built in desk that runs along the wall, and it's supposed to be shared, obviously. But she's got a group project this term, and her group meets in our room. Four people, three or four nights a week, until pretty late. And all their stuff lives on the desk. I basically haven't been able to work in my own room since the second week of the semester."
+    },
+    {
+      "speaker": "officer",
+      "text": "And have you said that to her? In those words?"
+    },
+    {
+      "speaker": "student",
+      "text": "I've said things. I said something like, hey, is the group coming over again tonight. Which, I mean, she said yes."
+    },
+    {
+      "speaker": "officer",
+      "text": "Mm. Right. So she answered the question you asked."
+    },
+    {
+      "speaker": "student",
+      "text": "Yeah. Okay. Fair."
+    },
+    {
+      "speaker": "officer",
+      "text": "I'm not trying to give you a hard time. It's the single most common thing I see in here. Somebody hints for six weeks, then comes to me convinced their roommate is ignoring them, and the roommate has no idea there's a problem. So let me lay out what's available to you. There are three levels."
+    },
+    {
+      "speaker": "officer",
+      "text": "Level one, you and I sit down for twenty minutes and I help you script the conversation. What you say, when you say it, and what you're asking for, specifically. Not you're taking over the desk, but something like, I need the desk Sunday through Wednesday after eight. Most cases end there."
+    },
+    {
+      "speaker": "officer",
+      "text": "Level two, if that doesn't land, or if you'd rather not do it on your own, we do a facilitated conversation. All three of us in a room, I run it, and we come out of it with a written roommate agreement. Quiet hours, guest hours, who gets the desk when. You both sign it. It's not disciplinary, it just gives us something concrete to point at later."
+    },
+    {
+      "speaker": "officer",
+      "text": "Level three is a room change, and I'll be straight with you about that one. It's a last resort and it's slow. We're at capacity this term, so realistically you'd be looking at the midterm break at the earliest. I also can't approve one unless we've tried level two first."
+    },
+    {
+      "speaker": "student",
+      "text": "So I can't just skip ahead to the room change."
+    },
+    {
+      "speaker": "officer",
+      "text": "Not through this office, no. And honestly, most people who walk in here wanting a room change don't want one anymore by the end of level two."
+    },
+    {
+      "speaker": "student",
+      "text": "Okay. Can we do the level one thing now? I've got until three."
+    },
+    {
+      "speaker": "officer",
+      "text": "We can. Let me pull up your room's floor plan so we're talking about the actual furniture, and then we'll work out what you're going to say to her tonight."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student go to the housing office?",
+      "options": [
+        "To request a different building for next semester",
+        "To report a roommate for violating quiet hours",
+        "To get help with a conflict over shared space in her room",
+        "To ask whether group projects may be held in dormitory rooms"
+      ],
+      "answer": 2,
+      "explanation_en": "She opens by saying she has a housing problem and describes losing access to the shared desk. She never asks for a specific building, and she is careful to say the situation is not a fight or a rules complaint.",
+      "explanation_zh": "她一开口就说自己有住宿方面的问题，接着描述自己用不上共用书桌。她没有指定要哪栋楼，也特意说明这不是吵架或违规投诉。"
+    },
+    {
+      "id": "q2",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. What does the officer mean when he says this:",
+      "replayLine": 7,
+      "options": [
+        "He is pointing out that she never actually asked for what she wants.",
+        "He is confirming that the roommate answered honestly and helpfully.",
+        "He is suggesting that the roommate was being deliberately rude.",
+        "He is checking that he has understood the timeline correctly."
+      ],
+      "answer": 0,
+      "explanation_en": "The student reported asking only whether the group was coming over, so the roommate's yes was a complete answer to a question that contained no request. Choice C is wrong because the officer goes on to say the other roommate probably has no idea there is a problem.",
+      "explanation_zh": "学生只问了“今晚小组还来吗”，室友回答“来”其实完整回应了一个并未提出任何要求的问题。选项C不对，因为管理员随后说另一方很可能根本不知道存在问题。"
+    },
+    {
+      "id": "q3",
+      "type": "detail",
+      "stem": "What is produced at the end of a level two facilitated conversation?",
+      "options": [
+        "A disciplinary record placed in both students' files",
+        "A guaranteed room assignment in a different building",
+        "A schedule approved by the group project's other members",
+        "A signed written agreement covering quiet hours, guests, and desk use"
+      ],
+      "answer": 3,
+      "explanation_en": "The officer says the three of them come out of the meeting with a written roommate agreement that both students sign. He explicitly says it is not disciplinary, which rules out choice A.",
+      "explanation_zh": "管理员说三人谈完后会形成一份书面室友协议，双方签字。他明确说这不属于纪律处分，因此选项A被排除。"
+    },
+    {
+      "id": "q4",
+      "type": "attitude",
+      "stem": "What is the officer's attitude toward requesting a room change?",
+      "options": [
+        "He thinks it is usually the fastest way to resolve a conflict.",
+        "He is willing to approve it immediately if the student insists.",
+        "He treats it as a slow last resort that most students end up not needing.",
+        "He believes it should be handled by the front desk rather than his office."
+      ],
+      "answer": 2,
+      "explanation_en": "He calls it a last resort, says it is slow because housing is at capacity, and adds that most students no longer want one after level two. He states directly that he cannot approve it without trying level two first.",
+      "explanation_zh": "他称换宿舍是“最后手段”，因宿舍满员而进展缓慢，还说多数人走完第二步后就不想换了。他明确表示不先做第二步就无法批准。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "stem": "What will the student most likely do next?",
+      "options": [
+        "Leave and speak with her roommate without further help",
+        "Stay and work with the officer on what to say that evening",
+        "Fill out a room change application before three o'clock",
+        "Arrange a meeting with all four members of the group project"
+      ],
+      "answer": 1,
+      "explanation_en": "She asks to do level one right away, and the officer agrees and starts pulling up the floor plan. Choice A is wrong because she is staying precisely in order to get help scripting the conversation.",
+      "explanation_zh": "她当场要求做第一步，管理员同意并开始调出宿舍平面图。选项A不对，因为她留下来正是为了让对方帮她准备怎么开口。"
+    }
+  ]
+}

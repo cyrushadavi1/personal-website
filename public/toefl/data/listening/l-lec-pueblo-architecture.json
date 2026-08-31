@@ -1,0 +1,115 @@
+{
+  "id": "l-lec-pueblo-architecture",
+  "kind": "lecture",
+  "title": "What Were the Great Houses For?",
+  "topic": "history",
+  "difficulty": 3,
+  "setting_en": "In an archaeology class.",
+  "setting_zh": "在考古学课上。",
+  "speakers": [
+    { "id": "prof", "label_en": "Professor", "label_zh": "教授", "voice": "female-b" },
+    { "id": "s1", "label_en": "Male student", "label_zh": "男学生", "voice": "male-a" },
+    { "id": "s2", "label_en": "Female student", "label_zh": "女学生", "voice": "female-a" }
+  ],
+  "script": [
+    { "speaker": "prof", "text": "So we've been working through the northern Southwest, and today I want to narrow in on one kind of building. The great houses of Chaco Canyon, in what's now northwestern New Mexico. These go up mostly between about nine hundred and eleven fifty of the common era. And they are big. The largest, Pueblo Bonito, has something on the order of six hundred rooms, stacked four or five stories at the back, all inside one continuous D shaped wall. For its time and place that is an enormous amount of masonry, and it took generations to build." },
+    { "speaker": "prof", "text": "Now the question I want us to sit with is easy to ask and very hard to answer. What were these buildings for? And let me be upfront: we do not have a settled answer. What we have is three families of interpretation. Each one rests on real evidence, and each one has a real problem." },
+    { "speaker": "prof", "text": "The first, and the oldest, is the residential reading. It's the natural one, right? Six hundred rooms, so six hundred rooms worth of people. Early researchers put the canyon's population in the thousands. The buildings look like scaled up versions of ordinary Puebloan villages, and those villages we know were residential. So the inference seemed safe." },
+    { "speaker": "s1", "text": "Something must have gone wrong with it, though, or you wouldn't be phrasing it that way." },
+    { "speaker": "prof", "text": "Fair. What went wrong is, well, the trash. If several thousand people live somewhere for two centuries, they generate an enormous quantity of garbage, and they generate burials. And the refuse mounds at Chaco are thin relative to that population estimate. Many rooms show no hearths at all, no cooking, no sign of the daily grinding of corn. And the number of human burials recovered is a tiny fraction of what a resident population that size would leave behind. So the estimates have come down a great deal. Some researchers now argue the permanent population was in the hundreds, not the thousands." },
+    { "speaker": "prof", "text": "That opens the door to the second reading, the ceremonial one. On this view a great house isn't primarily a place to live. It's a stage. It's a pilgrimage destination that fills up periodically and then empties out. And there's support for it. The road system, those famously straight roads running out of the canyon for tens of kilometers, is hard to explain in narrowly economic terms. The buildings are aligned to solar and lunar events with real precision. And some of what does turn up in the deposits looks like feasting debris, big episodic dumps rather than steady daily accumulation." },
+    { "speaker": "s2", "text": "How would you tell those apart, though? Feasting debris and, you know, ordinary garbage." },
+    { "speaker": "prof", "text": "Composition and rhythm, mostly. A feasting deposit tends to be concentrated in time, heavy on serving vessels, heavy on preferred cuts of meat, and it doesn't grade smoothly into the layers around it. Now, is that reading airtight? No. Critics point out that ceremonial is doing a lot of work as a category. It can absorb almost any evidence you throw at it, and an explanation that can't fail isn't much of an explanation." },
+    { "speaker": "prof", "text": "The third reading emphasizes storage and redistribution. Chaco sits in a marginal environment where rainfall varies enormously from one valley to the next in any given year. So the argument runs that great houses worked as a buffer. Surplus corn comes in from areas that did well, gets held, and moves back out to communities that fell short. And those sealed interior rooms with no hearths and no windows, which are a problem for the residential reading, become an asset for this one. They're storerooms." },
+    { "speaker": "s1", "text": "Is there anything actually in them?" },
+    { "speaker": "prof", "text": "Not much, and that's the honest weakness. Storage rooms get emptied, so absence isn't fatal, but it isn't evidence either. What we do have is the imported material. Timber hauled from mountains eighty kilometers away, turquoise, macaws from Mesoamerica, pottery manufactured out in the outlying districts. Something was flowing into that canyon." },
+    { "speaker": "prof", "text": "So where does that leave us? My own view, and I'd say much of the field has drifted this way, is that the question is badly posed. We keep asking which one, and meanwhile these buildings stand there for two hundred and fifty years. Functions change. A structure put up as an elite residence can end up a storehouse, and later a ceremonial shell. The interesting work now is less about crowning a winner and more about tracing how the use of a single building shifted over time." }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the main purpose of the lecture?",
+      "options": [
+        "To describe the construction techniques used in Chacoan masonry",
+        "To compare Chaco Canyon with contemporary sites elsewhere in the Southwest",
+        "To argue that great houses were built primarily for the storage of surplus corn",
+        "To review competing explanations of what the Chacoan great houses were used for"
+      ],
+      "answer": 3,
+      "explanation_en": "The professor states outright that there is no settled answer and lays out three families of interpretation with their supporting evidence and weaknesses. The storage reading is only one of the three, and she does not endorse it.",
+      "explanation_zh": "教授明确说这个问题尚无定论，并逐一介绍了三派解释及各自的证据与弱点。储藏说只是其中之一，她并没有为它背书。"
+    },
+    {
+      "id": "q2",
+      "type": "organization",
+      "stem": "How does the professor organize the body of the lecture?",
+      "options": [
+        "By presenting each interpretation in turn along with the evidence against it",
+        "By tracing the excavation of Chaco Canyon in chronological order",
+        "By contrasting the views of two named archaeologists point by point",
+        "By moving from the smallest great houses up to the largest"
+      ],
+      "answer": 0,
+      "explanation_en": "She announces three families of interpretation and takes them one at a time, giving the support and then the problem for each. She never organizes by excavation history or by building size, and no individual researchers are named.",
+      "explanation_zh": "她先宣布有三派解释，然后逐一处理，每派都先讲支持证据再讲问题所在。她既没有按发掘史也没有按建筑规模来组织，更没有点名具体学者。"
+    },
+    {
+      "id": "q3",
+      "type": "detail",
+      "stem": "What evidence has led researchers to lower their estimates of Chaco's permanent population?",
+      "options": [
+        "Tree ring dating showing the buildings were occupied for less than fifty years",
+        "The small quantity of refuse and the small number of burials for a settlement that size",
+        "Written records left by neighboring communities in the region",
+        "The discovery that many rooms were added long after the canyon was abandoned"
+      ],
+      "answer": 1,
+      "explanation_en": "The professor points to thin refuse mounds, rooms without hearths, and very few burials as inconsistent with thousands of residents. She dates construction across roughly two and a half centuries, so a short occupation is contradicted rather than supported.",
+      "explanation_zh": "教授举出垃圾堆很薄、许多房间没有火塘、人类墓葬极少，这与数千常住人口不符。她说建筑跨越约两个半世纪，因此“占用时间很短”正好与讲座相反。"
+    },
+    {
+      "id": "q4",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the student say this:",
+      "replayLine": 3,
+      "options": [
+        "To ask the professor to define a term she has just used",
+        "To object that the residential interpretation is obviously correct",
+        "To point out that the professor's wording signals a coming objection",
+        "To complain that the reading assignment did not cover this material"
+      ],
+      "answer": 2,
+      "explanation_en": "The student notices that phrases like the inference seemed safe are hedged in the past tense, and predicts that the professor is about to undercut the residential view, which she immediately does. He is not defending that view or asking for a definition.",
+      "explanation_zh": "学生注意到“这个推断当时看起来很稳妥”这种带保留的过去式措辞，预判教授接下来要推翻居住说，而她马上就这么做了。他并不是在维护该观点，也不是在问词义。"
+    },
+    {
+      "id": "q5",
+      "type": "multi-detail",
+      "stem": "According to the professor, which TWO observations are cited in support of the ceremonial interpretation? Choose TWO answers.",
+      "options": [
+        "The long straight roads leading out of the canyon",
+        "Turquoise and macaws imported from distant regions",
+        "The alignment of the buildings with solar and lunar events",
+        "Interior rooms sealed off with no hearths or windows"
+      ],
+      "answer": [0, 2],
+      "explanation_en": "The roads and the astronomical alignments are both offered as evidence for the ceremonial reading, along with apparent feasting deposits. The imported goods come up under the storage and redistribution reading, and the sealed hearthless rooms are used there as well.",
+      "explanation_zh": "道路和天文朝向都是仪式说的证据，另外还有疑似宴飨堆积。进口物品是在储藏与再分配说中提到的，密封无火塘的房间也是用在那一说里。"
+    },
+    {
+      "id": "q6",
+      "type": "attitude",
+      "stem": "What is the professor's own position on the debate?",
+      "options": [
+        "She believes the storage interpretation will eventually be confirmed",
+        "She thinks asking which single function is correct is the wrong question",
+        "She considers the evidence too poor for any conclusions to be drawn",
+        "She accepts the residential reading despite its problems with the refuse"
+      ],
+      "answer": 1,
+      "explanation_en": "At the end she says the question is badly posed, since a building standing for two hundred and fifty years can change function, and that the useful work is tracing those shifts. That is different from saying nothing can be known, which she does not claim.",
+      "explanation_zh": "结尾她说这个问题问错了，因为一座矗立两百五十年的建筑功能会变化，真正有价值的是追踪这些变化。这与“什么都无法得知”不同，她并没有那样说。"
+    }
+  ]
+}

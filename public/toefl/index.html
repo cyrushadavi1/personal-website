@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOEFL Practice</title>
+<meta name="description" content="Reading, listening, and vocabulary practice for the TOEFL. Works offline on your phone.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101413" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TOEFL">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <main class="screen" id="boot">
+    <div class="empty" style="padding-top:26vh">
+      <div class="ico" aria-hidden="true">📘</div>
+      <p>Loading…</p>
+      <noscript>
+        <p>This app needs JavaScript. Please enable it in your browser.</p>
+        <p lang="zh-Hans">此应用需要 JavaScript，请在浏览器中启用。</p>
+      </noscript>
+    </div>
+  </main>
+</div>
+<script type="module">
+  import { boot } from './js/app.js';
+  boot().catch((err) => {
+    console.error(err);
+    document.getElementById('boot').innerHTML =
+      '<div class="empty" style="padding-top:22vh"><div class="ico">⚠️</div>' +
+      '<p>The app could not start. Please reload.</p>' +
+      '<p lang="zh-Hans">应用无法启动，请重新加载。</p></div>';
+  });
+</script>
+</body>
+</html>

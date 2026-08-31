@@ -1,0 +1,189 @@
+{
+  "id": "r-plate-tectonics",
+  "title": "The Acceptance of Plate Tectonics",
+  "topic": "physical-science",
+  "difficulty": 3,
+  "paragraphs": [
+    "In 1912 the German meteorologist Alfred Wegener proposed that the continents had once formed a single landmass that later broke apart and drifted to their present positions. He called the ancestral supercontinent Pangaea, and he assembled a wide range of evidence in its support. The coastlines of South America and Africa fit together with unusual precision, and the rock formations exposed on the two sides of the Atlantic matched in age and composition. Fossils of identical land reptiles appeared on continents now separated by oceans that those animals could not have crossed. Deposits left by ancient glaciers occurred in regions that are tropical today, arranged in a pattern that made sense only if the southern continents had once been joined near the pole.",
+    "Most geologists nevertheless rejected the hypothesis, and their objection was not to the evidence but to the mechanism. Wegener suggested that the continents plowed through the ocean floor, driven by forces associated with the rotation of the earth and the pull of the sun and moon. Physicists calculated that these forces were far too weak, and that continental rock was far too fragile to survive such a passage without being destroyed. A theory whose proposed cause was demonstrably impossible seemed to many scientists worse than no theory at all, and the correlations Wegener had collected were explained away as coincidence or attributed to land bridges that had since sunk.",
+    "The situation changed only when the ocean floor itself became accessible to study. Echo sounding surveys conducted after the Second World War revealed a continuous mountain chain running down the middle of the Atlantic and through the other ocean basins, split along its crest by a deep valley. Sediment on the sea floor proved to be surprisingly thin, and no part of the ocean floor was older than about two hundred million years, although the continents preserve rock more than ten times that age. In 1962 the American geologist Harry Hess offered an explanation. Molten material rises beneath the ridge, cools to form new sea floor, and spreads outward in both directions, carrying the continents passively along with it.",
+    "Confirmation came from an unexpected direction. Iron-bearing minerals in cooling lava align themselves with the magnetic field of the earth and preserve that orientation permanently. The field has reversed its polarity many times, and the sequence of reversals had already been worked out independently from lava flows on land. Magnetic surveys towed behind ships showed that the ocean floor is divided into long stripes of alternating polarity, running parallel to the ridge and forming a mirror image on either side of it. If new crust forms continuously at the ridge and moves away, it must record each reversal as a matched pair of stripes, which is precisely the pattern the surveys found. The stripes therefore served as a record of both time and motion.",
+    "Spreading raised an obvious problem, since the earth is not expanding. The answer lay in the deep trenches that border the Pacific, where the ocean floor bends downward and descends back into the mantle. Earthquakes beneath these trenches occur along a plane that slopes away from the ocean to depths of several hundred kilometers, tracing the path of the sinking slab. The velocities implied by the magnetic stripes, a few centimeters each year, matched the rates later measured directly by satellite. By the late 1960s these observations had been combined into a single framework in which the outer shell of the earth is divided into rigid plates that are created at ridges, consumed at trenches, and slide past one another along faults.",
+    "The episode is often cited as an illustration of how scientific communities respond to unfamiliar claims. The resistance Wegener encountered was not simple conservatism, because his critics were applying a reasonable standard: a correlation, however striking, carries little weight without a plausible physical cause. What changed between 1912 and 1968 was not the quality of the original evidence but the discovery of a mechanism that could be tested and measured. Once the sea floor supplied that mechanism, the older observations regained their force, and material that had been dismissed for decades became part of the case for the new theory."
+  ],
+  "glossary": [
+    {
+      "term": "seafloor spreading",
+      "def_en": "the process by which new ocean crust forms at a mid-ocean ridge and moves outward on both sides",
+      "def_zh": "海底扩张：新的洋壳在大洋中脊生成并向两侧移动的过程"
+    },
+    {
+      "term": "magnetic reversal",
+      "def_en": "an episode in which the north and south magnetic poles of the earth exchange positions",
+      "def_zh": "磁极倒转：地球南北磁极互换位置的事件"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, which of the following did Wegener offer as evidence for his hypothesis?",
+      "options": [
+        "Measurements showing that South America moves away from Africa each year",
+        "Volcanic eruptions occurring simultaneously on both sides of the Atlantic",
+        "Rock formations of matching age and composition on opposite shores of the Atlantic",
+        "Ocean currents that could have carried land reptiles between continents"
+      ],
+      "answer": 2,
+      "explanation_en": "Paragraph 1 lists matching coastlines, matching rock formations, shared fossils, and misplaced glacial deposits. Choice D contradicts the passage, which says the reptiles could not have crossed the oceans that now separate them.",
+      "explanation_zh": "第一段列举了海岸线吻合、岩层年龄与成分一致、共有化石以及位置异常的冰川沉积。选项D与原文矛盾，文中说这些爬行动物无法跨越如今分隔它们的海洋。"
+    },
+    {
+      "id": "q2",
+      "type": "vocabulary",
+      "paragraph": 1,
+      "stem": "The word \"precision\" in paragraph 1 is closest in meaning to",
+      "highlight": "precision",
+      "options": [
+        "exactness",
+        "symmetry",
+        "difficulty",
+        "speed"
+      ],
+      "answer": 0,
+      "explanation_en": "The coastlines fit together with unusual precision, meaning the fit is unusually exact. Symmetry describes a balanced arrangement rather than the closeness of a fit.",
+      "explanation_zh": "海岸线以异常的 precision 相互吻合，意为吻合得异常精确。symmetry 指对称的排列，而非吻合的紧密程度。"
+    },
+    {
+      "id": "q3",
+      "type": "sentence-simplification",
+      "paragraph": 2,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+      "highlight": "A theory whose proposed cause was demonstrably impossible seemed to many scientists worse than no theory at all, and the correlations Wegener had collected were explained away as coincidence or attributed to land bridges that had since sunk.",
+      "options": [
+        "Scientists accepted the evidence but asked Wegener to propose a stronger driving force.",
+        "Because the proposed cause was impossible, many scientists preferred to treat the evidence as accidental or to explain it in other ways.",
+        "Land bridges were a better explanation of the fossil evidence than continental drift had ever been.",
+        "Wegener himself came to doubt his theory once physicists had examined his calculations."
+      ],
+      "answer": 1,
+      "explanation_en": "The sentence says an impossible mechanism made the theory seem worse than none, so the correlations were dismissed as coincidence or credited to sunken land bridges. Choice C misstates the passage, which presents land bridges as a way of avoiding drift rather than as a demonstrated better explanation.",
+      "explanation_zh": "原句说机制不可能成立使该理论看起来还不如没有理论，因此那些相关性被当作巧合或归因于沉没的陆桥。选项C歪曲原文，文中把陆桥说成是回避大陆漂移的办法，而非已被证明更好的解释。"
+    },
+    {
+      "id": "q4",
+      "type": "negative-factual",
+      "paragraph": 2,
+      "stem": "Paragraph 2 mentions all of the following as reasons that geologists rejected continental drift EXCEPT",
+      "options": [
+        "The forces Wegener proposed were much too weak to move continents.",
+        "Continental rock could not have survived plowing through the ocean floor.",
+        "Wegener's fossil identifications were later shown to be mistaken.",
+        "Alternative explanations such as sunken land bridges were available."
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph is explicit that the objection was to the mechanism, not the evidence, so no claim is made that the fossil identifications were wrong. The other three points appear in the paragraph.",
+      "explanation_zh": "该段明确指出反对的是机制而非证据，因此并未说化石鉴定有误。其余三项都在该段中出现。"
+    },
+    {
+      "id": "q5",
+      "type": "factual",
+      "paragraph": 3,
+      "stem": "According to paragraph 3, one unexpected result of postwar study of the ocean floor was the discovery that",
+      "options": [
+        "the mid-ocean ridge has no valley along its crest",
+        "sediment accumulates faster at sea than on land",
+        "molten material cools more slowly beneath the ocean",
+        "no part of the ocean floor is nearly as old as the continents"
+      ],
+      "answer": 3,
+      "explanation_en": "Paragraph 3 states that no part of the ocean floor exceeds about two hundred million years while continental rock is more than ten times older. Choice A contradicts the paragraph, which says the chain is split along its crest by a deep valley.",
+      "explanation_zh": "第三段指出洋底任何部分都不超过约两亿年，而大陆岩石的年龄超过其十倍。选项A与该段矛盾，文中说这条山脉沿脊部被一条深谷分开。"
+    },
+    {
+      "id": "q6",
+      "type": "reference",
+      "paragraph": 4,
+      "stem": "The word \"it\" in the phrase \"on either side of it\" in paragraph 4 refers to",
+      "highlight": "on either side of it",
+      "options": [
+        "the magnetic field",
+        "the ridge",
+        "the ship",
+        "each stripe"
+      ],
+      "answer": 1,
+      "explanation_en": "The stripes run parallel to the ridge and form a mirror image on either side of it, so \"it\" refers to the ridge. A stripe cannot be its own mirror image, which rules out choice D.",
+      "explanation_zh": "条带与洋脊平行，并在其两侧形成镜像，因此 it 指洋脊。单条条带不可能是自身的镜像，故排除选项D。"
+    },
+    {
+      "id": "q7",
+      "type": "rhetorical-purpose",
+      "paragraph": 4,
+      "stem": "Why does the author point out that the sequence of magnetic reversals had already been worked out from lava flows on land?",
+      "options": [
+        "To show that the pattern observed at sea could be checked against a record established by other means",
+        "To argue that studies on land are generally more reliable than studies at sea",
+        "To explain why iron-bearing minerals lose their magnetic orientation over time",
+        "To indicate that lava flows on land are older than any part of the ocean floor"
+      ],
+      "answer": 0,
+      "explanation_en": "An independently established reversal sequence gives the marine stripes something external to be matched against, which is what makes them confirmation. Choice C contradicts the paragraph, which says the orientation is preserved permanently.",
+      "explanation_zh": "独立建立的倒转序列为海上条带提供了可供比对的外部记录，这正是它们能构成验证的原因。选项C与该段矛盾，文中说这种取向是永久保存的。"
+    },
+    {
+      "id": "q8",
+      "type": "inference",
+      "paragraph": 5,
+      "stem": "It can be inferred from paragraph 5 that the trenches bordering the Pacific are important to the theory because they",
+      "options": [
+        "are the places where most new ocean crust is produced",
+        "show that the earth has expanded slowly over geological time",
+        "allow old sea floor to be destroyed at about the rate new floor is created",
+        "prevent earthquakes from occurring beneath the continents"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph raises the problem that the earth is not expanding and answers it with trenches where ocean floor descends into the mantle, which implies a balance between creation and destruction. Choice B states the opposite of the premise given in the first sentence.",
+      "explanation_zh": "该段先提出地球并未膨胀这一难题，再以洋底在海沟处下沉进入地幔来回答，暗示生成与消亡之间存在平衡。选项B与该段首句的前提正好相反。"
+    },
+    {
+      "id": "q9",
+      "type": "insert-text",
+      "paragraph": 6,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 6. Where would the sentence best fit?",
+      "insertSentence": "That standard normally protects a field from adopting explanations that cannot be tested.",
+      "insertAfter": [
+        "The episode is often cited as an illustration of how scientific communities respond to unfamiliar claims.",
+        "The resistance Wegener encountered was not simple conservatism, because his critics were applying a reasonable standard: a correlation, however striking, carries little weight without a plausible physical cause.",
+        "What changed between 1912 and 1968 was not the quality of the original evidence but the discovery of a mechanism that could be tested and measured.",
+        "Once the sea floor supplied that mechanism, the older observations regained their force, and material that had been dismissed for decades became part of the case for the new theory."
+      ],
+      "answer": 1,
+      "explanation_en": "The inserted sentence begins with \"That standard\" and so must follow the sentence that introduces the critics' standard, namely that a correlation needs a plausible physical cause. Later positions separate the sentence from the noun it refers back to.",
+      "explanation_zh": "插入句以“That standard”开头，必须紧随提出批评者标准的那一句，即相关性需要有合理的物理原因。放在更后的位置会使该句与其所指代的名词脱节。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Directions: An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Continental drift was proposed early in the twentieth century but was accepted only after the discovery of a mechanism that could move the continents.",
+      "options": [
+        "Wegener supported drift with matching coastlines, rocks, fossils, and glacial deposits on continents now far apart.",
+        "His contemporaries rejected the idea because the forces he proposed could not physically move continents through the ocean floor.",
+        "Surveys of the sea floor revealed a spreading ridge and symmetrical magnetic stripes that supplied the missing mechanism.",
+        "Echo sounding equipment had originally been developed for purposes unrelated to geology.",
+        "Hess showed that the continents and the ocean floor are composed of the same kind of rock.",
+        "Earthquakes near ocean trenches are shallower than earthquakes recorded beneath continents."
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation_en": "The passage moves from Wegener's evidence, to the mechanical objection that defeated it, to the marine discoveries that resolved the objection. Choice D is not stated, choice E is not claimed anywhere, and choice F misrepresents the description of deep earthquakes along a sloping plane.",
+      "explanation_zh": "全文依次讲述魏格纳的证据、使其失败的机制方面的反对意见，以及解决该反对意见的海洋发现。选项D文中未提，选项E文中并无此说法，选项F歪曲了关于沿倾斜面分布的深源地震的描述。"
+    }
+  ]
+}

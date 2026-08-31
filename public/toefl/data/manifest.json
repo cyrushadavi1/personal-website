@@ -1,0 +1,200 @@
+{
+ "built": "2026-08-31T17:39:26.356Z",
+ "reading": [
+  {
+   "id": "r-language-acquisition",
+   "title": "How Young Children Learn Words",
+   "topic": "social-science",
+   "difficulty": 1,
+   "questions": 10,
+   "words": 685
+  },
+  {
+   "id": "r-seed-dispersal",
+   "title": "How Plants Move Their Seeds",
+   "topic": "life-science",
+   "difficulty": 1,
+   "questions": 10,
+   "words": 749
+  },
+  {
+   "id": "r-silk-road-textiles",
+   "title": "Silk and the Overland Routes",
+   "topic": "arts",
+   "difficulty": 1,
+   "questions": 10,
+   "words": 657
+  },
+  {
+   "id": "r-cave-art-purpose",
+   "title": "Interpreting Upper Paleolithic Cave Art",
+   "topic": "arts",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 687
+  },
+  {
+   "id": "r-coral-bleaching",
+   "title": "Coral Bleaching and Reef Resilience",
+   "topic": "life-science",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 705
+  },
+  {
+   "id": "r-glacial-varves",
+   "title": "Glacial Varves and the Dating of Past Climate",
+   "topic": "physical-science",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 708
+  },
+  {
+   "id": "r-hanseatic-league",
+   "title": "The Hanseatic League",
+   "topic": "history",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 676
+  },
+  {
+   "id": "r-soil-formation",
+   "title": "The Formation of Soil Horizons",
+   "topic": "life-science",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 749
+  },
+  {
+   "id": "r-urbanization-work",
+   "title": "Industrial Cities and the Reorganization of Household Labor",
+   "topic": "social-science",
+   "difficulty": 2,
+   "questions": 10,
+   "words": 697
+  },
+  {
+   "id": "r-bird-navigation",
+   "title": "Compasses and Maps in Bird Migration",
+   "topic": "life-science",
+   "difficulty": 3,
+   "questions": 10,
+   "words": 748
+  },
+  {
+   "id": "r-plate-tectonics",
+   "title": "The Acceptance of Plate Tectonics",
+   "topic": "physical-science",
+   "difficulty": 3,
+   "questions": 10,
+   "words": 697
+  },
+  {
+   "id": "r-roman-concrete",
+   "title": "Roman Concrete",
+   "topic": "history",
+   "difficulty": 3,
+   "questions": 10,
+   "words": 658
+  }
+ ],
+ "listening": [
+  {
+   "id": "l-con-bookstore-refund",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 1,
+   "questions": 5,
+   "words": 449
+  },
+  {
+   "id": "l-con-housing-office",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 1,
+   "questions": 5,
+   "words": 493
+  },
+  {
+   "id": "l-con-lab-section",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 1,
+   "questions": 5,
+   "words": 412
+  },
+  {
+   "id": "l-con-internship-advisor",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 2,
+   "questions": 5,
+   "words": 497
+  },
+  {
+   "id": "l-con-library-research",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 2,
+   "questions": 5,
+   "words": 462
+  },
+  {
+   "id": "l-con-professor-paper",
+   "kind": "conversation",
+   "topic": "campus",
+   "difficulty": 2,
+   "questions": 5,
+   "words": 500
+  },
+  {
+   "id": "l-lec-impressionism",
+   "kind": "lecture",
+   "topic": "arts",
+   "difficulty": 2,
+   "questions": 6,
+   "words": 795
+  },
+  {
+   "id": "l-lec-memory-consolidation",
+   "kind": "lecture",
+   "topic": "life-science",
+   "difficulty": 2,
+   "questions": 6,
+   "words": 760
+  },
+  {
+   "id": "l-lec-photosynthesis-c4",
+   "kind": "lecture",
+   "topic": "life-science",
+   "difficulty": 2,
+   "questions": 6,
+   "words": 711
+  },
+  {
+   "id": "l-lec-ocean-currents",
+   "kind": "lecture",
+   "topic": "physical-science",
+   "difficulty": 3,
+   "questions": 6,
+   "words": 799
+  },
+  {
+   "id": "l-lec-pueblo-architecture",
+   "kind": "lecture",
+   "topic": "history",
+   "difficulty": 3,
+   "questions": 6,
+   "words": 747
+  },
+  {
+   "id": "l-lec-urban-heat-island",
+   "kind": "lecture",
+   "topic": "social-science",
+   "difficulty": 3,
+   "questions": 6,
+   "words": 774
+  }
+ ],
+ "vocab": 200
+}

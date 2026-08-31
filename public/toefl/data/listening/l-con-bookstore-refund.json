@@ -1,0 +1,178 @@
+{
+  "id": "l-con-bookstore-refund",
+  "kind": "conversation",
+  "title": "The Wrong Edition",
+  "topic": "campus",
+  "difficulty": 1,
+  "setting_en": "At the campus bookstore.",
+  "setting_zh": "在校园书店。",
+  "speakers": [
+    {
+      "id": "student",
+      "label_en": "Student",
+      "label_zh": "学生",
+      "voice": "female-a"
+    },
+    {
+      "id": "clerk",
+      "label_en": "Bookstore employee",
+      "label_zh": "书店员工",
+      "voice": "male-b"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "student",
+      "text": "Hi. Um, I need to return a textbook. Is this the right counter?"
+    },
+    {
+      "speaker": "clerk",
+      "text": "This is the place. Do you have the receipt?"
+    },
+    {
+      "speaker": "student",
+      "text": "Yeah, right here. It's the chemistry book, the big blue one."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Okay, let me see. Hmm. So this was bought on the third, and our return window is fourteen days. Today's the twenty second."
+    },
+    {
+      "speaker": "student",
+      "text": "I know. I know, and I'm sorry. But here's the thing, I bought the wrong edition. The syllabus said fifth edition and I bought the fourth, and I didn't figure that out until we got to chapter six and my page numbers were all wrong."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Ah. That happens more than you'd think."
+    },
+    {
+      "speaker": "student",
+      "text": "So can I return it?"
+    },
+    {
+      "speaker": "clerk",
+      "text": "Well, technically, no. The fourteen day policy is pretty firm, and it's printed right at the bottom of the receipt. But let me ask you something. Where did the fourth edition come from? Because we shelve by course number, and the chemistry shelf should only have the fifth."
+    },
+    {
+      "speaker": "student",
+      "text": "It was on the same shelf. There was a stack of them, and the sticker said Chemistry two ten."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Okay. That changes things. If it was mis shelved, that's on us, not on you. Give me one second, I need to check something."
+    },
+    {
+      "speaker": "student",
+      "text": "Sure."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Yeah, so, our system shows four returns of the fourth edition from that section since the term started. Which means somebody put a returned stack back in the wrong spot. I can process yours as a store error, which means full refund, no restocking fee."
+    },
+    {
+      "speaker": "student",
+      "text": "Oh, thank you. Seriously, I was expecting to eat the eighty dollars."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Don't thank me yet. There's a catch. The refund goes back to your card, and that takes five to seven business days. And I only have two copies of the fifth edition left, so if you want one, you'd have to buy it today, before the refund clears."
+    },
+    {
+      "speaker": "student",
+      "text": "So I'd be paying twice at the same time."
+    },
+    {
+      "speaker": "clerk",
+      "text": "For about a week, yes. Unless you want to try the library. They keep two copies of every assigned text on two hour reserve. It's not ideal, but it's free, and it would get you through until the money comes back."
+    },
+    {
+      "speaker": "student",
+      "text": "Two hours at a time isn't going to work. I have a problem set every week and I do most of it at night."
+    },
+    {
+      "speaker": "clerk",
+      "text": "Then buy the copy now. Honestly, at this point in the term, if you wait, there won't be one. We don't reorder chemistry after the fourth week."
+    },
+    {
+      "speaker": "student",
+      "text": "Okay. Okay, let's do that. Can you ring up the new one and the refund together so I only have to stand here once?"
+    },
+    {
+      "speaker": "clerk",
+      "text": "That's the plan. I just need your student ID for the store error form."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-purpose",
+      "stem": "Why does the student go to the bookstore?",
+      "options": [
+        "To return a textbook she bought in the wrong edition",
+        "To ask which edition of a textbook her course requires",
+        "To complain that a book was priced incorrectly",
+        "To find out whether the library has a copy on reserve"
+      ],
+      "answer": 0,
+      "explanation_en": "She opens by saying she needs to return a textbook, and the whole conversation follows from her having bought the fourth edition instead of the fifth. The library comes up later, as the employee's suggestion, not as her reason for coming.",
+      "explanation_zh": "她一开口就说要退一本教材，整段对话都围绕她买错版本展开。图书馆是后来员工提出的建议，不是她来的目的。"
+    },
+    {
+      "id": "q2",
+      "type": "detail",
+      "stem": "Why does the employee agree to accept the return?",
+      "options": [
+        "The student had a valid receipt with her",
+        "The fourteen day policy does not apply to chemistry texts",
+        "The book appears to have been shelved in the wrong place by the store",
+        "The student is willing to buy a replacement immediately"
+      ],
+      "answer": 2,
+      "explanation_en": "He processes it as a store error once he learns the fourth edition was stacked on the Chemistry two ten shelf and his system shows several similar returns. The receipt was necessary but not sufficient, since the return window had already closed.",
+      "explanation_zh": "当他得知第四版被摆在“化学二一〇”的书架上，而且系统显示已有几次同类退货后，才按“店方失误”处理。收据虽然必要，但不足以退货，因为退货期已过。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the conversation. Then answer the question. Why does the employee say this:",
+      "replayLine": 14,
+      "options": [
+        "To warn the student that the refund may be denied later",
+        "To signal that his good news comes with a practical drawback",
+        "To express annoyance at the student's repeated thanks",
+        "To indicate that he cannot complete the refund himself"
+      ],
+      "answer": 1,
+      "explanation_en": "\"Don't thank me yet\" prefaces the catch: the refund takes five to seven business days while only two copies of the correct edition remain. He is qualifying the good news, not withdrawing it or objecting to being thanked.",
+      "explanation_zh": "“先别谢我”是为后面的“但是”做铺垫：退款要五到七个工作日，而正确版本只剩两本。他是在给好消息加限定条件，不是收回承诺，也不是嫌学生道谢。"
+    },
+    {
+      "id": "q4",
+      "type": "detail",
+      "stem": "Why does the student reject the library option?",
+      "options": [
+        "The library's copies are also the wrong edition",
+        "She would have to pay a fee to place a book on reserve",
+        "The library closes before she finishes studying at night",
+        "Two hour loans do not fit how she does her weekly problem sets"
+      ],
+      "answer": 3,
+      "explanation_en": "She says two hours at a time will not work because she has a weekly problem set and does most of it at night. She never says the library closes early, only that the loan period is too short.",
+      "explanation_zh": "她说一次两小时不够用，因为每周都有作业，而且大多在晚上做。她没有说图书馆关门早，只是说借阅时间太短。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "stem": "What does the employee imply about the fifth edition?",
+      "options": [
+        "It will probably be unavailable if she waits for the refund",
+        "It will be sold at a discount later in the term",
+        "It is being replaced by a sixth edition next semester",
+        "It can be reserved without payment for one week"
+      ],
+      "answer": 0,
+      "explanation_en": "He says two copies are left and that the store does not reorder chemistry texts after the fourth week, so waiting means there will not be one. Nothing suggests a discount or a free hold.",
+      "explanation_zh": "他说只剩两本，而且书店第四周之后不再补订化学教材，所以再等就没有了。对话中没有任何打折或免费预留的暗示。"
+    }
+  ]
+}

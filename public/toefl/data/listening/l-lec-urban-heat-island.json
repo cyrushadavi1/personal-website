@@ -1,0 +1,185 @@
+{
+  "id": "l-lec-urban-heat-island",
+  "kind": "lecture",
+  "title": "Measuring the Urban Heat Island",
+  "topic": "social-science",
+  "difficulty": 3,
+  "setting_en": "In an urban geography class.",
+  "setting_zh": "在城市地理课上。",
+  "speakers": [
+    {
+      "id": "prof",
+      "label_en": "Professor",
+      "label_zh": "教授",
+      "voice": "female-b"
+    },
+    {
+      "id": "s1",
+      "label_en": "Male student",
+      "label_zh": "男学生",
+      "voice": "male-b"
+    },
+    {
+      "id": "s2",
+      "label_en": "Female student",
+      "label_zh": "女学生",
+      "voice": "female-a"
+    }
+  ],
+  "script": [
+    {
+      "speaker": "prof",
+      "text": "Alright, let's get going. You've all heard the phrase urban heat island. The basic observation goes back to the eighteen twenties, when an amateur meteorologist in London noticed that the city center was consistently warmer than the countryside around it. He was measuring with ordinary thermometers, and the difference was large enough that he couldn't miss it."
+    },
+    {
+      "speaker": "prof",
+      "text": "The physical reasons are not mysterious. Asphalt and brick and concrete absorb solar radiation during the day and release it slowly at night. Cities have very little vegetation, and vegetation cools by evaporating water. Tall buildings trap radiation in what we call street canyons, so heat bounces around instead of escaping to the sky. Add waste heat from vehicles and air conditioners, and you get a city that is warmer than its surroundings, most dramatically at night."
+    },
+    {
+      "speaker": "s1",
+      "text": "How big is the difference usually?"
+    },
+    {
+      "speaker": "prof",
+      "text": "In a large city, a few degrees Celsius on average, and on a calm, clear summer night it can reach eight or even ten. But hold onto that number, because the number you get depends enormously on how you measure, and that is really what I want to spend today on."
+    },
+    {
+      "speaker": "prof",
+      "text": "Here's the first problem. What exactly are you comparing the city to? The definition requires a rural reference site. But rural is not a physical quantity. If your reference station sits in an irrigated field, it will be unusually cool, because all that evaporation is pulling heat out of the air, and your heat island will look enormous. If it sits in a dry pasture, or on bare soil, it will be warm, and your heat island shrinks. Same city, different answer, and nothing about the city has changed."
+    },
+    {
+      "speaker": "s2",
+      "text": "Couldn't you just average a lot of rural stations?"
+    },
+    {
+      "speaker": "prof",
+      "text": "You could, and people do, but averaging doesn't rescue you if all the stations share a bias. In much of the American Midwest, for instance, nearly every rural station is surrounded by irrigated cropland. Averaging twenty biased stations gives you a very precise wrong answer."
+    },
+    {
+      "speaker": "prof",
+      "text": "Second problem, and this one trips up a lot of published work. There are really two different heat islands. The one the London observer measured is the air temperature heat island, measured about two meters above the ground, where people actually breathe. But most modern studies use satellites, and satellites don't measure air temperature. They measure the infrared radiation coming off surfaces. That's the surface heat island."
+    },
+    {
+      "speaker": "s1",
+      "text": "And those don't match?"
+    },
+    {
+      "speaker": "prof",
+      "text": "They can diverge sharply. A parking lot at two in the afternoon might have a surface temperature of sixty degrees Celsius while the air a meter and a half above it is thirty five. Surface heat islands are typically strongest in the daytime; air temperature heat islands are typically strongest at night. So if you read a paper reporting a daytime heat island of twelve degrees, check which one they measured before you get excited."
+    },
+    {
+      "speaker": "prof",
+      "text": "Third, timing and weather. The heat island is strongest under calm, clear conditions and can vanish almost entirely when it's windy or overcast, because wind mixes the air and clouds suppress the nighttime cooling that the countryside depends on. So a study based on a handful of field campaigns can report almost whatever it likes, depending on which nights got sampled."
+    },
+    {
+      "speaker": "s2",
+      "text": "So is the whole literature unreliable?"
+    },
+    {
+      "speaker": "prof",
+      "text": "No, no, I'm not saying that. The effect is real and it's robust. What I'm saying is that a single number, this city is three point two degrees warmer, is close to meaningless without the method attached. The comparisons that hold up are the ones done consistently, same instruments, same reference, same conditions."
+    },
+    {
+      "speaker": "prof",
+      "text": "And now the part I care most about. The heat island is not distributed evenly across a city, and the pattern is not random. Neighborhoods with dense tree canopy can run several degrees cooler than neighborhoods a couple of kilometers away with the same regional climate. And in city after city, in study after study, tree canopy correlates with income and with historical patterns of who was allowed to buy property where. In several American cities, researchers matched present day summer surface temperatures against nineteen thirties lending maps and found the neighborhoods that had been marked as risky were consistently hotter today, sometimes by five degrees or more."
+    },
+    {
+      "speaker": "s1",
+      "text": "Is that because those areas were built differently, or because of what happened afterward?"
+    },
+    {
+      "speaker": "prof",
+      "text": "Mostly afterward, as far as anyone can tell. Disinvestment meant fewer street trees planted and fewer maintained, more land given over to industry and to parking. So the heat is, in a sense, a physical record of decades of decisions. Which also means it's fixable, and that's where we'll start on Thursday."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "gist-content",
+      "stem": "What is the lecture mainly about?",
+      "options": [
+        "The history of temperature measurement in nineteenth century London",
+        "Why satellites have replaced ground stations in climate research",
+        "The difficulty of measuring the urban heat island and its uneven distribution within cities",
+        "How building materials could be redesigned to reduce city temperatures"
+      ],
+      "answer": 2,
+      "explanation_en": "After a brief statement of the physical causes, the professor devotes most of the lecture to three measurement problems and then to unequal exposure within a city. Redesigning materials is never discussed; mitigation is postponed to the next class.",
+      "explanation_zh": "教授简要说明物理成因后，把大部分时间用在三个测量问题上，最后讲城市内部的不均衡暴露。改造建筑材料完全没讲，缓解措施被推到下节课。"
+    },
+    {
+      "id": "q2",
+      "type": "multi-detail",
+      "stem": "According to the professor, which TWO factors make a reported heat island value hard to interpret? Choose TWO answers.",
+      "options": [
+        "The characteristics of the rural site chosen for comparison",
+        "The number of residents living in the city center",
+        "Whether the study measured air temperature or surface temperature",
+        "The age of the thermometers used at urban stations"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation_en": "The professor's first problem is that rural reference sites vary, for example irrigated fields versus dry pasture, and his second is the divergence between air temperature and satellite derived surface temperature. Population and instrument age are never raised as sources of ambiguity.",
+      "explanation_zh": "教授提出的第一个问题是乡村参照点差异很大，比如灌溉农田和干燥牧场；第二个是气温热岛与卫星地表热岛之间的差别。人口规模和仪器年龄从未被提到。"
+    },
+    {
+      "id": "q3",
+      "type": "function",
+      "stem": "Listen again to part of the lecture. Then answer the question. Why does the professor say this:",
+      "replayLine": 6,
+      "options": [
+        "To argue that precise instruments are more important than many stations",
+        "To point out that adding more measurements does not remove a shared bias",
+        "To praise Midwestern researchers for their careful station networks",
+        "To suggest that twenty stations are not enough for a reliable average"
+      ],
+      "answer": 1,
+      "explanation_en": "\"Averaging twenty biased stations gives you a very precise wrong answer\" is a comment on systematic bias: if every station shares the same distortion, more of them only tightens the estimate around the wrong value. The professor is not asking for a larger sample.",
+      "explanation_zh": "“把二十个有偏差的站点平均，只会得到一个非常精确的错误答案”说的是系统性偏差：如果所有站点都有同样的偏差，数量再多也只是让错误值更精确。教授并不是在要求更大的样本量。"
+    },
+    {
+      "id": "q4",
+      "type": "detail",
+      "stem": "Why can the urban heat island nearly disappear on a windy, cloudy night?",
+      "options": [
+        "Clouds reflect the infrared radiation that satellites detect",
+        "Wind carries waste heat from vehicles out of the street canyons",
+        "Rural stations record higher humidity under overcast conditions",
+        "Wind mixes the air and clouds prevent the countryside from cooling"
+      ],
+      "answer": 3,
+      "explanation_en": "The professor says wind mixes the air and clouds suppress the nighttime cooling that the countryside depends on, so the two sites converge. The satellite option confuses this point with the separate discussion of surface versus air temperature.",
+      "explanation_zh": "教授说风把空气混合起来，云层抑制了乡村赖以降温的夜间辐射冷却，于是城乡温差缩小。卫星那一项把这点和另一处“地表与气温”的讨论混淆了。"
+    },
+    {
+      "id": "q5",
+      "type": "connecting-content",
+      "stem": "What does the professor say about the relationship between historical lending maps and present day temperatures?",
+      "options": [
+        "Areas once marked as risky tend to be measurably hotter today",
+        "The maps were originally drawn using temperature data",
+        "The correlation disappears once regional climate is controlled for",
+        "Neighborhoods marked as risky had denser tree canopy at the time"
+      ],
+      "answer": 0,
+      "explanation_en": "Researchers matched summer surface temperatures against nineteen thirties lending maps and found the areas marked risky were consistently hotter, sometimes by five degrees or more. The maps were about lending risk, not temperature.",
+      "explanation_zh": "研究者把夏季地表温度与二十世纪三十年代的信贷地图对照，发现被标为“风险区”的区域如今始终更热，有时高出五度以上。那些地图针对的是放贷风险，不是温度。"
+    },
+    {
+      "id": "q6",
+      "type": "attitude",
+      "stem": "What does the professor think of the existing research literature on urban heat islands?",
+      "options": [
+        "She considers it unreliable because most of it uses satellite data",
+        "She accepts the underlying effect but distrusts figures reported without their methods",
+        "She thinks the field should abandon the rural reference concept entirely",
+        "She believes single city studies are more trustworthy than comparative ones"
+      ],
+      "answer": 1,
+      "explanation_en": "When a student asks whether the whole literature is unreliable, she explicitly says no, the effect is real and robust, but that a bare number is close to meaningless without the method attached. She criticizes how results are reported, not satellites as such.",
+      "explanation_zh": "当学生问整个文献是否都不可靠时，她明确否认，说效应是真实且稳健的，只是脱离方法的单一数字几乎没有意义。她批评的是结果的呈现方式，而不是卫星本身。"
+    }
+  ]
+}

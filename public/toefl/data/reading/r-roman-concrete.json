@@ -1,0 +1,188 @@
+{
+  "id": "r-roman-concrete",
+  "title": "Roman Concrete",
+  "topic": "history",
+  "difficulty": 3,
+  "paragraphs": [
+    "Roman builders of the late Republic and early Empire worked with a material that modern engineers did not fully understand until the twenty-first century. Their concrete, known as opus caementicium, was made by combining lime, volcanic ash, water, and coarse fragments of stone or broken brick. The mixture was not poured in the modern sense but laid in successive layers and tamped into wooden forms, often between facing walls of brick or small cut stones. Structures built in this way have survived earthquakes, centuries of neglect, and, in the case of harbor works, continuous immersion in the sea. Modern concrete made with Portland cement, by contrast, is generally designed for a service life of fifty to one hundred years in marine conditions.",
+    "The critical ingredient was pozzolana, a volcanic ash named after the town of Pozzuoli on the Bay of Naples. When lime is mixed with water alone it hardens slowly by absorbing carbon dioxide from the air, a process that cannot proceed underwater. Pozzolana changes the reaction entirely. Its silica and alumina, made chemically reactive by the heat of the eruptions that produced them, combine with lime and water to form calcium aluminosilicate hydrates, binding compounds that solidify without any contact with air. This property, known as hydraulic setting, is what allowed Roman engineers to build piers, breakwaters, and fish ponds directly in seawater.",
+    "Seawater does more than fail to destroy Roman marine concrete; under certain conditions it improves the material. Analyses of cores drilled from harbor structures have shown that the interaction of seawater with the volcanic ash produced crystals of aluminous tobermorite and a related mineral, phillipsite, within the cement matrix. These crystals grew in pores and along microscopic cracks, where they interlocked and blocked the paths by which water and dissolved salts would otherwise penetrate deeper into the mass. In modern structures the same intrusion of seawater attacks the steel reinforcement inside, which rusts, expands, and splits the surrounding material. Roman concrete contained no steel, so the chemical process that ordinarily begins decay instead sealed the structure more tightly with each passing decade.",
+    "A second mechanism has been proposed more recently. Roman concrete commonly contains small white inclusions of lime, which were long dismissed as evidence of careless mixing. Laboratory work suggests instead that they were produced deliberately, by combining quicklime with the other ingredients at high temperature rather than slaking the lime with water beforehand. Inclusions formed in this way act as reservoirs of reactive calcium. When a crack opens and water reaches one of them, the calcium dissolves, migrates into the crack, and recrystallizes, closing the fracture before it can spread. Specimens made according to this hypothesis and then deliberately cracked have resealed themselves within two weeks.",
+    "The technique nevertheless disappeared. Its loss cannot be attributed to any single cause. Roman concrete construction depended on a supply of a particular ash from a limited number of deposits, on shipping capable of moving that ash across the Mediterranean, and on crews of skilled workers organized on a scale that only imperial or civic patronage could sustain. When long distance trade contracted in the fifth and sixth centuries and large public building projects ceased, each of these supports weakened at once. Knowledge that resided in the practice of working crews rather than in written manuals had no way to survive an interruption of that magnitude.",
+    "Recovery was slow and partial. Medieval and Renaissance builders knew the surviving monuments and read the surviving texts, including the treatise of Vitruvius, but the descriptions were too imprecise to be reproduced without experiment. Systematic investigation began only in the eighteenth century, when John Smeaton, seeking a mortar that would set underwater for the Eddystone Lighthouse, tested limes of different compositions and found that those containing clay impurities performed best. That finding led in turn to the artificial hydraulic cements of the nineteenth century. The Roman formula itself was not reconstructed; what was recovered was the principle behind it."
+  ],
+  "glossary": [
+    {
+      "term": "opus caementicium",
+      "def_en": "the Roman building material made of lime, volcanic ash, water, and stone fragments",
+      "def_zh": "罗马建筑材料，由石灰、火山灰、水和碎石块混合而成"
+    },
+    {
+      "term": "pozzolana",
+      "def_en": "a reactive volcanic ash that allows lime mortar to harden under water",
+      "def_zh": "一种具有反应活性的火山灰，可使石灰砂浆在水下硬化"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "factual",
+      "paragraph": 1,
+      "stem": "According to paragraph 1, how was opus caementicium placed during construction?",
+      "options": [
+        "It was poured into molds while still liquid.",
+        "It was laid in layers and compacted into wooden forms.",
+        "It was cut into blocks and set in place with mortar.",
+        "It was sprayed onto facing walls of brick and cut stone."
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph states explicitly that the mixture was not poured but laid in successive layers and tamped into wooden forms. Choice 0 is the modern practice that the sentence is designed to rule out.",
+      "explanation_zh": "该段明确指出这种混合料并非浇筑，而是分层铺放并夯入木模中。选项一正是原句要排除的现代做法。"
+    },
+    {
+      "id": "q2",
+      "type": "factual",
+      "paragraph": 2,
+      "stem": "According to paragraph 2, lime mixed with water alone hardens by",
+      "options": [
+        "reacting with silica in the surrounding stone",
+        "crystallizing at high temperature",
+        "absorbing carbon dioxide from the air",
+        "releasing trapped water into the atmosphere"
+      ],
+      "answer": 2,
+      "explanation_en": "The paragraph says lime and water alone harden slowly by absorbing carbon dioxide from the air. Reaction with silica describes what happens when pozzolana is added, not what lime does on its own.",
+      "explanation_zh": "该段说仅有石灰和水时，硬化靠缓慢吸收空气中的二氧化碳。与二氧化硅反应是加入火山灰后的情况，而非石灰单独的反应。"
+    },
+    {
+      "id": "q3",
+      "type": "vocabulary",
+      "paragraph": 2,
+      "stem": "The word \"solidify\" in paragraph 2 is closest in meaning to",
+      "highlight": "solidify",
+      "options": [
+        "harden",
+        "dissolve",
+        "expand",
+        "cool"
+      ],
+      "answer": 0,
+      "explanation_en": "The word describes binding compounds becoming solid without contact with air, which is hardening. Cool is tempting because heat is mentioned nearby, but the sentence concerns a change of state produced by chemical reaction, not by temperature.",
+      "explanation_zh": "该词描述胶结化合物在不接触空气的情况下变硬。选“冷却”是因为附近提到了热量，但该句说的是化学反应造成的状态变化，与温度无关。"
+    },
+    {
+      "id": "q4",
+      "type": "sentence-simplification",
+      "paragraph": 3,
+      "stem": "Which of the following best expresses the essential information in the highlighted sentence in paragraph 3?",
+      "highlight": "These crystals grew in pores and along microscopic cracks, where they interlocked and blocked the paths by which water and dissolved salts would otherwise penetrate deeper into the mass.",
+      "options": [
+        "Water and dissolved salts gradually dissolved the crystals that had formed in the pores and cracks.",
+        "The crystals formed only in concrete that had already cracked extensively.",
+        "Crystals in the pores made the concrete denser but allowed salts to move through it more freely.",
+        "By filling pores and cracks, the crystals locked together and closed off the routes seawater would otherwise have used to reach deeper material."
+      ],
+      "answer": 3,
+      "explanation_en": "The sentence says the crystals grew in pores and cracks, interlocked, and blocked the paths of water and salts inward. Choice 2 reverses the outcome, since the crystals restricted rather than eased the movement of salts.",
+      "explanation_zh": "原句说晶体在孔隙和裂缝中生长、互相咬合，阻断了水和盐类向内渗透的通道。选项三把结果说反了，晶体是限制而非便利盐类的移动。"
+    },
+    {
+      "id": "q5",
+      "type": "inference",
+      "paragraph": 3,
+      "stem": "Paragraph 3 implies that modern reinforced concrete deteriorates in seawater mainly because",
+      "options": [
+        "it contains a material that Roman concrete did not",
+        "it is mixed with fresh water rather than with seawater",
+        "it hardens too quickly for crystals to form",
+        "it is used in structures far larger than Roman harbor works"
+      ],
+      "answer": 0,
+      "explanation_en": "The paragraph contrasts modern concrete, whose steel reinforcement rusts and splits the material, with Roman concrete, which contained no steel. Nothing in the paragraph attributes the difference to the water used in mixing.",
+      "explanation_zh": "该段把内部钢筋锈蚀胀裂的现代混凝土与不含钢筋的罗马混凝土作对比。段中并未把差别归因于拌合用水。"
+    },
+    {
+      "id": "q6",
+      "type": "rhetorical-purpose",
+      "paragraph": 4,
+      "stem": "Why does the author mention that cracked specimens resealed themselves within two weeks?",
+      "options": [
+        "To show that Roman concrete can now be manufactured commercially.",
+        "To provide experimental support for the proposal that lime inclusions repair cracks.",
+        "To argue that the white inclusions really were the result of careless mixing.",
+        "To explain why Roman builders preferred quicklime in cold weather."
+      ],
+      "answer": 1,
+      "explanation_en": "The detail is the last step in the argument of paragraph 4, testing in the laboratory what the hypothesis predicts about self-repair. Choice 2 states the view that the paragraph explicitly sets aside.",
+      "explanation_zh": "这一细节是第四段论证的最后一步，用实验检验该假说关于自我修复的预测。选项三正是该段明确否定的旧看法。"
+    },
+    {
+      "id": "q7",
+      "type": "insert-text",
+      "paragraph": 5,
+      "stem": "Look at the four squares that indicate where the following sentence could be added to paragraph 5. Where would the sentence best fit?",
+      "insertSentence": "Remove any one of these conditions and the others became difficult to maintain.",
+      "insertAfter": [
+        "The technique nevertheless disappeared.",
+        "Its loss cannot be attributed to any single cause.",
+        "Roman concrete construction depended on a supply of a particular ash from a limited number of deposits, on shipping capable of moving that ash across the Mediterranean, and on crews of skilled workers organized on a scale that only imperial or civic patronage could sustain.",
+        "When long distance trade contracted in the fifth and sixth centuries and large public building projects ceased, each of these supports weakened at once."
+      ],
+      "answer": 2,
+      "explanation_en": "\"These conditions\" must follow the list of deposits, shipping, and organized labor, and the generalization then sets up the next sentence about all the supports weakening at once. Placed earlier, the phrase would have no list to refer back to.",
+      "explanation_zh": "“这些条件”必须出现在矿源、运输和熟练工班这一列举之后，而这一概括又引出下一句所有支撑同时削弱的说法。若放在更前面，该短语就没有可指代的内容。"
+    },
+    {
+      "id": "q8",
+      "type": "negative-factual",
+      "paragraph": 5,
+      "stem": "According to paragraph 5, all of the following were required for Roman concrete construction EXCEPT",
+      "options": [
+        "volcanic ash from particular deposits",
+        "written manuals recording the mixing procedures",
+        "ships able to carry materials long distances",
+        "large workforces organized under wealthy patrons"
+      ],
+      "answer": 1,
+      "explanation_en": "The paragraph says the knowledge resided in the practice of working crews rather than in written manuals, so manuals were not among the requirements. The other three are listed as the supports on which the industry depended.",
+      "explanation_zh": "该段说相关知识存在于工班的实际操作中，而非写在手册里，因此手册不是必需条件。其余三项都被列为该行业赖以存在的支撑。"
+    },
+    {
+      "id": "q9",
+      "type": "inference",
+      "paragraph": 6,
+      "stem": "It can be inferred from paragraph 6 that Smeaton's experiments",
+      "options": [
+        "reproduced the exact composition of Roman marine concrete",
+        "depended on volcanic ash imported from the Bay of Naples",
+        "were guided by precise instructions preserved in Vitruvius",
+        "recovered the principle of hydraulic setting without recovering the Roman recipe"
+      ],
+      "answer": 3,
+      "explanation_en": "The paragraph closes by saying the formula was never reconstructed but the principle behind it was, and Smeaton reached that principle by testing limes with clay impurities. Choice 2 contradicts the statement that the surviving descriptions were too imprecise to follow.",
+      "explanation_zh": "该段结尾说配方从未被复原，被复原的是其背后的原理，而斯米顿正是通过试验含黏土杂质的石灰得出这一原理。选项三与“留存的描述过于含糊”矛盾。"
+    },
+    {
+      "id": "q10",
+      "type": "summary",
+      "paragraph": null,
+      "stem": "Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage.",
+      "summaryIntro": "Roman concrete achieved a durability, particularly in seawater, that modern researchers have only recently been able to explain.",
+      "options": [
+        "The Romans avoided steel reinforcement because they had observed that it rusted in marine air.",
+        "Volcanic ash let the mixture set without contact with air, which made building directly in seawater possible.",
+        "Portland cement concrete is normally designed to last between fifty and one hundred years in marine conditions.",
+        "Seawater reacting with the ash produced crystals that filled cracks and pores rather than causing decay.",
+        "Vitruvius left instructions precise enough for medieval builders to reproduce the Roman mixture.",
+        "Lime inclusions once regarded as mistakes may act as reservoirs of calcium that reseal fractures."
+      ],
+      "answer": [
+        1,
+        3,
+        5
+      ],
+      "explanation_en": "The three keys are the chemistry that permits underwater setting, the crystal growth that closes cracks, and the self-repairing lime inclusions. Choice 0 invents a Roman motive the passage never gives, choice 4 contradicts paragraph 6, and choice 2 is a comparison detail rather than a main idea.",
+      "explanation_zh": "三个正确选项分别是水下凝结的化学原理、封闭裂缝的晶体生长，以及可自我修复的石灰颗粒。选项一凭空给罗马人安上动机，选项五与第六段矛盾，选项三只是用于对比的细节。"
+    }
+  ]
+}
